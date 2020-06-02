@@ -1,6 +1,6 @@
 import {RECEIVE_CURRENT_USER} from "../actions/session_actions";
 
-const userReducer = (state = {}, action.type) => {
+const usersReducer = (state = {}, action) => {
   Object.freeze(state);
   let nextState = Object.assign({}, state);
 
@@ -14,4 +14,4 @@ const userReducer = (state = {}, action.type) => {
   }
 }
 
-export default userReducer;
+export default usersReducer;
