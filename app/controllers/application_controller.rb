@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   helper_method :current_user, :ensure_login, :login, :logout, :logged_in?
 
   def current_user
-    @user ||= User.find_by(session_token: session[session_token])
+    @user ||= User.find_by(session_token: session[:session_token])
   end
 
   def ensure_login
