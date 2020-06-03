@@ -7,8 +7,8 @@ class User < ApplicationRecord
   validates :email, :session_token, uniqueness: true
   validates :password, length: {minimum: 6}, allow_nil: true
 
-  def self.find_by_credentials(username, password)
-    user = User.find_by(username: username)
+  def self.find_by_credentials(email, password)
+    user = User.find_by(email: email)
     return nil unless user && user.is_password?(password)
     user
   end
@@ -19,7 +19,7 @@ class User < ApplicationRecord
   
   def generate_unique_session_token
     self.session_token = new_session_token
-    while User.find_by(session_token: self.session_token)
+    while User.find_by(session_token: self.session_token) # referenced from aA open as a more efficient alternative
       self.session_token = new_session_token
     end
     self.session_token
