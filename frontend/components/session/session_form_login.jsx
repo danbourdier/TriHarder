@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
  
 class SessionFormLogin extends React.Component {
   constructor(props) {
@@ -15,8 +15,8 @@ class SessionFormLogin extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    return this.props.processForm(this.state)
-  }
+    return this.props.processForm(this.state);
+  };
 
   render() {
     return (
@@ -24,19 +24,20 @@ class SessionFormLogin extends React.Component {
 
         <form onSubmit={this.handleSubmit}>
           <Link to="/signup">SIGN UP</Link>
-          <br/>
+            <br/>
           <a href="https://www.facebook.com/login.php">LOG IN WITH FACEBOOK</a>
-          <br/>
+            <br/>
           <p>OR</p>
           <label> Email
             <input type="text" value={this.state.email} onChange={this.update('email')}/>
           </label>
-          <br/>
+            <br/>
           <label> Password
-            <input type="text" value={this.state.password} onChange={this.update('password')} />
+            <input type="password" value={this.state.password} onChange={this.update('password')} />
           </label>
-          <br />
-
+            <br />
+          <button type="submit">{this.props.formType}</button>
+            <br/>
           <p>Forgot Password? (TO BE A --LINK--)</p>
 
         </form>
