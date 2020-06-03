@@ -1,5 +1,12 @@
 import React from 'react';
-import { Link, Redirect } from "react-router-dom";
+import {
+  Link, Redirect, BrowserRouter as Router,
+  Switch,
+  Route,
+  useHistory,
+  useLocation 
+} from "react-router-dom";
+
  
 class SessionFormLogin extends React.Component {
   constructor(props) {
@@ -7,7 +14,7 @@ class SessionFormLogin extends React.Component {
 
     this.state = { email: "", password: "" };
     this.handleSubmit = this.handleSubmit.bind(this);
-  }
+  };
 
   update(field) {
     return e => this.setState({ [field]: e.currentTarget.value })
@@ -15,7 +22,7 @@ class SessionFormLogin extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    return this.props.processForm(this.state);
+    this.props.processForm(this.state)
   };
 
   render() {

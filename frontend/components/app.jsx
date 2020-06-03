@@ -12,17 +12,15 @@ const App = () => (
   <div>
     <header>
       <h1> TriHarder </h1>
-      <NavBarContainer />git
+      <NavBarContainer />
       <h3>Learn about TriHarder's COVID-19 Pledge</h3>
     </header>
-    
     <Switch>
-      <Route exact path="/" component={SplashContainer} />
+      <AuthRoute exact path="/" component={SplashContainer} />
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
-      <Route exact path="/home_page/:user_id" component={HomePageContainer}/>
+      <ProtectedRoute exact path="/home_page" component={HomePageContainer}/>
     </Switch>
-
   </div>
 );
 
