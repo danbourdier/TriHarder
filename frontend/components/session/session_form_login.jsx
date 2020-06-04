@@ -14,6 +14,7 @@ class SessionFormLogin extends React.Component {
 
     this.state = { email: "", password: "" };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demoUser = this.demoUser.bind(this);
   };
 
   update(field) {
@@ -22,7 +23,14 @@ class SessionFormLogin extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    
     this.props.processForm(this.state)
+  };
+
+  demoUser(e){
+    e.preventDefault();
+    let demo = { email: "demo@demo.com", password: "password" };
+    this.props.logIn(demo);
   };
 
   render() {
@@ -32,7 +40,7 @@ class SessionFormLogin extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <Link to="/signup">SIGN UP</Link>
             <br/>
-          <a href="https://www.facebook.com/login.php">LOG IN WITH FACEBOOK</a>
+         <button onClick={this.demoUser}>DEMO USER</button>
             <br/>
           <p>OR</p>
           <label> Email

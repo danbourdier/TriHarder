@@ -1,16 +1,19 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { signup } from '../../actions/session_actions';
+import { signup, login, wipeErrors } from '../../actions/session_actions';
 import SessionForm from './session_form';
 
-const mSTP = (state, ownProps) => ({
+const mSTP = (state) => ({
   errors: state.errors.session,
   formType: "SIGN UP",
+  
 });
 
-const mDTP = (dispatch, ownProps) => ({
-  processForm: user => dispatch(signup(user))
+const mDTP = (dispatch) => ({
+  processForm: user => dispatch(signup(user)),
+  logIn: user => dispatch(login(user)),
+  wipeErrors: () => dispatch(wipeErrors()), // allows us to dispatch an action creator that goes straight to reducer
 });
 
 export default connect(mSTP, mDTP)(SessionForm);

@@ -9,11 +9,11 @@ class SessionForm extends React.Component {
   }
 
   seperator(){
-    let { errors, formType, processForm } = this.props;
+    let { errors, formType, processForm, logIn, wipeErrors } = this.props;
     if (this.props.formType === "SIGN UP") {
-      return < SessionFormSignup formType = { formType } errors = { errors } processForm = { processForm } />
+      return < SessionFormSignup wipeErrors={ wipeErrors } formType = { formType } errors = { errors } processForm = { processForm } logIn={ logIn }/>
     } else if (this.props.formType === "LOG IN") {
-      return <SessionFormLogin formType={formType} errors={errors} processForm={processForm} />
+      return <SessionFormLogin wipeErrors={wipeErrors} formType={formType} errors={errors} processForm={processForm} logIn={ logIn } />
     } else {
       return null // forgot password container's form.
     }

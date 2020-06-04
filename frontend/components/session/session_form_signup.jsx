@@ -7,6 +7,8 @@ class SessionFormSignup extends React.Component {
 
     this.state = { f_name: "", l_name: "", email: "", password: "", birth_date: "", gender: "", location: "" };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demoUser = this.demoUser.bind(this);
+
   }
 
   update(field) {
@@ -18,22 +20,45 @@ class SessionFormSignup extends React.Component {
     return this.props.processForm(this.state); 
   };
 
+  demoUser(e) {
+    e.preventDefault();
+    let demo = { email: "demo@demo.com", password: "password"};
+    this.props.logIn(demo);
+  };
+
   render() {
     // let {} = this.state
+    let firstError = "";
+    let lastError = "";
+    let emailError = "";
+    let passwordError = "";
+    let birth_dateError = "";
+    let genderError = "";
+    let locationError = "";
+
+    console.log(this.props.errors)
+    // this.props.errors.forEach(error => { // errors are currently an array of strings
+    //   if (error.includes("f_name")) {
+    //     firstError = `${error}`
+    //   };
+    // });
+
     return (
       <div>
         
         <Link to="/login">LOG IN</Link>
-        <br/>
-        <button>DEMO USER</button>
-        <p>OR</p>
+          <br/><br/><br/>
+        <button onClick={this.demoUser} >DEMO USER</button>
+          <p>OR</p>
         <h3>{this.props.formType}</h3>
         <form onSubmit={this.handleSubmit}>
-          <label>
+          <label className="input-first-name">
             <input type="text" placeholder="First name" value={this.state.f_name} onChange={this.update("f_name")} />
           </label>
+              {/* <p className={this.state.f_name.length < 1 ? "first-name-error" : "first-name-error-hidden"}>{firstError}</p> */}
+              <p>{firstError}</p>
             <br/>
-          <label>
+          <label className="input-last-name">
             <input type="text" placeholder="Last name" value={this.state.l_name} onChange={this.update("l_name")} />
           </label>
             <br />

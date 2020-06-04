@@ -1,0 +1,16 @@
+/* .input-first-name {
+  margin: 2px;
+  background-color: chartreuse;
+}
+
+.input-last-name {
+  margin: 2px;
+  background-color: blue;
+} */
+
+.first-name-error-hidden {
+  display: none;
+}
+.first-name-error {
+  color: crimson;
+}
