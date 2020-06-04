@@ -23,15 +23,17 @@ const receiveErrors = errors => ({
 
 // thunk action creators
 
+
+
 export const signup = user => dispatch => (
   APIUtil.signup(user)
-    .then(user => dispatch(receiveCurrentUser(user)), errors => dispatch(receiveErrors(errors)))
+    .then(user => dispatch(receiveCurrentUser(user), errors => dispatch(receiveErrors(errors.responseJSON))))
 ); // i put second args to #then because we need a way for store to keep track of errors upon ajax
 // requests returning failure promises
 
-export const login = user => dispatch => (
+export const login = user => dispatch => ( //-------
   APIUtil.login(user)
-    .then(user => dispatch(receiveCurrentUser(user)), errors => dispatch(receiveErrors(errors)))
+    .then(user => (dispatch(receiveCurrentUser(user))), errors => (dispatch(receiveErrors(errors.responseJSON))))
 );
 
 export const logout = () => dispatch => (

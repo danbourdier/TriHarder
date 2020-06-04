@@ -7,7 +7,7 @@ const Auth = ({ component: Component, path, loggedIn }) => ( // component 1
 ); // routes to our home_page if we are already logged in
 
 const Protected = ({ component: Component, path, loggedIn }) => ( // component 2
-  <Route path={path} render={props => ( loggedIn ? <Component {...props} /> : <Redirect to="/login" /> )} />
+  <Route path={path} render={props => ( loggedIn ? <Component {...props} /> : <Redirect to="/" /> )} />
 );
 
 const mapStateToProps = state => ({ // a mSTP function thats shared with the above 2 components. Allows us to create our turnary statement
