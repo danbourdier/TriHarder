@@ -8,9 +8,9 @@
   background-color: blue;
 } */
 
-.first-name-error-hidden {
+.error-hidden {
   display: none;
 }
-.first-name-error {
+.error {
   color: crimson;
 }

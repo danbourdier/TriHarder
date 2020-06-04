@@ -34,6 +34,21 @@ class SessionFormLogin extends React.Component {
   };
 
   render() {
+    let wam = this.props.errors.responseJSON;
+    // let {} = this.state
+    let emailError = "";
+    let passwordError = "";
+
+    if (wam) {
+      wam.forEach(error => {
+        if (error.includes("Invalid")) {
+          emailError = error;
+          passwordError = error;
+        }
+
+      });
+    };
+
     return (
       <div>
 
@@ -46,14 +61,17 @@ class SessionFormLogin extends React.Component {
           <label> Email
             <input type="text" value={this.state.email} onChange={this.update('email')}/>
           </label>
+           <p className={emailError.length < 1 ? "error-hidden" : "error"}>{emailError}</p>
             <br/>
           <label> Password
             <input type="password" value={this.state.password} onChange={this.update('password')} />
           </label>
-            <br />
+            <p className={passwordError.length < 1 ? "error-hidden" : "error"}>{passwordError}</p>
+              <br />
+          <Link to="/login/forgot_password">Forgot Password?</Link>
+            <br/>
           <button type="submit">{this.props.formType}</button>
             <br/>
-          <p>Forgot Password? (TO BE A --LINK--)</p>
 
         </form>
 

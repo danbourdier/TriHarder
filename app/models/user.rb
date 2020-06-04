@@ -3,7 +3,7 @@ class User < ApplicationRecord
   attr_reader :password
   after_initialize :ensure_session_token
 
-  validates :f_name, :l_name, :birth_date, :email, :location, :password_digest, :session_token, presence: true
+  validates :first_name, :last_name, :birth_date, :email, :location, :password_digest, :session_token, presence: true
   validates :email, :session_token, uniqueness: true
   validates :password, length: {minimum: 6}, allow_nil: true
 

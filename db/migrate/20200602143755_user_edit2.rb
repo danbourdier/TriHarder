@@ -2,8 +2,8 @@ class UserEdit2 < ActiveRecord::Migration[5.2]
   def change
     drop_table :users
     create_table :users do |t|
-      t.string :f_name, null: false
-      t.string :l_name, null: false
+      t.string :first_name, null: false
+      t.string :last_name, null: false
       t.string :gender
       t.string :birth_date, null: false
       t.string :email, null: false

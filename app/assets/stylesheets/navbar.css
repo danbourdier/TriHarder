@@ -1,0 +1,16 @@
+
+.covid-header-div {
+  margin: auto;
+}
+
+.covid-header {
+  display: block;
+  min-height: 60px;
+  background-image: grey;
+  text-align: center;
+  
+}
+
+.outermost-navbar-div {
+  height: 65px;
+}

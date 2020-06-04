@@ -6,7 +6,7 @@ class SplashPage extends React.Component{
 
   render() {
     return (
-      <div>
+      <div className="outermost-splash-div">
 
         <div className="own-every-mile-div">
           <h1>OWN EVERY MILE</h1>

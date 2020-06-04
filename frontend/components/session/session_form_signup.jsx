@@ -5,7 +5,7 @@ class SessionFormSignup extends React.Component {
   constructor(props) {
     super(props)
 
-    this.state = { f_name: "", l_name: "", email: "", password: "", birth_date: "", gender: "", location: "" };
+    this.state = { first_name: "", last_name: "", email: "", password: "", birth_date: "", gender: "", location: "" };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.demoUser = this.demoUser.bind(this);
 
@@ -27,21 +27,39 @@ class SessionFormSignup extends React.Component {
   };
 
   render() {
+    let wam = this.props.errors.responseJSON;
     // let {} = this.state
     let firstError = "";
     let lastError = "";
     let emailError = "";
     let passwordError = "";
-    let birth_dateError = "";
+    let birthDateError = "";
     let genderError = "";
     let locationError = "";
 
-    console.log(this.props.errors)
-    // this.props.errors.forEach(error => { // errors are currently an array of strings
-    //   if (error.includes("f_name")) {
-    //     firstError = `${error}`
-    //   };
-    // });
+
+    // console.log(this.props.errors.responseJSON)
+    if (wam) {
+      // debugger;
+      wam.forEach(error => {
+        if (error.includes("First")) {
+          firstError = error
+        } else if (error.includes("Last")) {
+          lastError = error;
+        } else if (error.includes("Last")) {
+          lastError = error;
+        } else if (error.includes("Email")) {
+          emailError = error;
+        } else if (error.includes("Birth")) {
+          birthDateError = error;
+        } else if (error.includes("Location")) {
+          locationError = error;
+        } else if (error.includes("Password")) {
+          passwordError = error;
+        }
+      });
+
+    };
 
     return (
       <div>
@@ -53,26 +71,29 @@ class SessionFormSignup extends React.Component {
         <h3>{this.props.formType}</h3>
         <form onSubmit={this.handleSubmit}>
           <label className="input-first-name">
-            <input type="text" placeholder="First name" value={this.state.f_name} onChange={this.update("f_name")} />
+            <input type="text" placeholder="First name" value={this.state.first_name} onChange={this.update("first_name")} />
           </label>
-              {/* <p className={this.state.f_name.length < 1 ? "first-name-error" : "first-name-error-hidden"}>{firstError}</p> */}
-              <p>{firstError}</p>
-            <br/>
+            <p className={firstError.length < 1 ? "error-hidden" : "error"}>{firstError}</p>
+              <br/>
           <label className="input-last-name">
-            <input type="text" placeholder="Last name" value={this.state.l_name} onChange={this.update("l_name")} />
+            <input type="text" placeholder="Last name" value={this.state.last_name} onChange={this.update("last_name")} />
           </label>
-            <br />
+            <p className={lastError.length < 1 ? "error-hidden" : "error"}>{lastError}</p>
+             <br />
           <label>
             <input type="text" placeholder="Email" value={this.state.email} onChange={this.update("email")} />
           </label>
-            <br />
+            <p className={emailError.length < 1 ? "error-hidden" : "error"}>{emailError}</p>
+              <br />
           <label>
             <input type="password" placeholder="Password" value={this.state.password} onChange={this.update("password")} />
           </label>
-            <br />
+            <p className={passwordError.length < 1 ? "error-hidden" : "error"}>{passwordError}</p>
+             <br />
           <label> {/* We dont need labels at this point*/}
             <input type="text" placeholder="Day" value={this.state.birth_date} onChange={this.update('birth_date')} />
           </label>
+            <p className={birthDateError.length < 1 ? "error-hidden" : "error"}>{birthDateError}</p>
           <label> {/* We dont need labels at this point*/}
             <input type="text" placeholder="Month" value={this.state.birth_date} onChange={this.update('birth_date')} />
           </label>
@@ -90,6 +111,7 @@ class SessionFormSignup extends React.Component {
           <label>
             <input type="text" placeholder="Location" value={this.state.location} onChange={this.update("location")} />
           </label>
+            <p className={locationError.length < 1 ? "error-hidden" : "error"}>{locationError}</p>
             <br/>
           <div>
             <input type="checkbox" /> <span>Yes, I would like to receive by email the latest news, innovation updates, and offers from MapMyRun and Under Armour.</span>
