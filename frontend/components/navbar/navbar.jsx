@@ -3,17 +3,17 @@ import { Link } from 'react-router-dom';
 
 const NavBar = props => {
   const sessionLinks = () => (
-    <div className="outermost-navbar-div">
+    <div className="auth-container-outer-div">
       <nav className="login-signup">
-        <div className="navbar-auth" >
-          <Link to="/login">LOGIN</Link>
+        <div className="auth-container-div" >
+          <Link to="/login">LOG IN</Link>
           <Link to="/signup">SIGN UP</Link>
         </div>
       </nav>
     </div>
   );
   const personalNavBar = () => (
-    <div className="outermost-navbar-div">
+    <div className="auth-container-div">
       <hgroup className="header-group">
         <div>
           <h2 className="header-name"> (future drop-down) {props.currentUser.username}</h2>

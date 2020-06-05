@@ -11,47 +11,48 @@ import ForgotPasswordContainer from './session/forgot_password_container';
 import ForgotPasswordMessage from './session/forgot_password_message';
 
 const App = () => (
-  <div>
-    <header>
-      <div className="main-header">
+  <div className="render"> 
+    <header className="header-container">
+      <div className="header-main">
 
-
-        <div className="main-header-inner">
           {/* left */}
-          <div className="main-header-logo-div">
+          <div className="logo-container">
             <img src={window.logoText} alt="logo"/>
           </div>
           {/* to contain a component for links */}
-          <div className="main-header-links">
-            <p className="main-header-links-each">Training</p>
-            <p className="main-header-links-each">Routes</p>
-            <p className="main-header-links-each">Challenges</p>
-            <p className="main-header-links-each">Go MVP</p>
-            <p className="main-header-links-each">Blog</p>
-            <p className="main-header-links-each">Shop</p>
+          <div className="link-container">
+            <p className="link">Training</p>
+            <p className="link">Routes</p>
+            <p className="link">Challenges</p>
+            <p className="link">Go MVP</p>
+            <p className="link">Blog</p>
+            <p className="link">Shop</p>
           </div>
           {/* right */}
-          <div className="main-header-navbar-div">
-            <NavBarContainer />
+          <div className="auth-container">
+            <div>
+              <NavBarContainer />
+            </div>  
           </div>
-        </div>
-
-
+        
       </div>
-        <div className="covid-header-div">
+        <div className="header-sub">
           <span className="covid-header-content" >Learn about TH's COVID-19 Pledge</span>
         </div>
 
     </header>
 
-    <Switch>
-      <AuthRoute exact path="/" component={SplashContainer} />
-      <AuthRoute exact path="/login" component={LoginFormContainer} />
-      <AuthRoute exact path="/login/forgot_password" component={ForgotPasswordContainer} />
-      <AuthRoute exact path="/forgot_password_message" component={ForgotPasswordMessage} />
-      <AuthRoute exact path="/signup" component={SignupFormContainer} />
-      <ProtectedRoute exact path="/home_page" component={HomePageContainer}/>
-    </Switch>
+    <div className="body">
+      <Switch>
+        <AuthRoute exact path="/" component={SplashContainer} />
+        <AuthRoute exact path="/login" component={LoginFormContainer} />
+        <AuthRoute exact path="/login/forgot_password" component={ForgotPasswordContainer} />
+        <AuthRoute exact path="/forgot_password_message" component={ForgotPasswordMessage} />
+        <AuthRoute exact path="/signup" component={SignupFormContainer} />
+        <ProtectedRoute exact path="/home_page" component={HomePageContainer}/>
+      </Switch>
+    </div>
+
   </div>
 );
 

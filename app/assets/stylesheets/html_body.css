@@ -1,8 +1,8 @@
 .html-body {
-  background-color: white
+  background-color: white;
 }
 
-.outermost-splash-div {
+.body {
   background-color: darkgray;
   margin: 0px auto;
   width:1320px;
