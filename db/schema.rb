@@ -10,14 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_02_143755) do
+ActiveRecord::Schema.define(version: 2020_06_04_163418) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "users", force: :cascade do |t|
-    t.string "f_name", null: false
-    t.string "l_name", null: false
+    t.string "first_name", null: false
+    t.string "last_name", null: false
     t.string "gender"
     t.string "birth_date", null: false
     t.string "email", null: false

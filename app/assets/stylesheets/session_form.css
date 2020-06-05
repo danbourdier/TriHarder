@@ -1,0 +1,21 @@
+/* .input-first-name {
+  margin: 2px;
+  background-color: chartreuse;
+}
+
+.input-last-name {
+  margin: 2px;
+  background-color: blue;
+} */
+
+.error-hidden {
+  display: none;
+}
+.error {
+  color: crimson;
+}
+
+.session-form-signup-div {
+  /* display: flex; */
+  margin-top: inherit;
+}

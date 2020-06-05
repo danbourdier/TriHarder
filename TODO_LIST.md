@@ -5,3 +5,12 @@
   * Link on line: 62 to different landing
 
 2. CSS for splash    
+
+3. Issues
+  * ...
+
+4. Knockouts
+  * render errors (adjusting forms)
+  * birthdate (seperate on signup)
+
+  
