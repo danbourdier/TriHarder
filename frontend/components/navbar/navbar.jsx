@@ -5,8 +5,10 @@ const NavBar = props => {
   const sessionLinks = () => (
     <div className="outermost-navbar-div">
       <nav className="login-signup">
-        <Link to="/login">LOGIN</Link>
-        <Link to="/signup">SIGN UP</Link>
+        <div className="navbar-auth" >
+          <Link to="/login">LOGIN</Link>
+          <Link to="/signup">SIGN UP</Link>
+        </div>
       </nav>
     </div>
   );

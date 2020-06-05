@@ -13,12 +13,37 @@ import ForgotPasswordMessage from './session/forgot_password_message';
 const App = () => (
   <div>
     <header>
-      <h1> TriHarder </h1>
-      <NavBarContainer />
-      <div className="covid-header-div">
-       <h3 className="covid-header" >Learn about TH's COVID-19 Pledge</h3>
+      <div className="main-header">
+
+
+        <div className="main-header-inner">
+          {/* left */}
+          <div className="main-header-logo-div">
+            <img src={window.logoText} alt="logo"/>
+          </div>
+          {/* to contain a component for links */}
+          <div className="main-header-links">
+            <p className="main-header-links-each">Training</p>
+            <p className="main-header-links-each">Routes</p>
+            <p className="main-header-links-each">Challenges</p>
+            <p className="main-header-links-each">Go MVP</p>
+            <p className="main-header-links-each">Blog</p>
+            <p className="main-header-links-each">Shop</p>
+          </div>
+          {/* right */}
+          <div className="main-header-navbar-div">
+            <NavBarContainer />
+          </div>
+        </div>
+
+
       </div>
+        <div className="covid-header-div">
+          <span className="covid-header-content" >Learn about TH's COVID-19 Pledge</span>
+        </div>
+
     </header>
+
     <Switch>
       <AuthRoute exact path="/" component={SplashContainer} />
       <AuthRoute exact path="/login" component={LoginFormContainer} />
