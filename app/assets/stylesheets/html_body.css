@@ -3,6 +3,7 @@
 }
 
 .body {
+  display: flex;
   background-color: darkgray;
   margin: 0px auto;
   width:1320px;

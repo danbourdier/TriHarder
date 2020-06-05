@@ -44,10 +44,11 @@
 .header-sub {
   display: flex;
   color: #222628;
-  background-color: whitesmoke;
+  background-color: rgb(240,240,240);
   border: #d2d2d2;
   border-style: solid;
   border-width: 1px;
+  height: 100%;
   max-height: 58px;
   min-height: 58px;
   align-items: center;

@@ -62,7 +62,7 @@ class SessionFormSignup extends React.Component {
     };
 
     return (
-      <div>
+      <div className="session-form-signup-div">
         
         <Link to="/login">LOG IN</Link>
           <br/><br/><br/>
