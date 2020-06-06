@@ -42,16 +42,18 @@ const App = () => (
 
     </header>
 
-    <div className="body">
-      <Switch>
-        <AuthRoute exact path="/" component={SplashContainer} />
-        <AuthRoute exact path="/login" component={LoginFormContainer} />
-        <AuthRoute exact path="/login/forgot_password" component={ForgotPasswordContainer} />
-        <AuthRoute exact path="/forgot_password_message" component={ForgotPasswordMessage} />
-        <AuthRoute exact path="/signup" component={SignupFormContainer} />
-        <ProtectedRoute exact path="/home_page" component={HomePageContainer}/>
-      </Switch>
-    </div>
+    <main className="body">
+      <div className="body-components">
+        <Switch>
+          <AuthRoute exact path="/" component={SplashContainer} />
+          <AuthRoute exact path="/login" component={LoginFormContainer} />
+          <AuthRoute exact path="/login/forgot_password" component={ForgotPasswordContainer} />
+          <AuthRoute exact path="/forgot_password_message" component={ForgotPasswordMessage} />
+          <AuthRoute exact path="/signup" component={SignupFormContainer} />
+          <ProtectedRoute exact path="/home_page" component={HomePageContainer}/>
+        </Switch>
+      </div>
+    </main>
 
   </div>
 );

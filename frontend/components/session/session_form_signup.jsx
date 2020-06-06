@@ -38,9 +38,9 @@ class SessionFormSignup extends React.Component {
     let locationError = "";
 
 
-    // console.log(this.props.errors.responseJSON)
+
     if (wam) {
-      // debugger;
+
       wam.forEach(error => {
         if (error.includes("First")) {
           firstError = error

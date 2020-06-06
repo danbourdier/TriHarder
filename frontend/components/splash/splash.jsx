@@ -7,32 +7,51 @@ class SplashPage extends React.Component{
   render() {
     return (
       <div className="outermost-splash-div">
-
+        
         <div className="own-every-mile-div">
-          <h1>OWN EVERY MILE</h1>
-            <br/>
-          <p>The best mobile run tracking experience, backed by the world's largest digital health and fitness community.
-          </p>
-            <br/>
-          <Link to="/signup">SIGN UP</Link>
-            <br/>
-          <strong>Already a member?</strong>
-          <Link to="/login">LOG IN</Link>
-            <br/><br/><br/>
+          <div className="bar-container">
+            <hr class="bar"/> 
+          </div>
 
-          <a href="https://apps.apple.com/us/app/map-my-run-gps-running-workout/id291890420">
-            <span>Download on the</span>
-            <br/>
-            <strong>App Store</strong>
-          </a>
+          <h2 className="own-every-mile-container">
+            <span>OWN EVERY MILE</span>
+          </h2>
 
-          <a href="https://play.google.com/store/apps/details?id=com.mapmyrun.android2&hl=en">
-            <span>GET IT ON</span>
-            <br />
-            <strong>Google Play</strong>
-          </a>
+          <div className="bar-container2">
+            <hr class="bar2" />
+          </div>
+
+          <div className="splash-first-p-div">
+            <p>The best mobile run tracking experience, backed by the world's largest digital health and fitness community.</p>
+          </div>
+
+          <div className="splash-signup-container">
+            <Link to="/signup">SIGN UP</Link>
+          </div>
+          
+          <div className="splash-login-container">
+            <strong>Already a member?</strong>
+            <div>
+              <Link to="/login">LOG IN</Link>
+            </div>
+          </div>
+
+            
+          <div className="splash-download-links-container">
+            <a href="https://github.com/danbourdier">
+              <img src={window.gitBW} alt="git logo"/>
+              <strong>Git Hub</strong>
+            </a>
+
+            <a href="https://play.google.com/store/apps/details?id=com.mapmyrun.android2&hl=en">
+              <img src={window.linkedInBW} alt="linked in logo"/>
+                <br />
+              <strong>LinkedIn</strong>
+            </a>
+          </div>
+
         </div>
-
+          ---------------------------------
           <br/><br/><br/>
 
         <div className="syncs-with-under-armour-smart-shoes-div">

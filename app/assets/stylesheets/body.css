@@ -1,0 +1,29 @@
+.html-body {
+  background-color: white;
+}
+
+.body {
+  display: flex;
+  /* position: relative; */
+  top: 4px;
+  margin: 0px 60px 0px 60px;
+  max-width: 1320px;
+  width:1320px;
+  justify-content: center;
+  background-color: cornflowerblue;
+}
+
+.body-components div {
+  /* position: relative; */
+}
+
+.session-form-signup-div {
+  display: flex;
+  /* position: absolute; */
+  /* top: 150px; */
+  /* background-color: lawngreen; */
+  width: inherit;
+  margin: 0px auto;
+
+  /* margin-top: inherit; */
+}

@@ -13,7 +13,7 @@ const mSTP = (state) => ({
 const mDTP = (dispatch) => ({
   processForm: user => dispatch(signup(user)),
   logIn: user => dispatch(login(user)),
-  wipeErrors: () => dispatch(wipeErrors()), // allows us to dispatch an action creator that goes straight to reducer
+  wipeErrors: () => dispatch(wipeErrors()),
 });
 
 export default connect(mSTP, mDTP)(SessionForm);

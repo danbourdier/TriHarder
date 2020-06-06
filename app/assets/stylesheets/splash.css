@@ -1,0 +1,183 @@
+.outermost-splash-div {
+  display: flex;
+  flex-direction: column;
+  /* background-color: yellow; */
+  /* text-align: right; */
+  /* justify-content: right; */
+}
+
+.own-every-mile-div {
+  display: flex;
+  margin: 24px;
+  width: 1192px;
+  flex-direction: column;
+  /* background-color: violet; */
+  /* justify-content: space-between; */
+  /* justify-content: right; */
+  /* margin-left: auto;    shifts the container to the edge of it's parent*/
+}
+
+/* containers below */
+.own-every-mile-container {
+  width: 500px;
+  /* background-color: lavender; */
+  margin-left: auto;
+  margin-top: 20px;
+}
+
+.bar-container {
+  margin-top: 22px;
+  margin-left: auto;
+}
+    .bar {
+      color: white;
+      background-color: white;
+      width: 87px;
+      height: 5px;
+      margin-left: auto;
+      
+    }
+.bar-container2 {
+  margin-top: 20px;
+  margin-left: auto;
+}
+    .bar2 {
+      color: white;
+      background-color: white;
+      width: 87px;
+      height: 5px;
+      margin-left: auto;
+      
+    }
+
+    .own-every-mile-container span {
+      font-family: Arial, Helvetica, sans-serif;
+      color: white;
+      font-size: 47px;
+      font-stretch: condensed;
+      font-weight: 900;
+      letter-spacing: 6px;
+    }
+
+.splash-first-p-div {
+  width: 295px;
+  /* background-color: lightsalmon; */
+  margin-left: auto;
+  margin-top: 14px;
+  text-align: right;
+}
+  .splash-first-p-div p {
+    font-size: 16;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    /* letter-spacing: 5px; */
+    line-height: 1.4;
+    /* margin-left: auto; */
+  }
+
+.splash-signup-container {
+  display: flex;
+  max-width: 290px;
+  width: 290px;
+  height: 44px;
+  max-height: 44px;
+  background-color: #1bd373;
+  margin-left: auto;
+  margin-top: 30px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  /* align-content: center; */
+}
+  .splash-signup-container :last-child {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 900;
+  }
+
+.splash-login-container {
+  display: flex;
+  width: 232px;
+  margin-left: auto;
+  margin-top: 30px;
+  justify-content: space-between;
+  /* align-content: center; */
+  align-items: center;
+  /* background-color: magenta; */
+}
+  .splash-login-container strong {
+    font-size: 14px;
+    font-style: italic;
+    color: white;
+    font-weight: 200 !important;
+  }
+
+  .splash-login-container div {
+    display: flex;
+    align-content: center;
+    border-radius: 4px;
+    text-align: center;
+    border: 2px solid #d3d6dc;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    min-width: 96px;
+    line-height: 20px;
+    letter-spacing: 0.06em;
+    /* background-color: magenta; */
+  }
+
+    .splash-login-container div :last-child {
+      text-decoration: none;
+      font-size: 14px;
+      color: white;
+      /* padding: 6px; */
+    }
+
+.splash-download-links-container {
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-evenly;
+  width: auto;
+  /* min-width: 290px; */
+  /* background-color: black; */
+  margin-left: 913px;
+  margin-top: 28px;
+}
+  .splash-download-links-container a{
+    display: flex;
+    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+    width: 138px;
+    min-width: 138px;
+    min-height: 42px;
+    max-height: 42px;
+    color: white;
+    border-radius: 4px;
+    border: 1px solid #d3d6dc;
+    background-color: black;
+    margin-right: 14px;
+    text-decoration: none;
+    font-size: 18px;
+  }
+    .splash-download-links-container strong{
+      margin-right: 14px;
+      margin-top: 10px;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+  .splash-download-links-container img{
+    /* margin-top: 3px; */
+    width: 34px;
+    min-width: 34px;
+    min-height: 30px;
+    height: 32px;
+    margin-right: 8px;
+    /* max-height: 42px; */
+  }
+
