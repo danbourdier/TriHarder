@@ -9,12 +9,9 @@
   margin: 0px 60px 0px 60px;
   max-width: 1320px;
   width:1320px;
-  justify-content: center;
-  background-color: cornflowerblue;
-}
-
-.body-components div {
-  /* position: relative; */
+  /* background-color: cornflowerblue; */
+    justify-content: center;
+    flex-direction: column;
 }
 
 .session-form-signup-div {

@@ -2,27 +2,44 @@
   display: flex;
   flex-direction: column;
   /* background-color: yellow; */
+  position: relative;
   /* text-align: right; */
   /* justify-content: right; */
 }
 
+.first-splash-image {
+  /* background-image: url("splash.png"); */
+  /* display: block; */
+  /* display: flex; */
+  /* width: 100%; */
+  position: absolute;
+  /* left: -40px;  WTF  */
+  width: 1320px;
+  height: 670px;
+}
+
 .own-every-mile-div {
+  position: relative;
   display: flex;
   margin: 24px;
+  
   width: 1192px;
+  left: 41px;
   flex-direction: column;
   /* background-color: violet; */
   /* justify-content: space-between; */
   /* justify-content: right; */
   /* margin-left: auto;    shifts the container to the edge of it's parent*/
+  
 }
 
 /* containers below */
 .own-every-mile-container {
-  width: 500px;
+  width: 1000px;
   /* background-color: lavender; */
   margin-left: auto;
   margin-top: 20px;
+  text-align: right;
 }
 
 .bar-container {
@@ -51,9 +68,10 @@
     }
 
     .own-every-mile-container span {
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      font-stretch: condensed;
       color: white;
-      font-size: 47px;
+      font-size: 48px;
       font-stretch: condensed;
       font-weight: 900;
       letter-spacing: 6px;
@@ -78,6 +96,8 @@
 
 .splash-signup-container {
   display: flex;
+  position: relative;
+  bottom: 2px;
   max-width: 290px;
   width: 290px;
   height: 44px;
@@ -100,6 +120,8 @@
 
 .splash-login-container {
   display: flex;
+  position: relative;
+  top: -2px;
   width: 232px;
   margin-left: auto;
   margin-top: 30px;
@@ -140,6 +162,8 @@
 .splash-download-links-container {
   display: flex;
   /* align-items: center; */
+  position: relative;
+  top: -2px;
   justify-content: space-evenly;
   width: auto;
   /* min-width: 290px; */
@@ -181,3 +205,399 @@
     /* max-height: 42px; */
   }
 
+/* track-everything ------------------------------------------*/
+.track-everything-div-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 176px;
+  max-width: 1322px;
+  min-width: 1322px;
+  overflow: hidden;
+  /* border: mediumslateblue solid 1px; */
+  background-image: url(topo_cut.png);
+  /* background-position: unset; */
+  background-size: contain;
+  background-blend-mode: luminosity;
+  background-color: azure;
+  background-repeat: no-repeat;
+  margin-bottom: -296px;
+}
+
+.track-everything-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: relative;
+  line-height: 18px;
+  max-width: 280px;
+  min-width: 280px;
+  /* top: 190px; */
+        /* previously 176px */
+  left: 120px;
+  padding-top: 190px;
+  padding-bottom: 193px;
+  /* background-color: lawngreen; */
+}
+
+.splash-first-aside-photo {
+    width: 150px;
+    height: 200px;
+    margin-left: auto;
+    position: relative;
+    top: 250px;
+    right: 600px;
+
+}
+  .splash-phone-back-drop-1 {
+    background-image: url(phone_back_drop.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* width: 150px; */
+    /* height: 200px; */
+
+    margin-left: auto;
+    position: relative;
+    top: 250px;
+    right: 600px;
+  }
+
+  /* first paragraph */
+  .track-everything-first-container {
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    /* left: 120px; */
+    width: 280px;
+  }
+  .track-everything-first-paragraph-title-div {
+    display: flex;
+    font-weight: 900;
+    font-size: 18px;
+    letter-spacing: 3px;
+
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-stretch: 100%;
+  }
+
+  .track-everything-first-paragraph-body-div {
+    padding-top: 2px;
+    font-size: 16px;
+    margin-top: 4px;
+    line-height: 19.2px;
+  }
+
+  /* second paragraph */
+
+  .track-everything-second-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* left: 120px; */
+    width: 280px;
+    margin-top: 30px;
+  }
+
+  .track-everything-second-paragraph-title-div {
+    display: flex;
+    font-weight: 900;
+    font-size: 18px;
+    letter-spacing: 3px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-stretch: 100%;
+  }
+
+  .track-everything-second-paragraph-body-div {
+    padding-top: 2px;
+    font-size: 16px;
+    margin-top: 4px;
+    line-height: 19.2px;
+  }
+
+  /* third paragraph */
+
+  .track-everything-third-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* left: 120px; */
+    width: 280px;
+    margin-top: 30px;
+  }
+
+  .track-everything-third-paragraph-title-div {
+    display: flex;
+    font-weight: 900;
+    font-size: 18px;
+    letter-spacing: 3px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-stretch: 100%;
+  }
+
+  .track-everything-third-paragraph-body-div {
+    padding-top: 2px;
+    font-size: 16px;
+    margin-top: 4px;
+    line-height: 19.2px;
+  }
+
+  /* splash-check-it-out-div */
+
+.splash-check-it-out-div {
+  margin-top: 24px;
+  line-height: 12px;
+  /* position: relative; */
+  /* left: 120px; */
+}
+
+    .splash-check-it-out-div a{
+      font-weight: 500;
+      font-size: 12px;
+      text-decoration: none;
+      color: #0076c0;
+    }
+
+    .splash-second-phone {
+      bottom: 400px;
+      display: flex;
+      justify-content: center;
+      background-image: url(phone_back_drop2.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      max-height: 800px;
+      max-width: 800px;
+      width: 400px;
+      height: 445px;
+      top: 113px;
+      left: 188px;
+    }
+
+/* find-your-path-anywhere ----------------------------------- */
+
+.find-your-path-anywhere-div {
+  display: flex;
+  /* position: absolute; */
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1322px;
+  min-width: 1322px;
+  /* border: mediumslateblue solid 1px; */
+  background-blend-mode: soft-light;
+  background-color: darkcyan;
+  background-image: url(trailblazer.png);
+  background-repeat: no-repeat;
+  /* background-blend-mode: overlay; */
+  /* background-position: center; */
+  background-size: cover;
+}
+  .splash-find-your-path-bar {
+    height: 7px;
+    width: 50px;
+    color: black;
+    background-color: black;
+    margin-bottom: 24px;
+    margin-top: 18px;
+    margin-inline-end: 616.5px;
+    margin-inline-start: 616.5px;
+    margin-left: 616.5px;
+    margin-right: 616.5px;
+    width: 87px;
+  }
+
+  .splash-annoying-div {
+    width: 384.66px;
+    height: 114px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .splash-find-your-path-paragraph {
+    margin-top: 5px;
+    /* border: black solid 1px; */
+  }
+
+  .find-your-path-anywhere-div span{
+    /* text-align: center; */
+    font-size: 48px;
+    /* width: 425px; */
+    height: 118px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 6px;
+    line-height: 56.16px;
+  }
+
+  .find-your-path-anywhere-div p{
+    text-align: center;
+    font-size: 16px;
+    line-height: 22.4px;
+    font-weight: 400;
+    max-width: 300px;
+    margin-top: 20px;
+    margin: 0px 510px 0px 510px;
+    /* margin-inline-end: 510px;
+    margin-inline-start: 510px;
+    margin-block-start: 20px; */
+  }
+
+  .splash-cities-div {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    min-width: 700px;
+    margin: 16px 310px 32px 310px;
+
+  }
+
+    .splash-cities-div ul {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 200px;
+      max-width: 200px;
+      width: 200px;
+      max-height: 144px;
+      margin: 0px 16.656px 0px 16.656px;
+      /* justify-content: space-between; */
+    }
+
+      .splash-cities-div ul a {
+        text-decoration: none;
+        color: #00c4f1;
+        font-size: 14px;
+        margin-bottom: 13px;
+        text-align: center;
+     }
+
+
+/* take-on-new-challenges ----------------------------------- */
+
+.take-on-new-challenges-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 300px;
+
+  left: -41px;
+  /* top: 176px; */
+  max-width: 1322px;
+  min-width: 1322px;
+  border: mediumslateblue solid 1px;
+}
+  .take-on-new-challenges-div-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 300px;
+    left: -41px;
+    max-width: 1322px;
+    min-width: 1322px;
+    margin-left: -70px;
+  }
+
+  .take-on-new-challenges-title {
+    width: 348.97px;
+    height: 118px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .take-on-new-challenges-title span{
+    width: 348.97px;
+    height: 118px;
+    display: flex;
+    justify-content: center;
+    font-size: 48px;
+    font-weight: 900;
+    font-family: Impact, Haettenschweiler,'Arial Narrow Bold', sans-serif;
+    line-height: 56.16px;
+    letter-spacing: 7px;
+  }
+
+  .splash-take-on-new-challenges-bar {
+    height: 7px;
+    width: 50px;
+    color: black;
+    background-color: black;
+    margin-bottom: 24px;
+    margin-top: 18px;
+    margin-inline-end: 616.5px;
+    margin-inline-start: 616.5px;
+    margin-left: 616.5px;
+    margin-right: 616.5px;
+    width: 87px;
+  }
+
+  .take-on-new-challenges-p {
+    width: 299.33px;
+    text-align: center;
+  }
+
+  .splash-view-challenges-div {
+    margin-top: 50px;
+    padding-bottom: 85px;
+  }
+
+  .splash-view-challenges-div a{
+    padding: 12px 15px;
+    border: black solid 2px;
+    border-radius: 4px;
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    letter-spacing: 0.84px;
+    line-height: 20px;
+    text-align: center;
+  }
+
+
+/* TRANSFORM EFFECTS -----------------------------*/
+
+.splash-gradient {
+  text-align: center;
+  background-image: linear-gradient(to top, rgba(255,0,0,0), white);
+}
+
+.splash-muh-ali-container {
+  position: relative;
+    left: 350px;
+    bottom: 400px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    width: 270px;
+}
+  .splash-muh-ali-phone {
+    background-image: url(phone_back_drop.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    border-radius: 57px;
+    border: solid 2px black;
+    width: 257px;
+    left: 20px;
+    height: 436px;
+  }
+
+  .splash-muh-ali {
+    position: relative;
+    right: 50px;
+    width: 307px;
+    height: 350px;
+    max-width: fit-content;
+    max-height: fit-content;
+    top: 49px;
+    left: 2px;
+    height: 342px;
+  }
+
+
+  /* .giphy-embed {
+    position: absolute;
+  } */
+
+   

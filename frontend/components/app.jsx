@@ -26,7 +26,9 @@ const App = () => (
             <p className="link">Challenges</p>
             <p className="link">Go MVP</p>
             <p className="link">Blog</p>
-            <p className="link">Shop</p>
+            <a href="https://https://www.linkedin.com/in/daniel-bourdier-17075194/in/daniel-bourdier-17075194/"> 
+              <img src={window.linkedInBW} />LinkedIn
+            </a>
           </div>
           {/* right */}
           <div className="auth-container">
