@@ -23,8 +23,8 @@
   height: 316px;
   margin-top: 90px;
   position: relative;
+  left: 2px;
   bottom: 2px;
-  left: 5px;
 }
 
 
@@ -43,13 +43,23 @@
     background-color: #3c5997;
     color: white;
     width: 320px;
-    height: 44px;
+    height: 55px;
   }
 
   .session-form-login p:first-of-type {
     text-align: center;
-    font-size: 13px;
+
     margin: 15px 0px 15px 0px;
+        font-weight: 400;
+    font-family: arial;
+    font-size: 13px;
+    letter-spacing: -1px;
+    word-spacing: -2px;
+    transform: scale(0.9, 1.05);
+    color: darkgray;
+    width: 350px;
+    right: 13px;
+    position: relative;
   }
 
   .session-form-login input {

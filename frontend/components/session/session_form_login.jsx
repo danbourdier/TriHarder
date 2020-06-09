@@ -62,7 +62,7 @@ class SessionFormLogin extends React.Component {
 
            <button onClick={this.demoUser}>DEMO USER</button>
 
-            <p>--------------------------OR--------------------------</p>
+            <p>------------------------------------------------  OR  -------------------------------------------------</p>
             <label>
               <input type="text" value={this.state.email} placeholder="Email" onChange={this.update('email')}/>
             </label>
