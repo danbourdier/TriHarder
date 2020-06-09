@@ -120,14 +120,14 @@ class SplashPage extends React.Component{
           <div className="splash-gradient">
               <hr className="splash-find-your-path-bar"/>
             <div className="splash-annoying-div">
-              <span>FIND YOUR PATH ANYWHERE</span>
+              <span>Trailblaze your own path</span>
             </div> 
               <hr className="splash-find-your-path-bar"/>
 
             <div className="splash-find-your-path-paragraph">
-              <p>Create and discover new routes</p>
+              <p>Discover and pave new routes</p>
               <p>wherever you are. Save your favorites for</p>
-              <p>the next time you're ready to run.</p>
+              <p>the next time you set out.</p>
             </div>
               <br/>
 
@@ -165,9 +165,46 @@ class SplashPage extends React.Component{
 
         </div>
 
+        <div className="splash-flag-waving">
+          <img src={window.flag} alt="Ol flag"/>
+          <img src={window.flag} alt="Ol flag"/>
+          <img src={window.flag} alt="Ol flag"/>
+          <img src={window.flag} alt="Ol flag"/>
+          <img src={window.flag} alt="Ol flag"/>
+          <img src={window.flag} alt="Ol flag"/>
+          <img src={window.flag} alt="Ol flag"/>
+          <img src={window.flag} alt="Ol flag"/>
+          <img src={window.flag} alt="Ol flag"/>
+          <img src={window.flag} alt="Ol flag"/>
+          <img src={window.flag} alt="Ol flag"/>
+          <img src={window.flag} alt="Ol flag"/>
+          <img src={window.flag} alt="Ol flag"/>
+          <img src={window.flag} alt="Ol flag"/>
+          <img src={window.flag} alt="Ol flag"/>
+          <img src={window.flag} alt="Ol flag"/>
+          <img src={window.flag} alt="Ol flag"/>
+          <img src={window.flag} alt="Ol flag"/>
+          <img src={window.flag} alt="Ol flag"/>
+          <img src={window.flag} alt="Ol flag"/>
+          <img src={window.flag} alt="Ol flag"/>
+          <img src={window.flag} alt="Ol flag"/>
 
+          <img src={window.flag} alt="Ol flag"/>
+          <img src={window.flag} alt="Ol flag"/>
+          <img src={window.flag} alt="Ol flag"/>
+          <img src={window.flag} alt="Ol flag"/>
+          <img src={window.flag} alt="Ol flag"/>
+          <img src={window.flag} alt="Ol flag"/>
+          <img src={window.flag} alt="Ol flag"/>
+          <img src={window.flag} alt="Ol flag"/>
+          <img src={window.flag} alt="Ol flag"/>
+        </div>
+        
+        
         <section className="take-on-new-challenges-div">
-          
+          {/* <div> */}
+          {/* </div> */}
+
           <div className="take-on-new-challenges-div-inner">
 
             <hr className="splash-take-on-new-challenges-bar" />
@@ -177,10 +214,9 @@ class SplashPage extends React.Component{
             <hr className="splash-take-on-new-challenges-bar" />
 
             <div className="take-on-new-challenges-p">
-              <span>Make the right decision and join the challenge. Enjoy many 
-                benefits such as tax-incentives, saving your business money on 
-                un-needed employee health care coverage, and  
-                <a href="https://smallbiztrends.com/2017/03/benefits-of-hiring-veterans.html#comments"> much more</a>.
+              <span>Join the challenge. Enjoy benefits such as tax-incentives, cost-savings on 
+                un-required employee health care, and  
+                <a href="https://smallbiztrends.com/2017/03/benefits-of-hiring-veterans.html#comments"> more</a>.
               </span>
             </div>
 

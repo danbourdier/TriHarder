@@ -106,14 +106,19 @@
 
 .header-sub span {
   font-size: 18px;
-  font-weight: 200;
+
 
   /* font-family: Arial, Helvetica, sans-serif; */
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
   /* font-stretch: condensed; */
-  letter-spacing: 0.52px;
+
   /* transform: scale(.8,1) */
   /* text-decoration: none; */
+  letter-spacing: 0px;
+    word-spacing: -2px;
+    font-family: unset;
+    transform: scale(0.9, 1.0);
+    font-weight: 200;
 }
 
 

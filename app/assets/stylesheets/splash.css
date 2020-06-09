@@ -18,7 +18,12 @@
   height: 670px;
 }
 
+.own-every-mile-outer-div {
+  z-index: 2;
+}
+
 .own-every-mile-div {
+  z-index: 2;
   position: relative;
   display: flex;
   margin: 24px;
@@ -52,8 +57,10 @@
       width: 87px;
       height: 5px;
       margin-left: auto;
-      
+      border-top-right-radius: 4px;
+      transform: skewX(-12deg);
     }
+
 .bar-container2 {
   margin-top: 20px;
   margin-left: auto;
@@ -64,7 +71,9 @@
       width: 87px;
       height: 5px;
       margin-left: auto;
-      
+      color: white;
+      border-top-right-radius: 4px;
+      transform: skewX(-12deg);
     }
 
     .own-every-mile-container span {
@@ -207,6 +216,7 @@
 
 /* track-everything ------------------------------------------*/
 .track-everything-div-container {
+  z-index: 2;
   display: flex;
   flex-direction: column;
   margin-top: 176px;
@@ -367,15 +377,23 @@
       position: absolute;
       max-height: 800px;
       max-width: 800px;
-      width: 400px;
       height: 445px;
       top: 113px;
       left: 188px;
+
+      border-radius: 59px;
+      width: 262px;
+      border: solid;
+      background-origin: border-box;
+      border-width: 3px;
+      border-style: groove;
+      border-color: chartreuse;
     }
 
 /* find-your-path-anywhere ----------------------------------- */
 
 .find-your-path-anywhere-div {
+  z-index: 2;
   display: flex;
   /* position: absolute; */
   flex-direction: column;
@@ -478,12 +496,13 @@
   flex-direction: column;
   align-items: center;
   top: 300px;
-
+  /* background: url(american_flag.png);
+  background-repeat: repeat; */
   left: -41px;
   /* top: 176px; */
   max-width: 1322px;
   min-width: 1322px;
-  border: mediumslateblue solid 1px;
+  /* border: mediumslateblue solid 1px; */
 }
   .take-on-new-challenges-div-inner {
     display: flex;
@@ -502,6 +521,8 @@
     display: flex;
     justify-content: center;
     text-align: center;
+    position: relative;
+    top: 20px;
   }
 
   .take-on-new-challenges-title span{
@@ -528,11 +549,29 @@
     margin-left: 616.5px;
     margin-right: 616.5px;
     width: 87px;
+    position: relative;
+    top: 10px;
+    left: 2.5px;
+    border-top-style: ridge;
+  }
+  .take-on-new-challenges-div-inner hr:first-of-type {
+    top: 12px;
   }
 
   .take-on-new-challenges-p {
     width: 299.33px;
     text-align: center;
+    position: relative;
+    left: 2px;
+  }
+
+  .take-on-new-challenges-p span{
+    width: 299.33px;
+    text-align: center;
+
+    line-height: 20px;
+    position: relative;
+    top: 7.5px;
   }
 
   .splash-view-challenges-div {
@@ -551,6 +590,11 @@
     letter-spacing: 0.84px;
     line-height: 20px;
     text-align: center;
+
+    padding: 14px 18px;
+    position: relative;
+    bottom: 1px;
+    left: 2px;
   }
 
 
@@ -581,6 +625,11 @@
     width: 257px;
     left: 20px;
     height: 436px;
+
+    background-origin: border-box;
+    border-width: 3px;
+    border-style: groove;
+    border-color: cyan;
   }
 
   .splash-muh-ali {
@@ -593,6 +642,28 @@
     top: 49px;
     left: 2px;
     height: 342px;
+  }
+
+.splash-flag-waving {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  position: fixed;
+  height: 33px;
+  width: 33px;
+  z-index: -1;
+  /* padding: 20px; */
+  margin: 15px;
+  width: 1322px;
+  height: 800px;
+  flex-direction: column;
+  left: 320px;
+}
+  .splash-flag-waving img {
+    margin: 10px;
+    height: 15px;
+    width: 30px;
+    margin-bottom: 20px;
   }
 
 
