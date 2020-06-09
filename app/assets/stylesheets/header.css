@@ -111,6 +111,9 @@
   font-family: unset;
   transform: scale(0.9, 1.0);
   font-weight: 200;
+  position: relative;
+  left: 8px;
+  top: 1px;
 }
 
 

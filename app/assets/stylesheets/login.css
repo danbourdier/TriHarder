@@ -91,3 +91,10 @@
   height: 45.732px;
 }
 
+
+.session-form-login input:focus {
+  background-color: white;
+  outline: none;
+  border-color: #9ecaed;
+  box-shadow: 1px 0 10px #9ecaed;
+}
