@@ -73,7 +73,7 @@ class SessionFormLogin extends React.Component {
             </label>
               <p className={passwordError.length < 1 ? "error-hidden" : "error"}>{passwordError}</p>
 
-            <Link to="/login/forgot_password">Forgot Password?</Link>
+            <Link className="session-form-login-forgot-password" to="/login/forgot_password">Forgot Password?</Link>
 
             <button type="submit">{this.props.formType}</button>
 

@@ -106,14 +106,13 @@
 
 .header-sub span {
   font-size: 18px;
+  position: relative;
+  top: 1px;
   letter-spacing: 0px;
   word-spacing: -2px;
   font-family: unset;
   transform: scale(0.9, 1.0);
   font-weight: 200;
-  position: relative;
-  left: 8px;
-  top: 1px;
 }
 
 
@@ -152,14 +151,26 @@
 }
 
 .auth-container :last-child {
-  /* margin-left: 10px; */
-  position: relative;
-  left: 2px;
-}
-.auth-container :first-child {
-  /* margin-left: 10px; */
-  position: relative;
-  right: 7px;
-  /* font-size: 12.25px;
-  opacity: 0.6; */
-}
+    /* margin-left: 10px; */
+    position: relative;
+    left: 2px;
+  }
+  .auth-container :first-child {
+    /* margin-left: 10px; */
+    position: relative;
+    right: 7px;
+    /* font-size: 12.25px;
+    opacity: 0.6; */
+  }
+
+
+
+  /* special CSS-------------- */
+
+  .SESSION-HIDDEN-hidden-container {
+    position: relative;
+    height: 0px;
+    width: 0px;
+
+    display: none;
+  }

@@ -27,7 +27,7 @@
   max-width: 320px;
   max-height: 745px;
   position: relative;
-  left: 5px;
+  left: -5px;
   bottom: 35px;
 }
 
@@ -62,7 +62,7 @@
   flex-direction: row;
 }
 
-.session-form-signup-link {
+.session-form-login-link {
   text-decoration: none;
   text-align: right;
   color: darkgray;

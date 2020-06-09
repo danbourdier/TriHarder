@@ -10,6 +10,8 @@ import HomePageContainer from './home_page/home_page_container';
 import ForgotPasswordContainer from './session/forgot_password_container';
 import ForgotPasswordMessage from './session/forgot_password_message';
 
+var SESSION_HIDDEN = false;
+
 const App = () => (
   <div className="render"> 
     <header className="header-container">
@@ -31,7 +33,8 @@ const App = () => (
             </a>
           </div>
           {/* right */}
-          <div className="auth-container">
+           
+          <div className={!SESSION_HIDDEN ? "auth-container" : "SESSION_HIDDEN-container"} onClick={ () => SESSION_HIDDEN = (!SESSION_HIDDEN ? true : false)}>
             <div>
               <NavBarContainer />
             </div>  
@@ -57,7 +60,8 @@ const App = () => (
       </div>
     </main>
 
-    <footer className="footer">
+      
+    <footer className={!SESSION_HIDDEN ? "footer" : "SESSION_HIDDEN-container"}>
           <section className="footer-first-section">
             <div className="top-footer-link-p">
               <p>
@@ -164,14 +168,10 @@ const App = () => (
                 <aside>
                   <img src={window.logoBlack} alt="logo"/>
                 </aside>
-
                 <aside>
                   <div>
-
                   </div>
-
                   <div>
-
                   </div>
                 </aside>
               </section>

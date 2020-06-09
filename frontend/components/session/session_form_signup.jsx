@@ -68,7 +68,7 @@ class SessionFormSignup extends React.Component {
 
         <section className="session-form-signup-container">
         
-          <Link className="session-form-signup-link" to="/login">LOG IN</Link>
+          <Link className="session-form-login-link" to="/login">LOG IN</Link>
             
           <button onClick={this.demoUser} >DEMO USER</button>
           <div><aside className="signup-form-or-fancy"></aside><p>------------------------------------------------OR--------------------------------------------------</p><aside className="signup-form-or-fancy"></aside></div>
