@@ -1,16 +1,12 @@
 .footer {
   min-height: 245px;
   max-height: 245px;
-  /* border: blue 1px solid; */
-  /* z-index: 3; */
   background-color: white;
   max-height: 345px;
-    display: flex;
-    z-index: 0;
-    flex-direction: column;
-    /* justify-content: space-between;
-    align-items: center; */
-        margin-top: 13px;
+  display: flex;
+  z-index: 0;
+  flex-direction: column;
+  margin-top: 12px;
 }
 
   .footer img {
@@ -28,14 +24,15 @@
   justify-content: flex-end;
     position: relative;
     right: 232px;
+    top: 1px;
 }
 
  .top-footer {
    display: flex;
    flex-direction: row;
    z-index: 3;
-   min-height: 46px;
-   max-height: 46px;
+   min-height: 48px;
+   max-height: 48px;
    background-color: #f0f2f4;
    /* border: blue 1px solid; */
    justify-content: center;
@@ -131,23 +128,40 @@
     align-items: center;
     width: 580px;
     line-height: 14px;
+    position: relative;
+    right: 17px;
   }
-  .top-footer section div a{
+  .top-footer section div a {
     font-size: 14px;
     text-decoration: none;
     color: grey;
     padding: 19px 10px;
-    font-weight: 600;
+    font-weight: 900;
     font-family: Impact, Haettenschweiler,'Arial Narrow Bold', sans-serif;
-    letter-spacing: 7px;
+    letter-spacing: 5px;
+    font-family: arial;
+    font-size: 13px;
+    word-spacing: -2px;
+    transform: scale(0.9, 1.05);
   }
   .top-footer section div {
     width: 80px;
     height: 14px;
   }
+    .top-footer section :nth-child(4){
+      position: relative;
+      right: 20px;
+    }
+    .top-footer section :nth-child(5){
+      position: relative;
+      right: 48px;
+    }
   .top-footer section :first-child{
-    width: 190px;
-    height: 35px;
+    position: relative;
+    right: 3px;
+    height: 30px;
+    width: 142px;
+}
   }
   .top-footer section :first-child img{
     height: 100%;
@@ -165,7 +179,7 @@
    display: flex;
    flex-direction: row;
    z-index: 3;
-   min-height: 135px;
+   min-height: 134px;
    background-color: #222628;
    justify-content: space-between;
    align-items: center;
@@ -193,7 +207,7 @@
     display: flex;
     flex-direction: row;
     position: relative;
-    right: 30px;
+    right: 28px;
     top: 7px;
   }
 
@@ -265,7 +279,7 @@
     display: flex;
     position: relative;
     max-width: 500px;
-    left: -9px;
+    left: -9.5px;
     width: 100%;
     }
   
@@ -305,7 +319,12 @@
         height: 45px;
         padding: 0px;
         border-left: solid #232729 3.5px;
-        border-right: solid #232729 3.5px
+        border-right: solid #232729 3.5px;
+
+        background-image: url(logo.png);
+        background-size: contain;
+        background-blend-mode: color-burn;
+        background-position-y: bottom;
       }
 
       .jss1 div :nth-child(2) {
@@ -315,7 +334,12 @@
         height: 45px;
         padding: 0px;
         border-left: solid #232729 3.5px;
-        border-right: solid #232729 3.5px
+        border-right: solid #232729 3.5px;
+        background-image: url(logo.png);
+        background-size: contain;
+        background-blend-mode: color-burn;
+        background-position-y: initial;
+
       }
 
       .jss1 div :nth-child(3) {
@@ -325,7 +349,11 @@
         height: 45px;
         padding: 0px;
         border-left: solid #232729 3.5px;
-        border-right: solid #232729 3.5px
+        border-right: solid #232729 3.5px;
+        background-image: url(logo.png);
+        background-size: contain;
+        background-blend-mode: color-burn;
+        background-position-y: center;
       }
 
       .jss1 div :nth-child(4) {
@@ -335,16 +363,23 @@
         height: 45px;
         padding: 0px;
         border-left: solid #232729 3.5px;
-        border-right: solid #232729 3.5px
+        border-right: solid #232729 3.5px;
+        background-image: url(logo.png);
+        background-size: contain;
+        background-blend-mode: color-burn;
+        background-position-y: bottom;
       }
   
 
   .footer-mid-aside div {
-    border-radius: 13px;
+    border-radius: 11px;
     /* padding: 8px; */
     background-color: yellow;
-    background-image: linear-gradient(to topright(white));
+    /* background-image: linear-gradient(to topright(white)); */
+    background-image: url(logo.png);
+    background-size: contain;
   }
+
 
 /*  bottom-footer----------------------------------------------------------------*/
   .bottom-footer {

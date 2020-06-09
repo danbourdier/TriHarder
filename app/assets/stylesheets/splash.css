@@ -535,6 +535,8 @@
     font-family: Impact, Haettenschweiler,'Arial Narrow Bold', sans-serif;
     line-height: 56.16px;
     letter-spacing: 7px;
+    position: relative;
+    bottom: 10px;
   }
 
   .splash-take-on-new-challenges-bar {
@@ -550,12 +552,12 @@
     margin-right: 616.5px;
     width: 87px;
     position: relative;
-    top: 10px;
+    top: 8px;
     left: 2.5px;
     border-top-style: ridge;
   }
   .take-on-new-challenges-div-inner hr:first-of-type {
-    top: 12px;
+    top: 10px;
   }
 
   .take-on-new-challenges-p {

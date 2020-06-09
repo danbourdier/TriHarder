@@ -90,16 +90,16 @@ const App = () => (
                   <img src={window.logoGrey} alt="logo" />
                 </aside>
                 <div>
-                  <a href="">RUN</a>
-                </div>
-                <div>
                   <a href="">RIDE</a>
                 </div>
                 <div>
-                <a href="">WALK</a>
+                  <a href="">RUN</a>
                 </div>
                 <div>
-                <a href="">HIKE</a>  
+                  <a href="">HIKE</a>
+                </div>
+                <div>
+                <a href="">FITNESS</a>  
                 </div>
               </section>
             </nav>
