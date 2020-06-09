@@ -50,31 +50,36 @@ class SessionFormLogin extends React.Component {
     };
 
     return (
-      <div>
+      <div className="session-form-login-body">
 
-        <form onSubmit={this.handleSubmit}>
-          <Link to="/signup">SIGN UP</Link>
-            <br/>
-         <button onClick={this.demoUser}>DEMO USER</button>
-            <br/>
-          <p>OR</p>
-          <label> Email
-            <input type="text" value={this.state.email} onChange={this.update('email')}/>
-          </label>
-           <p className={emailError.length < 1 ? "error-hidden" : "error"}>{emailError}</p>
-            <br/>
-          <label> Password
-            <input type="password" value={this.state.password} onChange={this.update('password')} />
-          </label>
-            <p className={passwordError.length < 1 ? "error-hidden" : "error"}>{passwordError}</p>
-              <br />
-          <Link to="/login/forgot_password">Forgot Password?</Link>
-            <br/>
-          <button type="submit">{this.props.formType}</button>
-            <br/>
+        <section className="session-form-login-container">
 
-        </form>
+          <form className="session-form-login" onSubmit={this.handleSubmit}>
+            <div className="session-form-signup-link">
+              <Link to="/signup">SIGN UP</Link>
+            </div>
+            
 
+           <button onClick={this.demoUser}>DEMO USER</button>
+
+            <p>--------------------------OR--------------------------</p>
+            <label>
+              <input type="text" value={this.state.email} placeholder="Email" onChange={this.update('email')}/>
+            </label>
+             <p className={emailError.length < 1 ? "error-hidden" : "error"}>{emailError}</p>
+
+            <label>
+              <input type="password" value={this.state.password} placeholder="Password" onChange={this.update('password')} />
+            </label>
+              <p className={passwordError.length < 1 ? "error-hidden" : "error"}>{passwordError}</p>
+
+            <Link to="/login/forgot_password">Forgot Password?</Link>
+
+            <button type="submit">{this.props.formType}</button>
+
+          </form>
+
+        </section>
       </div>
     )
   };
