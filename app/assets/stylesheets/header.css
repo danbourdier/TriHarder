@@ -169,3 +169,15 @@
     /* font-size: 12.25px;
     opacity: 0.6; */
   }
+
+
+
+  /* special CSS-------------- */
+
+  .SESSION-HIDDEN-hidden-container {
+    position: relative;
+    height: 0px;
+    width: 0px;
+
+    display: none;
+  }
