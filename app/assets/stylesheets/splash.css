@@ -8,12 +8,8 @@
 }
 
 .first-splash-image {
-  /* background-image: url("splash.png"); */
-  /* display: block; */
-  /* display: flex; */
-  /* width: 100%; */
+  background-image: url("splash.png");
   position: absolute;
-  /* left: -40px;  WTF  */
   width: 1320px;
   height: 670px;
 }
@@ -223,7 +219,7 @@
   min-width: 1322px;
   overflow: hidden;
   /* border: mediumslateblue solid 1px; */
-  /* background-image: url(topo_cut.png); */
+  background-image: url(topo_cut.png);
   /* background-position: unset; */
   background-size: contain;
   background-blend-mode: luminosity;
