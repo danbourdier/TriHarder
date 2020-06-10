@@ -9,17 +9,22 @@ import NavBarContainer from './navbar/navbar_container';
 import HomePageContainer from './home_page/home_page_container';
 import ForgotPasswordContainer from './session/forgot_password_container';
 import ForgotPasswordMessage from './session/forgot_password_message';
+import HeaderTabsContainer from './header/header_tabs_container';
+
 
 var SESSION_HIDDEN = false;
 
 const App = () => (
   <div className="render"> 
     <header className="header-container">
+
       <div className="header-main">
 
           {/* left */}
           <div className="logo-container">
-            <img src={window.logoText} alt="logo"/>
+            <a href="#/">
+              <img src={window.logoText} alt="logo"/>
+            </a>
           </div>
           {/* to contain a component for links */}
           <div className="link-container">
@@ -39,16 +44,20 @@ const App = () => (
               <NavBarContainer />
             </div>  
           </div>
-        
       </div>
-        <div className="header-sub">
-          <span className="covid-header-content" >Learn about TH's COVID-19 Pledge</span>
-        </div>
+
+      <section>
+        <HeaderTabsContainer />
+      </section>
+
+      <div className="header-sub">
+        <span className="covid-header-content" >Learn about TH's COVID-19 Pledge</span>
+      </div>
 
     </header>
 
     <main className="body">
-      <div className="body-components">
+      <div>
         <Switch>
           <AuthRoute exact path="/" component={SplashContainer} />
           <AuthRoute exact path="/login" component={LoginFormContainer} />
@@ -56,6 +65,9 @@ const App = () => (
           <AuthRoute exact path="/forgot_password_message" component={ForgotPasswordMessage} />
           <AuthRoute exact path="/signup" component={SignupFormContainer} />
           <ProtectedRoute exact path="/home_page" component={HomePageContainer}/>
+          {/* <ProtectedRoute exact path="/create_route" component={}/>
+          <ProtectedRoute exact path="/create_workout" component={}/>
+          <ProtectedRoute exact path="/create_goal" component={}/> */}
         </Switch>
       </div>
     </main>

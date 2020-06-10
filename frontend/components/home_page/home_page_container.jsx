@@ -6,7 +6,7 @@ import HomePageComponent from './home_page_component';
 const mSTP = (state) => ({
   errors: state.errors.session,
   // currentUser: state.users[ownProps.match.params.userId],
-});
+}); 
 
 const mDTP = (dispatch, ownProps) => ({
   processForm: user => dispatch(login(user))
