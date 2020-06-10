@@ -2,7 +2,7 @@
   z-index: 3;
   min-width: 1450px;
   height: 997px;
-  background-color: #f5f5f5;
+  background-color: #F0F0F0;
   position: relative;
   right: 60px;  
   align-items: center;
@@ -25,9 +25,9 @@
   flex-direction: column;
   justify-content: flex-start;
   max-width: 320px;
-  max-height: 745px;
+  max-height: 746px;
   position: relative;
-  left: -5px;
+  left: 3px;
   bottom: 35px;
 }
 
@@ -118,7 +118,7 @@
 .session-form-signup-input input {
   width: -webkit-fill-available;
   height: -webkit-fill-available;
-  background-color: #f5f5f5;
+  background-color: #f0f0f0;
   color: #9297A3;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
@@ -181,7 +181,7 @@
   background-repeat: no-repeat;
   background-position-x: 49.4px;
   background-position-y: 14px;
-  background-color: whitesmoke;
+  background-color: #f0f0f0;
   background-blend-mode: darken;
 }
 
@@ -233,9 +233,10 @@
   height: 44px;
   width: 44px;
   -webkit-appearance: none;
-  border: 1px solid grey;
+  border: 1px solid darkgrey;
   width: 152.5px;
   margin: 0px;
+  opacity: 0.7;
   /* width: -webkit-fill-available; */
 }
 
@@ -246,18 +247,19 @@
   padding: 0px;
   margin: 16px 0px 15px 0px;
   display: flex;
-  border: solid 1px grey;
+  border: solid 1px darkgrey;
+  opacity: 0.7;
 }
 .session-form-signup-location input {
   width: 100%;
-  background-color: whitesmoke;
+  background-color: #f0f0f0;
   border: none;
 }
 
 .session-form-signup-offer-checkbox {
   width: 320px;
   height: 36px;
-  margin: 10px 0px 45px 0px;
+  margin: 10px 0px 51px 0px;
   
 }
 .session-form-signup-offer-checkbox div {
@@ -273,25 +275,55 @@
   letter-spacing: 0px;
 	word-spacing: -2px;
   transform: scale(0.9, 1.05);
+
 }
 
 .session-form-signup-offer-checkbox span {
   font-size: 14px;
   font-weight: 400;
   font-family: arial;
-
+  
   letter-spacing: 0px;
 	word-spacing: -2px;
   transform: scale(0.9, 1.05);
+  -webkit-font-smoothing: none;
+  font-size: 15px;
+  position: relative;
+  left: -10px;
+  top: 2px;
+  word-spacing: -0.7px;
+  transform: scale(0.9, 1.03);
+  opacity: 0.6;
+}
+.session-form-signup-offer-checkbox input {
+  height: 22px;
+  width: 57.4px;
+  -webkit-appearance: none;
+  background-color: #f0f0f0;
+  border: 0.5px solid darkgray;
+  position: relative;
+  top: 14px;
+  margin: 0px 10px 0px 0px;
+  opacity: 0.7;
 }
 
 .session-form-signup-last-span {
   min-width: 38px;
-  margin: 0px 0px 30px 0px;
+  margin: 0px 0px 27px 0px;
   text-align: center;
-  line-height: 1.4;
+  line-height: 1.2;
+  position: relative;
+  top: -1.5px;
 }
 .session-form-signup-last-span span {
   font-size: 14px;
   color: #9297A3;
+}
+.session-form-signup-last-span a {
+  text-decoration: none;
+  color: dodgerblue;
+}
+
+.session-form-signup-last-button {
+  background-color: #1ddd7b !important;
 }

@@ -137,7 +137,7 @@ class SessionFormSignup extends React.Component {
 
               <div className="session-form-signup-last-span">
                 <span>By signing up with TriHarder, you agree to our
-                  <a href="https://account.underarmour.com/en-us/privacy/">Privacy Policy</a>
+                  <a href="https://account.underarmour.com/en-us/privacy/"> Privacy Policy</a>
                   {' & '}
                   <a href="">Terms of Use</a>
                   { '.' }
@@ -147,7 +147,7 @@ class SessionFormSignup extends React.Component {
             </div>
 
 
-              <button>{this.props.formType}</button>
+              <button className="session-form-signup-last-button">{this.props.formType}</button>
           </form>
 
         </section>

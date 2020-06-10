@@ -1,9 +1,11 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
-  # Allows us to render non-compatible css with heroku
+  # Defaults our program to search the asset pipeline as opposed to
+      # loading from the page
+  #  TLDR: Allows us to render non-compatible css with heroku
   config.serve_static_assets = true
-
+  config.assets.compile = true
 
   # Code is not reloaded between requests.
   config.cache_classes = true
