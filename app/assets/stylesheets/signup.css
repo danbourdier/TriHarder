@@ -1,6 +1,6 @@
 .session-form-signup-body {
   z-index: 3;
-  min-width: 1450px;
+  min-width: 1440px;
   height: 997px;
   background-color: #F0F0F0;
   position: relative;
@@ -27,7 +27,7 @@
   max-width: 320px;
   max-height: 746px;
   position: relative;
-  left: 3px;
+  left: 0px;
   bottom: 35px;
 }
 
@@ -88,7 +88,7 @@
   border-radius: 2px;
   position: relative;
   top: 1px;
-  height: 44px;
+  min-height: 44px;
 }
 
 .session-form-signup-container p:first-of-type {

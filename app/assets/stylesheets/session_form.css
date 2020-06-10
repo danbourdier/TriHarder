@@ -12,6 +12,19 @@
   display: none;
 }
 .error {
-  color: crimson;
+  position: relative !important;
+  color: crimson !important;
+  font-size: 12px !important;
+  bottom: 10px !important;
+
+  text-align: left !important;
+  font-weight: 400 !important;
+  font-family: arial !important;
+  letter-spacing: 0px !important;
+  word-spacing: 0px !important;
+  transform: scale(1, 1) !important;
+  width: 320px !important;
+  right: 0px !important;
+  margin: 3px 0px 9px 0px!important;
 }
 

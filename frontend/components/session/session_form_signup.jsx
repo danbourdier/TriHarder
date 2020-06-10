@@ -101,7 +101,6 @@ class SessionFormSignup extends React.Component {
                 <label className="session-form-signup-input-birth"> {/* We dont need labels at this point*/}
                   <input type="text" placeholder="Day" value={this.state.birth_date} onChange={this.update('birth_date')} />
                 </label>
-                  <p className={birthDateError.length < 1 ? "error-hidden" : "error"}>{birthDateError}</p>
                 <label className="session-form-signup-input-birth"> {/* We dont need labels at this point*/}
                   <input type="text" placeholder="Month" value={this.state.birth_date} onChange={this.update('birth_date')} />
                 </label>
@@ -110,6 +109,7 @@ class SessionFormSignup extends React.Component {
                 </label>
                 
               </div>
+                  <p className={birthDateError.length < 1 ? "error-hidden" : "error"}>{birthDateError}</p>
 
               <div className="session-form-signup-gender">
                 <label>
