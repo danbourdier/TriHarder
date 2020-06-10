@@ -2,7 +2,7 @@
   z-index: 3;
   min-width: 1450px;
   height: 997px;
-  background-color: #F0F0F0;
+  background-color: #f5f5f5;
   position: relative;
   right: 60px;  
   align-items: center;
@@ -60,6 +60,8 @@
 .session-form-signup-birthdate {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 15px;
 }
 
 .session-form-login-link {
@@ -116,7 +118,7 @@
 .session-form-signup-input input {
   width: -webkit-fill-available;
   height: -webkit-fill-available;
-  background-color: #F0F0F0;
+  background-color: #f5f5f5;
   color: #9297A3;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
@@ -152,4 +154,74 @@
   outline: none;
   border-color: #9ecaed;
   box-shadow: 1px 0 10px #9ecaed;
+}
+
+.session-form-signup-birthdate input {
+  width: -webkit-fill-available;
+  background-color: #F0F0F0;
+  color: #9297A3;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 12px 16px 12px;
+  border: 1px solid darkgrey;
+  line-height: 1.21;
+  height: 44px;
+  background: transparent;
+  height: 18px;
+  margin-bottom: 15px;
+  opacity: 0.7;
+}
+
+.session-form-signup-input-birth {
+  max-height: 44px;
+  background-image: url(drop_down_arrow.png);
+
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-position-x: 49.4px;
+  background-position-y: 14px;
+  background-color: whitesmoke;
+  background-blend-mode: darken;
+}
+
+.session-form-signup-birthdate :first-child {
+  max-width: 78px;
+}
+.session-form-signup-birthdate :first-child input{
+  max-width: 78px;
+}
+.session-form-signup-birthdate :nth-child(3) {
+  max-width: 122px;
+  background-position-x: 93px;
+}
+.session-form-signup-birthdate :nth-child(3) input {
+  max-width: 122px;
+}
+.session-form-signup-birthdate :nth-child(4) {
+  max-width: 85px;
+  background-position-x: 56px;
+}
+.session-form-signup-birthdate :nth-child(4) input {
+  max-width: 85px;
+}
+
+.session-form-signup-gender {
+  display: flex;
+  justify-content: space-between;
+  min-width: 320px;
+}
+.session-form-signup-gender label {
+  min-width: 152.5px;
+  min-height: 44px;
+}
+
+.session-form-signup-gender label input{
+  height: 44px;
+  width: 44px;
+  -webkit-appearance: none;
+  border: 1px solid black;
+  width: 152.5px;
+  margin: 0px;
+  /* width: -webkit-fill-available; */
 }

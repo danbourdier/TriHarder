@@ -98,25 +98,28 @@ class SessionFormSignup extends React.Component {
 
               <div className="session-form-signup-birthdate">
 
-                <label> {/* We dont need labels at this point*/}
+                <label className="session-form-signup-input-birth"> {/* We dont need labels at this point*/}
                   <input type="text" placeholder="Day" value={this.state.birth_date} onChange={this.update('birth_date')} />
                 </label>
                   <p className={birthDateError.length < 1 ? "error-hidden" : "error"}>{birthDateError}</p>
-                <label> {/* We dont need labels at this point*/}
+                <label className="session-form-signup-input-birth"> {/* We dont need labels at this point*/}
                   <input type="text" placeholder="Month" value={this.state.birth_date} onChange={this.update('birth_date')} />
                 </label>
-                <label> {/* We dont need labels at this point*/}
+                <label className="session-form-signup-input-birth"> {/* We dont need labels at this point*/}
                   <input type="text" placeholder="Year" value={this.state.birth_date} onChange={this.update('birth_date')} />
                 </label>
                 
               </div>
 
-              <label>
-                <input type="checkbox" placeholder="Male" value={"Male"} onClick={this.update("gender")}/>
-              </label>
-              <label>
-                <input type="checkbox" placeholder="Female" value={"Female"} onClick={this.update("gender")} />
-              </label>
+              <div className="session-form-signup-gender">
+                <label>
+                  <input type="radio" name="x" placeholder="Male" value={"Male"} onClick={this.update("gender")}/>
+                </label>
+                <label>
+                  <input type="radio" name="x" placeholder="Female" value={"Female"} onClick={this.update("gender")} />
+                </label>
+              </div>
+                
 
               <label>
                 <input type="text" placeholder="Location" value={this.state.location} onChange={this.update("location")} />
