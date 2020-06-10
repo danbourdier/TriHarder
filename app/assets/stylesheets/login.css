@@ -66,6 +66,10 @@
     height: 44px;
     border: none;
     border-radius: 2px;
+    font-size: 14px;
+    background-color: #3c5997;
+    color: white;
+    width: 320px;
   }
 
   .session-form-login p:first-of-type {
@@ -84,13 +88,6 @@
     position: relative;
   }
 
-.session-form-login button:first-of-type {
-  font-size: 14px;
-  background-color: #3c5997;
-  color: white;
-  width: 320px;
-  height: 55px;
-}
 .session-form-login p:first-of-type {
   text-align: center;
   margin: 15px 0px 15px 0px;
