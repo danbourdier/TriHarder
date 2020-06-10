@@ -113,24 +113,26 @@ class SessionFormSignup extends React.Component {
 
               <div className="session-form-signup-gender">
                 <label>
-                  <input type="radio" name="x" placeholder="Male" value={"Male"} onClick={this.update("gender")}/>
+                  <input type="radio" name="x" value={"Male"} onClick={this.update("gender")}/>
+                  <span>Male</span>
                 </label>
                 <label>
-                  <input type="radio" name="x" placeholder="Female" value={"Female"} onClick={this.update("gender")} />
+                  <input type="radio" name="x" value={"Female"} onClick={this.update("gender")} />
+                  <span>Female</span>
                 </label>
               </div>
                 
 
-              <label>
+              <label className='session-form-signup-location'>
                 <input type="text" placeholder="Location" value={this.state.location} onChange={this.update("location")} />
               </label>
                 <p className={locationError.length < 1 ? "error-hidden" : "error"}>{locationError}</p>
 
-              <div>
+              <div className="session-form-signup-offer-checkbox">
                 <input type="checkbox" /> <span>Yes, I would like to receive by email the latest news, innovation updates, and offers from MapMyRun and Under Armour.</span>
               </div>
 
-              <div>
+              <div className="session-form-signup-last-span">
                 <span>By signing up with TriHarder, you agree to our
                   <a href="https://account.underarmour.com/en-us/privacy/">Privacy Policy</a>
                   {' & '}
