@@ -129,7 +129,10 @@ class SessionFormSignup extends React.Component {
                 <p className={locationError.length < 1 ? "error-hidden" : "error"}>{locationError}</p>
 
               <div className="session-form-signup-offer-checkbox">
-                <input type="checkbox" /> <span>Yes, I would like to receive by email the latest news, innovation updates, and offers from MapMyRun and Under Armour.</span>
+                <div>
+
+                  <input type="checkbox" /> <span>Yes, I would like to receive by email the latest news, innovation updates, and offers from MapMyRun and Under Armour.</span>
+                </div>
               </div>
 
               <div className="session-form-signup-last-span">
