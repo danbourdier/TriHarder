@@ -8,7 +8,7 @@
 }
 
 .first-splash-image {
-  background-image: url("splash.png");
+  /* background-image: url("splash.png"); */
   position: absolute;
   width: 1320px;
   height: 670px;
