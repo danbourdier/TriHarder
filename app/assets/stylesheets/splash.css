@@ -223,7 +223,7 @@
   min-width: 1322px;
   overflow: hidden;
   /* border: mediumslateblue solid 1px; */
-  background-image: url(topo_cut.png);
+  /* background-image: url(topo_cut.png); */
   /* background-position: unset; */
   background-size: contain;
   background-blend-mode: luminosity;

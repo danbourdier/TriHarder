@@ -56,6 +56,7 @@ class SplashPage extends React.Component{
         </nav>
 
         <div className="track-everything-div-container">
+          <img className="splash-topo-image" src={window.topoCut} alt="topo map"/>
             {/* <aside className="splash-first-aside-photo"> */}
               <figure className="splash-phone-back-drop-1">
               </figure>
