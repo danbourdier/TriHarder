@@ -1,0 +1,16 @@
+.route-summary-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.route-summary-container nav {
+  width: 310px;
+  height: 28px;
+  border: solid blue 1px;
+}
+
+.route-summary-body {
+  width: 620px;
+  height: 470px;
+  border: red solid 1px;
+}

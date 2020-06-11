@@ -4,13 +4,12 @@ import { connect } from 'react-redux';
 import { login } from '../../actions/session_actions';
 import ActivityFeedIndex from './activity_feed_index';
 
-const mSTP = (state, ownProps) => ({
-  errors: state.errors.session,
-  formType: "LOG IN",
+const mSTP = state => ({
+  currentUser: state.entities.users[state.session.id]
 });
 
-const mDTP = (dispatch, ownProps) => ({
-  processForm: user => dispatch(login(user))
+const mDTP = dispatch => ({
+  action: () => dispatch(method())
 });
 
 export default connect(mSTP, mDTP)(ActivityFeedIndex);

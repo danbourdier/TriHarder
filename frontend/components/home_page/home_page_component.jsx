@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import DashBoardContainer from '../dashboard/dashboard_container';
 import ActivityFeedContainer from '../activity_feed/activity_feed_container';
 import StatsContainer from '../stats/stats_container';
+import { Link } from 'react-router-dom';
  
 
 const HomePageComponent = props => (
@@ -14,21 +15,29 @@ const HomePageComponent = props => (
         Itty bitty magic box message
       </figure>
       <nav className="homepage-body-header-radios">
-        <label>ACTIVITY FEED</label>
-        <label>MY DASHBOARD</label>
-        <label>STATS</label>
+        <Link to="">
+          <label>ACTIVITY FEED</label>
+        </Link> 
 
+        <Link to="">
+          <label>MY DASHBOARD</label>
+        </Link> 
+
+        <Link to="">
+          <label>STATS</label>
+        </Link>
+          
+
+        {/* <input type="radio" name="dash_tabs"/>
         <input type="radio" name="dash_tabs"/>
-        <input type="radio" name="dash_tabs"/>
-        <input type="radio" name="dash_tabs"/>
+        <input type="radio" name="dash_tabs"/> */}
       </nav>
 
     </header>
-    <main className="homepage-body-inner">
+    <main className="homepage-body-inner-dashboard-container">
 
       <DashBoardContainer prop={props}/>
-      <ActivityFeedContainer prop={props}/>
-      <StatsContainer prop={props}/>
+      
 
     </main>
       

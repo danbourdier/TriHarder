@@ -2,7 +2,16 @@ import React from 'react';
 
 
 const ActivityFeedIndex = props => (
-  <h3>Activity Feed Index </h3>
+  <div>
+    <header>
+      <figure>Profile pic here</figure>
+      <div>Status post Form here</div>
+    </header>
+
+    <section>
+
+    </section>
+  </div>
 )
 
 export default ActivityFeedIndex;
