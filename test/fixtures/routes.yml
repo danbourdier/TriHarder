@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  route: MyString
+  total_time: MyString
+  activity: MyString
+  distance: 1.5
+  description: MyText
+  start_point: MyString
+  end_point: MyString
+  user_id: MyString
+
+two:
+  route: MyString
+  total_time: MyString
+  activity: MyString
+  distance: 1.5
+  description: MyText
+  start_point: MyString
+  end_point: MyString
+  user_id: MyString
