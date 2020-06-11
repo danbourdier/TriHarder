@@ -5,6 +5,8 @@ import Root from './components/root';
 import configureStore from './store/store';
 
 // import {login, signup, logout} from './util/session_api_util';
+// import {createRoute} from "./util/route_api_util";
+import { createRoute } from "./actions/route_actions";
 
 document.addEventListener("DOMContentLoaded", () => {
   let store = configureStore();
@@ -24,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.getState = store.getState;
   window.dispatch = store.dispatch;
 
+  window.createRoute = createRoute();
   
   const root = document.getElementById("root");
   ReactDOM.render(<Root store={store} />, root)

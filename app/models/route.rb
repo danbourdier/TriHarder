@@ -1,8 +1,8 @@
 class Route < ApplicationRecord
 
-  validates :route, :total_time, :activity, :distance, :description, :start_point,
+  validates :title, :total_time, :activity, :distance, :description, :start_point,
       :end_point, :user_id, presence: true
-  validates :activity, :route, :description, length: { minimum: 6 }
+  validates :activity, :title, :description, length: { minimum: 3 }
 
   belongs_to :user, {
     class_name: :User,
@@ -10,7 +10,9 @@ class Route < ApplicationRecord
     primary_key: :id
   }
 
-  
+  # def total_time_calc(start, end)
+  #   self.total_time = 
+  # end
 
 
 end
