@@ -1,6 +1,6 @@
-import { RECEIVE_ROUTE_ERRORS, RECEIVE_ROUTE } from "../actions/route_actions";
+import { RECEIVE_ROUTE_ERRORS, RECEIVE_ROUTE, WIPE_ROUTE_ERRORS } from "../actions/route_actions";
 
-const RoutesErrorsReducer = (state = [], action) => {
+const routesErrorsReducer = (state = [], action) => {
   Object.freeze(state);
   let nextState = Object.assign({}, state);
 
@@ -11,7 +11,11 @@ const RoutesErrorsReducer = (state = [], action) => {
   
     case RECEIVE_ROUTE:
 
-    return [];
+      return [];
+
+    case WIPE_ROUTE_ERRORS:
+
+      return [];
 
     default:
       return state;
@@ -19,4 +23,4 @@ const RoutesErrorsReducer = (state = [], action) => {
 
 }
 
-export default RoutesErrorsReducer;
+export default routesErrorsReducer;
