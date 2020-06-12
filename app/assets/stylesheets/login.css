@@ -63,7 +63,7 @@
     background-color: #3c5997;
     color: white;
     width: 320px;
-    height: 44px;
+    min-height: 44px;
     border: none;
     border-radius: 2px;
     font-size: 14px;
