@@ -71,7 +71,7 @@ https://www.mapmyrun.com/
 
 Users will be able to signup and create an account to enjoy full access to the clone.
 
-
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/log_in_snapshot.png "Logo Title Text 1")
 
 ---
 ## Future Directions
