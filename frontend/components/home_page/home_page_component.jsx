@@ -13,7 +13,7 @@ const HomePageComponent = props => (
   <div className="homepage-body">
     <header className="homepage-body-header">
       <figure>
-        Itty bitty magic box message
+        Dialogue Box with link
       </figure>
       <nav className="homepage-body-header-radios">
         <Link to="">

@@ -5,10 +5,10 @@ class RouteIndexItem extends Component {
 
 
   render() {
+    // debugger
+    console.log(this.props.route)
     return (
-      <li>
-        {console.log(this.props.route)}
-      </li>
+      <li>{this.props.route}</li>
     )
   };
 

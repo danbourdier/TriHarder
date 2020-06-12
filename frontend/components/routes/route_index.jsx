@@ -6,21 +6,23 @@
 
   componentDidMount() {
     this.props.showRoutes();
-    // debugger
   }
 
   render() {
 
-    // let index = this.props.routes.map(route => {
-    //   <RouteIndexItem key={route.id} route={route} />
-    //   }
-    // );
-      // debugger
+    let index = this.props.routes.map(route => {
+      return (
+        <RouteIndexItem key={route.id} route={route.title} />
+      )
+    });
+    
+    // debugger
+
     return (
       <div>
         <ul>
-          
-          {/* {this.props.showRoutes} */}
+          {index}
+
         </ul>
       </div>
     )

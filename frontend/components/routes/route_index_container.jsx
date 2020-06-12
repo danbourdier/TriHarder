@@ -3,13 +3,10 @@ import { connect } from 'react-redux';
 import { showRoutes } from '../../actions/route_actions';
 import RouteIndex from './route_index';
 
-const mSTP = state => {
-  debugger
-  return {
-    // routes: Object.values( () => dispatch(showRoutes()) ) 
-  }
-   
-}; 
+const mSTP = state => ({
+  routes: Object.values(state.entities.routes),
+  currentUser: state.entities.users
+})
 
 const mDTP = dispatch => ({
   // editRoute = asjd,
