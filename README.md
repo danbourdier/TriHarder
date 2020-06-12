@@ -8,7 +8,7 @@ ___
 
 * [Live Site](https://tri-harder.herokuapp.com/)
 * [Intro](https://github.com/danbourdier/TriHarder/#Intro)
-* [Technologies](https://github.com/danbourdier/TriHarder/#TechnologiesUsed)
+* [Technologies](https://github.com/danbourdier/TriHarder/#Technologies)
 * [Legal](https://github.com/danbourdier/TriHarder/#Legal)
 * [Links](https://github.com/danbourdier/TriHarder/#Links)
 * [Future Directions](https://github.com/danbourdier/TriHarder/#Intro)
@@ -44,7 +44,7 @@ https://www.mapmyrun.com/
 
 ---
 
-## TECHNOLOGIES USED
+## TECHNOLOGIES
 
 #### Backend          
 1. Postgresql
