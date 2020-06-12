@@ -48,7 +48,7 @@ const App = () => (
 
       <section>
         <HeaderTabsContainer />
-      </section>
+      </section> 
 
       <div className="header-sub">
         <span className="covid-header-content" >Learn about TH's COVID-19 Pledge</span>

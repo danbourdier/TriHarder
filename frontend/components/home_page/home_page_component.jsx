@@ -6,6 +6,7 @@ import DashBoardContainer from '../dashboard/dashboard_container';
 import ActivityFeedContainer from '../activity_feed/activity_feed_container';
 import StatsContainer from '../stats/stats_container';
 import { Link } from 'react-router-dom';
+import RouteIndexContainer from '../routes/route_index_container';
  
 
 const HomePageComponent = props => (
@@ -20,7 +21,7 @@ const HomePageComponent = props => (
         </Link> 
 
         <Link to="">
-          <label>MY DASHBOARD</label>
+          <label>MY DASHBOARD</label> 
         </Link> 
 
         <Link to="">
@@ -36,7 +37,7 @@ const HomePageComponent = props => (
     </header>
     <main className="homepage-body-inner-dashboard-container">
 
-      <DashBoardContainer prop={props}/>
+      <RouteIndexContainer prop={props}/>
       
 
     </main>
