@@ -1,16 +1,43 @@
-.route-summary-container {
-  display: flex;
-  flex-direction: column;
-}
-
-.route-summary-container nav {
-  width: 310px;
-  height: 28px;
-  border: solid blue 1px;
-}
-
-.route-summary-body {
+.route-index-container {
   width: 620px;
-  height: 470px;
-  border: red solid 1px;
+  background-color: lightgreen;
+}
+
+.route-index-chart {
+  border: blue 1px solid;
+  background-color: white;
+  min-width: 620px;
+  min-height: 445px;
+}
+
+
+
+/* route totals */
+.route-index-chart-totals-container {
+  min-height: 160px;
+}
+
+.route-index-char-totals-calcs {
+  min-height: 105px;
+  display: flex;
+}
+.route-index-char-totals-calcs div {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+/* route-chart----------------- */
+
+/* .route-chart-bar {
+  border: solid 2px black;
+} */
+
+.recharts-cartesian-grid-vertical {
+  opacity: 0;
+}
+
+
+.recharts-layer.recharts-cartesian-axis.recharts-yAxis.yAxis {
+  font-size: 11px;  
 }

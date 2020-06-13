@@ -6,9 +6,13 @@ class RouteIndexItem extends Component {
 
   render() {
     // debugger
-    console.log(this.props.route)
+    console.log(this.props.route);
+    // console.log(this.props.routes);
+
     return (
-      <li>{this.props.route}</li>
+      <li className="route-index-item">
+        {this.props.route}
+      </li>
     )
   };
 
