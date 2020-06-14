@@ -6,19 +6,27 @@ const RouteChartTotals = props => (
     <aside className="route-index-char-totals-calcs">
       {/* 105 */}
       <div>
-        distance
+        <p>TIME</p>
+        <aside>{parseFloat(props.time/60.0)}</aside>
+        <span>hours</span>
       </div>
 
       <div>
-        duration
+        <p>DISTANCE</p>
+        <aside>{props.distance}</aside>
+        <span>miles</span>
       </div>
 
       <div>
-        calories burned
+        <p>CALORIES</p>
+        <aside>{props.cal}</aside>
+        <span>burned</span>
       </div>
 
       <div>
-        number of workouts completed
+        <p>WORKOUTS</p>
+        <aside>{props.numWorkouts}</aside>
+        <span>completed</span>
       </div>
 
     </aside>

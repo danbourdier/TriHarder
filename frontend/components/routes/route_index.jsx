@@ -11,23 +11,26 @@ class RouteIndex extends Component {
   }
 
   render() {
+    let ownRoutes = [];
     let totalDistance = 0;
     let totalTime = 0;
-    let ownRoutes = [];
     let totalCalories = 0;
+    let totalWorkouts = 0;
     // average calories burned every hour by middle aged male
     //    ~175 lb = 400 cal
 
     let index = this.props.routes.map(route => {
-
-      if (route.user_id === this.props.currentUser[1].id) {
+      
+      if (route.user_id === Number(Object.keys(this.props.currentUser)[0])) {
         totalDistance = totalDistance + route.distance;
-        totalTime = route.total_time + totalTime;
-        totalCalories = totalCalories + ()
+        totalTime = totalTime + route.total_time;
+        totalCalories = totalCalories + ((route.total_time / 60) * 400);
+        totalWorkouts = totalWorkouts + 1;
+
         ownRoutes.push(route);
 
         return (
-          <RouteIndexItem key={route.id} route={route.title} />
+          <RouteIndexItem key={route.id} rout={route} />
         )
       }
       
@@ -37,14 +40,22 @@ class RouteIndex extends Component {
 
     return (
       <div className="route-index-container">
-
-        <RouteChartTotals />
-
+        <section className="route-index-blue-buttons">
+          <div><a href="">Lifetime Stats</a></div>
+          
+          <div><a href="">View Calendar</a></div>
+        </section>
+        <RouteChartTotals cal={totalCalories} time={totalTime} distance={totalDistance} numWorkouts={totalWorkouts} />
+        <aside className="jss7891">
+          time and graph filter
+        </aside>
         <figure className="route-index-chart">
           <BarChart routes={ownRoutes}/>
+          <div></div>
         </figure>
 
-        <ul>
+        <ul className="route-index-container-after-chart">
+          <h3>RECENT WORKOUTS</h3>
           {index}
 
         </ul>

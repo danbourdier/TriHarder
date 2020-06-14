@@ -34,6 +34,9 @@
   margin-top: auto;
   display: flex;
   flex-direction: row;
+
+  position: relative;
+  left: 3px;
 }
 /* 622 1288 */
 
@@ -74,7 +77,8 @@
     height: 44px;
     /* -webkit-appearance: none; */
     background-color: #f6f6f6;
-    border: solid 1px black;
+    border: solid 1px lightgrey;
+    border-bottom: none;
 }
 
 .homepage-body-inner-dashboard-container {
@@ -84,6 +88,7 @@
   max-height: 1280px;
   border-top: grey solid 1px;
   
-  border: solid 1px grey;
+  position: relative;
+  left: 3px;
 }
 

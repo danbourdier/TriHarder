@@ -48,7 +48,7 @@ route1c = Route.create!(title: "CAG Operator's morning jog", total_time: 172.10,
   end_point: "Space, ???", user_id: 1
 )
 
-route2 = Route.create!(title: "Styx River Dip", total_time: 5.0, 
+route2 = Route.create!(title: "Styx River Dip", total_time: 5.01, 
   activity: "swim", distance: 999.0, description: "Don't drink the water", 
   start_point: "Feneos", end_point: "Styx", user_id: 2
 )
@@ -57,12 +57,12 @@ route2a = Route.create!(title: "Weekly Ruck", total_time: 174.23,
   start_point: "Fort Bragg, Gruber rd (range road intersection)", end_point: "Range Road exit", user_id: 2
 )
 
-route3 = Route.create!(title: "Inferno to Paradiso", total_time: 168.0,
-  activity: "run", distance: 588.0, description: "From a little spark may burst a flame",
+route3 = Route.create!(title: "Inferno to Paradiso", total_time: 168.12,
+  activity: "run", distance: 588.01, description: "From a little spark may burst a flame",
   start_point: "First Circle of Hell", end_point: "9th Sphere", user_id: 3
 )
 route3a = Route.create!(title: "Combat Fitness", total_time: 134.18,
-  activity: "run", distance: 3.8, description: "Train like you will fight",
+  activity: "run", distance: 3.80, description: "Train like you will fight",
   start_point: "Fort Bragg, Nasty Nick obstacle course", end_point: "Fort Bragg, Nasty Nick obstacle course end", user_id: 3
 )
 route3b = Route.create!(title: "Classified", total_time: 1159.32,
