@@ -222,7 +222,7 @@ class SplashPage extends React.Component{
             <div className="take-on-new-challenges-p">
               <span>Join the challenge. Enjoy benefits such as tax-incentives, cost-savings on 
                 un-required employee health care, and  
-                <a href="https://smallbiztrends.com/2017/03/benefits-of-hiring-veterans.html#comments"> more</a>.
+                <a href="https://smallbiztrends.com/2017/03/benefits-of-hiring-veterans.html#comments">more</a>.
               </span>
             </div>
 

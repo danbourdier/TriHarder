@@ -203,6 +203,11 @@
   flex-direction: column;
 }
 
+.footer-social a {
+  text-decoration: none;
+  color: lightgrey;
+}
+
 .mid-footer-inner {
   display: flex;
   flex-direction: row;

@@ -126,7 +126,7 @@ const App = () => (
                   <div className="footer-social">
                     <h1>SOCIAL</h1>
                     <span>
-                      <p>Like us on facebook</p>  
+                      <p><a href="www.linkedin.com/in/danielbourdier">Like me on LinkedIn</a></p>  
                       <p>Follow us on twitter</p>
                       <p>MayMyRun blog</p>
                     </span>

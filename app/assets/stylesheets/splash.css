@@ -226,6 +226,7 @@
   background-color: azure;
   background-repeat: no-repeat;
   margin-bottom: -296px;
+  max-height: 189vh;
 }
 
 .track-everything-div {
@@ -376,21 +377,18 @@
 .find-your-path-anywhere-div {
   z-index: 2;
   display: flex;
-  /* position: absolute; */
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   max-width: 1322px;
   min-width: 1322px;
-  /* border: mediumslateblue solid 1px; */
   background-blend-mode: soft-light;
   background-color: darkcyan;
   background-image: url(trailblazer.png);
   background-repeat: no-repeat;
-  /* background-blend-mode: overlay; */
-  /* background-position: center; */
   background-size: cover;
 }
+
 .splash-find-your-path-bar {
   height: 7px;
   width: 50px;
@@ -484,9 +482,6 @@
   align-items: center;
   top: 300px;
   left: -41px;
-  max-width: 1322px;
-  min-width: 1322px;
-  margin-left: -70px;
 }
 .take-on-new-challenges-title {
   width: 348.97px;
@@ -569,7 +564,7 @@
 
 .splash-gradient {
   text-align: center;
-  background-image: linear-gradient(to top, rgba(255,0,0,0), white);
+  background-image: linear-gradient(to bottom, rgba(255,0,0,0), white);
 }
 
 .splash-muh-ali-container {
@@ -619,7 +614,8 @@
   height: 800px;
   flex-direction: row;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
+  width: 94vw;
 }
 
 .flag-wave-ec1 {
