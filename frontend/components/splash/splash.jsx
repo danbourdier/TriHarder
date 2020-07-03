@@ -167,38 +167,43 @@ class SplashPage extends React.Component{
         </div>
 
         <div className="splash-flag-waving">
-          <img src={window.flag} alt="Ol flag"/>
-          <img src={window.flag} alt="Ol flag"/>
-          <img src={window.flag} alt="Ol flag"/>
-          <img src={window.flag} alt="Ol flag"/>
-          <img src={window.flag} alt="Ol flag"/>
-          <img src={window.flag} alt="Ol flag"/>
-          <img src={window.flag} alt="Ol flag"/>
-          <img src={window.flag} alt="Ol flag"/>
-          <img src={window.flag} alt="Ol flag"/>
-          <img src={window.flag} alt="Ol flag"/>
-          <img src={window.flag} alt="Ol flag"/>
-          <img src={window.flag} alt="Ol flag"/>
-          <img src={window.flag} alt="Ol flag"/>
-          <img src={window.flag} alt="Ol flag"/>
-          <img src={window.flag} alt="Ol flag"/>
-          <img src={window.flag} alt="Ol flag"/>
-          <img src={window.flag} alt="Ol flag"/>
-          <img src={window.flag} alt="Ol flag"/>
-          <img src={window.flag} alt="Ol flag"/>
-          <img src={window.flag} alt="Ol flag"/>
-          <img src={window.flag} alt="Ol flag"/>
-          <img src={window.flag} alt="Ol flag"/>
+          <div className="flag-wave-ec1">
+            <img src={window.flag} alt="Ol flag"/>
+            <img src={window.flag} alt="Ol flag"/>
+            <img src={window.flag} alt="Ol flag"/>
+            <img src={window.flag} alt="Ol flag"/>
+            <img src={window.flag} alt="Ol flag"/>
+            <img src={window.flag} alt="Ol flag"/>
+            <img src={window.flag} alt="Ol flag"/>
+            <img src={window.flag} alt="Ol flag"/>
+            <img src={window.flag} alt="Ol flag"/>
+            <img src={window.flag} alt="Ol flag"/>
+            <img src={window.flag} alt="Ol flag"/>
+            <img src={window.flag} alt="Ol flag"/>
+            <img src={window.flag} alt="Ol flag"/>
+            <img src={window.flag} alt="Ol flag"/>
+            <img src={window.flag} alt="Ol flag"/>
+          </div>
+          
+          <div className="flag-wave-ec1">
+            <img src={window.flag} alt="Ol flag"/>
+            <img src={window.flag} alt="Ol flag"/>
+            <img src={window.flag} alt="Ol flag"/>
+            <img src={window.flag} alt="Ol flag"/>
+            <img src={window.flag} alt="Ol flag"/>
+            <img src={window.flag} alt="Ol flag"/>
+            <img src={window.flag} alt="Ol flag"/>
+            <img src={window.flag} alt="Ol flag"/>
+            <img src={window.flag} alt="Ol flag"/>
+            <img src={window.flag} alt="Ol flag"/>
+            <img src={window.flag} alt="Ol flag"/>
+            <img src={window.flag} alt="Ol flag"/>
+            <img src={window.flag} alt="Ol flag"/>
+            <img src={window.flag} alt="Ol flag"/>
+            <img src={window.flag} alt="Ol flag"/>
+            <img src={window.flag} alt="Ol flag"/>
+          </div>
 
-          <img src={window.flag} alt="Ol flag"/>
-          <img src={window.flag} alt="Ol flag"/>
-          <img src={window.flag} alt="Ol flag"/>
-          <img src={window.flag} alt="Ol flag"/>
-          <img src={window.flag} alt="Ol flag"/>
-          <img src={window.flag} alt="Ol flag"/>
-          <img src={window.flag} alt="Ol flag"/>
-          <img src={window.flag} alt="Ol flag"/>
-          <img src={window.flag} alt="Ol flag"/>
         </div>
         
         

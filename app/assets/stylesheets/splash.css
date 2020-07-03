@@ -612,18 +612,21 @@
 .splash-flag-waving {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
   position: fixed;
-  height: 33px;
-  width: 33px;
   z-index: -1;
-  /* padding: 20px; */
-  margin: 15px;
+  margin: 0px auto 0px auto;
   width: 1322px;
   height: 800px;
-  flex-direction: column;
-  left: 320px;
+  flex-direction: row;
+  flex-direction: row;
+  justify-content: center;
 }
+
+.flag-wave-ec1 {
+  display: flex;
+  flex-direction: column;
+}
+
 .splash-flag-waving img {
   margin: 10px;
   height: 15px;
@@ -631,9 +634,5 @@
   margin-bottom: 20px;
 }
 
-
-  /* .giphy-embed {
-    position: absolute;
-  } */
 
    

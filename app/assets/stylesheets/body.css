@@ -6,7 +6,7 @@
   display: flex;
   /* position: relative; */
   top: 4px;
-  margin: 0px 60px 0px 60px;
+  margin: 0px auto 0px auto;
   max-width: 1320px;
   width:1320px;
   /* background-color: cornflowerblue; */
