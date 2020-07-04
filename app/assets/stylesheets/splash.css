@@ -219,15 +219,13 @@
   max-width: 1322px;
   min-width: 1322px;
   overflow: hidden;
-  /* border: mediumslateblue solid 1px; */
   background-image: url(topo_cut.png);
-  /* background-position: unset; */
   background-size: contain;
   background-blend-mode: luminosity;
   background-color: azure;
   background-repeat: no-repeat;
   margin-bottom: -296px;
-  max-height: 128vh;
+  min-height: 1020px;
 }
 
 .track-everything-div {
@@ -616,7 +614,7 @@
   flex-direction: row;
   flex-direction: row;
   justify-content: space-around;
-  width: 94vw;
+  width: 1322px;
 }
 
 .flag-wave-ec1 {
