@@ -126,36 +126,36 @@ const App = () => (
                   <div className="footer-social">
                     <h1>SOCIAL</h1>
                     <span>
-                      <p><a href="www.linkedin.com/in/danielbourdier">Like me on LinkedIn</a></p>  
-                      <p>Follow us on twitter</p>
-                      <p>MayMyRun blog</p>
+                      <p><a href="https://www.linkedin.com/in/danielbourdier/">Like me on LinkedIn</a></p>  
+                      <p><a href="https://github.com/danbourdier">Follow me on Github</a></p>  
+                      <p><a href="https://danbourdier.github.io/">Check out my portfolio!</a></p>  
                     </span>
                   </div>
 
                   <div  className="footer-projects">
                     <h1>PROJECTS</h1>
                     <span>
-                      <p>Log In / Register</p>
-                      <p>Support</p>
-                      <p>Developer / API</p>
+                      <p><a href="https://danbourdier.github.io/CovidInteractiveBubbleChart/">Covid Int.Chart</a></p>
+                      <p>More to Come!</p>
+                      <p>More to Come!</p>
                     </span>
                   </div>
 
                   <div  className="footer-skills">
                     <h1>SKILLS</h1>
                     <span>
-                      <p>Advertise</p>
-                      <p>Join Our Team</p>
-                      <p>Shop Under Armor</p>
+                      <p>Ruby on Rails</p>
+                      <p>JavaScript</p>
+                      <p><a href="https://danbourdier.github.io/">Click to see more!</a></p>
                     </span>
                   </div>
 
                   <aside className="jss1">
                     <p>TRI  FITNESS  COMMUNITY</p>
                     <div className="footer-mid-aside">
-                      <div  className="splash-colly-booxes1">
+                      {/* <div  className="splash-colly-booxes1">
 
-                      </div>
+                      </div> */}
 
                       <div  className="splash-colly-booxes2">
 

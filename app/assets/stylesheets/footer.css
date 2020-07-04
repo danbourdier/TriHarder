@@ -201,11 +201,12 @@
 .footer-social {
   display: flex;
   flex-direction: column;
+  color: #9ea0a2;
 }
 
 .footer-social a {
   text-decoration: none;
-  color: lightgrey;
+  color: #9ea0a2;
 }
 
 .mid-footer-inner {
@@ -236,6 +237,7 @@
   font-size: 13px;
   right: 1px;
   letter-spacing: 1.22px;
+  text-decoration: none;
 }
 
 .mid-footer div span {
@@ -272,7 +274,7 @@
   height: 70px;
   position: relative;
   width: 210px;
-  left: 160px;
+  left: 210px;
   top: -2.75px;
 }
 .mid-footer aside div {
@@ -281,7 +283,7 @@
   display: flex;
   position: relative;
   max-width: 500px;
-  left: -9.5px;
+  left: -19.5px;
   width: 100%;
 }
 
@@ -378,6 +380,14 @@
   background-size: contain;
 }
 
+.footer-projects a {
+  text-decoration: none;
+  color: #9ea0a2;
+}
+.footer-skills a {
+  text-decoration: none;
+  color: #9ea0a2;
+}
 
 /*  bottom-footer----------------------------------------------------------------*/
 .bottom-footer {
