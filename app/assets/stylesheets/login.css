@@ -38,6 +38,8 @@
     position: relative;
     left: 6px;
   }
+
+
   .session-form-signup-link a:last-of-type {
     font-size: 14px;
     text-align: center;
@@ -70,6 +72,7 @@
     background-color: #3c5997;
     color: white;
     width: 320px;
+    cursor: pointer;
   }
 
   .session-form-login p:first-of-type {
@@ -131,7 +134,8 @@
     transform: scale(1.0, 1.1);
     position: relative;
     top: 0.5px;
-    margin-bottom: 21px;
+    width: 110px;
+    margin: 0px auto 21px auto;
   }
 
   .session-form-login button:last-of-type {
@@ -142,6 +146,10 @@
     height: 44.032px;
     letter-spacing: 1px;
     word-spacing: -0.7px;
+  }
+
+  #ec-login-1345 {
+    cursor: pointer !important;
   }
 
 .session-form-login input:focus {

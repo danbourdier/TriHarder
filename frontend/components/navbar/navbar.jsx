@@ -6,7 +6,7 @@ const NavBar = props => {
     <div className="auth-container-outer-div">
       <nav className="login-signup">
         <div className="auth-container-div" >
-          <Link to="/login">LOG IN</Link>
+          <Link id="ec-link-123" to="/login">LOG IN</Link>
           <Link to="/signup">SIGN UP</Link>
         </div>
       </nav>

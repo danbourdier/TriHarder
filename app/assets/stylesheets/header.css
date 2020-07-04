@@ -124,7 +124,11 @@
   left: 33.5px;
   margin-top: 28px;
   margin-bottom: 28px;
+  cursor: initial;
+}
 
+.login-signup {
+  cursor: initial !important;
 }
 
 .header-sub {
@@ -181,8 +185,13 @@
   padding: 11px 24px 10px 24px;
   align-items: baseline;
   position: relative;
-
+  cursor: initial !important;
 }
+
+.auth-container-outer-div {
+  cursor: initial !important;
+}
+
 .auth-container-div :first-child{
   /* display: flex; */
   margin: 0px 10px;
@@ -214,14 +223,13 @@
     left: 2px;
   }
   .auth-container :first-child {
-    /* margin-left: 10px; */
     position: relative;
     right: 7px;
-    /* font-size: 12.25px;
-    opacity: 0.6; */
   }
 
-
+#ec-link-123 {
+  padding: 10px 10px;
+}
 
   /* special CSS-------------- */
 
@@ -232,3 +240,5 @@
 
     display: none;
   }
+
+

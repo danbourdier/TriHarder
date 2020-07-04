@@ -75,7 +75,7 @@ class SessionFormLogin extends React.Component {
 
             <Link className="session-form-login-forgot-password" to="/login/forgot_password">Forgot Password?</Link>
 
-            <button type="submit">{this.props.formType}</button>
+            <button id="ec-login-1345" type="submit">{this.props.formType}</button>
 
           </form>
 
