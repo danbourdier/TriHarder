@@ -27,7 +27,7 @@ class RouteIndexItem extends Component {
         <section className="route-index-item-second-section">
         <Link to="">{title}</Link>
           <p>Distance </p>
-          <span>{distance}<p>mi</p></span>
+          <span>{distance}<p id="ec-mi-next-to-big">mi</p></span>
         </section>
         {/*  */}
         <section className="route-index-item-third-section">
