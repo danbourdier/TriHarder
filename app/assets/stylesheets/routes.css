@@ -242,6 +242,7 @@
   padding-top: 7px;
   margin-bottom: 5px;
   color: #434343;
+  display: flex;
 }
 
 
@@ -273,4 +274,10 @@
 .route-index-item-fourth-section div {
   min-width: 36px;
   min-height: 36px;
+}
+
+#ec-kcal-705 {
+  font-size: 13.2px;
+  margin-left: 5px;
+  width: 50px;
 }

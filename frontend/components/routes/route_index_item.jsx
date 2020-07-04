@@ -34,7 +34,7 @@ class RouteIndexItem extends Component {
           <span>DURATION </span>
           <p>{total_time} </p>
           <span>CALORIES BURNED</span>
-          <p>{((distance/60.00)*400).toFixed(2)} </p>
+          <p>{((distance/60.00)*400).toFixed(2)} <p id="ec-kcal-705">kCal</p></p>
         </section>
         {/*  */}
         <section className="route-index-item-fourth-section">
