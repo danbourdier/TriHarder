@@ -12,9 +12,12 @@ import RouteIndexContainer from '../routes/route_index_container';
 const HomePageComponent = props => (
   <div className="homepage-body">
     <header className="homepage-body-header">
-      <figure>
-        Dialogue Box with link
-      </figure>
+      <div id="ecbannerblue">
+        <figure>
+          Changes are coming to this website!
+        </figure>
+      </div>
+
       <nav className="homepage-body-header-radios">
         <Link to="">
           <label>ACTIVITY FEED</label>

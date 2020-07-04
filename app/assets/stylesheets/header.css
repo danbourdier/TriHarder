@@ -209,7 +209,7 @@
 }
 
 .auth-container :last-child {
-    /* margin-left: 10px; */
+    cursor: pointer;
     position: relative;
     left: 2px;
   }
