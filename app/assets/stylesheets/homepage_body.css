@@ -51,44 +51,44 @@
 /* 622 1288 */
 
 .homepage-body-header-radios :nth-child(1) label {
-  left: 30px !important;
+  left: 65px !important;
   font-size: 16px !important;
   color: rgb(4, 106, 178) !important;
-  width: 150px !important;
-  height: 45px !important;
+
   background-color: transparent;
 }
 .homepage-body-header-radios :nth-child(2) label {
   left: 330px;
   font-size: 16px !important;
   color: rgb(4, 106, 178) !important;
-  width: 150px !important;
-  height: 45px !important;
   background-color: transparent;
 }
 .homepage-body-header-radios :nth-child(3) label {
-  left: 630px !important;
+  left: 610px !important;
   font-size: 16px !important;
   color: rgb(4, 106, 178) !important;
-  width: 150px !important;
-  height: 45px !important;
   background-color: transparent;
 }
 
 .homepage-body-header-radios label{
   position: absolute;
+  max-width: fit-content !important;
+  max-height: fit-content !important;
 }
 
 .homepage-body-header-radios a {
-    border-color: gray;
-    padding: 0px;
-    margin: 0px;
-    width: 256px;
-    height: 44px;
-    /* -webkit-appearance: none; */
-    background-color: #f6f6f6;
-    border: solid 1px lightgrey;
-    border-bottom: none;
+  border-color: gray;
+  padding: 0px;
+  margin: 0px;
+  width: 256px;
+  height: 44px;
+  background-color: #f6f6f6;
+  border: solid 1px lightgrey;
+  border-bottom: none;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .homepage-body-inner-dashboard-container {
