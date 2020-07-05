@@ -74,6 +74,7 @@
   position: absolute;
   max-width: fit-content !important;
   max-height: fit-content !important;
+  cursor: pointer;
 }
 
 .homepage-body-header-radios a {
