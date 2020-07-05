@@ -17,6 +17,7 @@ class RouteIndexItem extends Component {
     // start_point: "Marathon, Greece",
     // end_point: "Athens, Greece", user_id: 1)
     let { id, title, total_time, activity, distance, description, start_point, end_point, created_at } = this.props.rout;
+      activity = `${activity[0]}`.toUpperCase() + `${activity.slice(1)}`
     let parsedDate = new Date(created_at)
       let month = parsedDate.getMonth()
         if (month < 10) {
@@ -35,7 +36,6 @@ class RouteIndexItem extends Component {
       let year = parsedDate.getFullYear()
         year = `${year}`;
 
-    // debugger
     return (
 
       <li className="route-index-item">
@@ -47,14 +47,14 @@ class RouteIndexItem extends Component {
         <section className="route-index-item-second-section">
         <Link to="">{title}</Link>
           <p>Distance </p>
-          <span>{distance}<p id="ec-mi-next-to-big">mi</p></span>
+          <span>{distance.toFixed(2)}<p id="ec-mi-next-to-big">mi</p></span>
         </section>
         {/*  */}
         <section className="route-index-item-third-section">
           <span>DURATION </span>
-          <p>{total_time} </p>
+          <p>{total_time.toFixed(2)} </p>
           <span>CALORIES BURNED</span>
-          <p>{((distance/60.00)*400).toFixed(2)} <p id="ec-kcal-705">kCal</p></p>
+          <p>{Math.floor(((distance/60.00)*400))} <p id="ec-kcal-705">kCal</p></p>
         </section>
         {/*  */}
         <section className="route-index-item-fourth-section">
