@@ -17,9 +17,29 @@ class RouteIndexItem extends Component {
     // start_point: "Marathon, Greece",
     // end_point: "Athens, Greece", user_id: 1)
     let { id, title, total_time, activity, distance, description, start_point, end_point, created_at } = this.props.rout;
+    let parsedDate = new Date(created_at)
+      let month = parsedDate.getMonth()
+        if (month < 10) {
+          month = "0" + `${month}`
+        } else {
+          month = `${month}`
+        };
 
+      let day = parsedDate.getDay()
+        if (day < 10) {
+          day = "0" + `${day}`
+        } else {
+          day = `${day}`
+        };
+
+      let year = parsedDate.getFullYear()
+        year = `${year}`;
+
+    // debugger
     return (
+
       <li className="route-index-item">
+
         <section className="route-index-item-first-section">
           map picture 
         </section>
@@ -38,9 +58,10 @@ class RouteIndexItem extends Component {
         </section>
         {/*  */}
         <section className="route-index-item-fourth-section">
-          <span>{created_at} </span>
+          
+          <span>{ month + "/" + day + "/" + year } </span>
           <p>Activity </p>
-          <div>activity logo</div>
+          <div>{activity}</div>
         </section>
         
       </li>
