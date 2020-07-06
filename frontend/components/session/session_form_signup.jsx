@@ -97,7 +97,7 @@ class SessionFormSignup extends React.Component {
                 <p className={passwordError.length < 1 ? "error-hidden" : "error"}>{passwordError}</p>
 
               <div className="session-form-signup-birthdate">
-
+        
                 <label className="session-form-signup-input-birth"> {/* We dont need labels at this point*/}
                   <input type="text" placeholder="Day" value={this.state.birth_date} onChange={this.update('birth_date')} />
                 </label>
