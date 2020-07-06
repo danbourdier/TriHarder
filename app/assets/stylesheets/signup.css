@@ -156,7 +156,7 @@
   box-shadow: 1px 0 10px #9ecaed;
 }
 
-.session-form-signup-birthdate input {
+.session-form-signup-birthdate select { /* */
   width: -webkit-fill-available;
   background-color: #F0F0F0;
   color: #9297A3;
@@ -188,21 +188,21 @@
 .session-form-signup-birthdate :first-child {
   max-width: 78px;
 }
-.session-form-signup-birthdate :first-child input{
+.session-form-signup-birthdate :first-child select{
   max-width: 78px;
 }
 .session-form-signup-birthdate :nth-child(3) {
   max-width: 122px;
   background-position-x: 93px;
 }
-.session-form-signup-birthdate :nth-child(3) input {
+.session-form-signup-birthdate :nth-child(3) select {
   max-width: 122px;
 }
 .session-form-signup-birthdate :nth-child(4) {
   max-width: 85px;
   background-position-x: 56px;
 }
-.session-form-signup-birthdate :nth-child(4) input {
+.session-form-signup-birthdate :nth-child(4) select {
   max-width: 85px;
 }
 

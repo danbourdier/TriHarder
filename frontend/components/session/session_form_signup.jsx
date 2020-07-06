@@ -61,6 +61,33 @@ class SessionFormSignup extends React.Component {
 
     };
 
+    let daysRaw = Array(32)
+
+    let days = [...daysRaw.keys()]
+      days.unshift("Day")
+    let dayIndex = days.map((day, i) => (
+      <option key={i} value={day} >{day}</option>
+      ))
+    
+    let months = ["January", "February", "March", "April", "May", "June", "July",
+      "August", "September", "October", "November", "December"]
+    let monthIndex = months.map((month, i) => (
+      <option key={i} value={month} >{month}</option>
+    ))
+    
+    let yearsRaw = new Date()
+      yearsRaw = yearsRaw.getFullYear();
+    let yearIndex = []
+      for (let i = yearsRaw; i > 1899; i -=1) {
+        yearIndex.push(i)
+      }
+      yearIndex = yearIndex.map((year, i) => (
+        <option key={i} value={year}>{year}</option>
+        )
+      )
+
+    // let birthDateRaw = `${a}` + `${b}` + `${c}`
+
     return (
       <div className="session-form-signup-body">
 
@@ -96,16 +123,25 @@ class SessionFormSignup extends React.Component {
               </label>
                 <p className={passwordError.length < 1 ? "error-hidden" : "error"}>{passwordError}</p>
 
+              {/* birthdate selectors */}
               <div className="session-form-signup-birthdate">
-        
+                {/* day */}
                 <label className="session-form-signup-input-birth"> {/* We dont need labels at this point*/}
-                  <input type="text" placeholder="Day" value={this.state.birth_date} onChange={this.update('birth_date')} />
+                  <select name="days" placeholder="Day" value={this.state.birth_date} onChange={this.update('birth_date')}>
+                  {dayIndex}
+                  </select>
                 </label>
+                {/* month */}
                 <label className="session-form-signup-input-birth"> {/* We dont need labels at this point*/}
-                  <input type="text" placeholder="Month" value={this.state.birth_date} onChange={this.update('birth_date')} />
+                  <select name="months" placeholder="Month" value={this.state.birth_date} onChange={this.update('birth_date')}>
+                    {monthIndex}
+                  </select>
                 </label>
+                {/* year */}
                 <label className="session-form-signup-input-birth"> {/* We dont need labels at this point*/}
-                  <input type="text" placeholder="Year" value={this.state.birth_date} onChange={this.update('birth_date')} />
+                  <select name="years" placeholder="Year" value={this.state.birth_date} onChange={this.update('birth_date')}>
+                    {yearIndex}
+                  </select>
                 </label>
                 
               </div>
