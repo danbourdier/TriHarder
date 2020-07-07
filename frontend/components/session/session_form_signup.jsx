@@ -61,12 +61,12 @@ class SessionFormSignup extends React.Component {
 
     };
 
-    let daysRaw = Array(32)
-
-    let days = [...daysRaw.keys()]
-      days.unshift("Day")
+    let days = ["Day"]
+      for (let i = 1; i < 32; i += 1) {
+        days.push(i)
+      };
     let dayIndex = days.map((day, i) => (
-      <option key={i} value={day} >{day}</option>
+    <option key={i} value={day} >{day}</option>
       ))
     
     let months = ["January", "February", "March", "April", "May", "June", "July",
