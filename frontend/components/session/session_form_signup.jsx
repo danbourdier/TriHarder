@@ -5,7 +5,7 @@ class SessionFormSignup extends React.Component {
   constructor(props) {
     super(props)
 
-    this.state = { first_name: "", last_name: "", email: "", password: "", birth_date: "", gender: "", location: "" };
+    this.state = { first_name: "", last_name: "", email: "", password: "", birth_date: "", gender: "", location: "", day: "", month: "", year: "" };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.demoUser = this.demoUser.bind(this);
 
@@ -17,7 +17,18 @@ class SessionFormSignup extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    return this.props.processForm(this.state); 
+    this.setState({ birth_date: ( `${this.state['month']}` + "/" + `${this.state['day']}` + "/" + `${this.state['year']}` ) } )
+    let payload = Object.assign({}, {
+      first_name: this.state.first_name,
+      last_name: this.state.last_name,
+      email: this.state.email,
+      password: this.state.password,
+      birth_date: this.state.birth_date,
+      gender: this.state.gender,
+      location: this.state.location
+    });
+
+    return this.props.processForm(payload); 
   };
 
   demoUser(e) {
@@ -61,6 +72,7 @@ class SessionFormSignup extends React.Component {
 
     };
 
+    //selector data
     let days = ["Day"]
       for (let i = 1; i < 32; i += 1) {
         days.push(i)
@@ -86,7 +98,24 @@ class SessionFormSignup extends React.Component {
         )
       )
 
-    // let birthDateRaw = `${a}` + `${b}` + `${c}`
+    let locations = ["Location", "Alabama",'Alaska','Arizona','Arkansas','California',
+      'Colorado','Connecticut','Delaware','Florida','Georgia','Hawaii',"Idaho",
+      "IllinoisIndiana","Iowa","Kansas","Kentucky","Louisiana","Maine","Maryland",
+      "Massachusetts","Michigan","Minnesota","Mississippi","Missouri","MontanaNebraska",
+      "Nevada","New Hampshire","New Jersey","New Mexico","New York","North Carolina",
+      "North Dakota","Ohio","Oklahoma","Oregon","PennsylvaniaRhode Island","South Carolina",
+      "South Dakota","Tennessee","Texas","Utah","Vermont","Virginia","Washington",
+      "West Virginia","Wisconsin","Wyoming",
+    ]
+
+    let locationIndex = 
+      locations.map((locale, i) => (
+        <option key={i} value={locale}>{locale}</option>
+      ))
+
+    let stateDay = "";
+    let stateMonth = "";
+    let stateYear = "";
 
     return (
       <div className="session-form-signup-body">
@@ -127,19 +156,19 @@ class SessionFormSignup extends React.Component {
               <div className="session-form-signup-birthdate">
                 {/* day */}
                 <label className="session-form-signup-input-birth"> {/* We dont need labels at this point*/}
-                  <select name="days" placeholder="Day" value={this.state.birth_date} onChange={this.update('birth_date')}>
+                  <select name="days" placeholder="Day" value={this.state.day} onChange={this.update('day')}>
                   {dayIndex}
                   </select>
                 </label>
                 {/* month */}
                 <label className="session-form-signup-input-birth"> {/* We dont need labels at this point*/}
-                  <select name="months" placeholder="Month" value={this.state.birth_date} onChange={this.update('birth_date')}>
+                  <select name="months" placeholder="Month" value={this.state.month} onChange={this.update('month')}>
                     {monthIndex}
                   </select>
                 </label>
                 {/* year */}
                 <label className="session-form-signup-input-birth"> {/* We dont need labels at this point*/}
-                  <select name="years" placeholder="Year" value={this.state.birth_date} onChange={this.update('birth_date')}>
+                  <select name="years" placeholder="Year" value={this.state.year} onChange={this.update('year')}>
                     {yearIndex}
                   </select>
                 </label>
@@ -160,7 +189,9 @@ class SessionFormSignup extends React.Component {
                 
 
               <label className='session-form-signup-location'>
-                <input type="text" placeholder="Location" value={this.state.location} onChange={this.update("location")} />
+                <select name="locations" placeholder="Location" value={this.state.location} onChange={this.update('location')}>
+                  {locationIndex}
+                </select>
               </label>
                 <p className={locationError.length < 1 ? "error-hidden" : "error"}>{locationError}</p>
 
@@ -189,8 +220,11 @@ class SessionFormSignup extends React.Component {
         </section>
 
       </div>
+
     )
+
   };
+
 }
 
 export default SessionFormSignup;
