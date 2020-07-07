@@ -13,17 +13,20 @@ class SessionFormSignup extends React.Component {
 
   update(field) {
     return e => this.setState( { [field]: e.currentTarget.value  } )
+    // return e => console.log(e.currentTarget.value)
   };
 
   handleSubmit(e) {
     e.preventDefault();
-    this.setState({ birth_date: ( `${this.state['month']}` + "/" + `${this.state['day']}` + "/" + `${this.state['year']}` ) } )
+    
+    let birthDateRaw = this.state['month'] + "/" + this.state['day'] + "/" + this.state['year']
+
     let payload = Object.assign({}, {
       first_name: this.state.first_name,
       last_name: this.state.last_name,
       email: this.state.email,
       password: this.state.password,
-      birth_date: this.state.birth_date,
+      birth_date: birthDateRaw,
       gender: this.state.gender,
       location: this.state.location
     });
@@ -113,9 +116,9 @@ class SessionFormSignup extends React.Component {
         <option key={i} value={locale}>{locale}</option>
       ))
 
-    let stateDay = "";
-    let stateMonth = "";
-    let stateYear = "";
+    // let stateDay = "";
+    // let stateMonth = "";
+    // let stateYear = "";
 
     return (
       <div className="session-form-signup-body">
@@ -156,19 +159,19 @@ class SessionFormSignup extends React.Component {
               <div className="session-form-signup-birthdate">
                 {/* day */}
                 <label className="session-form-signup-input-birth"> {/* We dont need labels at this point*/}
-                  <select name="days" placeholder="Day" value={this.state.day} onChange={this.update('day')}>
+                  <select name="days" placeholder="Day" value={this.state.day} onChange={this.update("day")}>
                   {dayIndex}
                   </select>
                 </label>
                 {/* month */}
                 <label className="session-form-signup-input-birth"> {/* We dont need labels at this point*/}
-                  <select name="months" placeholder="Month" value={this.state.month} onChange={this.update('month')}>
+                  <select name="months" placeholder="Month" value={this.state.month} onChange={this.update("month")}>
                     {monthIndex}
                   </select>
                 </label>
                 {/* year */}
                 <label className="session-form-signup-input-birth"> {/* We dont need labels at this point*/}
-                  <select name="years" placeholder="Year" value={this.state.year} onChange={this.update('year')}>
+                  <select name="years" placeholder="Year" value={this.state.year} onChange={this.update("year")}>
                     {yearIndex}
                   </select>
                 </label>
