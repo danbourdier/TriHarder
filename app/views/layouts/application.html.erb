@@ -29,6 +29,10 @@
     <script type="text/javascript"> window.arrow = '<%= image_url("drop_down_arrow.png") %>' </script>
     <script type="text/javascript"> window.splash_snapshot = '<%= image_url("splash_snapshot.png") %>' </script>
 
+    <script type="text/javascript">
+      window.googleAPIKey = "<%= Rails.application.credentials.google[:api_key] %>"
+    </script>
+
     <link rel="shortcut icon" href="<%= image_url('logo.png') %>" type="image/png">
   </head>
 
