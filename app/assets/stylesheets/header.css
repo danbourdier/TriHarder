@@ -137,15 +137,11 @@
   background-color: rgb(240,240,240);
   border: #d2d2d2;
   border-style: solid;
-  /* border-bottom-width: thin; */
   border-width: 1px;
-  /* height: 100%; */
   max-height: 58px;
-  /* min-height: 58px; */
   height: 58px;
   align-items: center;
   justify-content: center;
-  /* position: relative; */
   vertical-align: baseline;
   letter-spacing: 0.52px;
   

@@ -89,6 +89,7 @@
   position: relative;
   top: 1px;
   min-height: 44px;
+  cursor: pointer;
 }
 
 .session-form-signup-container p:first-of-type {
@@ -198,7 +199,7 @@
     background-image: url(drop_down_arrow.png);
     background-size: 15px;
     background-repeat: no-repeat;
-    background-position-x: 49.4px;
+    background-position-x: 94.5px;
     background-position-y: 14px;
     background-color: #f0f0f0;
     background-blend-mode: darken;
@@ -299,6 +300,7 @@
   background-blend-mode: darken;
   border: none;
   -webkit-appearance: none;
+  text-indent: 15px;
 }
 .session-form-signup-offer-checkbox {
   width: 320px;
