@@ -216,12 +216,7 @@
     background-color: #f0f0f0;
     background-blend-mode: darken;
 }
-/* .session-form-signup-birthdate :first-child {
-  max-width: 78px; */
-}
-/* .session-form-signup-birthdate :first-child select{
-  max-width: 78px;
-} */
+
 .session-form-signup-birthdate :nth-child(3) {
   max-width: 122px;
   background-position-x: 93px;
