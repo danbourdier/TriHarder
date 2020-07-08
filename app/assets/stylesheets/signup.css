@@ -192,6 +192,7 @@
     background-position-y: 14px;
     background-color: #f0f0f0;
     background-blend-mode: darken;
+    cursor: pointer;
 }
 #month-selector {
   width: 122px !important;
@@ -267,6 +268,7 @@
   width: 152.5px;
   margin: 0px;
   opacity: 0.7;
+  cursor: pointer;
 }
 
 
@@ -288,7 +290,6 @@
 }
 
 #locations-selector {
-  background-color: #f0f0f0f0;
   width: inherit;
   color: #9297A3;
   background-image: url(drop_down_arrow.png);
@@ -301,7 +302,9 @@
   border: none;
   -webkit-appearance: none;
   text-indent: 15px;
+  cursor: pointer;
 }
+
 .session-form-signup-offer-checkbox {
   width: 320px;
   height: 36px;
@@ -342,8 +345,8 @@
   opacity: 0.6;
 }
 .session-form-signup-offer-checkbox input {
-  height: 22px;
-  width: 57.4px;
+  height: 24px;
+  width: 37.1px;
   -webkit-appearance: none;
   background-color: #f0f0f0;
   border: 0.5px solid darkgray;
