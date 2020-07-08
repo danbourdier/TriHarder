@@ -41,8 +41,7 @@ class SessionFormSignup extends React.Component {
   };
 
   render() {
-    let wam = this.props.errors.responseJSON;
-    // let {} = this.state
+    let stateErrors = this.props.errors.responseJSON;
     let firstError = "";
     let lastError = "";
     let emailError = "";
@@ -53,9 +52,9 @@ class SessionFormSignup extends React.Component {
 
 
 
-    if (wam) {
+    if (stateErrors) {
 
-      wam.forEach(error => {
+      stateErrors.forEach(error => {
         if (error.includes("First")) {
           firstError = error
         } else if (error.includes("Last")) {
@@ -84,7 +83,7 @@ class SessionFormSignup extends React.Component {
     <option key={i} value={day} >{day}</option>
       ))
     
-    let months = ["January", "February", "March", "April", "May", "June", "July",
+    let months = ["Month", "January", "February", "March", "April", "May", "June", "July",
       "August", "September", "October", "November", "December"]
     let monthIndex = months.map((month, i) => (
       <option key={i} value={month} >{month}</option>
@@ -92,7 +91,7 @@ class SessionFormSignup extends React.Component {
     
     let yearsRaw = new Date()
       yearsRaw = yearsRaw.getFullYear();
-    let yearIndex = []
+    let yearIndex = ["Year"]
       for (let i = yearsRaw; i > 1899; i -=1) {
         yearIndex.push(i)
       }
@@ -165,13 +164,13 @@ class SessionFormSignup extends React.Component {
                 </label>
                 {/* month */}
                 <label className="session-form-signup-input-birth"> {/* We dont need labels at this point*/}
-                  <select name="months" placeholder="Month" value={this.state.month} onChange={this.update("month")}>
+                  <select id="month-selector" name="months" placeholder="Month" value={this.state.month} onChange={this.update("month")}>
                     {monthIndex}
                   </select>
                 </label>
                 {/* year */}
                 <label className="session-form-signup-input-birth"> {/* We dont need labels at this point*/}
-                  <select name="years" placeholder="Year" value={this.state.year} onChange={this.update("year")}>
+                  <select id="year-selector" name="years" placeholder="Year" value={this.state.year} onChange={this.update("year")}>
                     {yearIndex}
                   </select>
                 </label>
@@ -192,7 +191,7 @@ class SessionFormSignup extends React.Component {
                 
 
               <label className='session-form-signup-location'>
-                <select name="locations" placeholder="Location" value={this.state.location} onChange={this.update('location')}>
+                <select id="locations-selector" name="locations" placeholder="Location" value={this.state.location} onChange={this.update('location')}>
                   {locationIndex}
                 </select>
               </label>
