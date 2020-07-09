@@ -43,9 +43,6 @@ class RouteIndex extends Component {
       <div className="route-index-container">
         <section className="route-index-blue-buttons">
           <div><a href="">Lifetime Stats</a></div>
-          <div>
-            <Link to="/123">CLICK MEEEEEEFAIFKBSGBSDLFGBFASGFAWIDGFAIFGAWIBGAWRGHAWIRGHAWKBRGAWKHBRGAILSK.HFGBLAEIRS.KXFHDGVNZLRX.KÔ†ÓGFCAIRN</Link>
-          </div>
           <div><a href="">View Calendar</a></div>
         </section>
         <RouteChartTotals cal={totalCalories} time={totalTime} distance={totalDistance} numWorkouts={totalWorkouts} />
