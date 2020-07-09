@@ -10,6 +10,7 @@ import HomePageContainer from './home_page/home_page_container';
 import ForgotPasswordContainer from './session/forgot_password_container';
 import ForgotPasswordMessage from './session/forgot_password_message';
 import HeaderTabsContainer from './header/header_tabs_container';
+import Search from "./mapping/search";
 
 
 var SESSION_HIDDEN = false;
@@ -65,6 +66,7 @@ const App = () => (
           <AuthRoute exact path="/forgot_password_message" component={ForgotPasswordMessage} />
           <AuthRoute exact path="/signup" component={SignupFormContainer} />
           <ProtectedRoute exact path="/home_page" component={HomePageContainer}/>
+          <AuthRoute exact path="/123" component={Search} />
           {/* <ProtectedRoute exact path="/create_route" component={}/>
           <ProtectedRoute exact path="/create_workout" component={}/>
           <ProtectedRoute exact path="/create_goal" component={}/> */}

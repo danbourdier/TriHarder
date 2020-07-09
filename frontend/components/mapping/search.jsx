@@ -5,8 +5,8 @@ import RouteMap from "./route_map";
 const Search = props => (
 
   <div>
-    {/* {RouteMap} */}
-    search route container ect. TESTTTT
+    {RouteMap}
+
   </div>
 )
 
