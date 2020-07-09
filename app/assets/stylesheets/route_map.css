@@ -1,4 +1,28 @@
+
+/* route page container */
+
+#route-page-container {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  left: -58px;
+}
+
+/* page left */
+#map-page-left {
+  min-width: 340px;
+  min-height: 610px;
+
+  background-color: beige;
+  border-right: solid 1px black;
+}
+
+/* page right */
 #map-container {
   width: 80vw;
   height: 80vh;
 }
+
+

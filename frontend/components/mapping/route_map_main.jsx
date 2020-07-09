@@ -1,8 +1,14 @@
 import React, {Component} from 'react';
 
-
+import RouteMapLeft from "./route_map_left";
 // this is being rendered from the higher component: Search located at search.jsx
 class RouteMap extends Component {
+  constructor(props){
+    super(props)
+
+
+    this.markArray = [];
+  }
 
   componentDidMount() {
     // our map init
@@ -19,7 +25,8 @@ class RouteMap extends Component {
         map: map
       });
 
-      map.panTo(e.latLng)
+      this.markArray.push(mark)
+      // map.panTo(e.latLng)
     })
   }
 
@@ -28,9 +35,14 @@ class RouteMap extends Component {
 
   render() {
 
+
     return (
-      <div id="map-container" ref="map">
-        routeMap!
+      <div id="route-page-container">
+        <RouteMapLeft markArray={this.markArray}/>
+
+        <section id="map-container" ref="map">
+          routeMap!
+        </section>
       </div>
     )
 
