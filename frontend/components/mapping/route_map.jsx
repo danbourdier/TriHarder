@@ -8,8 +8,8 @@ class RouteMap extends Component {
     // our map init
     let map;
     map = new google.maps.Map(document.getElementById("map-container"), {
-      center: { lat: -34.397, lng: 150.644 }, // what coordinate the map defaults to
-      zoom: 8 // specifies what view level to instantiate the map at; 1: world, 5: continent, 10: city...
+      center: { lat: 40.736957, lng: -73.976 }, // what coordinate the map defaults to
+      zoom: 15// specifies what view level to instantiate the map at; 1: world, 5: continent, 10: city...
       }
     );
   }

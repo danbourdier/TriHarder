@@ -35,10 +35,12 @@
 
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
+      <!-- had to remove "&callback=initMap" below(line 40) after closing erb tag because no callback func was needed upon load-->
     <script
-      src="https://maps.googleapis.com/maps/api/js?key=<%= Rails.application.credentials.google[:api_key] %>&callback=initMap&libraries=&v=weekly"
+      src="https://maps.googleapis.com/maps/api/js?key=<%= Rails.application.credentials.google[:api_key] %>&libraries=&v=weekly"
       defer>
     </script>
+    
 
     <link rel="shortcut icon" href="<%= image_url('logo.png') %>" type="image/png">
   </head>
