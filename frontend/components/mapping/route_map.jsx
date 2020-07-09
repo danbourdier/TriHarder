@@ -12,6 +12,15 @@ class RouteMap extends Component {
       zoom: 15// specifies what view level to instantiate the map at; 1: world, 5: continent, 10: city...
       }
     );
+
+    map.addListener("click", e => {
+      let mark = new google.maps.Marker({
+        position: e.latLng,
+        map: map
+      });
+
+      map.panTo(e.latLng)
+    })
   }
 
 
