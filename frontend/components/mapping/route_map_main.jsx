@@ -19,7 +19,7 @@ class RouteMap extends Component {
     this.pointsArray = [];
     // shortcuts to use googles built-in methods to access their routes api and rendering UI
     this.directionsService = new google.maps.DirectionService();
-    this.directionsDisplay = new.google.maps.DirectionsDisplay()
+    this.directionsDisplay = new google.maps.DirectionsDisplay()
   }
 
   
