@@ -7,14 +7,22 @@ class RouteMap extends Component {
   constructor(props){
     super(props)
 
+    // binded methods
+    this.createPoint = this.createPoint.bind(this)
+
+    // shortcuts to store data
     this.drawingManager;
     this.placeIdArray = [];
     this.polylines = [];
     this.snappedCoordinates = [];
-    this.markArray = [];
+    // where we contain our created points
+    this.pointsArray = [];
+    // shortcuts to use googles built-in methods to access their routes api and rendering UI
     this.directionsService = new google.maps.DirectionService();
     this.directionsDisplay = new.google.maps.DirectionsDisplay()
   }
+
+  
 
   componentDidMount() {
     // our map init
@@ -25,17 +33,18 @@ class RouteMap extends Component {
       zoom: 15 // specifies what view level to instantiate the map at; 1: world, 5: continent, 10: city...
       }
     );
+  }
 
+  createPoint() {
     // the below listener adds new markers to our map
     map.addListener("click", e => {
       let mark = new google.maps.Marker({
         position: e.latLng,
         map: map
       });
-      this.markArray.push(mark)
+      this.pointsArray.push(mark)
       // map.panTo(e.latLng)
     });
-
   }
 
 
@@ -46,7 +55,7 @@ class RouteMap extends Component {
 
     return (
       <div id="route-page-container">
-        <RouteMapLeft markArray={this.markArray}/>
+        <RouteMapLeft pointsArray={this.pointskArray}/>
 
         <section id="map-container" ref="map">
           routeMap!

@@ -3,17 +3,17 @@ import React, { Component } from "react";
 class RouteMapLeft extends Component {
   constructor(props){
     super(props)
-    
 
-    this.marks = this.props.markArray;
+
+    this.points = this.props.pointsArray;
     this.handleClick.bind(this)
   }
 
   handleClick() {
-    this.marks.forEach(mar => (
-      mar.setMap(null)
+    this.points.forEach(point => (
+      point.setMap(null)
     ));
-    this.marks.length = 0;
+    this.points.length = 0;
     
   }
 
