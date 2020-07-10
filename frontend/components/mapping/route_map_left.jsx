@@ -3,6 +3,7 @@ import React, { Component } from "react";
 class RouteMapLeft extends Component {
   constructor(props){
     super(props)
+    
 
     this.marks = this.props.markArray;
     this.handleClick.bind(this)
