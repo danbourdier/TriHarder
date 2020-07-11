@@ -66,7 +66,7 @@ const App = () => (
           <AuthRoute exact path="/forgot_password_message" component={ForgotPasswordMessage} />
           <AuthRoute exact path="/signup" component={SignupFormContainer} />
           <ProtectedRoute exact path="/home_page" component={HomePageContainer}/>
-          <AuthRoute exact path="/123" component={SearchContainer} />
+          <AuthRoute exact path="/map" component={SearchContainer} />
           {/* <ProtectedRoute exact path="/create_route" component={}/>
           <ProtectedRoute exact path="/create_workout" component={}/>
           <ProtectedRoute exact path="/create_goal" component={}/> */}

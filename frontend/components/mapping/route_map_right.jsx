@@ -24,6 +24,7 @@ class RouteMapRight extends Component {
         <div>{Number(distance).toFixed(2)}</div>
         <button onClick={nullAllPoints}>clear all points</button>
         <button onClick={nullPoint}>clear point</button>
+          <strong>Points are not to exceed the "Z" point to not overload map requests</strong>
       </section>
     )
 
