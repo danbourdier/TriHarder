@@ -1,11 +1,9 @@
 .header-container {
   max-height: 124px;
-  /* position: relative; */
-  min-height: 122px;
-  max-height: 162px;
-  
-
+  max-height: 64px;
+  max-height: 64px;
 }
+
 .header-main {
   display: flex;
   justify-content: space-between;

@@ -11,7 +11,7 @@ import RouteIndexContainer from '../routes/route_index_container';
 
 const HomePageComponent = props => (
   <div className="homepage-body">
-    <header className="homepage-body-header">
+    <section className="homepage-body-header">
       <div id="ecbannerblue">
         <figure>
           Changes are coming to this website!
@@ -35,7 +35,7 @@ const HomePageComponent = props => (
        
       </nav>
 
-    </header>
+    </section>
     <main className="homepage-body-inner-dashboard-container">
 
       <RouteIndexContainer prop={props}/>
