@@ -17,11 +17,13 @@ class RouteMapRight extends Component {
   }
 
   render() {
-    let {distance, nullPoint, nullAllPoints} = this.props
+    // object destructing for DRY code
+    let {total_time, distance, nullPoint, nullAllPoints} = this.props
 
     return (
       <section id="map-page-right" onClick={() => (this.handleClick())}>
         <div>{Number(distance).toFixed(2)}</div>
+        {/* <div>{total_time} Minutes</div> */}
         <button onClick={nullAllPoints}>clear all points</button>
         <button onClick={nullPoint}>clear point</button>
           <strong>Points are not to exceed the "Z" point to not overload map requests</strong>

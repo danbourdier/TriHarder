@@ -218,7 +218,7 @@ class RouteMap extends Component {
         <RouteMapLeft total_time={this.state.total_time} distance={this.state.distance} />
 
         <main id="map-container" ref={map => this.mapNode = map}>Our Map!</main>
-        <RouteMapRight distance={this.state.distance} nullPoint={() => (this.nullPoint())} nullAllPoints={() => (this.nullAllPoints())} />
+        <RouteMapRight total_time={this.state.total_time} distance={this.state.distance} nullPoint={() => (this.nullPoint())} nullAllPoints={() => (this.nullAllPoints())} />
       </div>
     )
   }
