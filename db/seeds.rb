@@ -43,8 +43,8 @@ route1b = Route.create!(title: "Trail Trek Madness", total_time: 18.00, activity
   distance: 8.6, description: "Bring your favorite trailrunners!!!", start_point: "Fort Bragg, Gruber rd Motor Pool", 
   end_point: "Fort Bragg, Zabitosky rd (Old 3rd Group trail entrance)", user_id: 1
 )
-route1c = Route.create!(title: "CAG Operator's morning jog", total_time: 172.10, activity: "run", 
-  distance: 38.60, description: "Enjoy a B-E-A-utiful run enjoyed by our finest, bring salt", start_point: "Fort Bragg, compound entrance(???)", 
+route1c = Route.create!(title: "Operator's morning jog", total_time: 172.10, activity: "run", 
+  distance: 38.60, description: "Enjoy a B-E-A-utiful run enjoyed by our finest, bring salt", start_point: "Fort Bragg, secret entrance(???)", 
   end_point: "Space, ???", user_id: 1
 )
 

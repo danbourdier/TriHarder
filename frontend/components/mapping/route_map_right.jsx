@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class RouteMapRight extends Component {
   constructor(props) {
     super(props)
-
+    // props = distance, nullPoint, nullAllPoints
     // this.marks = this.props.markArray;
     this.handleClick.bind(this)
   }
@@ -17,12 +17,13 @@ class RouteMapRight extends Component {
   }
 
   render() {
-
+    let {distance, nullPoint, nullAllPoints} = this.props
 
     return (
       <section id="map-page-right" onClick={() => (this.handleClick())}>
-        <p className="auto"><input type="text" id="autoc" /></p>
-        <p><a id="clear" href="">Click here</a> to clear map.</p>
+        <div>{Number(distance).toFixed(2)}</div>
+        <button onClick={nullAllPoints}>clear all points</button>
+        <button onClick={nullPoint}>clear point</button>
       </section>
     )
 

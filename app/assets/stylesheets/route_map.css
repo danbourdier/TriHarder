@@ -12,10 +12,10 @@
 
 /* page left */
 #map-page-left {
-  min-width: 340px;
-  min-height: 610px;
+  /* min-width: 340px;
+  min-height: 610px; */
 
-  background-color: beige;
+  background-color: transparent;
   border-right: solid 1px black;
 }
 
