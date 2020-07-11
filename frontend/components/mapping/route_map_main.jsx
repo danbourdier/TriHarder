@@ -202,6 +202,14 @@ class RouteMap extends Component {
     
   }
 
+    // DESIRED SUBMITTED STATE
+  // title: "",
+  // total_time: 0,
+  // activity: "",
+  // distance: 0,
+  // description: "",
+  // start_point: "",
+  // end_point: ""
 
   render() {
     // we pass our null functions as props below so our asides have functionality to interact with our main component!

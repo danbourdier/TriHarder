@@ -27,7 +27,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  border: solid 1px lightgray;
+  border-bottom: solid 1px lightgray;
   background-color: #f0f0f0;
   position: relative;
 }
