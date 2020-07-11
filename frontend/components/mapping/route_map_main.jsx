@@ -218,10 +218,9 @@ class RouteMap extends Component {
         <div id="ec-123-map-spacer"></div>
         <div className='route-page-container'>
           <RouteMapLeft total_time={this.state.total_time} distance={this.state.distance} />
-
           <section id="map-container" ref={map => this.mapNode = map}>Our Map!</section>
-          <RouteMapRight total_time={this.state.total_time} distance={this.state.distance} nullPoint={() => (this.nullPoint())} nullAllPoints={() => (this.nullAllPoints())} />
         </div>
+          <RouteMapRight total_time={this.state.total_time} distance={this.state.distance} nullPoint={() => (this.nullPoint())} nullAllPoints={() => (this.nullAllPoints())} />
       </div>
       
     )
