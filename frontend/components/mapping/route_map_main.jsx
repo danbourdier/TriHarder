@@ -214,12 +214,16 @@ class RouteMap extends Component {
   render() {
     // we pass our null functions as props below so our asides have functionality to interact with our main component!
     return (
-      <div className='route-page-container'>
-        <RouteMapLeft total_time={this.state.total_time} distance={this.state.distance} />
+      <div>
+        <div id="ec-123-map-spacer"></div>
+        <div className='route-page-container'>
+          <RouteMapLeft total_time={this.state.total_time} distance={this.state.distance} />
 
-        <main id="map-container" ref={map => this.mapNode = map}>Our Map!</main>
-        <RouteMapRight total_time={this.state.total_time} distance={this.state.distance} nullPoint={() => (this.nullPoint())} nullAllPoints={() => (this.nullAllPoints())} />
+          <section id="map-container" ref={map => this.mapNode = map}>Our Map!</section>
+          <RouteMapRight total_time={this.state.total_time} distance={this.state.distance} nullPoint={() => (this.nullPoint())} nullAllPoints={() => (this.nullAllPoints())} />
+        </div>
       </div>
+      
     )
   }
 

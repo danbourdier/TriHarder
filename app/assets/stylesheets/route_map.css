@@ -1,33 +1,44 @@
 
 /* route page container */
 
-#route-page-container {
+.route-page-container {
   width: 100vw;
-  height: 80vh;
+  height: 85vh;
   position: absolute;
   z-index: 300;
   top: 110px;
+  right: 0px;
+  display: flex;
+  flex-direction: row;
 }
 
 /* page left */
 #map-page-left {
-  min-width: 340px;
-  min-height: 610px;
-
+  width: 20%;
+  height: 100%;
   background-color: green;
   border-right: solid 1px black;
 }
 
 /* page right */
 #map-container {
-  /* width: 80vw; */
-  /* height: 100vh; */
+  width: 60%;
+  height: 100%;
   position: relative;
   overflow: hidden !important;
 }
 
-#map-page-left {
-  
+/* page right */
+#map-page-right {
+  width: 20%;
+  height: 100px;
 }
 
+
+/* spacer */
+
+#ec-123-map-spacer {
+  height: 50vh;
+
+}
 
