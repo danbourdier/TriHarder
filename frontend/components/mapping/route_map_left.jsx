@@ -30,7 +30,7 @@ class RouteMapLeft extends Component {
       // start_point: 
       // end_point: 
     });
-    // debugger
+    
 
     return (
       <section id="map-page-left">
