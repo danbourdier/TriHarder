@@ -19,9 +19,8 @@ class RouteMapLeft extends Component {
 
   render() {
 
-
     return (
-      <section id="map-page-left" onClick={() => (this.handleClick())}>
+      <section id="map-page-left">
         <form>
 
           <aside>
@@ -31,17 +30,17 @@ class RouteMapLeft extends Component {
 
           <aside>
             <span>Route Name:</span>
-            <input placeholder="Enter Title Here"/> 
+            <input placeholder="Enter Title Here" onChange={this.props.update('title')}/> 
           </aside>
 
           <aside>
             <span>Route Description:</span>
-            <input placeholder="Enter Description Here"/> 
+            <input placeholder="Enter Description Here" onChange={this.props.update('description')} /> 
           </aside>
 
           <aside>
             <span>Activity Type:</span>
-            <input placeholder="Choose Activity"/> 
+            <input placeholder="Choose Activity" onChange={this.props.update('activity')} /> 
           </aside>
 
           <aside>

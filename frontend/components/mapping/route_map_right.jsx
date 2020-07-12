@@ -3,25 +3,16 @@ import React, { Component } from "react";
 class RouteMapRight extends Component {
   constructor(props) {
     super(props)
-    // props = distance, nullPoint, nullAllPoints
-    // this.marks = this.props.markArray;
-    this.handleClick.bind(this)
-  }
 
-  handleClick() {
-    // this.marks.forEach(mar => (
-    //   mar.setMap(null)
-    // ));
-    // this.marks.length = 0;
-
+    
   }
 
   render() {
-    // object destructing for DRY code
-    let {stateTrack, total_time, distance, nullPoint, nullAllPoints} = this.props;
+    // object destructuring for DRY code
+    let {total_time, distance, nullPoint, nullAllPoints} = this.props;
 
     return (
-      <section id="map-page-right" onClick={() => (this.handleClick())}>
+      <section id="map-page-right" >
         <div className="map-page-right-distance-container">
           <div style={{ fontSize: 11.25 + 'px' }}>
             DISTANCE
@@ -34,14 +25,16 @@ class RouteMapRight extends Component {
         <section className="map-page-right-buttons-container">
           <button onClick={nullAllPoints}>Clear All Points</button>
           <button onClick={nullPoint}>Clear Last Point</button>
-          <button className="testing button" onClick={stateTrack}>TestFire</button>
+          <button className="testing button" >TestFire</button>
         </section>
           <strong>ToolTip</strong>
       </section>
     )
 
   };
+
 }
+
 
 
 export default RouteMapRight;

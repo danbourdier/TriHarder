@@ -19,19 +19,8 @@ class RouteMap extends Component {
     this.calcRouteAndRender = this.calcRouteAndRender.bind(this);
     this.createPoint = this.createPoint.bind(this);
 
-
-    
-
-
-
-    this.stateTrack = this.stateTrack.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
-    // this.createRoute = this.props.createRoute;
-
-
-
-
-
+                                                                                                                              // our binded test methods
+                                                                                                                              this.update = this.update.bind(this)
 
       // to remove all points located on line: 
     this.nullAllPoints = this.nullAllPoints.bind(this);
@@ -44,6 +33,15 @@ class RouteMap extends Component {
     this.currentPoint = 0;
     this.roadSnappedLatLng = 0;
   };
+
+  update(field) {
+    // although #setState is asynchronous, we make it synchronous by enclosing it in an sync function
+    console.log(this.state[field])
+    console.log(this.state)
+    e => this.setState({ [field]: e.currentTarget.value })
+    console.log(this.state[field])
+  };
+
 
   componentDidMount() {
     let map;
@@ -218,23 +216,9 @@ class RouteMap extends Component {
   }
 
 
-  handleSubmit() {
-    // we need enclosure to be able to use this state in another component
-    let that = this
-    debugger
-    that.props.props.createRoute(that.state)
-    debugger
-    // Redirect to?
-    // this.props.history.push(PATH)
-  }
+
    
-  // created testable method
-  stateTrack() {
-    let that = this;
-    console.log(that.state);
-    that.handleSubmit(that.state);
-    console.log(that.state);
-  }
+  
 
   render() {
     // we pass our null functions as props below so our asides have functionality to interact with our main component!
@@ -242,10 +226,10 @@ class RouteMap extends Component {
       <div>
         <div id="ec-123-map-spacer"></div>
         <div className='route-page-container'>
-          <RouteMapLeft total_time={this.state.total_time} distance={this.state.distance} />
+          <RouteMapLeft update={() => (this.update())} total_time={this.state.total_time} distance={this.state.distance} />
           <section id="map-container" ref={map => this.mapNode = map}>Our Map!</section>
         </div>
-          <RouteMapRight stateTrack={() => (this.stateTrack())} total_time={this.state.total_time} distance={this.state.distance} nullPoint={() => (this.nullPoint())} nullAllPoints={() => (this.nullAllPoints())} />
+          <RouteMapRight total_time={this.state.total_time} distance={this.state.distance} nullPoint={() => (this.nullPoint())} nullAllPoints={() => (this.nullAllPoints())} />
       </div>
       
     )
