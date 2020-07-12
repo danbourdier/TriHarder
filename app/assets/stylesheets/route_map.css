@@ -76,6 +76,12 @@
     border: solid 1px grey;
   }
 
+  #map-page-right strong {
+    background-color: whitesmoke;
+    width: 100%;
+    padding: 0px 72% 0px 0px;
+  }
+
 
 /* spacer */
 

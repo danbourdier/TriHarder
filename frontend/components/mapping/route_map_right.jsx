@@ -35,7 +35,7 @@ class RouteMapRight extends Component {
           <button onClick={nullAllPoints}>Clear All Points</button>
           <button onClick={nullPoint}>Clear Last Point</button>
         </section>
-          <strong>Points are not to exceed the "Z" point to not overload map requests</strong>
+          <strong>ToolTip</strong>
       </section>
     )
 
