@@ -4,11 +4,10 @@ class RouteMapRight extends Component {
   constructor(props) {
     super(props)
 
-    
   }
 
   render() {
-    // object destructuring for DRY code
+    // object destructuring for DRYer code
     let {total_time, distance, nullPoint, nullAllPoints} = this.props;
 
     return (
@@ -25,7 +24,6 @@ class RouteMapRight extends Component {
         <section className="map-page-right-buttons-container">
           <button onClick={nullAllPoints}>Clear All Points</button>
           <button onClick={nullPoint}>Clear Last Point</button>
-          <button className="testing button" >TestFire</button>
         </section>
           <strong>ToolTip</strong>
       </section>

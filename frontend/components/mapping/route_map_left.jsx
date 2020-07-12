@@ -18,7 +18,11 @@ class RouteMapLeft extends Component {
   }
 
   render() {
-    debugger
+    // debugger
+    let { activity, description, distance, end_point, lastDistanceLeg, 
+        lastLegDuration, start_point, title, total_time 
+        } = this.props.thatState
+
     return (
       <section id="map-page-left">
         <form>
@@ -30,17 +34,31 @@ class RouteMapLeft extends Component {
 
           <aside>
             <span>Route Name:</span>
-            <input placeholder="Enter Title Here" onChange={this.props.update('title')}/> 
+            <input  placeholder="Enter Title Here" 
+                    value={title}
+                    onChange={this.props.update('title')}/> 
           </aside>
 
           <aside>
             <span>Route Description:</span>
-            <input placeholder="Enter Description Here" onChange={this.props.update('description')} /> 
+            <input placeholder="Enter Description Here" 
+                  value={description} 
+                  onChange={this.props.update('description')} /> 
           </aside>
 
           <aside>
             <span>Activity Type:</span>
-            <input placeholder="Choose Activity" onChange={this.props.update('activity')} /> 
+            <select id="ec-selectore-123" name="activity" 
+                    placeholder="Choose Activity" 
+                    value={activity} 
+                    onChange={this.props.update('activity')}>
+
+              <option value="Run">Run</option>
+              <option value="Walk">Walk</option>
+              <option value="Ruck">Ruck</option>
+              <option value="Bike">Bike</option>
+              <option value="Manic Sprint">Manic Sprint</option>
+            </select>
           </aside>
 
           <aside>
