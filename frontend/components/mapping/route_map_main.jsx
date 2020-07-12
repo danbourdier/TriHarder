@@ -14,15 +14,16 @@ class RouteMap extends Component {
     // tied to our route creation and our info display on right of map
     this.total_time = this.props.total_time;
     this.distance = this.props.distance;
+                                                                                this.createRoute = this.props.props.createRoute.bind(this) //dirty but useful
 
     // our binded class methods
     this.calcRouteAndRender = this.calcRouteAndRender.bind(this);
     this.createPoint = this.createPoint.bind(this);
 
-                                                                                                                              // our binded test methods
-                                                                                                                              this.update = this.update.bind(this)
+    // our binded update methods
+    this.update = this.update.bind(this)
 
-      // to remove all points located on line: 
+    // to remove all points located on line: 
     this.nullAllPoints = this.nullAllPoints.bind(this);
     this.nullPoint = this.nullPoint.bind(this);
     // below are our two flags to help track concurrency so our final outcome stays the same
@@ -36,10 +37,7 @@ class RouteMap extends Component {
 
   update(field) {
     // although #setState is asynchronous, we make it synchronous by enclosing it in an sync function
-    console.log(this.state[field])
-    // console.log(this.state)
     return e => this.setState({ [field]: e.currentTarget.value })
-    // console.log(this.state[field])
   };
 
 
@@ -120,7 +118,6 @@ class RouteMap extends Component {
     }, (res, status) => {
       if (status === 'OK') {
         // https://developers.google.com/maps/documentation/javascript/directions#DirectionsResults for understanding repsonse of directions request
-        // debugger
         // stores our latest leg from the array returned within the responses routes key-value
           // each click is a new object stored under the response's [routes]: []
         let lastLegIndex = res.routes[0].legs.length - 1; // this stores the index of the last route's index for future convenience
@@ -215,21 +212,35 @@ class RouteMap extends Component {
     
   }
 
-
-
-   
-  
-
   render() {
     // we pass our null functions as props below so our asides have functionality to interact with our main component!
     return (
       <div>
         <div id="ec-123-map-spacer"></div>
+
         <div className='route-page-container'>
-          <RouteMapLeft thatState={this.state} update={this.update} total_time={this.state.total_time} distance={this.state.distance} />
-          <section id="map-container" ref={map => this.mapNode = map}>Our Map!</section>
+          <RouteMapLeft 
+            createRoute={this.createRoute}
+            thatState={this.state} 
+            update={this.update} 
+            total_time={this.state.total_time} 
+            distance={this.state.distance} 
+          />
+
+          <section  
+            id="map-container" 
+            ref={map => this.mapNode = map}>Our Map!
+          </section>
+
         </div>
-          <RouteMapRight total_time={this.state.total_time} distance={this.state.distance} nullPoint={() => (this.nullPoint())} nullAllPoints={() => (this.nullAllPoints())} />
+
+          <RouteMapRight 
+            total_time={this.state.total_time} 
+            distance={this.state.distance} 
+            nullPoint={() => (this.nullPoint())} 
+            nullAllPoints={() => (this.nullAllPoints())}
+          />
+
       </div>
       
     )

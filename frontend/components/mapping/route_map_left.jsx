@@ -18,10 +18,11 @@ class RouteMapLeft extends Component {
   }
 
   render() {
-    // debugger
-    let { activity, description, distance, end_point, lastDistanceLeg, 
+    
+    let { createRoute, activity, description, distance, end_point, lastDistanceLeg, 
         lastLegDuration, start_point, title, total_time 
         } = this.props.thatState
+    // debugger
 
     return (
       <section id="map-page-left">
@@ -48,7 +49,8 @@ class RouteMapLeft extends Component {
 
           <aside>
             <span>Activity Type:</span>
-            <select id="ec-selectore-123" name="activity" 
+            <select id="ec-selectore-123" 
+                    name="activity" 
                     placeholder="Choose Activity" 
                     value={activity} 
                     onChange={this.props.update('activity')}>
