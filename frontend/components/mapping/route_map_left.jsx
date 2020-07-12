@@ -22,6 +22,33 @@ class RouteMapLeft extends Component {
 
     return (
       <section id="map-page-left" onClick={() => (this.handleClick())}>
+        <form>
+
+          <aside>
+            <div>Choose Map Location</div>
+            <input placeholder="Search Location"/>
+          </aside>
+
+          <aside>
+            <span>Route Name:</span>
+            <input placeholder="Enter Title Here"/> 
+          </aside>
+
+          <aside>
+            <span>Route Description:</span>
+            <input placeholder="Enter Description Here"/> 
+          </aside>
+
+          <aside>
+            <span>Activity Type:</span>
+            <input placeholder="Choose Activity"/> 
+          </aside>
+
+          <aside>
+            <button type="submit">Create Route!</button>
+          </aside>
+
+        </form>
 
       </section>
     )
