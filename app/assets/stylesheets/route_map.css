@@ -6,7 +6,7 @@
   height: 85vh;
   position: absolute;
   z-index: 300;
-  top: 110px;
+  top: 126px;
   right: 0px;
   display: flex;
   flex-direction: row;
@@ -14,7 +14,7 @@
 
 /* page left */
 #map-page-left {
-  width: 30%;
+  width: 23.7%;
   height: 100%;
   background-color: green;
   border-right: solid 1px black;
@@ -22,7 +22,7 @@
 
 /* page right */
 #map-container {
-  width: 70%;
+  width: 76.3%;
   height: 100%;
   position: relative;
   overflow: hidden !important;
@@ -31,9 +31,9 @@
 /* page right */
 #map-page-right {
   position: absolute;
-  top: 75px;
+  top: 215px;
   /* width: 20%; */
-  width: 225px;
+  width: 185px;
   height: 100px;
   margin: 35px 10px 25px 85px;
   right: 0;
@@ -42,7 +42,35 @@
   border-radius: 2px;
   border: 1px solid #111;
   color: #6e6e6e;
+  overflow: hidden;
 }
+
+  .map-page-right-distance-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #525252;
+    background: rgba(51,51,51,0.75);
+    text-shadow: 1px 1px 2px #000;
+  }
+
+  .map-page-right-distance-container div {
+    display: flex;
+    flex-direction: row;
+    color: white;
+  }
+
+  .map-page-right-buttons-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: whitesmoke;
+  }
+  .map-page-right-buttons-container button{
+    width: 60px;
+    height: 40px;
+    margin-right: 3px;
+    background-image: linear-gradient(to bottom right, whitesmoke, lightgrey);
+  }
 
 
 /* spacer */
