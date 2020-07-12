@@ -37,9 +37,9 @@ class RouteMap extends Component {
   update(field) {
     // although #setState is asynchronous, we make it synchronous by enclosing it in an sync function
     console.log(this.state[field])
-    console.log(this.state)
-    e => this.setState({ [field]: e.currentTarget.value })
-    console.log(this.state[field])
+    // console.log(this.state)
+    return e => this.setState({ [field]: e.currentTarget.value })
+    // console.log(this.state[field])
   };
 
 
@@ -226,7 +226,7 @@ class RouteMap extends Component {
       <div>
         <div id="ec-123-map-spacer"></div>
         <div className='route-page-container'>
-          <RouteMapLeft update={() => (this.update())} total_time={this.state.total_time} distance={this.state.distance} />
+          <RouteMapLeft thatState={this.state} update={this.update} total_time={this.state.total_time} distance={this.state.distance} />
           <section id="map-container" ref={map => this.mapNode = map}>Our Map!</section>
         </div>
           <RouteMapRight total_time={this.state.total_time} distance={this.state.distance} nullPoint={() => (this.nullPoint())} nullAllPoints={() => (this.nullAllPoints())} />
