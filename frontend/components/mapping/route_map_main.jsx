@@ -7,7 +7,7 @@ import RouteMapRight from "./route_map_right";
 class RouteMap extends Component {
   constructor(props) {
     super(props);
-    this.state = { total_time: 0, distance: 0, lastLegDuration: 0, lastDistanceLeg: 0, title: "", activity: "", description: "" };
+    this.state = { total_time: 0, distance: 0, lastLegDuration: 0, lastDistanceLeg: 0, title: "", activity: "", description: "", start_point: "", end_point: "" };
     // array below used so we can store our points and conveniently delete them
     this.points = [];
 
