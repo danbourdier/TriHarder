@@ -20,7 +20,18 @@ class RouteMap extends Component {
     this.createPoint = this.createPoint.bind(this);
 
 
+    
+
+
+
     this.stateTrack = this.stateTrack.bind(this)
+    this.handleSubmit = this.handleSubmit.bind(this)
+    // this.createRoute = this.props.createRoute;
+
+
+
+
+
 
       // to remove all points located on line: 
     this.nullAllPoints = this.nullAllPoints.bind(this);
@@ -35,7 +46,6 @@ class RouteMap extends Component {
   };
 
   componentDidMount() {
-    console.log(this.props)
     let map;
     const mapOptions = {
       center: { lat: 40.744661381538805, lng: -73.98616038721435 },
@@ -211,7 +221,9 @@ class RouteMap extends Component {
   handleSubmit() {
     // we need enclosure to be able to use this state in another component
     let that = this
-    that.props.createRoute(that.state)
+    debugger
+    that.props.props.createRoute(that.state)
+    debugger
     // Redirect to?
     // this.props.history.push(PATH)
   }
@@ -219,6 +231,8 @@ class RouteMap extends Component {
   // created testable method
   stateTrack() {
     let that = this;
+    console.log(that.state);
+    that.handleSubmit(that.state);
     console.log(that.state);
   }
 

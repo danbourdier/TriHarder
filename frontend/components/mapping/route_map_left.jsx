@@ -10,12 +10,11 @@ class RouteMapLeft extends Component {
   }
 
   handleClick() {
-    console.log("event target success")
+    // console.log("event target success")
     // this.points.forEach(point => (
     //   point.setMap(null)
     // ));
     // this.points.length = 0;
-    
   }
 
   render() {

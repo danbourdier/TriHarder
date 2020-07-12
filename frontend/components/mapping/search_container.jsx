@@ -1,7 +1,8 @@
 import {connect} from 'react-redux';
 import Search from './search';
+import RouteMap from './route_map_main'
 
-import { createRoute } from '../../util/route_api_util'
+import { createRoute } from '../../actions/route_actions'
 
 const mSTP = state => ({
   title: "",

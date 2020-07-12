@@ -18,7 +18,7 @@ class RouteMapRight extends Component {
 
   render() {
     // object destructing for DRY code
-    let {total_time, distance, nullPoint, nullAllPoints} = this.props
+    let {stateTrack, total_time, distance, nullPoint, nullAllPoints} = this.props;
 
     return (
       <section id="map-page-right" onClick={() => (this.handleClick())}>
@@ -34,6 +34,7 @@ class RouteMapRight extends Component {
         <section className="map-page-right-buttons-container">
           <button onClick={nullAllPoints}>Clear All Points</button>
           <button onClick={nullPoint}>Clear Last Point</button>
+          <button className="testing button" onClick={stateTrack}>TestFire</button>
         </section>
           <strong>ToolTip</strong>
       </section>
