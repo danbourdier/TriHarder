@@ -15,7 +15,7 @@ const mSTP = state => ({
 });
 
 const mDTP = dispatch => ({
-  createRoute: route => dispatch(createRoute)
+  createRoute: route => dispatch(createRoute(route))
 });
 
 export default connect(mSTP, mDTP)(Search)
