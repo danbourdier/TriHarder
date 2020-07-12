@@ -7,7 +7,7 @@ import RouteMapRight from "./route_map_right";
 class RouteMap extends Component {
   constructor(props) {
     super(props);
-    this.state = { total_time: 0, distance: 0, lastLegDuration: 0, lastDistanceLeg: 0 };
+    this.state = { total_time: 0, distance: 0, lastLegDuration: 0, lastDistanceLeg: 0, title: "", activity: "", description: "" };
     // array below used so we can store our points and conveniently delete them
     this.points = [];
 
@@ -31,6 +31,7 @@ class RouteMap extends Component {
   }
 
   componentDidMount() {
+    console.log(this.props)
     let map;
     const mapOptions = {
       center: { lat: 40.744661381538805, lng: -73.98616038721435 },
@@ -202,6 +203,12 @@ class RouteMap extends Component {
     
   }
 
+
+  handleSubmit() {
+    this.props.createRoute(this.state)
+    // Redirect to?
+    // this.props.history.push(PATH)
+  }
     // DESIRED SUBMITTED STATE
   // title: "",
   // total_time: 0,
