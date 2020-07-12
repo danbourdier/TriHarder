@@ -28,7 +28,7 @@ class RouteMap extends Component {
 
     this.currentPoint = 0;
     this.roadSnappedLatLng = 0;
-  }
+  };
 
   componentDidMount() {
     console.log(this.props)
@@ -45,7 +45,7 @@ class RouteMap extends Component {
       // below line removes the feature of adding alphanumerical waypoints, and allows room 
         // for customization
       // suppressMarkers: true, 
-      polylineOptions: { strokeColor: "skyblue", strokeWeight: 8 },
+      polylineOptions: { strokeColor: "skyblue", strokeWeight: 12 },
       preserveViewport: true
     });
 
