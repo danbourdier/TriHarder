@@ -69,7 +69,9 @@ class RouteMapLeft extends Component {
                     value={activity} 
                     onChange={this.props.update('activity')}>
 
-              <option defaultValue="Run">Run</option>
+              {/* <option disabled >Choose an Activity</option> */}
+              <option value="">Choose an Activity</option>
+              <option value="Run">Run</option>
               <option value="Walk">Walk</option>
               <option value="Ruck">Ruck</option>
               <option value="Bike">Bike</option>
