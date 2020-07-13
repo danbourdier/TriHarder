@@ -14,21 +14,19 @@ class RouteMapLeft extends Component {
 
   render() {
     
-    let { handleClick, createRoute, activity, description, distance, end_point, lastDistanceLeg, 
-        lastLegDuration, start_point, title, total_time 
-        } = this.props.thatState
+    let { activity, description, distance, title, 
+        total_time, start_point, end_point } = this.props.thatState
     
     let newRoute = Object.assign({}, {
       'activity': activity,
-      'distance': Number(distance),
-      'total_time': Number(total_time),
+      'distance': parseFloat(distance),
+      'total_time': parseFloat(total_time),
       'title': title,
-      'description': description
-      // start_point: 
-      // end_point: 
+      'description': description,
+      'start_point': start_point,
+      'end_point': end_point
     });
 
-    // debugger
 
     return (
       <section id="map-page-left">

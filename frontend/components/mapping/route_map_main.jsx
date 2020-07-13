@@ -47,7 +47,6 @@ class RouteMap extends Component {
   };
 
                                                                                                         setStatePos(field, value) {
-                                                                                                          console.log(this.state[field])
                                                                                                           return this.setState({[field]: value})
                                                                                                         }
 
@@ -108,16 +107,15 @@ class RouteMap extends Component {
         } else if (that.points.length > 1) {
           that.setStatePos('end_point', (`${that.points[that.points.length - 1].position.lat()}` + "," + `${that.points[that.points.length - 1].position.lng()}`))
         }
-
+          // supposed to *hide* our last marker
         if (that.points.length > 1) {
           that.calcRouteAndRender(that.directionsService, that.directionsDisplay);
         } else if (this.points.length > 2) {
           this.points[this.points.length - 2].setMap(null)
         }
-        // supposed to *hide* our last marker
+        
       };
     });
-
   }
 
   calcRouteAndRender(directionsService, directionsDisplay) {
@@ -129,7 +127,6 @@ class RouteMap extends Component {
       this.points.slice(1, this.points.length - 1).map(point => ({ location: point.position, stopover: true })) || [];
     
       // directions service API takes at minimum 3 objects with optional waypoints
-    debugger
     directionsService.route({
       origin: this.points[0].position,
       destination: this.points[this.points.length - 1].position,
@@ -137,7 +134,6 @@ class RouteMap extends Component {
       waypoints: wayPoints
     }, (res, status) => {
       if (status === 'OK') {
-        debugger
 
         // https://developers.google.com/maps/documentation/javascript/directions#DirectionsResults for understanding repsonse of directions request
         // stores our latest leg from the array returned within the responses routes key-value
