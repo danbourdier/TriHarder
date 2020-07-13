@@ -12,8 +12,17 @@ class RouteMapLeft extends Component {
     // this.handleSubmit.bind(this)
   }
 
+
+  componentDidUpdate() {
+    if (window.getState().errors.routes.length > 0) {
+      if (window.getState().errors.routes.responseText.includes("duplicate")) {
+        alert("Please create a unique route!")
+      }
+    }
+  }
+
   render() {
-    
+    let that = this;
     let { activity, description, distance, title, 
         total_time, start_point, end_point } = this.props.thatState
     
@@ -28,6 +37,7 @@ class RouteMapLeft extends Component {
       'user_id': window.getState().entities.users[Number(Object.keys(window.getState().entities.users)[0])].id
     });
 
+    window.sat = that.props.thatState['activity']
 
     return (
       <section id="map-page-left">
@@ -59,7 +69,7 @@ class RouteMapLeft extends Component {
                     value={activity} 
                     onChange={this.props.update('activity')}>
 
-              <option value="Run">Run</option>
+              <option defaultValue="Run">Run</option>
               <option value="Walk">Walk</option>
               <option value="Ruck">Ruck</option>
               <option value="Bike">Bike</option>
