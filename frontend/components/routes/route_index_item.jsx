@@ -47,12 +47,12 @@ class RouteIndexItem extends Component {
         <section className="route-index-item-second-section">
         <Link to="">{title}</Link>
           <p>Distance </p>
-          <span>{distance.toFixed(2)}<p id="ec-mi-next-to-big">mi</p></span>
+          <span>{Number(distance).toFixed(2)}<p id="ec-mi-next-to-big">mi</p></span>
         </section>
         {/*  */}
         <section className="route-index-item-third-section">
           <span>DURATION </span>
-          <p>{total_time.toFixed(2)} </p>
+          <p>{Number(total_time).toFixed(2)} </p>
           <span>CALORIES BURNED</span>
           <p>{Math.floor(((distance/60.00)*400))} <span id="ec-kcal-705">kCal</span></p>
         </section>

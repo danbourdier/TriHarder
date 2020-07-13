@@ -24,13 +24,12 @@ document.addEventListener("DOMContentLoaded", () => {
   };
   
   window.getState = store.getState;
-  window.dispatch = store.dispatch;
   
   window.showRoute = showRoute;
   window.showRoutes = showRoutes;
   window.createRoute = createRoute;
   window.deleteRoute = deleteRoute;
-
+  
   const root = document.getElementById("root");
   ReactDOM.render(<Root store={store} />, root)
 });
@@ -39,4 +38,5 @@ document.addEventListener("DOMContentLoaded", () => {
 // window.login = login;
 // window.signup = signup;
 // window.logout = logout;
+// window.dispatch = store.dispatch;
 

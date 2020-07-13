@@ -24,7 +24,8 @@ class RouteMapLeft extends Component {
       'title': title,
       'description': description,
       'start_point': start_point,
-      'end_point': end_point
+      'end_point': end_point,
+      'user_id': window.getState().entities.users[Number(Object.keys(window.getState().entities.users)[0])].id
     });
 
 
