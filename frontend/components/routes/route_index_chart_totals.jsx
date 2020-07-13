@@ -7,7 +7,7 @@ const RouteChartTotals = props => (
       {/* 105 */}
       <div>
         <p>TIME</p>
-        <aside>{parseFloat(props.time/60.0)}</aside>
+        <aside>{parseFloat(props.time/60.0).toFixed(2)}</aside>
         <span>hours</span>
       </div>
 
@@ -19,7 +19,7 @@ const RouteChartTotals = props => (
 
       <div>
         <p>CALORIES</p>
-        <aside>{props.cal}</aside>
+        <aside>{props.cal.toFixed(2)}</aside>
         <span>burned</span>
       </div>
 
