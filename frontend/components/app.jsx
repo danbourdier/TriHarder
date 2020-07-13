@@ -51,11 +51,6 @@ const App = () => (
         <HeaderTabsContainer />
       </section> 
 
-      {/* deprecated HEADER!!! */}
-      {/* <div className="header-sub">
-        <span className="covid-header-content" >Learn about TH's COVID-19 Pledge</span>
-      </div> */}
-
     </header>
 
     <main className="body">
@@ -68,7 +63,7 @@ const App = () => (
           <AuthRoute exact path="/signup" component={SignupFormContainer} />
           <ProtectedRoute exact path="/home_page" component={HomePageContainer}/>
           <ProtectedRoute exact path="/map" component={SearchContainer} />
-          {/* <ProtectedRoute exact path="/create_route" component={}/>
+          {/*
           <ProtectedRoute exact path="/create_workout" component={}/>
           <ProtectedRoute exact path="/create_goal" component={}/> */}
         </Switch>
