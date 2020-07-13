@@ -46,9 +46,9 @@ class RouteMap extends Component {
     return e => this.setState({ [field]: e.currentTarget.value })
   };
 
-                                                                                                        setStatePos(field, value) {
-                                                                                                          return this.setState({[field]: value})
-                                                                                                        }
+  setStatePos(field, value) {
+    return this.setState({[field]: value})
+  }
 
 
   componentDidMount() {
