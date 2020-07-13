@@ -33,7 +33,6 @@ class RouteMapLeft extends Component {
     return (
       <section id="map-page-left">
 
-
           <aside>
             <div>Choose Map Location</div>
             <input placeholder="Search Location"/>
@@ -72,8 +71,6 @@ class RouteMapLeft extends Component {
           <aside>
             <button type="submit" onClick={(this.handleClick(newRoute))} >Create Route!</button>
           </aside>
-
-
 
       </section>
     )
