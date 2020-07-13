@@ -8,16 +8,13 @@ class RouteMapLeft extends Component {
     // since our parent component is dependent on its child(this) to update it with use of #update
         // it would be redundant to create a state and deal with unexpected async issues
     this.points = this.props.pointsArray;
+    this.handleClick = this.props.handleClick
     // this.handleSubmit.bind(this)
   }
 
-  // handleSubmit() {
-  //   return createRoute()
-  // }
-
   render() {
     
-    let { createRoute, activity, description, distance, end_point, lastDistanceLeg, 
+    let { handleClick, createRoute, activity, description, distance, end_point, lastDistanceLeg, 
         lastLegDuration, start_point, title, total_time 
         } = this.props.thatState
     
@@ -30,7 +27,8 @@ class RouteMapLeft extends Component {
       // start_point: 
       // end_point: 
     });
-    
+
+    // debugger
 
     return (
       <section id="map-page-left">
@@ -72,7 +70,7 @@ class RouteMapLeft extends Component {
           </aside>
 
           <aside>
-            <button type="submit" onClick={(newRoute) => (this.props.createRoute(newRoute))} >Create Route!</button>
+            <button type="submit" onClick={(this.handleClick(newRoute))} >Create Route!</button>
           </aside>
 
 

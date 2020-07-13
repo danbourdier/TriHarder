@@ -14,13 +14,13 @@ class RouteMap extends Component {
     // tied to our route creation and our info display on right of map
     this.total_time = this.props.total_time;
     this.distance = this.props.distance;
-                                                                                this.createRoute = this.props.props.createRoute.bind(this) //dirty but useful
 
     // our binded class methods
     this.calcRouteAndRender = this.calcRouteAndRender.bind(this);
     this.createPoint = this.createPoint.bind(this);
+    this.handleClick = this.handleClick.bind(this);
 
-    // our binded update methods
+    // our binded update method
     this.update = this.update.bind(this)
 
     // to remove all points located on line: 
@@ -34,6 +34,11 @@ class RouteMap extends Component {
     this.currentPoint = 0;
     this.roadSnappedLatLng = 0;
   };
+
+  handleClick(arg) {
+    const {createRoute} = this.props; // when destructuring objects we must name the names of keys we want
+    return () => createRoute(arg);
+  }
 
   update(field) {
     // although #setState is asynchronous, we make it synchronous by enclosing it in an sync function
@@ -220,6 +225,7 @@ class RouteMap extends Component {
 
         <div className='route-page-container'>
           <RouteMapLeft 
+            handleClick={this.handleClick}
             createRoute={this.createRoute}
             thatState={this.state} 
             update={this.update} 

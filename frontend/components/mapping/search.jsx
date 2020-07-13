@@ -7,8 +7,8 @@ import RouteMap from "./route_map_main";
 const Search = props => (
 
   <div>
-    <RouteMap props={props}/>
-
+    <RouteMap {...props}/>
+{/* RouteMap crestRoute activity description */}
   </div>
 )
 
