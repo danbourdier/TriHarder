@@ -234,11 +234,25 @@
     cursor: initial !important;
   }
 
+  .header-pic-dropdown-container-hidden {
+    display: hidden;
+    z-index: 3;
+  }
+
   .header-group {
     /* display: none; */
     background-color: limegreen;
     width: 34px;
     height: 34px;
+  }
+
+  .header-name {
+    position: initial !important;
+    right: 0 !important;
+  }
+
+  .header-button {
+    z-index: 4;
   }
 
 

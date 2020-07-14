@@ -451,7 +451,7 @@
 }
 .splash-cities-div ul a {
   text-decoration: none;
-  color: #00c4f1;
+  color: dodgerblue;
   font-size: 14px;
   margin-bottom: 13px;
   text-align: center;
@@ -562,6 +562,7 @@
 .splash-gradient {
   text-align: center;
   background-image: linear-gradient(to bottom, rgba(255,0,0,0), white);
+  background-attachment: fixed;
 }
 
 .splash-muh-ali-container {

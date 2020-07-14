@@ -13,7 +13,13 @@ const NavBar = props => {
     <div className="revealed-container-div">
       <div className="header-group">
           <h2 className="header-name"> Drop down photo</h2>
-          <button className="header-button" onClick={props.logout}>Log Out</button>
+          <section className="header-pic-dropdown-container">
+            <div className="header-button">A div button</div>
+            <div className="header-button">A div button</div>
+            <div className="header-button">A div button</div>
+            <div className="header-button">A div button</div>
+            <div className="header-button" onClick={props.logout}>Log Out</div>
+          </section>
       </div>
     </div>
   );
