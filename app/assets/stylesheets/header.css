@@ -47,8 +47,6 @@
   font-family: arial;
   font-size: 13px;
   letter-spacing: 0px;
-	word-spacing: -2px;
-  /* transform: scale(0.9, 1.05); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,8 +64,13 @@
   letter-spacing: 0px;
 	word-spacing: -2px;
   transform: scale(0.9, 1.05);
+  width: inherit;
+  padding: 12px 80px;
 }
 
+  .header-nav-tab:hover {
+    background-color: lightgrey;
+  }
 
 .header-mid-hidden {
   height: 0px;

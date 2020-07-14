@@ -82,10 +82,14 @@
   background-color: #f6f6f6;
   border: solid 1px lightgrey;
   border-bottom: none;
-
+  cursor: pointer;
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.homepage-body-header-radios a:hover {
+  background: lightgrey;
 }
 
 .homepage-body-inner-dashboard-container {
