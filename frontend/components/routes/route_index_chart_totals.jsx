@@ -13,7 +13,7 @@ const RouteChartTotals = props => (
 
       <div>
         <p>DISTANCE</p>
-        <aside>{props.distance}</aside>
+        <aside>{parseFloat(props.distance).toFixed(2)}</aside>
         <span>miles</span>
       </div>
 

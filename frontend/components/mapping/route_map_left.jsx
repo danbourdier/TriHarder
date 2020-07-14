@@ -15,8 +15,15 @@ class RouteMapLeft extends Component {
     let target = document.getElementById("ec-button-1249-submit")
     target.addEventListener("mouseout", () => {
       if (!Array.isArray(window.getState().errors.routes)) {
+        if (window.getState().errors.routes.responseText.includes("duplicate")) {
+            return alert("Oh no! One or more route fields are not unique. Try changing the name of your route!")
+        
+        } else if (window.getState().errors.routes.responseText.includes("Start point")) {
+            return alert("Oh no! You forgot to use the map! Click anywhere to plot a point!")
 
-        return alert("bam")
+        } else if (window.getState().errors.routes.responseText.includes("End point")) {
+            return alert("Oh no! You are missing an end point!")
+        }
       }
     })
 
