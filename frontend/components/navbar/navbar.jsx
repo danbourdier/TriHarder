@@ -12,7 +12,7 @@ const NavBar = props => {
   const personalNavBar = () => (
     <div className="revealed-container-div">
       <div className="header-group">
-          <h2 className="header-name"> Drop down photo</h2>
+          <h2 className="header-name"></h2>
           <section className="header-pic-dropdown-container-visible">
             <div className="header-button">A div button</div>
             <div className="header-button">A div button</div>
