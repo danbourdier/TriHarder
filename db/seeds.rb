@@ -34,7 +34,7 @@ route1 = Route.create!(title: "Pompeii Speedrun", total_time: 2.10, activity: "r
   distance: 26.2, description: "Hydrate or Die", start_point: "Marathon, Greece", 
   end_point: "Athens, Greece", user_id: 1
 )
-
+q
 route1a = Route.create!(title: "Bike Bonanza", total_time: 35.29, activity: "bike", 
   distance: 32.35, description: "Hills and scenery for the biker", start_point: "Fort Bragg, All American Expressway (Gruber Gate)", 
   end_point: "Fort Bragg, 82nd Land", user_id: 1

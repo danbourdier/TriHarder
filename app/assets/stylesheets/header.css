@@ -180,17 +180,20 @@
 
 .auth-container-div {
   display: flex;
-  /* min-height: 100px; */
   margin: 0px 10px 0px 10px;
   padding: 11px 24px 10px 24px;
   align-items: baseline;
   position: relative;
   cursor: initial !important;
 }
-
-.auth-container-outer-div {
-  cursor: initial !important;
-}
+  .revealed-container-div {
+    display: flex;
+    margin: 0px 10px 0px 10px;
+    padding: 11px 24px 10px 24px;
+    align-items: baseline;
+    position: relative;
+    cursor: initial !important;
+  }
 
 .auth-container-div :first-child{
   /* display: flex; */
