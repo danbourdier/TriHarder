@@ -14,10 +14,9 @@ const NavBar = props => {
       <div className="header-group">
           <h2 className="header-name"></h2>
           <section className="header-pic-dropdown-container-visible">
-            <div className="header-button">A div button</div>
-            <div className="header-button">A div button</div>
-            <div className="header-button">A div button</div>
-            <div className="header-button">A div button</div>
+            <div className="header-button">Friends</div>
+            <div className="header-button">Support</div>
+            <div className="header-button">Profile and Settings</div>
             <div className="header-button" onClick={props.logout}>Log Out</div>
           </section>
       </div>

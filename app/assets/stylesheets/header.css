@@ -239,10 +239,11 @@
     z-index: 3 !important;
     font-size: 12.25px !important;
     margin-top: 15px;
-
-    width: 165px;
-    border-radius: 8px;
+    border: lightgrey solid 1px;
+    width: 167px;
+    border-radius: 6px;
     overflow: hidden;
+    border-bottom: none;
   }
 
 
@@ -258,11 +259,22 @@
     background-color: limegreen;
     z-index: 3;
     margin-left: auto;
+    cursor: pointer;
   }
 
   .header-button {
-    height: 45px;
-    background-color: whitesmoke;
+    min-height: 48px;
+    min-width: 135px;
+    padding: 11px 16px;
+    background-color: #ffffff;
+    color: black;
+    border-bottom: lightgrey 1px solid;
+    color: grey;
+    cursor: pointer;
+    line-height: 25px;
+  }
+
+  .header-button:hover {
     color: black;
   }
 
