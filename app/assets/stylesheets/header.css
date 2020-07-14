@@ -239,12 +239,17 @@
     z-index: 3 !important;
     font-size: 12.25px !important;
     margin-top: 15px;
+
+    width: 165px;
+    border-radius: 8px;
+    overflow: hidden;
   }
 
 
   .header-group {
     display: flex;
     flex-direction: column;
+    max-width: 40px;
   }
 
   .header-name {
@@ -252,12 +257,11 @@
     height: 38px;
     background-color: limegreen;
     z-index: 3;
+    margin-left: auto;
   }
 
   .header-button {
-    z-index: 4 !important;
-    /* width: 165px !important; */
-    height: 45px !important;
+    height: 45px;
     background-color: whitesmoke;
     color: black;
   }
