@@ -1,10 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { debug } from 'webpack';
 
 // debugger
 let hiddenFlag = true;
+let target = document.getElementById("ez-drop-01249")
 
-// debugger
+if (target) {
+  target.addEventListener("mouseenter", () => (
+    hiddenFlag = false
+  ))
+}
+
+debugger
 
 const NavBar = props => {
   const sessionLinks = () => (
@@ -33,12 +41,5 @@ const NavBar = props => {
   return props.currentUser ? personalNavBar() : sessionLinks();
 };
 
-let target = document.getElementById("ez-drop-01249")
-console.log(target)
-if (target) {
-  target.addEventListener("mouseenter", () => (
-    hiddenFlag = false
-  ))
-}
 
 export default NavBar;
