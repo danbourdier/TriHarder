@@ -219,7 +219,7 @@
   }
 
 
-  /* revealed container */
+  /* dropdown */
   .revealed-container-div {
     margin: auto 10px;
     padding: 0px 24px 0px 24px;
@@ -229,8 +229,8 @@
     max-height: 40px;
   }
 
-  .header-pic-dropdown-container-hidden {
-    display: hidden;
+  .header-pic-dropdown-container {
+    display: none;
   }
 
   .header-pic-dropdown-container-visible {
