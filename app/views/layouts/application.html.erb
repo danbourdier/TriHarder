@@ -12,45 +12,47 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
-    <script type="text/javascript"> window.logoText = '<%= image_url("logo_and_txt.png") %>' </script>
-    <script type="text/javascript"> window.logo = '<%= image_url("logo.png") %>' </script>
-    <script type="text/javascript"> window.gitBW = '<%= image_url("git_black_and_white.png") %>' </script>
-    <script type="text/javascript"> window.linkedInBW = '<%= image_url("linkedin_logo.png") %>' </script>
-    <script type="text/javascript"> window.splash = '<%= image_url("splash.png") %>' </script>
-    <script type="text/javascript"> window.topoCut = '<%= image_url("topo_cut.png") %>' </script>
-    <script type="text/javascript"> window.phone = '<%= image_url("phone_back_drop.png") %>' </script>
-    <script type="text/javascript"> window.phone2 = '<%= image_url("phone_back_drop2.png") %>' </script>
-    <script type="text/javascript"> window.dots = '<%= image_url("dots.png") %>' </script>
-    <script type="text/javascript"> window.flag = '<%= image_url("american_flag.png") %>' </script>
-    <script type="text/javascript"> window.logoGrey = '<%= image_url("logo_and_text_grey.png") %>' </script>
-    <script type="text/javascript"> window.topoUncut = '<%= image_url("topo_uncut.png") %>' </script>
-    <script type="text/javascript"> window.logoBlack = '<%= image_url("logo_and_text_black.png") %>' </script>
-    <script type="text/javascript"> window.captcha = '<%= image_url("captcha.png") %>' </script>
-    <script type="text/javascript"> window.arrow = '<%= image_url("drop_down_arrow.png") %>' </script>
-    <script type="text/javascript"> window.splash_snapshot = '<%= image_url("splash_snapshot.png") %>' </script>
-    <script type="text/javascript"> window.camel = '<%= image_url("camel.png") %>' </script>
-    <script type="text/javascript"> window.shark = '<%= image_url("shark.png") %>' </script>
-    <script type="text/javascript"> window.squirrel = '<%= image_url("squirrel.png") %>' </script>
-    <script type="text/javascript"> window.rabbit = '<%= image_url("rabbit.png") %>' </script>
-    <script type="text/javascript"> window.bear = '<%= image_url("bear.png") %>' </script>
-    <script type="text/javascript"> window.turtle = '<%= image_url("turtle.png") %>' </script>
+    <script type="text/javascript"> 
+      window.logoText = '<%= image_url("logo_and_txt.png") %>';
+      window.logo = '<%= image_url("logo.png") %>';
+      window.gitBW = '<%= image_url("git_black_and_white.png") %>';
+      window.linkedInBW = '<%= image_url("linkedin_logo.png") %>';
+      window.splash = '<%= image_url("splash.png") %>';
+      window.topoCut = '<%= image_url("topo_cut.png") %>';
+      window.phone = '<%= image_url("phone_back_drop.png") %>';
+      window.phone2 = '<%= image_url("phone_back_drop2.png") %>';
+      window.dots = '<%= image_url("dots.png") %>';
+      window.flag = '<%= image_url("american_flag.png") %>';
+      window.logoGrey = '<%= image_url("logo_and_text_grey.png") %>';
+      window.topoUncut = '<%= image_url("topo_uncut.png") %>';
+      window.logoBlack = '<%= image_url("logo_and_text_black.png") %>';
+      window.captcha = '<%= image_url("captcha.png") %>';
+      window.arrow = '<%= image_url("drop_down_arrow.png") %>';
+      window.splash_snapshot = '<%= image_url("splash_snapshot.png") %>';
+      window.camel = '<%= image_url("camel.png") %>';
+      window.shark = '<%= image_url("shark.png") %>';
+      window.squirrel = '<%= image_url("squirrel.png") %>';
+      window.rabbit = '<%= image_url("rabbit.png") %>';
+      window.bear = '<%= image_url("bear.png") %>';
+      window.turtle = '<%= image_url("turtle.png") %>'
+    </script>
 
     <script type="text/javascript">
       window.googleAPIKey = "<%= Rails.application.credentials.google[:api_key] %>"
     </script>
   
-  
-      <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
-
-      <script defer
-        src="https://maps.googleapis.com/maps/api/js?key=<%= Rails.application.credentials.google[:api_key] %>&libraries=&v=weekly">
-      </script>    
+    <script defer
+      src="https://maps.googleapis.com/maps/api/js?key=<%= Rails.application.credentials.google[:api_key] %>&libraries=&v=weekly">
+    </script>    
 
     <link rel="shortcut icon" href="<%= image_url('logo.png') %>" type="image/png">
+
   </head>
 
   <body class="html-body">
     <%= yield %>
   </body>
+  
 </html>
