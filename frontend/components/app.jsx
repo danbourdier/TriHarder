@@ -27,6 +27,7 @@ const App = () => (
               <img src={window.logoText} alt="logo"/>
             </a>
           </div>
+          
           {/* to contain a component for links */}
           <div className="link-container">
             <p className="link">Training</p>
@@ -38,12 +39,10 @@ const App = () => (
               <img src={window.linkedInBW} />LinkedIn
             </a>
           </div>
+
           {/* right */}
-           
           <div className={!SESSION_HIDDEN ? "auth-container" : "SESSION_HIDDEN-container"} onClick={ () => SESSION_HIDDEN = (!SESSION_HIDDEN ? true : false)}>
-            <div>
               <NavBarContainer />
-            </div>  
           </div>
       </div>
 
