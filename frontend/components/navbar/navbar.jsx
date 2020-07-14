@@ -12,10 +12,8 @@ const NavBar = props => {
   const personalNavBar = () => (
     <div className="revealed-container-div">
       <div className="header-group">
-        <div>
-          <h2 className="header-name"> (future drop-down) {props.currentUser.username}</h2>
+          <h2 className="header-name"> Drop down photo</h2>
           <button className="header-button" onClick={props.logout}>Log Out</button>
-        </div>
       </div>
     </div>
   );

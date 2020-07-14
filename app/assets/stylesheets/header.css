@@ -85,11 +85,7 @@
 
 .logo-container {
   font-family: inherit;
-  /* margin-top: 10px; */
-  /* margin-bottom: 28px; */
-
 }
-
 
 .link-container {
   display: flex;
@@ -98,28 +94,21 @@
   opacity: 1;
   margin-left: 35px;
   left: 11.5px;
-  /* bottom: 1px; */
   margin-top: 2px;
 }
+
 .link-container :last-child img {
-  /* display: flex; */
-  /* margin-top: 30px; */
-  /* font-size: 12.25px; */
   opacity: 0.5;
   height: 10px;
   width: 12px;
   text-decoration: none;
   padding-right: 3px;
-  /* margin-bottom: 28px; */
 }
+
 .link-container :last-child {
-  /* display: flex; */
-  /* margin-top: 30px; */
-  /* font-size: 12.25px; */
   color: #6d717a;
   text-decoration: none;
   margin-left: 5px;
-  /* margin-bottom: 28px; */
 }
 
 .login-signup {
@@ -150,12 +139,10 @@
   width: 165px;
 }
 
-
 .link-container p {
   padding: 0px 10px;
   color: #6d717a;
 }
-
 
 .header-sub span {
   font-size: 18px;
@@ -186,14 +173,6 @@
   position: relative;
   cursor: initial !important;
 }
-  .revealed-container-div {
-    display: flex;
-    margin: 0px 10px 0px 10px;
-    padding: 11px 24px 10px 24px;
-    align-items: baseline;
-    position: relative;
-    cursor: initial !important;
-  }
 
 .auth-container-div :first-child{
   /* display: flex; */
@@ -242,6 +221,25 @@
     width: 0px;
 
     display: none;
+  }
+
+
+  /* revealed container */
+
+  .revealed-container-div {
+    display: flex;
+    margin: 0px 10px 0px 10px;
+    padding: 11px 24px 10px 24px;
+    align-items: baseline;
+    position: relative;
+    cursor: initial !important;
+  }
+
+  .header-group {
+    /* display: none; */
+    background-color: limegreen;
+    width: 34px;
+    height: 34px;
   }
 
 
