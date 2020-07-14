@@ -29,15 +29,16 @@ class RouteMap extends Component {
     this.nullPoint = this.nullPoint.bind(this);
     // below are our two flags to help track concurrency so our final outcome stays the same
       // Much used for execution of asynchronous requests see: https://en.wikipedia.org/wiki/Concurrency_(computer_science)
+    this.currentPoint = 0;
+    this.roadSnappedLatLng = 0;
     this.nullPointExecuted = false;
     this.nullPointReset = false;
 
-    this.currentPoint = 0;
-    this.roadSnappedLatLng = 0;
   };
 
   handleClick(arg) {
     const {createRoute} = this.props; // when destructuring objects we must name the names of keys we want
+
     return () => createRoute(arg);
   }
 

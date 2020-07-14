@@ -4,23 +4,22 @@ import { createRoute } from "../../actions/route_actions";
 class RouteMapLeft extends Component {
   constructor(props){
     super(props)
-
     // since our parent component is dependent on its child(this) to update it with use of #update
         // it would be redundant to create a state and deal with unexpected async issues
     this.points = this.props.pointsArray;
     this.handleClick = this.props.handleClick
-    // this.handleSubmit.bind(this)
+    this.flag = false
   }
 
   componentDidMount() {
-    window.addEventListener("click", () => {
-      if (window.getState().errors.routes.length > 0) {
-        if (window.getState().errors.routes.responseText.includes("duplicate")) {
-          return alert("Please create a unique route!")
-        } 
+    let target = document.getElementById("ec-button-1249-submit")
+    target.addEventListener("mouseout", () => {
+      if (!Array.isArray(window.getState().errors.routes)) {
+
+        return alert("bam")
       }
-     }
-    )
+    })
+
   }
 
   render() {
@@ -79,7 +78,7 @@ class RouteMapLeft extends Component {
           </aside>
 
           <aside>
-            <button type="submit" onClick={(this.handleClick(newRoute))} >Create Route!</button>
+            <button id="ec-button-1249-submit" type="submit" onClick={(this.handleClick(newRoute))} >Create Route!</button>
           </aside>
 
       </section>
