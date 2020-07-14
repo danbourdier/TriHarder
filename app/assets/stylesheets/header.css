@@ -221,11 +221,12 @@
 
   /* revealed container */
   .revealed-container-div {
-    margin: 10px 10px;
-    padding: 11px 24px 10px 24px;
+    margin: auto 10px;
+    padding: 0px 24px 0px 24px;
     align-items: baseline;
     position: relative;
     cursor: initial !important;
+    max-height: 40px;
   }
 
   .header-pic-dropdown-container-hidden {
@@ -237,6 +238,7 @@
     flex-direction: column;
     z-index: 3 !important;
     font-size: 12.25px !important;
+    margin-top: 15px;
   }
 
 
@@ -248,7 +250,6 @@
   .header-name {
     width: 38px;
     height: 38px;
-    margin-top: 230px;
     background-color: limegreen;
     z-index: 3;
   }
