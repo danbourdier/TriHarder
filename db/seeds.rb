@@ -40,7 +40,7 @@ route1a = Route.create!(title: "Bike Bonanza", total_time: 35.29, activity: "bik
   end_point: "Fort Bragg, 82nd Land", user_id: 1
 )
 route1b = Route.create!(title: "Trail Trek Madness", total_time: 18.00, activity: "run", 
-  distance: 8.6, description: "Bring your favorite trailrunners!!!", start_point: "Fort Bragg, Gruber rd Motor Pool", 
+  distance: 8.6, description: "Bring your favorite trailrunners!!", start_point: "Fort Bragg, Gruber rd Motor Pool", 
   end_point: "Fort Bragg, Zabitosky rd (Old 3rd Group trail entrance)", user_id: 1
 )
 route1c = Route.create!(title: "Operator's morning jog", total_time: 172.10, activity: "run", 
