@@ -1,6 +1,6 @@
 class Comment < ApplicationRecord
 
-  validates 
+  validates :author_username
 
 
 end

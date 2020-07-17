@@ -10,21 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_17_034756) do
+ActiveRecord::Schema.define(version: 2020_07_17_044444) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "comments", force: :cascade do |t|
-    t.string "author_username", null: false
+    t.string "author_email", null: false
     t.string "body", null: false
-    t.datetime "date_created", null: false
     t.integer "author_id", null: false
     t.integer "parent_comment_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["author_email"], name: "index_comments_on_author_email", unique: true
     t.index ["author_id"], name: "index_comments_on_author_id", unique: true
-    t.index ["author_username"], name: "index_comments_on_author_username", unique: true
   end
 
   create_table "routes", force: :cascade do |t|
