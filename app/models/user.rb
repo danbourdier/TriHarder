@@ -7,10 +7,11 @@ class User < ApplicationRecord
   validates :email, :session_token, uniqueness: true
   validates :password, length: {minimum: 6}, allow_nil: true
 
-  has_many :routes, {
+  has_many :routes,
     class_name: :Route,
     foreign_key: :user_id,
-  }
+    primary_key: :id
+
 
   def self.find_by_credentials(email, password)
     user = User.find_by(email: email)
@@ -48,6 +49,10 @@ class User < ApplicationRecord
 
   def new_session_token
     SecureRandom.urlsafe_base64
+  end
+
+  def all_the_routes
+    routes.all # method using active record to pull all routes
   end
 
 
