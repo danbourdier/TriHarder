@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", () => {
   
   window.getState = store.getState;
   
-  window.createComments = createComment
   
   const root = document.getElementById("root");
   ReactDOM.render(<Root store={store} />, root)
@@ -42,3 +41,4 @@ document.addEventListener("DOMContentLoaded", () => {
 // window.showRoutes = showRoutes;
 // window.createRoute = createRoute;
 // window.deleteRoute = deleteRoute;
+// window.createComments = createComment
