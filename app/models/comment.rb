@@ -8,6 +8,10 @@ class Comment < ApplicationRecord
     foreign_key: :author_id,
     primary_key: :id
 
+  def the_author
+    user.id
+  end
+
 
 
 

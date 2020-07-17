@@ -60,5 +60,9 @@ class User < ApplicationRecord
     routes.all # method using active record to pull all routes
   end
 
+  def all_the_comments
+    comments.all
+  end
+
 
 end
