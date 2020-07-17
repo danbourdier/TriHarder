@@ -12,7 +12,9 @@ class Comment < ApplicationRecord
     user.id
   end
 
-
+  def the_author_email
+    user.email
+  end
 
 
 end
