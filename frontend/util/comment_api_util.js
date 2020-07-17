@@ -10,7 +10,7 @@ export const createComment = comment => (
 
 export const getComments = () => (
   $.ajax({
-    method: "Get",
+    method: "Get", 
     url: "api/comments",
   })
 

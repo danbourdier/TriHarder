@@ -22,9 +22,10 @@ const receiveErrors = errors => ({
 
 
 export const createComment = comment => dispatch => {
+  // debugger
   return (
     CommentUtil.createComment(comment)
-      .then(comment => dispatch(createComment(comment)), errors => dispatch(receiveErrors(errors)) )
+      .then(comment => dispatch(receiveComment(comment)), errors => dispatch(receiveErrors(errors)) )
   )
 }
 

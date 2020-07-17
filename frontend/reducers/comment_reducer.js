@@ -11,7 +11,7 @@ const commentReducer = (state = {}, action) => {
       return action.comments
   
     case RECEIVE_COMMENT:
-      nextState[comment.id] = comment
+      nextState[action.comment.id] = action.comment
       return nextState;
 
     default:

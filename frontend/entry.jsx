@@ -7,7 +7,7 @@ import configureStore from './store/store';
 // import {login, signup, logout} from './util/session_api_util';
 // import {createRoute} from "./util/route_api_util";
 import { deleteRoute, showRoute, showRoutes, createRoute } from './actions/route_actions';
-import {createComment} from "./util/comment_api_util";
+import {createComment} from "./actions/comment_actions"
 
 document.addEventListener("DOMContentLoaded", () => {
   let store = configureStore();
@@ -25,17 +25,19 @@ document.addEventListener("DOMContentLoaded", () => {
   };
   
   window.getState = store.getState;
-  
+  window.dispatch = store.dispatch;
+  window.createComment = createComment;
+
   
   const root = document.getElementById("root");
   ReactDOM.render(<Root store={store} />, root)
+
 });
 
 // window testing 
 // window.login = login;
 // window.signup = signup;
 // window.logout = logout;
-// window.dispatch = store.dispatch;
 
 // window.showRoute = showRoute;
 // window.showRoutes = showRoutes;
