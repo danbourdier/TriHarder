@@ -28,3 +28,17 @@ export const createComment = comment => dispatch => {
   )
 }
 
+export const getComments = () => dispatch => {
+  return (
+    CommentUtil.getComments()
+      .then(comments => dispatch(receiveComments(comments)), errors => dispatch(receiveErrors(errors)) )
+  )
+}
+
+export const getComment = comment => dispatch => {
+  return (
+    CommentUtil.getComment()
+      .then(comment => dispatch(receiveComment(comment)), errors => dispatch(receiveErrors(errors)) )
+  )
+}
+
