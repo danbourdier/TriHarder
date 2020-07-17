@@ -7,9 +7,9 @@ import { Link } from 'react-router-dom';
 
 class RouteIndex extends Component {
 
-  componentDidMount() {
-    this.props.showRoutes();
-  }
+  // componentDidMount() {
+  //   this.props.showRoutes();
+  // }
 
   render() {
     let ownRoutes = [];
@@ -19,10 +19,9 @@ class RouteIndex extends Component {
     let totalWorkouts = 0;
     // average calories burned every hour by middle aged male
     //    ~175 lb = 400 cal
-
-    let index = this.props.routes.map(route => {
-      
-      if (route.user_id === Number(Object.keys(this.props.currentUser)[0])) {
+    let allRoutes = window.getState().entities.users[Object.keys(window.getState().entities.users)[0]].all_the_routes
+    
+    let index = allRoutes.map(route => {
         totalDistance = totalDistance + route.distance;
         totalTime = totalTime + route.total_time;
         totalCalories = totalCalories + ((route.total_time / 60) * 400);
@@ -33,7 +32,6 @@ class RouteIndex extends Component {
         return (
           <RouteIndexItem key={route.id} rout={route} />
         )
-      }
       
     });
 

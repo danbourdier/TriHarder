@@ -12,4 +12,4 @@ const mDTP = dispatch => ({
   showRoutes: () => dispatch(showRoutes())
 });
 
-export default connect(mSTP, mDTP)(RouteIndex)
+export default connect(mSTP, mDTP)(RouteIndex) 
