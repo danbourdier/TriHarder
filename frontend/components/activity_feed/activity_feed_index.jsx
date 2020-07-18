@@ -6,12 +6,16 @@ class ActivityFeedIndex extends React.Component {
 
 
   render() {
-    let { createComment } = this.props;
+    let { createComment, comments } = this.props;
+    let index = comments.map(comment => (
+      <IndexItem key={comment.id} comment={comment} createComment={createComment} />
+    ))
 
+    // console.log(comments);
     return (
       <div className="asdfg">
-        uwavsdjsfdafdasdalufdgih
-        <IndexItem createComment={createComment} />
+        {/* uwavsdjsfdafdasdalufdgih */}
+        {index}
       </div>
     )
 

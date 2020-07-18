@@ -6,7 +6,10 @@ class ActivityFeedIndexItem extends Component {
 
   render() {
     return (
-      <p>Index Item</p>
+      <div>
+        <p>Index Item</p>
+        <div>{this.props.comment.body}</div>
+      </div>
     )
   };
 
