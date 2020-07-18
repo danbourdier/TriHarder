@@ -2,3 +2,16 @@
   background-color: rgb(42, 221, 69);
   min-height: 700px;
 }
+
+
+/* create comment */
+
+.create-comment-container {
+  min-width: 630px;
+  min-height: 112px;
+}
+
+#status-update-text-box {
+  min-width: 595px;
+  min-height: 122px;
+}
