@@ -13,13 +13,15 @@ class ActivityFeedIndex extends React.Component {
 
     // console.log(comments);
     return (
-      <div className="asdfg">
+      <div id="activity-feed-container">
         <section className="create-comment-container">
           <aside id="status-update-pic"> Pic</aside>
           <textarea name="" id="status-update-text-box" cols="30" rows="10">Add a Status Update Here...</textarea>
         </section>
 
-        {index}
+        <section className="other-comments-posts-container">
+          {index}
+        </section>
       </div>
     )
 

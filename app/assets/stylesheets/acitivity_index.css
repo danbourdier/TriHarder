@@ -1,28 +1,47 @@
-.asdfg {
+#activity-feed-container {
   background-color: rgb(42, 221, 69);
   min-height: 700px;
-  margin-top: 43px;
+  display: flex;
+  flex-direction: column;
+  margin: 43px auto 0px auto;
+
 }
 
 
 /* create comment */
 
 .create-comment-container {
-  min-width: 630px;
-  min-height: 112px;
+  width: 690px;
+  height: 112px;
   display: flex;
   flex-direction: row;
+
+  margin: 0px auto;
 }
 
 #status-update-text-box {
-  min-width: 595px;
-  min-height: 122px;
+  width: 595px;
+  height: 122px;
 }
 
 #status-update-pic {
-  min-width: 60px;
-  min-height: 60px;
-  max-height: 60px;
+  width: 60px;
+  height: 60px;
+  height: 60px;
 
   background-color: yellow;
+}
+
+
+/* others comments and posts */
+
+.other-comments-posts-container {
+  max-width: fit-content;
+  margin: 0px auto;
+}
+
+.other-comments-posts-container div {
+  width: 635px;
+  height: 120px;
+  background-color: red;
 }
