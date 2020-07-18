@@ -6,11 +6,12 @@ class ActivityFeedIndex extends React.Component {
 
 
   render() {
+    let { createComment } = this.props;
 
     return (
       <div className="asdfg">
         uwavsdjsfdafdasdalufdgih
-        <IndexItem />
+        <IndexItem createComment={createComment} />
       </div>
     )
 
