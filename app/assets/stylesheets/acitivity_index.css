@@ -1,6 +1,7 @@
 .asdfg {
   background-color: rgb(42, 221, 69);
   min-height: 700px;
+  margin-top: 43px;
 }
 
 
@@ -9,9 +10,19 @@
 .create-comment-container {
   min-width: 630px;
   min-height: 112px;
+  display: flex;
+  flex-direction: row;
 }
 
 #status-update-text-box {
   min-width: 595px;
   min-height: 122px;
+}
+
+#status-update-pic {
+  min-width: 60px;
+  min-height: 60px;
+  max-height: 60px;
+
+  background-color: yellow;
 }
