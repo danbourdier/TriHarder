@@ -31,6 +31,7 @@
   background-color: yellow;
   background-image: url(rabbit.png);
   background-size: cover;
+  border-radius: 30px;
 }
 
 

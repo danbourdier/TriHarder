@@ -3,7 +3,15 @@ import React from 'react';
 import IndexItem from './activity_feed_index_item'
 
 class ActivityFeedIndex extends React.Component {
+  constructor(props) {
+    super(props)
 
+    this.state = { body: "Add a Status Update Here..." }
+  }
+
+  update(field) {
+    return e => this.setState( { [field]: e.target.currentValue } )
+  }
 
   render() {
     let { createComment, comments } = this.props;
@@ -16,7 +24,7 @@ class ActivityFeedIndex extends React.Component {
       <div id="activity-feed-container">
         <section className="create-comment-container">
           <aside id="status-update-pic"></aside>
-          <textarea name="" id="status-update-text-box" cols="30" rows="10">Add a Status Update Here...</textarea>
+          <textarea name="" value={this.state.body} id="status-update-text-box" cols="30" rows="10" onChange={this.update('body')}></textarea>
         </section>
 
         <section className="other-comments-posts-container">
