@@ -25,13 +25,11 @@ document.addEventListener("DOMContentLoaded", () => {
   };
   
   window.getState = store.getState;
-  window.dispatch = store.dispatch;
-  window.createComment = createComment;
-
+  
   
   const root = document.getElementById("root");
   ReactDOM.render(<Root store={store} />, root)
-
+  
 });
 
 // window testing 
@@ -39,8 +37,10 @@ document.addEventListener("DOMContentLoaded", () => {
 // window.signup = signup;
 // window.logout = logout;
 
+// window.dispatch = store.dispatch;
 // window.showRoute = showRoute;
 // window.showRoutes = showRoutes;
 // window.createRoute = createRoute;
 // window.deleteRoute = deleteRoute;
 // window.createComments = createComment
+// window.createComment = createComment;

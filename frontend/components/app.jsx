@@ -10,8 +10,9 @@ import HomePageContainer from './home_page/home_page_container';
 import ForgotPasswordContainer from './session/forgot_password_container';
 import ForgotPasswordMessage from './session/forgot_password_message';
 import HeaderTabsContainer from './header/header_tabs_container';
-// import Search from "./mapping/search";
+
 import SearchContainer from './mapping/search_container';
+import ActivityFeed from './activity_feed/activity_feed_container';
 
 var SESSION_HIDDEN = false;
 
@@ -62,8 +63,8 @@ const App = () => (
           <AuthRoute exact path="/signup" component={SignupFormContainer} />
           <ProtectedRoute exact path="/home_page" component={HomePageContainer}/>
           <ProtectedRoute exact path="/map" component={SearchContainer} />
-          {/*
-          <ProtectedRoute exact path="/create_workout" component={}/>
+          <ProtectedRoute exact path="/activity_feed" component={ActivityFeed} />
+          {/* <ProtectedRoute exact path="/create_workout" component={}/>
           <ProtectedRoute exact path="/create_goal" component={}/> */}
         </Switch>
       </div>

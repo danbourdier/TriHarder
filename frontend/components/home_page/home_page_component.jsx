@@ -19,7 +19,7 @@ const HomePageComponent = props => (
       </div>
 
       <nav className="homepage-body-header-radios">
-        <Link to="">
+        <Link to="/activity_feed">
           <label>ACTIVITY FEED</label>
         </Link> 
 

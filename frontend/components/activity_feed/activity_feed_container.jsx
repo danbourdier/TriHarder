@@ -1,7 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { login } from '../../actions/session_actions';
 import ActivityFeedIndex from './activity_feed_index';
 
 const mSTP = state => ({
@@ -9,7 +8,7 @@ const mSTP = state => ({
 });
 
 const mDTP = dispatch => ({
-  action: () => dispatch(method())
+  // action: () => dispatch(method())
 });
-
+ 
 export default connect(mSTP, mDTP)(ActivityFeedIndex);
