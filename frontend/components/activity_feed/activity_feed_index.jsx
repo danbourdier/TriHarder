@@ -1,18 +1,19 @@
 import React from 'react';
 
-class ActivityFeedIndex extends React.Component {
+import IndexItem from './activity_feed_index_item'
 
+class ActivityFeedIndex extends React.Component {
 
 
   render() {
 
     return (
-      <div className="asdfg"> class
+      <div className="asdfg">
         uwavsdjsfdafdasdalufdgih
-        
+        <IndexItem />
       </div>
     )
-    
+
   }
 }
 
