@@ -261,6 +261,8 @@
     z-index: 3;
     margin-left: auto;
     cursor: pointer;
+    background-image: url(rabbit.png);
+    background-size: cover;
   }
 
   .header-button {

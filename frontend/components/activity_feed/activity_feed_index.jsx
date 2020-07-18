@@ -15,7 +15,7 @@ class ActivityFeedIndex extends React.Component {
     return (
       <div id="activity-feed-container">
         <section className="create-comment-container">
-          <aside id="status-update-pic"> Pic</aside>
+          <aside id="status-update-pic"></aside>
           <textarea name="" id="status-update-text-box" cols="30" rows="10">Add a Status Update Here...</textarea>
         </section>
 

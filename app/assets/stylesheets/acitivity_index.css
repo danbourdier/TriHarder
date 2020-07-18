@@ -1,5 +1,5 @@
 #activity-feed-container {
-  background-color: rgb(42, 221, 69);
+  /* background-color: rgb(42, 221, 69); */
   min-height: 700px;
   display: flex;
   flex-direction: column;
@@ -28,8 +28,9 @@
   width: 60px;
   height: 60px;
   height: 60px;
-
   background-color: yellow;
+  background-image: url(rabbit.png);
+  background-size: cover;
 }
 
 
