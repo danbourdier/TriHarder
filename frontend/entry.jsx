@@ -4,10 +4,6 @@ import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store';
 
-// import {login, signup, logout} from './util/session_api_util';
-// import {createRoute} from "./util/route_api_util";
-import { deleteRoute, showRoute, showRoutes, createRoute } from './actions/route_actions';
-import {createComment} from "./actions/comment_actions"
 
 document.addEventListener("DOMContentLoaded", () => {
   let store = configureStore();
