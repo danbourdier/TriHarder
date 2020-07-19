@@ -29,7 +29,7 @@ class ActivityFeedIndex extends React.Component {
     });
 
     console.log(payload)
-    return this.createComment(payload)
+    this.createComment(payload)
   }
 
 
