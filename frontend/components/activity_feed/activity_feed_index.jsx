@@ -5,8 +5,9 @@ import IndexItem from './activity_feed_index_item'
 class ActivityFeedIndex extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { body: "Add a Status Update Here..." }
+    this.state = { body: "" }
 
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.email = this.props.currentUser.email;
     this.authorId = this.props.currentUser.id;
     this.createComment = this.props.createComment;
@@ -19,11 +20,12 @@ class ActivityFeedIndex extends React.Component {
   handleSubmit() {
     let payload = Object.assign({}, {
       'author_email': this.email,
-      'body': value,
-      'author_id': number
+      'body': this.state.body,
+      'author_id': this.authorId
     })
 
-    this.createComment(payload)
+    console.log(payload)
+    // return () => this.createComment(payload)
   }
 
 
@@ -37,12 +39,15 @@ class ActivityFeedIndex extends React.Component {
       backgroundImage: 'url(' + rabbit + ')'
     };
 
-    
+
     return (
       <div id="activity-feed-container">
         <section className="create-comment-container">
-          <aside id="status-update-pic" style={profilePic}></aside>
-          <textarea value={this.state.body} id="status-update-text-box" cols="30" rows="10" onChange={this.update('body')}></textarea>
+          <form onSubmit={this.handleSubmit}>
+            <aside id="status-update-pic" style={profilePic}></aside>
+            <textarea value={this.state.body} placeholder="Add a Status Update Here..." id="status-update-text-box" cols="30" rows="10" onChange={this.update('body')}></textarea>
+            <input type="submit" value="Submit Post!"/>
+          </form>
         </section>
 
         <section className="other-comments-posts-container">
