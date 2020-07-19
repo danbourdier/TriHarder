@@ -18,12 +18,17 @@ class ActivityFeedIndex extends React.Component {
     let index = comments.map(comment => (
       <IndexItem key={comment.id} comment={comment} createComment={createComment} />
     ))
+    let profilePic = {
+      backgroundSize: 'cover',
+      backgroundImage: 'url(' + turtle + ')'
+    };
 
-    // console.log(comments);
+      // style={{ fontSize: 24 + "px", fontFamily: "Arial" }}
+
     return (
       <div id="activity-feed-container">
         <section className="create-comment-container">
-          <aside id="status-update-pic"></aside>
+          <aside id="status-update-pic" style={profilePic}></aside>
           <textarea name="" value={this.state.body} id="status-update-text-box" cols="30" rows="10" onChange={this.update('body')}></textarea>
         </section>
 

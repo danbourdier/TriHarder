@@ -5,6 +5,8 @@ class ActivityFeedIndexItem extends Component {
 
 
   render() {
+    let profilePicCollection = ['turtle.png', 'bear.png', 'rabbit.png', 'squirrel.png', 'camel.png']
+
     return (
       <div>
         <p>Index Item</p>

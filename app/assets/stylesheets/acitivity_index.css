@@ -12,10 +12,9 @@
 
 .create-comment-container {
   width: 690px;
-  height: 112px;
+  height: fit-content;
   display: flex;
   flex-direction: row;
-
   margin: 92px auto 0px;
 }
 
