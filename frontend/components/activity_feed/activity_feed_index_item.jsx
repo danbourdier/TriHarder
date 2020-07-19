@@ -14,10 +14,17 @@ class ActivityFeedIndexItem extends Component {
 
 
     return (
-      <div>
-        <p>Index Item</p>
+
+      
+        
+        // <textarea value={this.state.body} id="status-update-text-box" cols="30" rows="10" onChange={this.update('body')}></textarea>
+      
+
+
+      <section className="create-comment-container">
+        <aside id="status-update-pic" style={profilePic}></aside>
         <div>{this.props.comment.body}</div>
-      </div>
+      </section>
     )
   };
 

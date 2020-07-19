@@ -5,6 +5,8 @@ import Root from './components/root';
 import configureStore from './store/store';
 
 
+
+
 document.addEventListener("DOMContentLoaded", () => {
   let store = configureStore();
   if (window.currentUser) { // Our Bootstrap method
@@ -21,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
   };
   
   window.getState = store.getState;
+
   
   
   const root = document.getElementById("root");
@@ -29,14 +32,18 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // window testing 
+
 // window.login = login;
 // window.signup = signup;
 // window.logout = logout;
+
+
 
 // window.dispatch = store.dispatch;
 // window.showRoute = showRoute;
 // window.showRoutes = showRoutes;
 // window.createRoute = createRoute;
 // window.deleteRoute = deleteRoute;
-// window.createComments = createComment
-// window.createComment = createComment;
+// import {createComment} from './actions/comment_actions';
+    // window.createComment = createComment;
+ 

@@ -5,13 +5,27 @@ import IndexItem from './activity_feed_index_item'
 class ActivityFeedIndex extends React.Component {
   constructor(props) {
     super(props)
-
     this.state = { body: "Add a Status Update Here..." }
+
+    this.email = this.props.currentUser.email;
+    this.authorId = this.props.currentUser.id;
+    this.createComment = this.props.createComment;
   }
 
   update(field) {
     return e => this.setState( { [field]: e.target.currentValue } )
   }
+
+  handleSubmit() {
+    let payload = Object.assign({}, {
+      'author_email': this.email,
+      'body': value,
+      'author_id': number
+    })
+
+    this.createComment(payload)
+  }
+
 
   render() {
     let { createComment, comments } = this.props;
@@ -23,13 +37,12 @@ class ActivityFeedIndex extends React.Component {
       backgroundImage: 'url(' + rabbit + ')'
     };
 
-      // style={{ fontSize: 24 + "px", fontFamily: "Arial" }}
-
+    
     return (
       <div id="activity-feed-container">
         <section className="create-comment-container">
           <aside id="status-update-pic" style={profilePic}></aside>
-          <textarea name="" value={this.state.body} id="status-update-text-box" cols="30" rows="10" onChange={this.update('body')}></textarea>
+          <textarea value={this.state.body} id="status-update-text-box" cols="30" rows="10" onChange={this.update('body')}></textarea>
         </section>
 
         <section className="other-comments-posts-container">
