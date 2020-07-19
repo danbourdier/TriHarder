@@ -14,7 +14,8 @@ class ActivityFeedIndex extends React.Component {
   }
 
   componentDidMount() {
-    this.props.getComments()
+    this.props.getComments();
+
   }
 
   update(field) {
@@ -28,14 +29,14 @@ class ActivityFeedIndex extends React.Component {
       'author_id': this.authorId
     });
 
-    console.log(payload)
+    // console.log(payload)
     this.createComment(payload)
   }
 
 
   render() {
     let { createComment, comments } = this.props;
-    let index = comments.map(comment => (
+    let index = Object.values(comments).map(comment => (
       <IndexItem key={comment.id} comment={comment} createComment={createComment} />
     ))
     let profilePic = {
@@ -43,6 +44,7 @@ class ActivityFeedIndex extends React.Component {
       backgroundImage: 'url(' + rabbit + ')'
     };
 
+    console.log(this.props.actualComment);
 
     return (
       <div id="activity-feed-container">
