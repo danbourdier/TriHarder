@@ -12,17 +12,16 @@ class ActivityFeedIndexItem extends Component {
       backgroundImage: 'url(' + profilePicCollection[Math.floor(Math.random() * profilePicCollection.length)] + ')'
     };
 
+    let userProfilePic = {
+      backgroundSize: 'cover',
+      backgroundImage: 'url(' + rabbit + ')'
+    }
+
 
     return (
-
       
-        
-        // <textarea value={this.state.body} id="status-update-text-box" cols="30" rows="10" onChange={this.update('body')}></textarea>
-      
-
-
       <section className="create-comment-container">
-        <aside id="status-update-pic" style={profilePic}></aside>
+        <aside id="status-update-pic" style={ this.props.comment.the_author === this.props.currentUserId ? userProfilePic : profilePic }></aside>
         <div>{this.props.comment.body}</div>
       </section>
     )
