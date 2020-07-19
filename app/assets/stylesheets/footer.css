@@ -212,6 +212,9 @@
   text-decoration: none;
   color: #9ea0a2;
 }
+  .footer-social a:hover{
+    color: white;
+  }
 
 .mid-footer-inner {
   display: flex;
@@ -388,6 +391,11 @@
   text-decoration: none;
   color: #9ea0a2;
 }
+
+  .footer-projects a:hover{
+    color: white;
+  }
+  
 .footer-skills a {
   text-decoration: none;
   color: #9ea0a2;

@@ -96,9 +96,7 @@ class SplashPage extends React.Component{
 
 
             <div className="splash-check-it-out-div">
-              <a href="https://www.mapmyrun.com/app">
-                CHECK IT OUT
-              </a>
+              <Link to="/login">CHECK IT OUT</Link>
             </div>
             
             <aside className="splash-muh-ali-container">
