@@ -5,7 +5,13 @@ class ActivityFeedIndexItem extends Component {
 
 
   render() {
-    let profilePicCollection = ['turtle.png', 'bear.png', 'rabbit.png', 'squirrel.png', 'camel.png']
+    let profilePicCollection = [camel, shark, turtle, bear, rabbit, squirrel]
+
+    let profilePic = {
+      backgroundSize: 'cover',
+      backgroundImage: 'url(' + profilePicCollection[Math.floor(Math.random() * profilePicCollection.length)] + ')'
+    };
+
 
     return (
       <div>

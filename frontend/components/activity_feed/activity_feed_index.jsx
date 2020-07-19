@@ -20,7 +20,7 @@ class ActivityFeedIndex extends React.Component {
     ))
     let profilePic = {
       backgroundSize: 'cover',
-      backgroundImage: 'url(' + turtle + ')'
+      backgroundImage: 'url(' + rabbit + ')'
     };
 
       // style={{ fontSize: 24 + "px", fontFamily: "Arial" }}
