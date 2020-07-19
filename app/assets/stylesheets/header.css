@@ -139,9 +139,10 @@
   width: 165px;
 }
 
-.link-container p {
+.ec-123-5-link {
   padding: 0px 10px;
   color: #6d717a;
+  text-decoration: none;
 }
 
 .header-sub span {

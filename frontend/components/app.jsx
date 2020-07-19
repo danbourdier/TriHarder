@@ -10,6 +10,7 @@ import HomePageContainer from './home_page/home_page_container';
 import ForgotPasswordContainer from './session/forgot_password_container';
 import ForgotPasswordMessage from './session/forgot_password_message';
 import HeaderTabsContainer from './header/header_tabs_container';
+
 import SearchContainer from './mapping/search_container';
 import ActivityFeedContainer from './activity_feed/activity_feed_container';
 
@@ -30,11 +31,11 @@ const App = () => (
           
           {/* to contain a component for links */}
           <div className="link-container">
-            <p className="link">Training</p>
-            <p className="link">Routes</p>
-            <p className="link">Challenges</p>
-            <p className="link">Go MVP</p>
-            <p className="link">Blog</p>
+            <p className="ec-123-5-link">Training</p>
+            <p className="ec-123-5-link">Routes</p>
+            <p className="ec-123-5-link">Challenges</p>
+            <a className="ec-123-5-link" href="https://angel.co/u/daniel-bourdier">AngelList</a>
+            <a className="ec-123-5-link" href="https://twitter.com/BourdierDaniel">Twitter</a>
             <a href="https://www.linkedin.com/in/daniel-bourdier-17075194"> 
               <img src={window.linkedInBW} />LinkedIn
             </a>
