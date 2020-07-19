@@ -33,7 +33,7 @@ const App = () => (
           <div className="link-container">
             <p className="ec-123-5-link">Training</p>
             <p className="ec-123-5-link">Routes</p>
-            <p className="ec-123-5-link">Challenges</p>
+            <a className="ec-123-5-link" href="https://github.com/danbourdier">GitHub</a>
             <a className="ec-123-5-link" href="https://angel.co/u/daniel-bourdier">AngelList</a>
             <a className="ec-123-5-link" href="https://twitter.com/BourdierDaniel">Twitter</a>
             <a href="https://www.linkedin.com/in/daniel-bourdier-17075194"> 
