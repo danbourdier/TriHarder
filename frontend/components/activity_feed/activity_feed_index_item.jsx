@@ -5,7 +5,7 @@ class ActivityFeedIndexItem extends Component {
 
 
   render() {
-    let profilePicCollection = [camel, shark, turtle, bear, rabbit, squirrel]
+    let profilePicCollection = [camel, shark, turtle, bear, squirrel]
 
     let profilePic = {
       backgroundSize: 'cover',
