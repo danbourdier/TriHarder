@@ -73,7 +73,11 @@
     color: white;
     width: 320px;
     cursor: pointer;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   }
+    .session-form-login button:first-of-type:hover {
+      background-color: rgb(49, 100, 228);
+    }
 
   .session-form-login p:first-of-type {
     text-align: center;
@@ -146,7 +150,11 @@
     height: 44.032px;
     letter-spacing: 1px;
     word-spacing: -0.7px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   }
+    .session-form-login button:last-of-type:hover{
+      background-color: lightgreen;
+    }
 
   #ec-login-1345 {
     cursor: pointer !important;
