@@ -251,6 +251,7 @@
 
   .header-pic-dropdown-container {
     display: none;
+    z-index: 10000 !important;
   }
 
   .header-pic-dropdown-container-visible {
@@ -265,6 +266,7 @@
     overflow: hidden;
     border-bottom: none;
     box-shadow: black 0px 0px 5px -2px;
+    z-index: 10000 !important;
   }
 
 
