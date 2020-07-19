@@ -1,5 +1,5 @@
 #activity-feed-container {
-  /* background-color: rgb(42, 221, 69); */
+  background-color: #F9F9F9;
   min-height: 700px;
   display: flex;
   flex-direction: column;
