@@ -14,7 +14,7 @@ class ActivityFeedIndex extends React.Component {
   }
 
   update(field) {
-    return e => this.setState( { [field]: e.target.currentValue } )
+    return e => this.setState( { [field]: e.currentTarget.value } )
   }
 
   handleSubmit() {
@@ -22,10 +22,10 @@ class ActivityFeedIndex extends React.Component {
       'author_email': this.email,
       'body': this.state.body,
       'author_id': this.authorId
-    })
+    });
 
     console.log(payload)
-    // return () => this.createComment(payload)
+    return this.createComment(payload)
   }
 
 
