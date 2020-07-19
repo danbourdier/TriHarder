@@ -111,6 +111,10 @@
   margin-left: 5px;
 }
 
+  .link-container :last-child:hover {
+    background-color: limegreen;
+  }
+
 .login-signup {
   cursor: initial !important;
 }
@@ -145,6 +149,10 @@
   text-decoration: none;
 }
 
+  .ec-123-5-link:hover {
+    color: limegreen;
+
+  }
 .header-sub span {
   font-size: 18px;
   position: relative;
