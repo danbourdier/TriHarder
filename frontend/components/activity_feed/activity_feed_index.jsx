@@ -13,6 +13,10 @@ class ActivityFeedIndex extends React.Component {
     this.createComment = this.props.createComment;
   }
 
+  componentDidMount() {
+    this.props.getComments()
+  }
+
   update(field) {
     return e => this.setState( { [field]: e.currentTarget.value } )
   }
