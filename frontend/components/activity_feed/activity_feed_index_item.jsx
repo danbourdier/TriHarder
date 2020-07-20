@@ -17,12 +17,18 @@ class ActivityFeedIndexItem extends Component {
       backgroundImage: 'url(' + rabbit + ')'
     }
 
+    let {body, the_author, the_author_email} = this.props.comment;
 
+    console.log(this.props.comment)
     return (
-      
       <section className="create-comment-container">
-        <aside id="status-update-pic" style={ this.props.comment.the_author === this.props.currentUserId ? userProfilePic : profilePic }></aside>
-        <div>{this.props.comment.body}</div>
+        <aside id="status-update-pic" style={ the_author === this.props.currentUserId ? userProfilePic : profilePic }></aside>
+        <div className="ec-comments-and-posts">
+          <div>
+            {the_author_email} <span className="delete-button">X</span>
+          </div>
+          {body}
+        </div>
       </section>
     )
   };

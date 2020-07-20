@@ -49,7 +49,7 @@
   margin: 0px auto;
 }
 
-.other-comments-posts-container div {
+.ec-comments-and-posts {
   height: 120px;
   background-color: red;
   background-color: white;
@@ -60,3 +60,13 @@
   padding: 12px 16px 12px;
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.15);
 }
+    .delete-button {
+      color: grey;
+      font-size: 18px;
+      margin-left: auto;
+
+    }
+
+    .ec-comments-and-posts div:first-of-type {
+      display: flex;
+    }
