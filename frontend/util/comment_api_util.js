@@ -24,10 +24,10 @@ export const getComment = comment => (
   
 )
 
-export const deleteComment = comment => (
+export const deleteComment = commentId => (
   $.ajax({
     method: "delete",
-    url: `api/comments/${comment.id}`
+    url: `api/comments/${commentId}`
   })
   
 )

@@ -23,15 +23,13 @@ class Api::CommentsController < ApplicationController
   end
 
   def destroy
-    @comment = Comment.find(params[:id])
+    # can use our associations for a shortcut to delete ONLY a user's comments
+    @comment = current_user.comment.find(params[:id])
 
     if @comment
-      # @comment.destroy
-      render json: ["target spotted!!!!"]
-      # render  "api/comments/index"
+      @comment.destroy
     else
-
-      render json: @comment.errors.full_messages, status: 422
+      render json: @comment.errors.full_messages, status: 404
     end
 
   end
