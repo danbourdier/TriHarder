@@ -24,7 +24,7 @@ class Api::CommentsController < ApplicationController
 
   def destroy
     # can use our associations for a shortcut to delete ONLY a user's comments
-    @comment = current_user.comment.find(params[:id])
+    @comment = current_user.comments.find(params[:id])
 
     if @comment
       @comment.destroy
