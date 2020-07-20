@@ -42,8 +42,8 @@ class ActivityFeedIndexItem extends Component {
             {body}
           </span>
           <section className="ec-comments-last-section">
-            <div className="like-count">1</div>
-            <div className="comment-count">2</div>
+            <div className="like-count">likes</div>
+            <div className="comment-count">comments</div>
           </section>
 
         </div>
