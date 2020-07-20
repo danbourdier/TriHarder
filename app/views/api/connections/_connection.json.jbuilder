@@ -1,1 +1,1 @@
-json.partial! connection, :id, :requester, :requestee, :user, :connection
+json.extract! connection, :id, :requester, :requestee, :user, :connection
