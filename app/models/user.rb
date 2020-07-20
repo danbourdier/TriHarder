@@ -17,6 +17,15 @@ class User < ApplicationRecord
     foreign_key: :author_id,
     primary_key: :id
 
+  has_many :connections,
+    foreign_key: :requester,
+    class_name: :FriendRequest,
+    primary_key: :id
+
+  has_many :friends,
+    through: :connections,
+    source: :friend
+
 
   def self.find_by_credentials(email, password)
     user = User.find_by(email: email)
