@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: comments
+#
+#  id                :bigint           not null, primary key
+#  author_email      :string           not null
+#  body              :string           not null
+#  author_id         :integer          not null
+#  parent_comment_id :integer
+#  created_at        :datetime         not null
+#  updated_at        :datetime         not null
+#
 class Comment < ApplicationRecord
 
   validates :author_email, :author_id, presence: true
