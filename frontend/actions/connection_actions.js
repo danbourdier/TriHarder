@@ -35,9 +35,16 @@ export const getConnections = () => dispatch => {
   )
 }
 
-export const getConnections = () => dispatch => {
+export const createConnection = connection => dispatch => {
   return (
-    ConnectionAPIUtil.getConnections()
-      .then(connections => dispatch(receiveConnections(connections)), errors => dispatch(receiveErrors(errors)) )
+    ConnectionAPIUtil.createConnection(connection)
+      .then(connection => dispatch(receiveConnection(connection)), errors => dispatch(receiveErrors(errors)) )
+  )
+}
+
+export const deleteConnection = connection => dispatch => {
+  return (
+    ConnectionAPIUtil.deleteConnection(connection)
+      .then(connection => dispatch(receiveConnection(connection)), errors => dispatch(receiveErrors(errors)) )
   )
 }
