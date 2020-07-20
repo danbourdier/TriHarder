@@ -23,3 +23,11 @@ export const getComment = comment => (
   })
   
 )
+
+export const deleteComment = comment => (
+  $.ajax({
+    method: "delete",
+    url: `api/comment/${comment.id}`
+  })
+  
+)

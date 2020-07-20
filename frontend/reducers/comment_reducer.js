@@ -1,5 +1,4 @@
-// import two constants from actions
-import { RECEIVE_COMMENTS, RECEIVE_COMMENT } from '../actions/comment_actions'
+import { RECEIVE_COMMENTS, RECEIVE_COMMENT, REMOVE_COMMENT } from '../actions/comment_actions'
 
 const commentReducer = (state = {}, action) => {
   Object.freeze(state)
@@ -12,6 +11,10 @@ const commentReducer = (state = {}, action) => {
   
     case RECEIVE_COMMENT:
       nextState[action.comment.id] = action.comment
+      return nextState;
+
+    case REMOVE_COMMENT:
+      delete nextState[action.comment.id];
       return nextState;
 
     default:

@@ -1,8 +1,9 @@
 import * as CommentUtil from '../util/comment_api_util';
 
 export const RECEIVE_COMMENT = 'RECEIVE_COMMENT';
+export const REMOVE_COMMENT = 'REMOVE_COMMENT';
 export const RECEIVE_COMMENTS = 'RECEIVE_COMMENTS';
-export const RECEIVE_COMMENT_ERRORS = 'RECEIVE_ERRORS'
+export const RECEIVE_COMMENT_ERRORS = 'RECEIVE_ERRORS';
 
 
 const receiveComments = comments => ({
@@ -15,17 +16,30 @@ const receiveComment = comment => ({
   comment
 })
 
+const removeComment = comment => ({
+  type: REMOVE_COMMENT,
+  comment
+})
+
 const receiveErrors = errors => ({
   type: RECEIVE_COMMENT_ERRORS,
   errors
-})
+}) 
 
 
 export const createComment = comment => dispatch => {
-  // debugger
+
   return (
     CommentUtil.createComment(comment)
       .then(comment => dispatch(receiveComment(comment)), errors => dispatch(receiveErrors(errors)) )
+  )
+}
+
+export const deleteComment = comment => dispatch => {
+
+  return (
+    CommentUtil.deleteComment(comment)
+      .then(comment => dispatch(removeComment(comment)), errors => dispatch(receiveErrors(errors)) )
   )
 }
 
