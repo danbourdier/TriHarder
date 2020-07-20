@@ -50,7 +50,9 @@
 }
 
 .ec-comments-and-posts {
-  height: 120px;
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
   background-color: red;
   background-color: white;
   border: lightgrey solid 1px;
@@ -61,15 +63,47 @@
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.15);
 }
     .delete-button {
-      color: grey;
-      font-size: 18px;
+      color: lightgrey;
+      font-size: 14px;
       margin-left: auto;
       cursor: pointer;
+      font-family: arial;
     }
 
-    .ec-comments-and-posts div:first-of-type {
+    #ec-comment-first-section {
       display: flex;
       font-size: 14px;
       color: #0076C0;
       text-decoration: none;
+      text-transform: capitalize;
+      padding: 8px;
+      border-bottom: solid 1px lightgrey;
     }
+
+    .ec-comment-body {
+      padding: 16px;
+      width: 100%;
+      border-bottom: solid 1px lightgrey;
+    }
+
+
+.like-count {
+  width: 18px;
+  height: 18px;
+  background-color: blue;
+}
+
+.comment-count {
+  width: 18px;
+  height: 18px;
+  background-color: blue;
+}
+
+.ec-comments-last-section {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 10px 2px;
+  color: #666666;
+  padding: 10px 10px 2px;
+  align-items: center;
+}

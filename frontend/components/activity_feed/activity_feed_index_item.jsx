@@ -32,15 +32,22 @@ class ActivityFeedIndexItem extends Component {
 
 
     return (
-      <section className="create-comment-container">
+      <article className="create-comment-container">
         <aside id="status-update-pic" style={ the_author === this.props.currentUserId ? userProfilePic : profilePic }></aside>
         <div className="ec-comments-and-posts">
-          <div>
+          <div id="ec-comment-first-section">
             {the_author_email} <span className="delete-button" onClick={ this.handleClick }>X</span>
           </div>
-          {body}
+          <span className="ec-comment-body">
+            {body}
+          </span>
+          <section className="ec-comments-last-section">
+            <div className="like-count">1</div>
+            <div className="comment-count">2</div>
+          </section>
+
         </div>
-      </section>
+      </article>
     )
   };
 
