@@ -5,7 +5,7 @@ import Root from './components/root';
 import configureStore from './store/store';
 
 
-
+import {deleteComment} from './actions/comment_actions';
 
 document.addEventListener("DOMContentLoaded", () => {
   let store = configureStore();
@@ -24,7 +24,8 @@ document.addEventListener("DOMContentLoaded", () => {
   
   window.getState = store.getState;
 
-  
+  window.dispatch = store.dispatch;
+  window.deleteComment = deleteComment
   
   const root = document.getElementById("root");
   ReactDOM.render(<Root store={store} />, root)
@@ -39,11 +40,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-// window.dispatch = store.dispatch;
 // window.showRoute = showRoute;
 // window.showRoutes = showRoutes;
 // window.createRoute = createRoute;
 // window.deleteRoute = deleteRoute;
-// import {createComment} from './actions/comment_actions';
+
     // window.createComment = createComment;
  
