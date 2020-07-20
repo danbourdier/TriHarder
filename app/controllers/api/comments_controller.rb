@@ -22,7 +22,7 @@ class Api::CommentsController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
     @comment = Comment.find(params[:id])
 
     if @comment
