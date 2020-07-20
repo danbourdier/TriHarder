@@ -1,4 +1,4 @@
-import { RECEIVE_CONNECTIONS, RECEIVE_CONNECTION, REMOVE_CONNECTION, RECEIVE_ERRORS } from '../actions/connection_actions';
+import { RECEIVE_CONNECTIONS, RECEIVE_CONNECTION, RECEIVE_ERRORS } from '../actions/connection_actions';
 
 const connectionErrorsReducer = (state = {}, action) => {
   Object.freeze(state);

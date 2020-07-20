@@ -45,6 +45,6 @@ export const createConnection = connection => dispatch => {
 export const deleteConnection = connection => dispatch => {
   return (
     ConnectionAPIUtil.deleteConnection(connection)
-      .then(connection => dispatch(receiveConnection(connection)), errors => dispatch(receiveErrors(errors)) )
+      .then(connection => dispatch(removeConnection(connection)), errors => dispatch(receiveErrors(errors)) )
   )
 }

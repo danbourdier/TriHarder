@@ -1,4 +1,3 @@
-const { REMOVE_CONNECTION } = require("../actions/connection_actions");
 import { RECEIVE_CONNECTIONS, RECEIVE_CONNECTION, REMOVE_CONNECTION } from '../actions/connection_actions';
 
 const connectionReducer = (state = {}, action) => {
