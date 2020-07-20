@@ -16,9 +16,9 @@ const receiveComment = comment => ({
   comment
 })
 
-const removeComment = comment => ({
+const removeComment = commentId => ({
   type: REMOVE_COMMENT,
-  comment
+  commentId
 })
 
 const receiveErrors = errors => ({
@@ -35,11 +35,11 @@ export const createComment = comment => dispatch => {
   )
 }
 
-export const deleteComment = comment => dispatch => {
+export const deleteComment = commentId => dispatch => {
 
   return (
-    CommentUtil.deleteComment(comment)
-      .then(comment => dispatch(removeComment(comment)), errors => dispatch(receiveErrors(errors)) )
+    CommentUtil.deleteComment(commentId)
+      .then(comment => dispatch(removeComment(commentId)), errors => dispatch(receiveErrors(errors)) )
   )
 }
 
