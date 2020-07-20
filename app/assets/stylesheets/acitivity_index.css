@@ -69,4 +69,7 @@
 
     .ec-comments-and-posts div:first-of-type {
       display: flex;
+      font-size: 14px;
+      color: #0076C0;
+      text-decoration: none;
     }
