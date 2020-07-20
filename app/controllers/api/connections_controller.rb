@@ -6,6 +6,7 @@ class Api::ConnectionsController < ApplicationController
   end
 
   def create
+        # created both ways so simulate two connections, thats why we create while indexing into strong_params
       @connection1 = Connection.new({requester: strong_params[:requester], requestee: strong_params[:requestee]}) 
       @connection2 = Connection.new({requester: strong_params[:requestee], requestee: strong_params[:requester]}) 
 
@@ -18,7 +19,7 @@ class Api::ConnectionsController < ApplicationController
   end
 
   def destroy
-      @connection = connection.find(params[:id])
+      @connection = Connection.find(params[:id])
 
       if @connection.destroy
           # render json: @connection
