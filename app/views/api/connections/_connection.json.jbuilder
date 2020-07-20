@@ -1,0 +1,1 @@
+json.partial! connection, :id, :requester, :requestee, :user, :connection
