@@ -21,8 +21,6 @@ class Api::ConnectionsController < ApplicationController
   end
 
   def destroy
-    #@connection = Connection.find(params[:id])
-
     @connection = current_user.connections.find(params[:id])
 
       if @connection
