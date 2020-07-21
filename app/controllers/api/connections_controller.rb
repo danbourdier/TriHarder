@@ -1,8 +1,10 @@
 class Api::ConnectionsController < ApplicationController
 
   def index
-    #@connections = Connection.where({ requester: current_user.id})
-     @connections = Connection.all
+    # we should always strive to take advantage of associations especially in the use of creating our backend
+        # it makes no difference it we append #all or not, they are just methods for utilizing active record thru rails
+            # its as if we are adding a SELECT * even though Active Record inserts it by default
+    @connections = current_user.connections.all
     
     render "api/connections/index"
   end
@@ -32,7 +34,6 @@ class Api::ConnectionsController < ApplicationController
       else
           render json: ["Error deleting connection"], status: 422
       end 
-
   end
 
     private 
