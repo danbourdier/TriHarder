@@ -1,8 +1,8 @@
 
 export const createConnection = connection => (
     $.ajax({
-      url: "api/connections",
       method: "Post",
+      url: "api/connections",
       data: { connection }
     })
 

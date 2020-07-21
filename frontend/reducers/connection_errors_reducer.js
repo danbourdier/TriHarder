@@ -8,9 +8,6 @@ const connectionErrorsReducer = (state = {}, action) => {
     case RECEIVE_ERRORS:
       return action.errors
 
-    case RECEIVE_CONNECTION:
-      return {};
-
     default:
       return state;
   };

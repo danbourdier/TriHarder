@@ -2,7 +2,7 @@ class Api::ConnectionsController < ApplicationController
 
   def index
         @connections = Connection.all
-        render json: "api/connections/index"
+        render "api/connections/index"
   end
 
   def create
@@ -11,9 +11,9 @@ class Api::ConnectionsController < ApplicationController
       @connection2 = Connection.new({requester: strong_params[:requestee], requestee: strong_params[:requester]}) 
 
       if @connection1.save && @connection2.save
-          render json: "api/connections/index"
+          render "api/connections/index"
       else
-          render json: ["Unable to accept connection"], status: 422
+          render json: @connection1.errors.full_messages, status: 422
       end
 
   end
@@ -25,7 +25,7 @@ class Api::ConnectionsController < ApplicationController
           # render json: @connection
       else
           # flash: {error: "unsuccessful!!!!"}
-          render json: ["Unable to delete connection"], status: 422
+          render json: ["Error deleting connection"], status: 422
       end 
 
   end
