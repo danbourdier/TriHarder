@@ -1,1 +1,1 @@
-json.partial! "api/connections/connection", connection: @connection
+json.partial! "api/connections/connection", connection: @connection1

@@ -3,7 +3,7 @@ import { RECEIVE_CONNECTIONS, RECEIVE_CONNECTION, REMOVE_CONNECTION } from '../a
 const connectionReducer = (state = {}, action) => {
   Object.freeze(state);
   let nextState = Object.assign({}, state);
-
+  debugger
   switch (action.type) {
     case RECEIVE_CONNECTIONS:
         return action.connections;

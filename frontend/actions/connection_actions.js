@@ -38,7 +38,7 @@ export const getConnections = () => dispatch => {
 export const createConnection = connection => dispatch => {
   return (
     ConnectionAPIUtil.createConnection(connection)
-      .then(res => dispatch(receiveConnection(res)), errors => dispatch(receiveErrors(errors)) )
+      .then(connection => dispatch(receiveConnection(connection)), errors => dispatch(receiveErrors(errors)) )
   )
 }
 
