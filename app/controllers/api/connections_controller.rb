@@ -1,7 +1,8 @@
 class Api::ConnectionsController < ApplicationController
 
   def index
-    @connections = Connection.all
+    #@connections = Connection.where({ requester: current_user.id})
+     @connections = Connection.all
     
     render "api/connections/index"
   end
@@ -20,17 +21,17 @@ class Api::ConnectionsController < ApplicationController
   end
 
   def destroy
-      @connection = Connection.find(params[:id])
+    #@connection = Connection.find(params[:id])
 
-      if @connection.destroy
-          # render json: @connection
+    @connection = current_user.connections.find(params[:id])
+
+      if @connection
+        @connection.destroy
       else
-          # flash: {error: "unsuccessful!!!!"}
           render json: ["Error deleting connection"], status: 422
       end 
 
   end
-
 
     private 
 

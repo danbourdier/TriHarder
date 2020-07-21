@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store';
 
-import { createConnection, getConnections } from './actions/connection_actions';
+import { createConnection, getConnections, deleteConnection } from './actions/connection_actions';
 
 document.addEventListener("DOMContentLoaded", () => {
   let store = configureStore();
@@ -27,8 +27,9 @@ document.addEventListener("DOMContentLoaded", () => {
   window.dispatch = store.dispatch;
   window.createConnection = createConnection;
   window.getConnections = getConnections;
+  window.deleteConnection = deleteConnection;
 
-  window.userA = {'requester': 3, 'requestee': 6 }
+  window.userA = {'requester': 1, 'requestee': 6 }
   // window.userB = {'requester': 2, 'requestee': 4}
   
   const root = document.getElementById("root");

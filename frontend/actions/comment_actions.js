@@ -25,7 +25,7 @@ const receiveErrors = errors => ({
   type: RECEIVE_COMMENT_ERRORS,
   errors
 }) 
-
+ 
 
 export const createComment = comment => dispatch => {
 

@@ -16,9 +16,9 @@ const receiveConnection = connection => ({
   connection,
 })
 
-const removeConnection = connection => ({
+const removeConnection = connectionId => ({
   type: REMOVE_CONNECTION,
-  connection
+  connectionId
 })
 
 const receiveErrors = errors => ({
@@ -43,9 +43,9 @@ export const createConnection = connection => dispatch => {
 }
 
 
-export const deleteConnection = connection => dispatch => {
+export const deleteConnection = connectionId => dispatch => {
   return (
-    ConnectionAPIUtil.deleteConnection(connection)
-      .then(connection => dispatch(removeConnection(connection)), errors => dispatch(receiveErrors(errors)) )
+    ConnectionAPIUtil.deleteConnection(connectionId)
+      .then(connection => dispatch(removeConnection(connectionId)), errors => dispatch(receiveErrors(errors)) )
   )
 }

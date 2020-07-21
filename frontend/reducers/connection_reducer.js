@@ -13,7 +13,7 @@ const connectionReducer = (state = {}, action) => {
       return nextState;
     
     case REMOVE_CONNECTION:
-      delete nextState[action.comment.id]
+      delete nextState[action.connectionId]
       return nextState;
 
     default:

@@ -5,16 +5,13 @@ export const createConnection = connection => (
       url: "api/connections",
       data: { connection }
     })
-
 )
 
-export const deleteConnection = connection => (
+export const deleteConnection = connectionId => (
     $.ajax({
-      url: `api/connections/${connection.id}`,
+      url: `api/connections/${connectionId}`,
       method: "delete",
-      data: { connection }
     })
-
 )
 
 export const getConnections = () => (

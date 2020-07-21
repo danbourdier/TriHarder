@@ -21,7 +21,6 @@ export const getComment = comment => (
     method: "Get",
     url: `api/comment/${comment.id}`
   })
-  
 )
 
 export const deleteComment = commentId => (
