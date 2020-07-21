@@ -6,8 +6,6 @@ class Api::ConnectionsController < ApplicationController
     render "api/connections/index"
   end
 
-
-
   def create
 
         # created both ways so simulate two connections, thats why we create while indexing into strong_params
