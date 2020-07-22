@@ -4,7 +4,10 @@ import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store';
 
+
+
 import { createConnection, getConnections, deleteConnection } from './actions/connection_actions';
+import { createConnectionRequest, deleteConnectionRequest, getConnectionRequests } from './actions/connection_requests_actions';
 
 document.addEventListener("DOMContentLoaded", () => {
   let store = configureStore();
@@ -25,12 +28,16 @@ document.addEventListener("DOMContentLoaded", () => {
   
   
   window.dispatch = store.dispatch;
-  window.createConnection = createConnection;
+  window.createConnectionRequest = createConnectionRequest;
+  window.deleteConnectionRequest = deleteConnectionRequest;
+
+  window.createConnection = createConnection
   window.getConnections = getConnections;
   window.deleteConnection = deleteConnection;
 
-  window.userA = {'requester': 1, 'requestee': 6 }
-  // window.userB = {'requester': 2, 'requestee': 4}
+  window.request = {'requester_id': 1, 'requestee': 6}
+  window.userConnect = {'requester': 1, 'requestee': 6 }
+
   
   const root = document.getElementById("root");
   ReactDOM.render(<Root store={store} />, root)

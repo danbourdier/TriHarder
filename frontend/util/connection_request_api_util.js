@@ -2,7 +2,7 @@
 export const createConnectionRequest = connectionRequest => (
   $.ajax({
     method: "Post",
-    url: "api/connections_requests",
+    url: "api/connection_requests",
     data: { connectionRequest }
   })
 )

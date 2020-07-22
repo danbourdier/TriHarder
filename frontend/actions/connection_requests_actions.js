@@ -30,14 +30,14 @@ const receiveErrors = errors => ({
 
 export const getConnectionRequests = () => dispatch => {
   return (
-    ConnectionAPIUtil.getConnectionRequests()
+    ConnectionRequestAPIUtil.getConnectionRequests()
       .then(connectionRequests => dispatch(receiveConnectionRequests(connectionRequests)), errors => dispatch(receiveErrors(errors)))
   )
 }
 
 export const createConnectionRequest = connectionRequest => dispatch => {
   return (
-    ConnectionAPIUtil.createConnectionRequest(connectionRequest)
+    ConnectionRequestAPIUtil.createConnectionRequest(connectionRequest)
       .then(connectionRequest => dispatch(receiveConnectionRequest(connectionRequest)), errors => dispatch(receiveErrors(errors)))
   )
 }
@@ -45,7 +45,7 @@ export const createConnectionRequest = connectionRequest => dispatch => {
 
 export const deleteConnectionRequest = connectionRequestId => dispatch => {
   return (
-    ConnectionAPIUtil.deleteConnectionRequest(connectionRequestId)
+    ConnectionRequestAPIUtil.deleteConnectionRequest(connectionRequestId)
       .then(connectionRequest => dispatch(removeConnectionRequest(connectionRequestId)), errors => dispatch(receiveErrors(errors)))
   )
 }
