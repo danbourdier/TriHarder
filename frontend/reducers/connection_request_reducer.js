@@ -6,10 +6,10 @@ const connectionRequestReducer = (state = {}, action) => {
 
   switch (action.type) {
     case RECEIVE_CONNECTION_REQUESTS:
-      return action.connections;
+      return action.connectionRequests;
 
     case RECEIVE_CONNECTION_REQUEST:
-      nextState[action.connection.id] = action.connection
+      nextState[action.connectionRequest.id] = action.connectionRequest
       return nextState;
 
     case REMOVE_CONNECTION_REQUEST:
