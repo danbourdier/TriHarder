@@ -13,19 +13,14 @@ class Api::ConnectionsController < ApplicationController
             # You will figure this out, just email me with the subject line: "a/A student needing help with MapmyRun Clone"
 
       our_user = current_user.id
-      p 'TOP BREAK'
-      p our_user
-      puts our_user.is_a? Integer
-      puts our_user.to_i.is_a? Integer
-      p 'BOTTOM BREAK'
       # created both ways so simulate two connections, thats why we create while indexing into strong_params
       @connection1 = Connection.new({requester: strong_params[:requester], requestee: strong_params[:requestee]}) 
       @connection2 = Connection.new({requester: strong_params[:requestee], requestee: strong_params[:requester]}) 
       @connection_req = ConnectionRequest.find_by(requester_id: our_user, requestee_id: 6 )
       if @connection1.save && @connection2.save
         @connection_req.destroy
-
         render "api/connections/show"
+        
       else
           render json: @connection1.errors.full_messages, status: 422
       end
