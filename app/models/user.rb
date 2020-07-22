@@ -21,7 +21,7 @@ class User < ApplicationRecord
 
   validates :first_name, :last_name, :birth_date, :email, :location, :password_digest, :session_token, presence: true
   validates :email, :session_token, uniqueness: true
-  validates :password, length: {minimum: 6}, allow_nil: true
+  validates :password, length: { minimum: 6 }, allow_nil: true
 
   # for google maps routes
   has_many :routes,
@@ -39,9 +39,13 @@ class User < ApplicationRecord
     class_name: :Connection,
     primary_key: :id
   # for finding friends through connections
-  has_many :friends,
-    through: :connections,
-    source: :connection
+      has_many :friends,
+        through: :connections,
+        source: :connection
+
+  has_many :connection_requests,
+    foreign_key: :requester_id,
+    class_name: :Connection_request
 
 
   def self.find_by_credentials(email, password)

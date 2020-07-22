@@ -1,0 +1,1 @@
+json.partial! "api/connection_requests/connectionRequest", connection_request: @connection_request
