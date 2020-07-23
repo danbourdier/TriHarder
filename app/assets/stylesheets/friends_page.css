@@ -55,6 +55,22 @@
 
 .friend-index-item-component-container {
   background-color: pink;
-  width: fit-content;
-  height: fit-content;
+  width: 342px;
+  height: 82px;
+  display: flex;
+  flex-direction: row;
+
+  border: saddlebrown 1px solid;
 }
+
+  #friend-index-item-pic {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    background-color: royalblue;
+    border-radius: 30px;
+  }
+  .friend-index-item-body {
+    display: flex;
+    flex-direction: column;
+  }

@@ -5,21 +5,29 @@ class FriendIndexItem extends Component {
     super(props)
 
     this.connection = this.props.connection;
-    // this.connections = this.props.allConnections;
-    // this.createConnection = this.props.createConnection;
-    // this.deleteConnection = this.props.deleteConnection;
+    this.deleteConnection = this.props.deleteConnection;
   }
 
   componentDidMount() {
     // this.props.getConnections()
   }
 
+  handleClick() {
+    return this.deleteConnection(this.connection.id)
+  }
+
   render() {
+    let { connection } = this.props;
+    console.log(connection);
 
     return (
-      <div className="friend-index-item-component-container">
-        {this.connection.connection.email}
-      </div>
+      <article className="friend-index-item-component-container">
+        <div id="friend-index-item-pic"></div>
+        <aside className="friend-index-item-body">
+          <div>{connection.connection.email}</div>
+          <div style={{cursor: 'pointer'}} onClick={ this.handleClick }>Delete Connection</div>
+        </aside>
+      </article>
     )
   }
 
