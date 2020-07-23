@@ -70,7 +70,18 @@
     background-color: royalblue;
     border-radius: 30px;
   }
+
+  .friend-index-item-body-email {
+    display: flex;
+    font-size: 14px;
+    color: #0076C0;
+    text-decoration: none;
+    text-transform: capitalize;
+
+  }
+
   .friend-index-item-body {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
   }
