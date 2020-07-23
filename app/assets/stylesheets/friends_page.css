@@ -43,30 +43,30 @@
   display: flex;
   flex-direction: column;
   width: fit-content;
-
-  background-color: greenyellow;
+  margin: 0px auto;
 }
 
 .friend-index-second-section aside {
   width: fit-content;
+  margin: 15px 0;
 }
 
 /* index item */
 
 .friend-index-item-component-container {
-  background-color: pink;
   width: 342px;
   height: 82px;
   display: flex;
   flex-direction: row;
-
-  border: saddlebrown 1px solid;
+  background-color: white;
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.15);
+    margin-bottom: 8px;
 }
 
   #friend-index-item-pic {
     width: 60px;
     height: 60px;
-    margin-right: 10px;
+    margin: auto 10px auto 10px;
     background-color: royalblue;
     border-radius: 30px;
   }

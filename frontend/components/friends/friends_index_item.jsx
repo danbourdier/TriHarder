@@ -24,12 +24,12 @@ class FriendIndexItem extends Component {
       <article className="friend-index-item-component-container">
         <div id="friend-index-item-pic"></div>
         <aside className="friend-index-item-body">
-          <div>{connection.connection.email}</div>
-          <div style={{cursor: 'pointer'}} onClick={ this.handleClick }>Delete Connection</div>
+          <div id="ec-comment-first-section">{connection.connection.email}</div>
+          <div style={{ cursor: 'pointer', color: "#0076C0"}} onClick={ this.handleClick }>Delete Connection</div>
         </aside>
       </article>
     )
-  }
+  } 
 
 
 }
