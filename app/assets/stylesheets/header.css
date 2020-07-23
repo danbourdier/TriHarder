@@ -300,6 +300,10 @@
     cursor: pointer;
     line-height: 25px;
   }
+    .header-button a {
+      text-decoration: none;
+      color: inherit;
+    }
 
   .header-button:hover {
     color: black;
