@@ -43,10 +43,18 @@
   display: flex;
   flex-direction: column;
   width: fit-content;
-  
+
   background-color: greenyellow;
 }
 
 .friend-index-second-section aside {
   width: fit-content;
+}
+
+/* index item */
+
+.friend-index-item-component-container {
+  background-color: pink;
+  width: fit-content;
+  height: fit-content;
 }

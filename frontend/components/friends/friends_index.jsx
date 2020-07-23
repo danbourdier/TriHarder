@@ -8,7 +8,6 @@ class FriendIndex extends Component {
     super(props)
     this.state = { friendCount: 0 }
 
-    this.connections = this.props.allConnections;
     this.createConnection = this.props.createConnection;
     this.deleteConnection = this.props.deleteConnection;
     
@@ -20,11 +19,10 @@ class FriendIndex extends Component {
 
   render() {
 
-    let index = Object.values(this.connections).map(connection => (
+    let { allConnections } = this.props;
+    let index = Object.values(allConnections).map(connection => (
       <Friend key={connection.id} connection={connection} delete={this.deleteConnection} />
     ))
-
-    
 
     return (
       <div className="friend-index-component-container">
@@ -35,9 +33,9 @@ class FriendIndex extends Component {
 
         <section className="friend-index-second-section">
           <aside>
-            Connections ({this.connections.length ? this.connections.length : 0})
+            Connections ({Object.values(allConnections).length ? Object.values(allConnections).length : 0})
           </aside>
-          
+
           {index}
         </section>
 

@@ -5,7 +5,7 @@ import FriendIndex from './friends_index';
 import { withRouter } from "react-router-dom";
 
 const mSTP = state => ({
-  allConnections: state.entities.connections
+  allConnections: state.entities.connections,
 })
 
 const mDTP = dispatch => ({
