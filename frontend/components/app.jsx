@@ -11,6 +11,7 @@ import ForgotPasswordContainer from './session/forgot_password_container';
 import ForgotPasswordMessage from './session/forgot_password_message';
 import HeaderTabsContainer from './header/header_tabs_container';
 import FriendsContainer from './friends/friends_container';
+import FriendFinderContainer from './friends/friend_finder_container';
 
 import SearchContainer from './mapping/search_container';
 import ActivityFeedContainer from './activity_feed/activity_feed_container';
@@ -66,6 +67,7 @@ const App = () => (
           <ProtectedRoute exact path="/map" component={SearchContainer} />
           <ProtectedRoute exact path="/activity_feed" component={ActivityFeedContainer} />
           <ProtectedRoute exact path="/friends" component={FriendsContainer} />
+          <ProtectedRoute exact path="/find_friends" component={FriendFinderContainer} />
           {/* <ProtectedRoute exact path="/create_workout" component={}/>
           <ProtectedRoute exact path="/create_goal" component={}/> */}
         </Switch>
