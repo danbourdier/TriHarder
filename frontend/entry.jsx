@@ -6,8 +6,7 @@ import configureStore from './store/store';
 
 
 
-import { createConnection, getConnections, deleteConnection } from './actions/connection_actions';
-import { createConnectionRequest, deleteConnectionRequest, getConnectionRequests } from './actions/connection_requests_actions';
+
 
 document.addEventListener("DOMContentLoaded", () => {
   let store = configureStore();
@@ -23,35 +22,19 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     store = configureStore();
   };
-  
-  window.getState = store.getState;
-  
-  
-  window.dispatch = store.dispatch;
-  window.createConnectionRequest = createConnectionRequest;
-  window.deleteConnectionRequest = deleteConnectionRequest;
-  window.getConnectionRequests = getConnectionRequests;
 
-  window.createConnection = createConnection
-  window.getConnections = getConnections;
-  window.deleteConnection = deleteConnection;
+  window.getState = store.getState
 
-  window.request = {'requester_id': 1, 'requestee_id': 6, 'pending': false}
-  window.userConnect = {'requester': 1, 'requestee': 6 }
-
-  
   const root = document.getElementById("root");
   ReactDOM.render(<Root store={store} />, root)
   
 });
 
 // window testing 
-
+// window.dispatch = store.dispatch;
 // window.login = login;
 // window.signup = signup;
 // window.logout = logout;
-
-
 
 // window.showRoute = showRoute;
 // window.showRoutes = showRoutes;
@@ -60,3 +43,11 @@ document.addEventListener("DOMContentLoaded", () => {
 // window.createComment = createComment;
 // import {deleteComment} from './actions/comment_actions';
   // window.deleteComment = deleteComment
+// import { createConnection, getConnections, deleteConnection } from './actions/connection_actions';
+  // window.createConnection = createConnection
+  // window.getConnections = getConnections;
+  // window.deleteConnection = deleteConnection;
+// import { createConnectionRequest, deleteConnectionRequest, getConnectionRequests } from './actions/connection_requests_actions';
+  // window.createConnectionRequest = createConnectionRequest;
+  // window.deleteConnectionRequest = deleteConnectionRequest;
+  // window.getConnectionRequests = getConnectionRequests;

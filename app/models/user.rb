@@ -34,7 +34,7 @@ class User < ApplicationRecord
     foreign_key: :author_id,
     primary_key: :id
   # for connections
-  has_many :connections,
+  has_many :connections, 
     foreign_key: :requester,
     class_name: :Connection,
     primary_key: :id
@@ -94,5 +94,12 @@ class User < ApplicationRecord
     comments.all
   end
 
+  def all_the_connections
+    connections.all
+  end
+
+  def all_the_connection_requests
+    connection_requests.all
+  end
 
 end
