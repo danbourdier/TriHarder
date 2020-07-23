@@ -13,7 +13,7 @@ const receiveConnectionRequests = connectionRequests => ({
 
 const receiveConnectionRequest = connectionRequest => ({
   type: RECEIVE_CONNECTION_REQUEST,
-  connectionRequest,
+  connectionRequest
 })
 
 const removeConnectionRequest = connectionRequestId => ({
