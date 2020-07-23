@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Friend from './friends_index_item';
+import { Link } from 'react-router-dom';
 
 class FriendIndex extends Component {
   constructor(props){
@@ -22,7 +23,15 @@ class FriendIndex extends Component {
 
     return (
       <div className="friend-index-component-container">
-        {index}
+        <section className="friend-index-first-section">
+          <article><Link to="/friends"></Link> MY CONNECTIONS</article>
+          <article><Link to="/find_friends"></Link> FIND CONNECTIONS</article>
+        </section>
+
+        <section className="friend-index-second-section">
+          {index}
+        </section>
+
       </div>
     )
   }
