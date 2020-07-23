@@ -11,6 +11,7 @@ class Api::ConnectionRequestsController < ApplicationController
   end
 
   def create
+    
     if current_user.id === strong_params[:requester_id].to_i
         @connection_request = ConnectionRequest.new(strong_params)
 

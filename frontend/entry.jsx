@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.getConnections = getConnections;
   window.deleteConnection = deleteConnection;
 
-  window.request = {'requester_id': 1, 'requestee': 6}
+  window.request = {'requester_id': 1, 'requestee_id': 6, 'pending': false}
   window.userConnect = {'requester': 1, 'requestee': 6 }
 
   

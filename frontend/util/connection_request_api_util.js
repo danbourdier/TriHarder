@@ -1,9 +1,9 @@
 
-export const createConnectionRequest = connectionRequest => (
+export const createConnectionRequest = connection_request => (
   $.ajax({
     method: "Post",
     url: "api/connection_requests",
-    data: { connectionRequest }
+    data: { connection_request }
   })
 )
 

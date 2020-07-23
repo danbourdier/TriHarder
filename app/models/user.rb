@@ -45,7 +45,7 @@ class User < ApplicationRecord
 
   has_many :connection_requests,
     foreign_key: :requester_id,
-    class_name: :Connection_request
+    class_name: :ConnectionRequest
 
 
   def self.find_by_credentials(email, password)
