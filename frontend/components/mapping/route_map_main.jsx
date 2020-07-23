@@ -230,7 +230,6 @@ class RouteMap extends Component {
         // second argument makes a request to the API to update our map after passing it the object which is our map
       this.calcRouteAndRender(this.directionsService, this.directionsDisplay);
     }
-    
   }
 
   render() {

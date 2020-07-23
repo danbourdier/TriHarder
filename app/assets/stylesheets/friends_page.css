@@ -1,5 +1,5 @@
 .friend-index-component-container {
-  height: 50vh;
+  min-height: 955px;
   width: 65vw;
   background-color: aliceblue;
 }

@@ -1,7 +1,5 @@
 .header-container {
-  max-height: 124px;
-  max-height: 64px;
-  max-height: 64px;
+  height: fit-content;
 }
 
 .header-main {

@@ -18,7 +18,7 @@ class FriendIndexItem extends Component {
 
     return (
       <div className="friend-index-item-component-container">
-        {this.connection}
+        {this.connection.connection.email}
       </div>
     )
   }
