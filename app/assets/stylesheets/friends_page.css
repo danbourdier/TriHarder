@@ -51,6 +51,12 @@
   margin: 15px 0;
 }
 
+#friends-index-tab {
+  border-bottom: solid skyblue 3px;
+  position: relative;
+  top: 1.5px;
+}
+
 /* index item */
 
 .friend-index-item-component-container {
