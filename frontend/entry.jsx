@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.dispatch = store.dispatch;
   window.createConnectionRequest = createConnectionRequest;
   window.deleteConnectionRequest = deleteConnectionRequest;
+  window.getConnectionRequests = getConnectionRequests;
 
   window.createConnection = createConnection
   window.getConnections = getConnections;

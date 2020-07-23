@@ -28,7 +28,7 @@ class Api::ConnectionRequestsController < ApplicationController
       render json: ["Have to be logged in to send a friend request"]
     end
   end
-
+ 
   def destroy
     @connection_request = current_user.connection_requests.find(params[:id])
 
