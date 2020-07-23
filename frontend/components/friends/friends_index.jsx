@@ -19,3 +19,5 @@ class FriendIndexItem extends Component {
 
 
 }
+
+export default FriendIndexItem;

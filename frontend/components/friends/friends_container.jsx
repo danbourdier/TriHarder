@@ -1,15 +1,17 @@
-// import dispatch actions
-
 import { connect } from "react-redux"
+import { getConnections, createConnection, deleteConnection } from '../../actions/connection_actions';
 
 import FriendIndex from './friends_index';
+import { withRouter } from "react-router-dom";
 
-const mSTP = state => {
-  allConnections: state.connections
-}
+const mSTP = state => ({
+  allConnections: state.entities.connections
+})
 
-const mDTP = dispatch => {
-  getConnections: () => dispatch(action())
-}
+const mDTP = dispatch => ({
+  getConnections: () => dispatch(getConnections() ),
+  createConnection: connection => dispatch(createConnection(connection)),
+  deleteConnection: connectionId => dispatch(deleteConnection(connectionId))
+})
 
-export default connect(mSTP, mDTP)(FriendIndex)
+export default withRouter(connect(mSTP, mDTP)(FriendIndex))

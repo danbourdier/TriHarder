@@ -10,6 +10,7 @@ import HomePageContainer from './home_page/home_page_container';
 import ForgotPasswordContainer from './session/forgot_password_container';
 import ForgotPasswordMessage from './session/forgot_password_message';
 import HeaderTabsContainer from './header/header_tabs_container';
+import FriendsContainer from './friends/friends_container';
 
 import SearchContainer from './mapping/search_container';
 import ActivityFeedContainer from './activity_feed/activity_feed_container';
@@ -64,7 +65,7 @@ const App = () => (
           <ProtectedRoute exact path="/home_page" component={HomePageContainer}/>
           <ProtectedRoute exact path="/map" component={SearchContainer} />
           <ProtectedRoute exact path="/activity_feed" component={ActivityFeedContainer} />
-          <ProtectedRoute exact path="/friends" component={     } />
+          <ProtectedRoute exact path="/friends" component={FriendsContainer} />
           {/* <ProtectedRoute exact path="/create_workout" component={}/>
           <ProtectedRoute exact path="/create_goal" component={}/> */}
         </Switch>

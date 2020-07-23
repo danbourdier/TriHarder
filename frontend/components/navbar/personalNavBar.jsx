@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 
 
@@ -45,7 +46,7 @@ class photoDropDown extends Component {
       <div className="header-group">
         <h2 id="ez-drop-01249" className="header-name"></h2>
           <section className={this.state['hiddenFlag'] ? "header-pic-dropdown-container" : "header-pic-dropdown-container-visible"}>
-          <div className="header-button">Friends</div>
+          <div className="header-button"><Link to="/friends">Friends</Link></div> 
           <div className="header-button">Support</div>
           <div className="header-button">Profile and Settings</div>
           <div className="header-button" onClick={this.props.logout}>Log Out</div>
