@@ -1,6 +1,5 @@
-class EditComment2 < ActiveRecord::Migration[5.2]
+class CreateComments < ActiveRecord::Migration[5.2]
   def change
-    drop_table :comments
     create_table :comments do |t|
       t.string :author_email, null: false
       t.string :body, null: false
@@ -10,7 +9,7 @@ class EditComment2 < ActiveRecord::Migration[5.2]
       t.timestamps
     end
 
-    add_index :comments, :author_id, unique: true
-    add_index :comments, :author_email, unique: true
+    add_index :comments, :author_id
+    add_index :comments, :author_email
   end
 end

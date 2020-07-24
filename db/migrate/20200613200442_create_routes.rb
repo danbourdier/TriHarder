@@ -1,6 +1,5 @@
-class EditRoutes1 < ActiveRecord::Migration[5.2]
+class CreateRoutes < ActiveRecord::Migration[5.2]
   def change
-    drop_table :routes
     create_table :routes do |t|
       t.string :title, null: false
       t.float :total_time, null: false
