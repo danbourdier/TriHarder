@@ -16,7 +16,7 @@ class RouteMapLeft extends Component {
     let that = this;
     let target = document.getElementById("ec-button-1249-submit");
 
-    target.addEventListener("mouseout", () => {
+    target.addEventListener("click", () => {
       that;
       // debugger
       if ((!Array.isArray(that.props.currentErrors)) && (Object.keys(that.props.currentErrors).length > 0)) {
