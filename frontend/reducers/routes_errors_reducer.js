@@ -1,6 +1,6 @@
 import { RECEIVE_ROUTE_ERRORS, RECEIVE_ROUTE, WIPE_ROUTE_ERRORS } from "../actions/route_actions";
 
-const routesErrorsReducer = (state = {}, action) => {
+const routesErrorsReducer = (state = [], action) => {
   Object.freeze(state);
   let nextState = Object.assign({}, state);
 

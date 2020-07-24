@@ -7,26 +7,36 @@ class RouteMapLeft extends Component {
     // since our parent component is dependent on its child(this) to update it with use of #update
         // it would be redundant to create a state and deal with unexpected async issues
     this.points = this.props.pointsArray;
-    this.handleClick = this.props.handleClick
-    this.flag = false
+    this.handleClick = this.props.handleClick;
+    this.flag = false;
+    this.errors = this.props.currentErrors;
+    this.listener = this.listener.bind(this)
   }
 
-  componentDidMount() {
-    let target = document.getElementById("ec-button-1249-submit")
-    target.addEventListener("mouseout", () => {
-      if (!Array.isArray(window.getState().errors.routes)) {
-        if (window.getState().errors.routes.responseText.includes("duplicate")) {
-            return alert("Oh no! One or more route fields are not unique. Try changing the name of your route!")
-        
-        } else if (window.getState().errors.routes.responseText.includes("Start point")) {
-            return alert("Oh no! You forgot to use the map! Click anywhere to plot a point!")
+  listener() {
+    let that = this;
+    let target = document.getElementById("ec-button-1249-submit");
 
-        } else if (window.getState().errors.routes.responseText.includes("End point")) {
-            return alert("Oh no! You are missing an end point!")
+    target.addEventListener("mouseout", () => {
+      that;
+      debugger
+      if (!Array.isArray(that.errors)) {
+        console.log(that.errors)
+        if (that.errors.responseText.includes("duplicate")) {
+          return alert("Oh no! One or more route fields are not unique. Try changing the name of your route!")
+
+        } else if (that.errors.responseText.includes("Start point")) {
+          return alert("Oh no! You forgot to use the map! Click anywhere to plot a point!")
+
+        } else if (that.errors.responseText.includes("End point")) {
+          return alert("Oh no! You are missing an end point!")
         }
       }
     })
+  }
 
+  componentDidMount() {
+    this.listener()
   }
 
   render() {

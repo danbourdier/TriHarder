@@ -244,6 +244,7 @@ class RouteMap extends Component {
             createRoute={this.createRoute}
             thatState={this.state} 
             update={this.update} 
+            currentErrors={this.props.currentErrors}
             total_time={this.state.total_time} 
             distance={this.state.distance} 
           />

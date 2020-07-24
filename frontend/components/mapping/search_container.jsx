@@ -11,7 +11,8 @@ const mSTP = state => ({
   distance: 0,
   description: "",
   start_point: "",
-  end_point: ""
+  end_point: "",
+  currentErrors: state.errors.routes,
 
 });
 
