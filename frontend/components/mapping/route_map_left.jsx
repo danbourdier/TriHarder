@@ -19,8 +19,8 @@ class RouteMapLeft extends Component {
     target.addEventListener("mouseout", () => {
       that;
       // debugger
-      if (!Array.isArray(that.props.currentErrors)) {
-        console.log(that.props.currentErrors)
+      if ((!Array.isArray(that.props.currentErrors)) && (Object.keys(that.props.currentErrors).length > 0)) {
+        // console.log(that.props.currentErrors)
         if (that.props.currentErrors.responseText.includes("duplicate")) {
           return alert("Oh no! One or more route fields are not unique. Try changing the name of your route!")
 
@@ -29,6 +29,15 @@ class RouteMapLeft extends Component {
 
         } else if (that.props.currentErrors.responseText.includes("End point")) {
           return alert("Oh no! You are missing an end point!")
+
+        } else if (that.props.currentErrors.responseText.includes("Activity")) {
+          return alert("Don't forget to choose an activity!")
+        
+        } else if (that.props.currentErrors.responseText.includes("Description")) {
+          return alert("Description must be a minimum of 3 characters!")
+      
+        } else if (that.props.currentErrors.responseText.includes("blank")) {
+          return alert("One of your fields are blank!")
         }
       }
     })
