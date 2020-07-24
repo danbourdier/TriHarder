@@ -15,7 +15,6 @@ Route.delete_all
 demo = User.create!( first_name: "demo", last_name: "user", email: "demo@demo.com", 
   password: "password", birth_date: "01/02/1990", gender: "F", location: "USA"
 )
-  
 user1 = User.create!( first_name: "user1", last_name: "user1", email: "user1@user.com", 
   password: "password", birth_date: "01/02/1990", gender: "F", location: "Morraco"
 )
@@ -27,9 +26,6 @@ user3 = User.create!( first_name: "user3", last_name: "user3", email: "user3@use
 )
 user4 = User.create!( first_name: "user4", last_name: "user4", email: "user4@user.com", 
   password: "password", birth_date: "03/14/1992", gender: "M", location: "USA"
-)
-user5 = User.create!( first_name: "user5", last_name: "user5", email: "user5@user.com", 
-  password: "password", birth_date: "06/01/1991", gender: "F", location: "Cairo"
 )
 
 connection1 = Connection.create!(requester: demo.id, requestee: user1.id)
@@ -57,7 +53,6 @@ route1c = Route.create!(title: "Operator's morning jog", total_time: 172.10, act
   distance: 38.60, description: "Enjoy a B-E-A-utiful run enjoyed by our finest, bring salt", start_point: "Fort Bragg, secret entrance(???)", 
   end_point: "Space, ???", user_id: user2.id
 )
-
 route2 = Route.create!(title: "Styx River Dip", total_time: 5.01, 
   activity: "swim", distance: 999.0, description: "Don't drink the water", 
   start_point: "Feneos", end_point: "Styx", user_id: user2.id
@@ -86,13 +81,6 @@ comment1 = Comment.create!(author_email: demo.email, body: "Hands down the best 
 )
   comment1a = Comment.create!(author_email: user1.email, body: "I can't wait to run it myself!!!",
     author_id: user1.id, parent_comment_id: comment1.id
-  )
-
-comment2 = Comment.create!(author_email: demo.email, body: "Hands down the best run i had in ages! Check out the route in Hell's Kitchen!",
-  author_id: demo.id
-)
-  comment2a = Comment.create!(author_email: user2.email, body: "I can't wait to run it myself!!!",
-    author_id: user2.id, parent_comment_id: comment2.id
   )
 
 comment3 = Comment.create!(author_email: user2.email, body: "I'm looking forward to crushing my next marathon, would anyone like to join and train?",

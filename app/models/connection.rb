@@ -13,6 +13,4 @@ validates :requester, :requestee, presence: true
     class_name: :User,
     primary_key: :id
 
-
-
 end
