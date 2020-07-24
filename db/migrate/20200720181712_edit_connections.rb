@@ -1,7 +1,6 @@
 class EditConnections < ActiveRecord::Migration[5.2]
   def change
-    drop_table :friend_requests
-    drop_table :connections
+
     create_table :connections do |t|
       t.integer :requester, null: false
       t.integer :requestee, null: false

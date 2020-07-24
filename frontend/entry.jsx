@@ -28,8 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.getState = store.getState
 
   
-  window.connect = {'requester': 1, 'requestee': 6}
-  window.req = { 'requester_id': 1, 'requestee_id': 4, 'pending': true }
+  
   window.createConnection = createConnection
   window.createConnectionRequest = createConnectionRequest;
 
