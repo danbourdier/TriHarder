@@ -2,10 +2,11 @@
   min-width: 960px;
   max-width: 960px;
   min-height: 1360px;
-  max-height: 1630.62px;
+  height: fit-content;
   margin: 0px auto 0px auto;
   position: relative;
   top: 62px;
+  margin-bottom: 55px;
 }
 
 .homepage-body-header {
@@ -96,9 +97,8 @@
   display: flex;
   max-width: 960px;
   min-height: 1280px;
-  max-height: 1280px;
+  height: fit-content;
   border-top: grey solid 1px;
-  
   position: relative;
   left: 3px;
 }

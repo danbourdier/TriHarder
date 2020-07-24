@@ -6,6 +6,8 @@ class FriendIndexItem extends Component {
 
     this.connection = this.props.connection;
     this.deleteConnection = this.props.deleteConnection;
+
+    this.handleClick = this.handleClick.bind(this)
   }
 
   componentDidMount() {
@@ -18,7 +20,6 @@ class FriendIndexItem extends Component {
 
   render() {
     let { connection } = this.props;
-    console.log(connection);
 
     let profilePicCollection = [camel, shark, turtle, bear, squirrel]
 
