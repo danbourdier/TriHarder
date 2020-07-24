@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 User.delete_all
+Connection.delete_all
+Comment.delete_all
 Route.delete_all
 
 
@@ -13,6 +15,7 @@ Route.delete_all
 demo = User.create!( first_name: "demo", last_name: "user", email: "demo@demo.com", 
   password: "password", birth_date: "01/02/1990", gender: "F", location: "USA"
 )
+  
 user1 = User.create!( first_name: "user1", last_name: "user1", email: "user1@user.com", 
   password: "password", birth_date: "01/02/1990", gender: "F", location: "Morraco"
 )
@@ -28,6 +31,13 @@ user4 = User.create!( first_name: "user4", last_name: "user4", email: "user4@use
 user5 = User.create!( first_name: "user5", last_name: "user5", email: "user5@user.com", 
   password: "password", birth_date: "06/01/1991", gender: "F", location: "Cairo"
 )
+
+connection1 = Connection.create!(requester: demo.id, requestee: user1.id)
+  connection1a = Connection.create!(requester: user1.id, requestee: demo.id)
+connection2 = Connection.create!(requester: demo.id, requestee: user2.id)
+  connection2 = Connection.create!(requester: user2.id, requestee: demo.id)
+connection3 = Connection.create!(requester: demo.id, requestee: user3.id)
+  connection3 = Connection.create!(requester: user3.id, requestee: demo.id)
 
 
 route1 = Route.create!(title: "Pompeii Speedrun", total_time: 2.10, activity: "run", 
@@ -69,3 +79,23 @@ route3b = Route.create!(title: "Classified", total_time: 1159.32,
   activity: "run", distance: 120.00, description: "Classified",
   start_point: "???", end_point: "???", user_id: user4.id
 )
+
+
+comment1 = Comment.create!(author_email: demo.email, body: "Hands down the best run i had in ages! Check out the route in Hell's Kitchen!",
+  author_id: demo.id
+)
+  comment1a = Comment.create!(author_email: user1.email, body: "I can't wait to run it myself!!!",
+    author_id: user1.id, parent_comment_id: comment1.id
+  )
+
+comment2 = Comment.create!(author_email: demo.email, body: "Hands down the best run i had in ages! Check out the route in Hell's Kitchen!",
+  author_id: demo.id
+)
+  comment2a = Comment.create!(author_email: user2.email, body: "I can't wait to run it myself!!!",
+    author_id: user2.id, parent_comment_id: comment2.id
+  )
+
+comment3 = Comment.create!(author_email: user2.email, body: "I'm looking forward to crushing my next marathon, would anyone like to join and train?",
+  author_id: user2.id
+)
+
