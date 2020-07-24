@@ -9,7 +9,6 @@ class RouteMapLeft extends Component {
     this.points = this.props.pointsArray;
     this.handleClick = this.props.handleClick;
     this.flag = false;
-    this.errors = this.props.currentErrors;
     this.listener = this.listener.bind(this)
   }
 
@@ -19,16 +18,16 @@ class RouteMapLeft extends Component {
 
     target.addEventListener("mouseout", () => {
       that;
-      debugger
-      if (!Array.isArray(that.errors)) {
-        console.log(that.errors)
-        if (that.errors.responseText.includes("duplicate")) {
+      // debugger
+      if (!Array.isArray(that.props.currentErrors)) {
+        console.log(that.props.currentErrors)
+        if (that.props.currentErrors.responseText.includes("duplicate")) {
           return alert("Oh no! One or more route fields are not unique. Try changing the name of your route!")
 
-        } else if (that.errors.responseText.includes("Start point")) {
+        } else if (that.props.currentErrors.responseText.includes("Start point")) {
           return alert("Oh no! You forgot to use the map! Click anywhere to plot a point!")
 
-        } else if (that.errors.responseText.includes("End point")) {
+        } else if (that.props.currentErrors.responseText.includes("End point")) {
           return alert("Oh no! You are missing an end point!")
         }
       }
