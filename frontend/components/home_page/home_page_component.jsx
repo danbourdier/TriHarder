@@ -1,14 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-
-
-// import ActivityFeedContainer from '../activity_feed/activity_feed_container';
 import StatsContainer from '../stats/stats_container';
 import { Link } from 'react-router-dom';
 import RouteIndexContainer from '../routes/route_index_container';
  
-
 const HomePageComponent = props => (
   <div className="homepage-body">
     <section className="homepage-body-header">

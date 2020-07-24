@@ -1,10 +1,10 @@
 class Api::RoutesController < ApplicationController
   def index
-    @routes = Route.all
+    @routes = current_user.routes
 
     render "api/routes/index"
   end
-
+ 
   def show 
     @route = Route.find(params[:id])
 
