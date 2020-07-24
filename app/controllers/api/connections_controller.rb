@@ -16,7 +16,7 @@ class Api::ConnectionsController < ApplicationController
       # created both ways so simulate two connections, thats why we create while indexing into strong_params
       @connection1 = Connection.new({requester: strong_params[:requester], requestee: strong_params[:requestee]}) 
       @connection2 = Connection.new({requester: strong_params[:requestee], requestee: strong_params[:requester]}) 
-      @connection_req = ConnectionRequest.find_by(requester_id: our_user, requestee_id: 6 )
+      @connection_req = ConnectionRequest.find_by(requester_id: our_user.to_i, requestee_id: 6 )
       if @connection1.save && @connection2.save
         @connection_req.destroy
         render "api/connections/show"
