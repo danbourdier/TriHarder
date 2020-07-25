@@ -29,7 +29,10 @@ class ActivityFeedIndexItem extends Component {
     }
 
     let { body, the_author, the_author_email } = this.props.comment;
-    console.log(this.props.comment)
+
+
+    let { sub_comments } = this.props.comment;
+    console.log(sub_comments)
 
     return (
       <article className="create-comment-container">
@@ -48,7 +51,24 @@ class ActivityFeedIndexItem extends Component {
               <div>Comments</div> 
             </div>
           </section>
+          <section className="ec-comment-replies-section">
+            {/* to be a sub component */}
+            <article>
+              <div>
+                <div>
+                  author_email
+                </div>
+                <div>
+                  body
+                </div>
+              </div>
 
+              <aside>
+                delete
+              </aside>
+            </article>
+            {/* to be a sub component */}
+          </section>
         </div>
       </article>
     )

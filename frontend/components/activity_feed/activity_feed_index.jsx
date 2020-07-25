@@ -44,8 +44,6 @@ class ActivityFeedIndex extends React.Component {
       backgroundImage: 'url(' + rabbit + ')'
     };
 
-    // console.log(this.props.actualComment);
-
     return (
       <div id="activity-feed-container">
         <section className="create-comment-container">
