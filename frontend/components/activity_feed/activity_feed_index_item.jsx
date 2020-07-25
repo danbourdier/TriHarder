@@ -29,7 +29,7 @@ class ActivityFeedIndexItem extends Component {
     }
 
     let { body, the_author, the_author_email } = this.props.comment;
-
+    console.log(this.props.comment)
 
     return (
       <article className="create-comment-container">
@@ -43,7 +43,10 @@ class ActivityFeedIndexItem extends Component {
           </span>
           <section className="ec-comments-last-section">
             <div className="like-count">likes</div>
-            <div className="comment-count">comments</div>
+            <div className="comment-count">
+              <div>{this.props.comment.sub_comments.length}</div>
+              <div>Comments</div> 
+            </div>
           </section>
 
         </div>
