@@ -10,6 +10,7 @@
 #  created_at        :datetime         not null
 #  updated_at        :datetime         not null
 #
+
 class Comment < ApplicationRecord
 
   validates :author_email, :author_id, presence: true
@@ -20,13 +21,18 @@ class Comment < ApplicationRecord
     foreign_key: :author_id,
     primary_key: :id
 
-  belongs_to :parent_comment,
-    class_name: :Comment,
-    foreign_key: :parent_comment_id
-
   has_many :child_comments,
     class_name: :Comment,
     foreign_key: :parent_comment_id
+
+  belongs_to :parent_comment,
+    class_name: :Comment,
+    foreign_key: :parent_comment_id,
+    optional: true
+
+
+  # validates :parent_comment, presence: { allow_nil: true}
+
 
   def the_author
     user.id

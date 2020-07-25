@@ -13,3 +13,4 @@ class CreateComments < ActiveRecord::Migration[5.2]
     add_index :comments, :author_email
   end
 end
+ 

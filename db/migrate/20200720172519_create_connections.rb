@@ -12,3 +12,4 @@ class CreateConnections < ActiveRecord::Migration[5.2]
     add_index :connections, [:requestee, :requester], unique: true
   end
 end
+ 

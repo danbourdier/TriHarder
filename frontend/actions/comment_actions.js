@@ -44,6 +44,7 @@ export const deleteComment = commentId => dispatch => {
 }
 
 export const getComments = () => dispatch => {
+  
   return (
     CommentUtil.getComments()
       .then(comments => dispatch(receiveComments(comments)), errors => dispatch(receiveErrors(errors)) )

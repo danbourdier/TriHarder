@@ -1,20 +1,21 @@
+require 'byebug';
+
 class Api::CommentsController < ApplicationController
 
   def index
-    @comments = Comment.all
-
+    #debugger
+    @comments = current_user.comments
     render "api/comments/index"
   end
 
   def show
     @comment = Comment.find(params[:id])
-
     render "api/comments/show"
   end
 
   def create
     @comment = Comment.new(comment_params)
-    # debugger
+
     if @comment.save
       render "api/comments/show"
     else
