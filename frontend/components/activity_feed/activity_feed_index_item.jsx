@@ -53,7 +53,7 @@ class ActivityFeedIndexItem extends Component {
           </section>
           <section className="ec-comment-replies-section">
             {/* to be a sub component */}
-            <article>
+            <article className="ec-comment-reply-container">
               <div>
                 <div>
                   author_email
@@ -68,6 +68,10 @@ class ActivityFeedIndexItem extends Component {
               </aside>
             </article>
             {/* to be a sub component */}
+
+            <form>
+              <input type="text" placeholder="Write a Comment"/>
+            </form>
           </section>
         </div>
       </article>
