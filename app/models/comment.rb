@@ -25,7 +25,7 @@ class Comment < ApplicationRecord
     foreign_key: :parent_comment_id
 
   has_many :child_comments,
-    class_name: :Comment
+    class_name: :Comment,
     foreign_key: :parent_comment_id
 
   def the_author
@@ -34,6 +34,10 @@ class Comment < ApplicationRecord
 
   def the_author_email
     user.email
+  end
+
+  def sub_comments
+    child_comments
   end
 
 
