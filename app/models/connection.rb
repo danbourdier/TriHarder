@@ -1,6 +1,7 @@
 class Connection < ApplicationRecord
 
-validates :requester, :requestee, presence: true
+validates :requester, presence: true
+validates :requestee, presence: true
 
   #person with which we associate with the requestee
   belongs_to :user,
