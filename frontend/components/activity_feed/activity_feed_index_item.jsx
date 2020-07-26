@@ -6,10 +6,32 @@ import Reply from './replies';
 class ActivityFeedIndexItem extends Component {
   constructor(props) {
     super(props)
+    this.state = { hiddenFlag: true }
+
     this.commentId = this.props.comment.id;
     this.deleteComment = this.props.deleteComment;
 
     this.handleClick = this.handleClick.bind(this);
+  }
+
+  componentDidMount() {
+    let target = document.getElementsByClassName("comment-count")[0]
+
+    target.addEventListener("click", () => {
+      if (this.state['hiddenFlag']) {
+        this.flagFalse()
+      } else {
+        this.flagTrue()
+      }
+    })
+  }
+
+  flagTrue() {
+    return this.setState({ hiddenFlag: true })
+  }
+
+  flagFalse() {
+    return this.setState({ hiddenFlag: false })
   }
 
   handleClick() {
@@ -61,7 +83,7 @@ class ActivityFeedIndexItem extends Component {
             </div>
           </section>
 
-          <section className="ec-comment-replies-section">
+          <section className={this.state['hiddenFlag'] ? "display-none" : "ec-comment-replies-section"}>
             {/* <RepliesContainer /> */}
             { replyIndex }
             <form> {/* we need an onsubmit*/}
