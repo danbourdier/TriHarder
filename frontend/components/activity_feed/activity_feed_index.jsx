@@ -37,7 +37,7 @@ class ActivityFeedIndex extends React.Component {
   render() {
     let { createComment, comments, deleteComment } = this.props;
     let index = Object.values(comments).map(comment => (
-      <IndexItem key={comment.id} comment={comment} createComment={createComment} deleteComment={deleteComment} currentUserId={this.authorId}/>
+      <IndexItem key={comment.id} authorEmail={this.email} comment={comment} createComment={createComment} deleteComment={deleteComment} currentUserId={this.authorId}/>
     ))
     let profilePic = {
       backgroundSize: 'cover',

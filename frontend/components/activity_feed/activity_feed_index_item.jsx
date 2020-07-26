@@ -6,12 +6,16 @@ import Reply from './replies';
 class ActivityFeedIndexItem extends Component {
   constructor(props) {
     super(props)
-    this.state = { hiddenFlag: true }
+    this.state = { hiddenFlag: true, postBody: "" }
 
     this.commentId = this.props.comment.id;
+    this.authorId = this.props.currentUserId
     this.deleteComment = this.props.deleteComment;
+    this.createComment = this.props.createComment;
+    this.authorEmail = this.props.authorEmail;
 
     this.handleClick = this.handleClick.bind(this);
+    this.update = this.update.bind(this)
   }
 
   componentDidMount() {
@@ -38,6 +42,22 @@ class ActivityFeedIndexItem extends Component {
     return this.deleteComment(this.commentId)
   }
 
+  update(field) {
+    return e => this.setState({[field]: e.currentTarget.value })
+  }
+
+  handleSubmit() {
+    let payload = Object.assign({}, 
+      {
+        body: this.state.postBody,
+        author_email: this.authorEmail,
+        parent_comment_id: this.commentId, 
+        author_id: this.authorId
+      })
+
+    return this.createComment(payload)
+  }
+
   render() {
     // references our window's instantiated images
     let profilePicCollection = [camel, shark, turtle, bear, squirrel]
@@ -51,7 +71,7 @@ class ActivityFeedIndexItem extends Component {
       backgroundSize: 'cover',
       backgroundImage: 'url(' + rabbit + ')'
     }
-
+    console.log(this.props)
     // this deconstructs our main comment
     const { body, the_author, the_author_email } = this.props.comment;
     // this deconstructs and provides direct access to our replies
@@ -84,12 +104,11 @@ class ActivityFeedIndexItem extends Component {
           </section>
 
           <section className={this.state['hiddenFlag'] ? "display-none" : "ec-comment-replies-section"}>
-            {/* <RepliesContainer /> */}
             { replyIndex }
-            <form className="ec-comment-reply-section-form">  {/* we need an onsubmit*/}
-              <aside id="reply-profile-pic" style={profilePic}></aside> {/* user pic*/}
-              <input type="text" placeholder="Write a Comment" value="state value here" /> {/*  */}
-              <button type="submit">POST</button>
+            <form onSubmit={this.handleSubmit} className="ec-comment-reply-section-form">  {/* we need an onsubmit*/}
+              <aside id="reply-profile-pic" style={profilePic}></aside>
+              <input type="text" placeholder="Write a Comment" value={this.state.postBody} onChange={this.update('postBody')} /> {/*  */}
+              <button id="reply-form-post-button" type="submit">POST</button>
             </form>
           </section>
           
