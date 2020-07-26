@@ -51,10 +51,13 @@ class ActivityFeedIndexItem extends Component {
           </span>
 
           <section className="ec-comments-last-section">
-            <div className="like-count">likes</div>
-            <div className="comment-count">
+            <div className="like-count">
+              <aside id="like-symbol"></aside>
               <div>{this.props.comment.sub_comments.length}</div>
-              <span>Comments</span> 
+            </div>
+            <div className="comment-count">
+              <aside id='comment-symbol'></aside>
+              <div>{this.props.comment.sub_comments.length}</div>
             </div>
           </section>
 

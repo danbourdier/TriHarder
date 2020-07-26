@@ -95,20 +95,35 @@
   align-items: center;
 }
   .like-count {
-    width: 18px;
-    height: 18px;
-    background-color: blue;
     margin-right: 30px;
+    display: flex;
+    flex-direction: row;
   }
+    #like-symbol {
+      background-image: url(like_icon);
+      background-size: cover;
+      width: 21px;
+      height: 18px;
+      margin-right: 4px;
+    }
 
   .comment-count {
-    width: 18px;
-    height: 18px;
-    background-color: blue;
+    width: fit-content;
+    height: fit-content;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    font-size: 14px;
+    align-items: inherit;
   }
+
+    #comment-symbol {
+      background-image: url(comment_icon);
+      background-size: cover;
+      width: 21px;
+      height: 18px;
+      margin-right: 4px;
+    }
 
 
   /* replies section */

@@ -1,15 +1,10 @@
 import React, { Component } from 'react';
 
 
-
-
 class Reply extends Component {
 
 
-
   render () {
-
-    console.log(this.props)
     const { author_email, body } = this.props.reply;
 
     return  (
