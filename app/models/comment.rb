@@ -14,6 +14,7 @@
 class Comment < ApplicationRecord
 
   validates :author_email, :author_id, presence: true
+  validates :parent_comment_id, presence: true, allow_blank: true
   validates :body, length: { minimum: 10 }
 
   belongs_to :user,

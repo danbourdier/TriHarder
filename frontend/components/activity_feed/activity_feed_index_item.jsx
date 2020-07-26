@@ -21,14 +21,16 @@ class ActivityFeedIndexItem extends Component {
 
   componentDidMount() {
     let target = document.getElementsByClassName("comment-count")[0]
+    if (target) {
 
-    target.addEventListener("click", () => {
-      if (this.state['hiddenFlag']) {
-        this.flagFalse()
-      } else {
-        this.flagTrue()
-      }
-    })
+      target.addEventListener("click", () => {
+        if (this.state['hiddenFlag']) {
+          this.flagFalse()
+        } else {
+          this.flagTrue()
+        }
+      })
+    }
   }
 
   flagTrue() {
@@ -81,40 +83,47 @@ class ActivityFeedIndexItem extends Component {
       <Reply key={com.id} reply={com} deleteReply={this.deleteComment} />
     ));
 
-    return (
-      <article className="create-comment-container">
-        <aside id="status-update-pic" style={ the_author === this.props.currentUserId ? userProfilePic : profilePic }></aside>
-        <div className="ec-comments-and-posts">
-          <div id="ec-comment-first-section">
-            {the_author_email} <span className="delete-button" onClick={ this.handleClick }>X</span>
+    if (!this.props.comment.hasOwnProperty('parent_comment_id')) {
+
+      return (
+        <article className="create-comment-container">
+          <aside id="status-update-pic" style={ the_author === this.props.currentUserId ? userProfilePic : profilePic }></aside>
+          <div className="ec-comments-and-posts">
+            <div id="ec-comment-first-section">
+              {the_author_email} <span className="delete-button" onClick={ this.handleClick }>X</span>
+            </div>
+            <span className="ec-comment-body">
+              {body}
+            </span>
+  
+            <section className="ec-comments-last-section">
+              <div className="like-count">
+                <aside id="like-symbol"></aside>
+                <div>{this.props.comment.sub_comments.length}</div>
+              </div>
+              <div className="comment-count">
+                <aside id='comment-symbol'></aside>
+                <div>{this.props.comment.sub_comments.length}</div>
+              </div>
+            </section>
+  
+            <section className={this.state['hiddenFlag'] ? "display-none" : "ec-comment-replies-section"}>
+              { replyIndex }
+              <form onSubmit={this.handleSubmit} className="ec-comment-reply-section-form">  {/* we need an onsubmit*/}
+                <aside id="reply-profile-pic" style={profilePic}></aside>
+                <input type="text" placeholder="Write a Comment" value={this.state.postBody} onChange={this.update('postBody')} /> {/*  */}
+                <button id="reply-form-post-button" type="submit">POST</button>
+              </form>
+            </section>
+            
           </div>
-          <span className="ec-comment-body">
-            {body}
-          </span>
-
-          <section className="ec-comments-last-section">
-            <div className="like-count">
-              <aside id="like-symbol"></aside>
-              <div>{this.props.comment.sub_comments.length}</div>
-            </div>
-            <div className="comment-count">
-              <aside id='comment-symbol'></aside>
-              <div>{this.props.comment.sub_comments.length}</div>
-            </div>
-          </section>
-
-          <section className={this.state['hiddenFlag'] ? "display-none" : "ec-comment-replies-section"}>
-            { replyIndex }
-            <form onSubmit={this.handleSubmit} className="ec-comment-reply-section-form">  {/* we need an onsubmit*/}
-              <aside id="reply-profile-pic" style={profilePic}></aside>
-              <input type="text" placeholder="Write a Comment" value={this.state.postBody} onChange={this.update('postBody')} /> {/*  */}
-              <button id="reply-form-post-button" type="submit">POST</button>
-            </form>
-          </section>
-          
-        </div>
-      </article>
-    )
+        </article>
+      )
+    } else {
+      return (
+        <div></div>
+      )
+    }
   };
 
   
