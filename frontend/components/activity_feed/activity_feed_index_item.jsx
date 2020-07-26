@@ -9,11 +9,12 @@ class ActivityFeedIndexItem extends Component {
     this.state = { hiddenFlag: true, postBody: "" }
 
     this.commentId = this.props.comment.id;
-    this.authorId = this.props.currentUserId
+    this.authorId = this.props.currentUserId;
     this.deleteComment = this.props.deleteComment;
     this.createComment = this.props.createComment;
     this.authorEmail = this.props.authorEmail;
 
+    this.handleSubmit = this.handleSubmit.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.update = this.update.bind(this)
   }
@@ -43,16 +44,17 @@ class ActivityFeedIndexItem extends Component {
   }
 
   update(field) {
+    console.log(this.state[field])
     return e => this.setState({[field]: e.currentTarget.value })
   }
 
   handleSubmit() {
     let payload = Object.assign({}, 
       {
-        body: this.state.postBody,
-        author_email: this.authorEmail,
-        parent_comment_id: this.commentId, 
-        author_id: this.authorId
+        'body': this.state.postBody,
+        'author_email': this.authorEmail,
+        'parent_comment_id': this.commentId, 
+        'author_id': this.authorId
       })
 
     return this.createComment(payload)
@@ -71,7 +73,6 @@ class ActivityFeedIndexItem extends Component {
       backgroundSize: 'cover',
       backgroundImage: 'url(' + rabbit + ')'
     }
-    console.log(this.props)
     // this deconstructs our main comment
     const { body, the_author, the_author_email } = this.props.comment;
     // this deconstructs and provides direct access to our replies
