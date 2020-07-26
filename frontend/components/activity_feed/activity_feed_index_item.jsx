@@ -83,7 +83,7 @@ class ActivityFeedIndexItem extends Component {
       <Reply key={com.id} reply={com} deleteReply={this.deleteComment} />
     ));
 
-    if (!this.props.comment.hasOwnProperty('parent_comment_id')) {
+    if ( this.props.comment['parent_comment_id'] === null ) {
 
       return (
         <article className="create-comment-container">
