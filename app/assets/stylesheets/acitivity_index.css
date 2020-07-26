@@ -134,14 +134,13 @@
 
   .ec-comment-replies-section {
     height: fit-content;
-    margin-left: 60px;
   }
 
     .ec-comment-reply-container {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      margin: 10px 0px 20px 0px;
+      margin: 10px 0px 20px 60px;
     }
       .ec-comment-reply-container aside{
         font-size: 10px;
@@ -167,3 +166,27 @@
         text-decoration: none;
         margin-top: 5px;
       }
+
+  .ec-comment-reply-section-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+    #reply-profile-pic {
+      height: 40px;
+      width: 40px;
+    }
+
+  .ec-comment-reply-section-form input{
+    width: 29vw;
+    color: #222628;
+    border: 1px solid #D3D6DC;
+    height: 40px;
+    display: block;
+    padding: 12px 16px 12px;
+    font-size: 14px;
+    box-sizing: border-box;
+    background: transparent;
+    line-height: 1.21;
+    border-radius: 0;
+  }

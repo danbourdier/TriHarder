@@ -86,7 +86,8 @@ class ActivityFeedIndexItem extends Component {
           <section className={this.state['hiddenFlag'] ? "display-none" : "ec-comment-replies-section"}>
             {/* <RepliesContainer /> */}
             { replyIndex }
-            <form> {/* we need an onsubmit*/}
+            <form className="ec-comment-reply-section-form">  {/* we need an onsubmit*/}
+              <aside id="reply-profile-pic" style={profilePic}></aside> {/* user pic*/}
               <input type="text" placeholder="Write a Comment" value="state value here" /> {/*  */}
               <button type="submit">POST</button>
             </form>
