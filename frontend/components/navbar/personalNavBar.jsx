@@ -9,7 +9,7 @@ class photoDropDown extends Component {
 
     this.state = { hiddenFlag: true }
   }
-
+ 
   componentDidMount() {
     let target = document.getElementById("ez-drop-01249")
     let secondTarget = document.getElementsByClassName("header-group")[0]

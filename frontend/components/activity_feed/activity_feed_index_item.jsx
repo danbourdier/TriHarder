@@ -17,22 +17,24 @@ class ActivityFeedIndexItem extends Component {
   }
 
   render() {
+    // references our window's instantiated images
     let profilePicCollection = [camel, shark, turtle, bear, squirrel]
 
     let profilePic = {
       backgroundSize: 'cover',
       backgroundImage: 'url(' + profilePicCollection[Math.floor(Math.random() * profilePicCollection.length)] + ')'
     };
-
+    // our function to provide inline-styling because i dont know how to use sass
     let userProfilePic = {
       backgroundSize: 'cover',
       backgroundImage: 'url(' + rabbit + ')'
     }
 
+    // this deconstructs our main comment
     const { body, the_author, the_author_email } = this.props.comment;
-
+    // this deconstructs and provides direct access to our replies
     let { sub_comments } = this.props.comment;
-
+    // this maps and renders our replies!
     let replyIndex = sub_comments.map(com => (
       <Reply key={com.id} reply={com} deleteReply={this.deleteComment} />
     ));

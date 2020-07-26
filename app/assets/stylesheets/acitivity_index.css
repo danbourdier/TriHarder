@@ -115,5 +115,36 @@
 
   .ec-comment-replies-section {
     height: fit-content;
-    background-color: lawngreen;
+    margin-left: 60px;
   }
+
+    .ec-comment-reply-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 10px 0px 20px 0px;
+    }
+      .ec-comment-reply-container aside{
+        font-size: 10px;
+        color: #0076C0;
+        text-transform: capitalize;
+        cursor: pointer;
+      }
+
+    .ec-comment-reply-first-section {
+      display: flex;
+      flex-direction: column;
+    }
+
+      .es-comment-reply-email {
+        font-size: 14px;
+        color: #0076C0;
+        text-decoration: none;
+        text-transform: capitalize;
+      }
+      .es-comment-reply-body {
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        margin-top: 5px;
+      }

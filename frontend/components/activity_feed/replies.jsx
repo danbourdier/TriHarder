@@ -9,22 +9,24 @@ class Reply extends Component {
 
   render () {
 
-    console.log(this.props.reply)
+    console.log(this.props)
+    const { author_email, body } = this.props.reply;
 
     return  (
       <article className="ec-comment-reply-container">
-        <div>
-          <div>
-            author_email
-                </div>
-          <div>
-            body
-                </div>
-        </div>
+        <section className="ec-comment-reply-first-section">
+          <span className="es-comment-reply-email">
+            { author_email }
+          </span>
+
+          <span className="es-comment-reply-body">
+            { body }
+          </span>
+        </section>
 
         <aside>
           delete
-              </aside>
+        </aside>
       </article>
     )
   }
