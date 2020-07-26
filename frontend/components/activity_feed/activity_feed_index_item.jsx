@@ -44,7 +44,6 @@ class ActivityFeedIndexItem extends Component {
   }
 
   update(field) {
-    console.log(this.state[field])
     return e => this.setState({[field]: e.currentTarget.value })
   }
 
@@ -57,7 +56,7 @@ class ActivityFeedIndexItem extends Component {
         'author_id': this.authorId
       })
 
-    return this.createComment(payload)
+    this.createComment(payload)
   }
 
   render() {
@@ -75,7 +74,7 @@ class ActivityFeedIndexItem extends Component {
     }
     // this deconstructs our main comment
     const { body, the_author, the_author_email } = this.props.comment;
-    // this deconstructs and provides direct access to our replies
+    // this deconstructs and provides direct access to our replies that are a lower level key in each comment
     let { sub_comments } = this.props.comment;
     // this maps and renders our replies!
     let replyIndex = sub_comments.map(com => (

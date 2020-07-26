@@ -29,7 +29,6 @@ class ActivityFeedIndex extends React.Component {
       'author_id': this.authorId
     });
 
-    // console.log(payload)
     this.createComment(payload)
   }
 
