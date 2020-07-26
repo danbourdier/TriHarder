@@ -9,7 +9,6 @@ class Reply extends Component {
     this.handleClick = this.handleClick.bind(this)
   }
 
-
   handleClick() {
     return this.props.deleteReply(this.reply.id)
   }
