@@ -58,7 +58,7 @@ class ActivityFeedIndexItem extends Component {
         'author_id': this.authorId
       })
 
-    this.createComment(payload)
+    this.createComment(payload);
   }
 
   render() {
