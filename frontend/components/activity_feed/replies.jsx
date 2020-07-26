@@ -2,7 +2,17 @@ import React, { Component } from 'react';
 
 
 class Reply extends Component {
+  constructor(props) {
+    super(props)
 
+    this.reply = this.props.reply;
+    this.handleClick = this.handleClick.bind(this)
+  }
+
+
+  handleClick() {
+    return this.props.deleteReply(this.reply.id)
+  }
 
   render () {
     const { author_email, body } = this.props.reply;
@@ -19,7 +29,7 @@ class Reply extends Component {
           </span>
         </section>
 
-        <aside>
+        <aside onClick={this.handleClick}>
           delete
         </aside>
       </article>
