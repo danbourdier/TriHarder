@@ -6,7 +6,7 @@ class RepliesIndex extends Component {
 
 
   render() {
-
+    
     return (
       <div>
         <Reply />

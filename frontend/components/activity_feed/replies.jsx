@@ -8,8 +8,24 @@ class Reply extends Component {
 
 
   render () {
+
+    console.log(this.props.reply)
+
     return  (
-      <div> A reply!</div>
+      <article className="ec-comment-reply-container">
+        <div>
+          <div>
+            author_email
+                </div>
+          <div>
+            body
+                </div>
+        </div>
+
+        <aside>
+          delete
+              </aside>
+      </article>
     )
   }
 }

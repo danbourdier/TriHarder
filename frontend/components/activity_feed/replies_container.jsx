@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import RepliesIndex from './replies_index';
 
 const mSTP = state => ({
-  // code here
+  replies: state.entities.comments
 })
 
 const mDTP = dispatch => ({

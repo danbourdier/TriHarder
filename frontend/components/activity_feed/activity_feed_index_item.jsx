@@ -1,5 +1,7 @@
 import React, {Component } from 'react';
 
+import RepliesContainer from './replies_container';
+import Reply from './replies';
 
 class ActivityFeedIndexItem extends Component {
   constructor(props) {
@@ -11,7 +13,6 @@ class ActivityFeedIndexItem extends Component {
   }
 
   handleClick() {
-
     return this.deleteComment(this.commentId)
   }
 
@@ -28,11 +29,13 @@ class ActivityFeedIndexItem extends Component {
       backgroundImage: 'url(' + rabbit + ')'
     }
 
-    let { body, the_author, the_author_email } = this.props.comment;
-
+    const { body, the_author, the_author_email } = this.props.comment;
 
     let { sub_comments } = this.props.comment;
-    console.log(sub_comments)
+
+    let replyIndex = sub_comments.map(com => (
+      <Reply key={com.id} reply={com} deleteReply={this.deleteComment} />
+    ));
 
     return (
       <article className="create-comment-container">
@@ -44,35 +47,24 @@ class ActivityFeedIndexItem extends Component {
           <span className="ec-comment-body">
             {body}
           </span>
+
           <section className="ec-comments-last-section">
             <div className="like-count">likes</div>
             <div className="comment-count">
               <div>{this.props.comment.sub_comments.length}</div>
-              <div>Comments</div> 
+              <span>Comments</span> 
             </div>
           </section>
+
           <section className="ec-comment-replies-section">
-            {/* to be a sub component */}
-            <article className="ec-comment-reply-container">
-              <div>
-                <div>
-                  author_email
-                </div>
-                <div>
-                  body
-                </div>
-              </div>
-
-              <aside>
-                delete
-              </aside>
-            </article>
-            {/* to be a sub component */}
-
-            <form>
-              <input type="text" placeholder="Write a Comment"/>
+            {/* <RepliesContainer /> */}
+            { replyIndex }
+            <form> {/* we need an onsubmit*/}
+              <input type="text" placeholder="Write a Comment" value="state value here" /> {/*  */}
+              <button type="submit">POST</button>
             </form>
           </section>
+          
         </div>
       </article>
     )

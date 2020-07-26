@@ -109,3 +109,11 @@
     flex-direction: row;
     justify-content: space-between;
   }
+
+
+  /* replies section */
+
+  .ec-comment-replies-section {
+    height: fit-content;
+    background-color: lawngreen;
+  }
