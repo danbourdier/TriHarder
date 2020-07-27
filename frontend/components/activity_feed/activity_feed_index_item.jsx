@@ -20,17 +20,35 @@ class ActivityFeedIndexItem extends Component {
   }
 
   componentDidMount() {
-    let target = document.getElementsByClassName("comment-count")[0]
-    if (target) {
-
-      target.addEventListener("click", () => {
-        if (this.state['hiddenFlag']) {
-          this.flagFalse()
-        } else {
-          this.flagTrue()
-        }
-      })
+    let targetIndex = document.getElementsByClassName("comment-count")
+    for (let i = 0; i < targetIndex.length; i++) {
+      let element = targetIndex[i];
+      // console.log(element.parentElement.nextElementSibling)
+      console.log(element.parentElement.nextElementSibling.className)
+      if (element) {
+        element.addEventListener("click", () => {
+          if (element.parentElement.nextElementSibling.className === "ec-comment-replies-section") {
+            // element.parentElement.nextElementSibling.className = 'display-none'
+            // console.log(element.parentElement.nextElementSibling.className)
+          } else {
+            // console.log(element.parentElement.nextElementSibling)
+            // element.parentElement.nextElementSibling.className = 'ec-comment-replies-section'
+      }})};     
     }
+
+    // let target = document.getElementsByClassName("comment-count")[0]
+
+    // target.parentElement.nextElementSibling.className = "ec-comment-replies-section";
+    // if (target) {
+
+    //   target.addEventListener("click", () => {
+    //     if (this.state['hiddenFlag']) {
+    //       this.flagFalse()
+    //     } else {
+    //       this.flagTrue()
+    //     }
+    //   })
+    // }
   }
 
   flagTrue() {
