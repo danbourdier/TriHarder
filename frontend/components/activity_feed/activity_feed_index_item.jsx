@@ -28,12 +28,14 @@ class ActivityFeedIndexItem extends Component {
       if (element) {
         element.addEventListener("click", () => {
           if (element.parentElement.nextElementSibling.className === "ec-comment-replies-section") {
-            // element.parentElement.nextElementSibling.className = 'display-none'
+            element.parentElement.nextElementSibling.className = 'display-none'
             // console.log(element.parentElement.nextElementSibling.className)
           } else {
             // console.log(element.parentElement.nextElementSibling)
-            // element.parentElement.nextElementSibling.className = 'ec-comment-replies-section'
-      }})};     
+            element.parentElement.nextElementSibling.className = 'ec-comment-replies-section'
+          }
+        })
+      };   
     }
 
     // let target = document.getElementsByClassName("comment-count")[0]
