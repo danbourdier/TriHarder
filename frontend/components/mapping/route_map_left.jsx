@@ -11,7 +11,7 @@ class RouteMapLeft extends Component {
     this.flag = false;
     this.listener = this.listener.bind(this)
   }
-
+ 
   listener() {
     let that = this;
     let target = document.getElementById("ec-button-1249-submit");

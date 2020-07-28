@@ -11,6 +11,9 @@ class RouteMap extends Component {
     // array below used so we can store our points and conveniently delete them
     this.points = [];
 
+    // props
+    this.createRouteComment = this.props.createComment;
+
     // tied to our route creation and our info display on right of map
     this.total_time = this.props.total_time;
     this.distance = this.props.distance;
@@ -100,7 +103,7 @@ class RouteMap extends Component {
           position: res.routes[0].legs[0].start_location,
           map: that.map,
           icon: window.logo_marker
-        })
+        }) 
         that.points.push(that.currentPoint);
         // sets our state's start/end point to res pos
         if (that.points.length === 1) {
@@ -247,6 +250,7 @@ class RouteMap extends Component {
             currentErrors={this.props.currentErrors}
             total_time={this.state.total_time} 
             distance={this.state.distance} 
+            createComment={this.createRouteComment}
           />
 
           <section  
