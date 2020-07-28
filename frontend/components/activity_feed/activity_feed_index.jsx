@@ -13,16 +13,15 @@ class ActivityFeedIndex extends React.Component {
     this.createComment = this.props.createComment;
   }
 
+
   componentDidMount() {
     this.props.getComments();
-
   }
 
   componentDidUpdate(prevProps) {
     if (Object.values(prevProps.comments).length !== Object.values(this.props.comments).length) {
       this.props.getComments();
     }
-    // debugger;
   }
 
   update(field) {
@@ -43,7 +42,7 @@ class ActivityFeedIndex extends React.Component {
   render() {
     let { createComment, comments, deleteComment } = this.props;
     let index = Object.values(comments).map(comment => (
-      <IndexItem key={comment.id} authorEmail={this.email} comment={comment} createComment={createComment} deleteComment={deleteComment} currentUserId={this.authorId}/>
+      <IndexItem key={comment.id} allComments={this.props.comments} authorEmail={this.email} comment={comment} createComment={createComment} deleteComment={deleteComment} currentUserId={this.authorId}/>
     ))
     let profilePic = {
       backgroundSize: 'cover',

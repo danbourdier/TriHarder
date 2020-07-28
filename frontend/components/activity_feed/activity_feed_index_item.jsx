@@ -16,15 +16,16 @@ class ActivityFeedIndexItem extends Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleClick = this.handleClick.bind(this);
-    this.update = this.update.bind(this)
+    this.update = this.update.bind(this);
+    // this.hideAndShow = this.hideAndShow.bind(this);
   }
 
-  componentDidMount() {
+  hideAndShow() {
     let targetIndex = document.getElementsByClassName("comment-count")
-    for (let i = 0; i < targetIndex.length; i++) {
+    for (let i = 0; i <= targetIndex.length; i++) {
       let element = targetIndex[i];
-      // console.log(element.parentElement.nextElementSibling)
-      console.log(element.parentElement.nextElementSibling.className)
+
+
       if (element) {
         element.addEventListener("click", () => {
           if (element.parentElement.nextElementSibling.className === "ec-comment-replies-section") {
@@ -35,30 +36,19 @@ class ActivityFeedIndexItem extends Component {
             element.parentElement.nextElementSibling.className = 'ec-comment-replies-section'
           }
         })
-      };   
+      };
     }
-
-    // let target = document.getElementsByClassName("comment-count")[0]
-
-    // target.parentElement.nextElementSibling.className = "ec-comment-replies-section";
-    // if (target) {
-
-    //   target.addEventListener("click", () => {
-    //     if (this.state['hiddenFlag']) {
-    //       this.flagFalse()
-    //     } else {
-    //       this.flagTrue()
-    //     }
-    //   })
-    // }
   }
 
-  flagTrue() {
-    return this.setState({ hiddenFlag: true })
+  componentDidMount() {
+    this.hideAndShow()
+
   }
 
-  flagFalse() {
-    return this.setState({ hiddenFlag: false })
+  componentDidUpdate(prevProps) {
+    if (Object.values(prevProps.allComments).length !== Object.values(this.props.allComments).length) {
+      this.hideAndShow();
+    }
   }
 
   handleClick() {
@@ -127,9 +117,9 @@ class ActivityFeedIndexItem extends Component {
               </div>
             </section>
   
-            <section className={this.state['hiddenFlag'] ? "display-none" : "ec-comment-replies-section"}>
+            <section className="display-none">
               { replyIndex }
-              <form onSubmit={this.handleSubmit} className="ec-comment-reply-section-form">  {/* we need an onsubmit*/}
+              <form onSubmit={this.handleSubmit} className="ec-comment-reply-section-form"> 
                 <aside id="reply-profile-pic" style={profilePic}></aside>
                 <input type="text" placeholder="Write a Comment" value={this.state.postBody} onChange={this.update('postBody')} /> {/*  */}
                 <button id="reply-form-post-button" type="submit">POST</button>

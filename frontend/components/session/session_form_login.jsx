@@ -50,7 +50,7 @@ class SessionFormLogin extends React.Component {
     };
 
     return (
-      <div className="session-form-login-body">
+      <div className="session-form-login-body"> 
 
         <section className="session-form-login-container">
 
