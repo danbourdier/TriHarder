@@ -3,6 +3,7 @@ import Search from './search';
 import RouteMap from './route_map_main'
 
 import { createRoute } from '../../actions/route_actions'
+import { createComment } from '../../actions/comment_actions';
 
 const mSTP = state => ({
   title: "",
@@ -17,7 +18,8 @@ const mSTP = state => ({
 });
 
 const mDTP = dispatch => ({
-  createRoute: route => dispatch(createRoute(route))
+  createRoute: route => dispatch(createRoute(route)),
+  createComment: comment => dispatch(createComment(comment))
 });
 
 export default connect(mSTP, mDTP)(Search)
