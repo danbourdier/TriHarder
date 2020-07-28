@@ -17,38 +17,12 @@ class ActivityFeedIndexItem extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.update = this.update.bind(this);
-    // this.hideAndShow = this.hideAndShow.bind(this);
+    this.hideAndShow = this.hideAndShow.bind(this);
+    
   }
 
   hideAndShow() {
-    let targetIndex = document.getElementsByClassName("comment-count")
-    for (let i = 0; i <= targetIndex.length; i++) {
-      let element = targetIndex[i];
-
-
-      if (element) {
-        element.addEventListener("click", () => {
-          if (element.parentElement.nextElementSibling.className === "ec-comment-replies-section") {
-            element.parentElement.nextElementSibling.className = 'display-none'
-            // console.log(element.parentElement.nextElementSibling.className)
-          } else {
-            // console.log(element.parentElement.nextElementSibling)
-            element.parentElement.nextElementSibling.className = 'ec-comment-replies-section'
-          }
-        })
-      };
-    }
-  }
-
-  componentDidMount() {
-    this.hideAndShow()
-
-  }
-
-  componentDidUpdate(prevProps) {
-    if (Object.values(prevProps.allComments).length !== Object.values(this.props.allComments).length) {
-      this.hideAndShow();
-    }
+    this.setState( { hiddenFlag: (!this.state.hiddenFlag) })
   }
 
   handleClick() {
@@ -93,6 +67,15 @@ class ActivityFeedIndexItem extends Component {
       <Reply key={com.id} reply={com} deleteReply={this.deleteComment} />
     ));
 
+    let replies = this.state.hiddenFlag ? null : <section className="ec-comment-replies-section">
+      {replyIndex}
+      <form onSubmit={this.handleSubmit} className="ec-comment-reply-section-form">
+        <aside id="reply-profile-pic" style={profilePic}></aside>
+        <input type="text" placeholder="Write a Comment" value={this.state.postBody} onChange={this.update('postBody')} /> 
+        <button id="reply-form-post-button" type="submit">POST</button>
+      </form>
+    </section>
+
     if ( this.props.comment['parent_comment_id'] === null ) {
 
       return (
@@ -111,20 +94,13 @@ class ActivityFeedIndexItem extends Component {
                 <aside id="like-symbol"></aside>
                 <div>{this.props.comment.sub_comments.length}</div>
               </div>
-              <div className="comment-count">
+              <div className="comment-count" onClick={ this.hideAndShow }>
                 <aside id='comment-symbol'></aside>
                 <div>{this.props.comment.sub_comments.length}</div>
               </div>
             </section>
   
-            <section className="display-none">
-              { replyIndex }
-              <form onSubmit={this.handleSubmit} className="ec-comment-reply-section-form"> 
-                <aside id="reply-profile-pic" style={profilePic}></aside>
-                <input type="text" placeholder="Write a Comment" value={this.state.postBody} onChange={this.update('postBody')} /> {/*  */}
-                <button id="reply-form-post-button" type="submit">POST</button>
-              </form>
-            </section>
+            { replies }
             
           </div>
         </article>
