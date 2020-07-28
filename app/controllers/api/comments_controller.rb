@@ -1,9 +1,6 @@
-require 'byebug';
-
 class Api::CommentsController < ApplicationController
 
   def index
-    #debugger
     @comments = current_user.comments
     render "api/comments/index"
   end
