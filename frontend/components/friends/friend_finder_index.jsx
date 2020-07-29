@@ -7,6 +7,7 @@ class FriendFinderIndex extends Component {
   constructor(props) {
     super(props)
     this.state = { search: "" }
+
   }
 
   handleSearch() {
@@ -15,8 +16,9 @@ class FriendFinderIndex extends Component {
     this.props.searchConnections(payload)
   }
 
-  update(e) {
+  update(field) {
 
+    return e => this.setState({ [field]: e.currentTarget.value })
   }
 
   render() {
@@ -36,7 +38,7 @@ class FriendFinderIndex extends Component {
           </section>
 
           <section id="friend-search-box-container">
-            <input type="text" placeholder={"Search for a connection!"} value={this.state.search} />
+            <input type="text" placeholder={"Search for a connection!"} value={this.state.search} onChange={this.update('search')}/>
             <button type="submit">SEARCH</button>
           </section>
  
