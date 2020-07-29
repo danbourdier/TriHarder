@@ -4,9 +4,12 @@ class Api::ConnectionsController < ApplicationController
     # we should always strive to take advantage of associations especially in the use of creating our backend
         # it makes no difference it we append #all or not, they are just methods for utilizing active record thru rails
             # its as if we are adding a SELECT * even though Active Record inserts it by default
+# Album.where('lower(title) like ?', "%#{search_term.downcase}%")
     if params[:connection]
-      slice = "#{params[:connection]}"
-      @connections = User.find_by_sql(`SELECT * FROM users WHERE email LIKE #{slice}`)
+      query = params[:connection]
+      # @connections = User.find_by_sql("SELECT * FROM users WHERE email LIKE '#{query}'")
+      @connections = User.where("lower(email) LIKE :query", query: "%#{query.downcase}%")
+      debugger
       render "api/connections/index"
     else
       @connections = current_user.connections.all
