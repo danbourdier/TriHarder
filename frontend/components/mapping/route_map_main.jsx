@@ -40,15 +40,15 @@ class RouteMap extends Component {
   };
 
   componentDidUpdate(prevProps) {
-    // debugger
     if (Object.values(prevProps.routes).length !== Object.values(this.props.routes).length) {
-      Object.assign({}, {
-        'author_email': this.email,
-        'body': this.state.body,
-        'author_id': this.authorId
-      });
 
-      this.props.createRouteComment();
+    let postRouteComment = Object.assign({}, {
+        'author_email': this.props.currentUser.email,
+        'body': `${this.props.currentUser.email} has completed a ${this.props.lastRoute.activity}! `,
+        'author_id': this.props.currentUser.id
+      });
+      debugger
+      this.createRouteComment(postRouteComment);
     }
   }
 

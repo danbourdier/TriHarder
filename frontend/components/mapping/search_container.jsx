@@ -15,6 +15,8 @@ const mSTP = state => ({
   end_point: "",
   currentErrors: state.errors.routes,
   routes: state.entities.routes,
+  currentUser: state.entities.users[state.session.id],
+  lastRoute: Object.values(state.entities.routes)[Object.values(state.entities.routes).length - 1],
 });
 
 const mDTP = dispatch => ({
