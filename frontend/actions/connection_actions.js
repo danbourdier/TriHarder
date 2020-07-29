@@ -35,6 +35,13 @@ export const getConnections = () => dispatch => {
   )
 }
 
+export const searchConnections = connection => dispatch => {
+  return (
+    ConnectionAPIUtil.searchConnections(connection)
+      .then(connections => dispatch(receiveConnections(connections)), errors => dispatch(receiveErrors(errors)) )
+  )
+}
+
 export const createConnection = connection => dispatch => {
   return (
     ConnectionAPIUtil.createConnection(connection)

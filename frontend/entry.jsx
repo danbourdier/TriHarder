@@ -6,7 +6,7 @@ import configureStore from './store/store';
 
 
 
-import { createConnection, getConnections, deleteConnection } from './actions/connection_actions';
+import { createConnection, getConnections, deleteConnection, searchConnections } from './actions/connection_actions';
 import { createConnectionRequest, deleteConnectionRequest, getConnectionRequests } from './actions/connection_requests_actions';
   
 document.addEventListener("DOMContentLoaded", () => {
@@ -27,7 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
   window.dispatch = store.dispatch;
   window.getState = store.getState
 
-  
+  window.getConnections = getConnections;
+  window.searchConnections = searchConnections;
   
   window.createConnection = createConnection
   window.createConnectionRequest = createConnectionRequest;

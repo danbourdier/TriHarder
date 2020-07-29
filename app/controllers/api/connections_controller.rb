@@ -4,11 +4,17 @@ class Api::ConnectionsController < ApplicationController
     # we should always strive to take advantage of associations especially in the use of creating our backend
         # it makes no difference it we append #all or not, they are just methods for utilizing active record thru rails
             # its as if we are adding a SELECT * even though Active Record inserts it by default
-    @connections = current_user.connections.all
-    render "api/connections/index"
+    if params[:connection]
+      slice = "#{params[:connection]}"
+      @connections = User.find_by_sql(`SELECT * FROM users WHERE email LIKE #{slice}`)
+      render "api/connections/index"
+    else
+      @connections = current_user.connections.all
+      render "api/connections/index"
+    end
   end
 
-  def create
+  def create 
         # To the future a/A student reading this code for help...... If you need me to explain the code to you i can be easily reached at dfbourdier@gmail.com 
             # You will figure this out, just email me with the subject line: "a/A student needing help with MapmyRun Clone"
 
@@ -27,7 +33,7 @@ class Api::ConnectionsController < ApplicationController
   end
 
   def destroy
-        # parans is referring to the http request that the rails controller receives from the router OR more accurately;
+        # params is referring to the http request that the rails controller receives from the router OR more accurately;
             # our url we are receiving from our api util's ajax request for connection deletion located at connection_api_util.js
     @connection1 = current_user.connections.find(params[:id])
     @connection2 = Connection.find_by( { requester: @connection1['requestee'] } )

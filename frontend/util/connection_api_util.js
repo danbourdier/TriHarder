@@ -14,8 +14,19 @@ export const deleteConnection = connectionId => (
     })
 )
 
-export const getConnections = () => (
-  $.ajax({
-    url: "api/connections",
-  })
-)
+export const getConnections = () => { 
+  return (
+    $.ajax({
+      url: "api/connections"
+    })
+  )
+}
+
+export const searchConnections = connection => { 
+  return (
+    $.ajax({
+      url: "api/connections",
+      data:  { connection } 
+    })
+  )
+}
