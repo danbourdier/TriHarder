@@ -39,6 +39,19 @@ class RouteMap extends Component {
 
   };
 
+  componentDidUpdate(prevProps) {
+    // debugger
+    if (Object.values(prevProps.routes).length !== Object.values(this.props.routes).length) {
+      Object.assign({}, {
+        'author_email': this.email,
+        'body': this.state.body,
+        'author_id': this.authorId
+      });
+
+      this.props.createRouteComment();
+    }
+  }
+
   handleClick(arg) {
     const {createRoute} = this.props; // when destructuring objects we must name the names of keys we want
 

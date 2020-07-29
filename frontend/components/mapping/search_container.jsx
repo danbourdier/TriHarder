@@ -14,7 +14,7 @@ const mSTP = state => ({
   start_point: "",
   end_point: "",
   currentErrors: state.errors.routes,
-
+  routes: state.entities.routes,
 });
 
 const mDTP = dispatch => ({

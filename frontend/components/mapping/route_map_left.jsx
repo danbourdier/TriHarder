@@ -10,6 +10,7 @@ class RouteMapLeft extends Component {
     this.handleClick = this.props.handleClick;
     this.flag = false;
     this.listener = this.listener.bind(this)
+
   }
  
   listener() {
