@@ -5,14 +5,14 @@ import FriendFinderIndex from './friend_finder_index';
 import { withRouter } from "react-router-dom";
 
 const mSTP = state => ({
-  allConnections: state.entities.connections,
+  searchResults: state.entities.connections,
 })
 
 const mDTP = dispatch => ({
   getConnections: () => dispatch(getConnections()),
   searchConnections: email => dispatch(searchConnections(email)),
   createConnection: connection => dispatch(createConnection(connection)),
-  deleteConnection: connectionId => dispatch(deleteConnection(connectionId))
+  deleteConnection: connectionId => dispatch(deleteConnection(connectionId)),
 })
 
 export default withRouter(connect(mSTP, mDTP)(FriendFinderIndex))

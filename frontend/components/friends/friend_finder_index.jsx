@@ -1,9 +1,32 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 
+import SearchItem from './friend_finder_index_item';
+
 class FriendFinderIndex extends Component {
+  constructor(props) {
+    super(props)
+    this.state = { search: "" }
+  }
+
+  handleSearch() {
+    let payload = this.state.search;
+
+    this.props.searchConnections(payload)
+  }
+
+  update(e) {
+
+  }
 
   render() {
+
+    let { getConnections, searchConnections, deleteConnection, createConnection} = this.props;
+
+    let index = Object.values(this.props.searchResults).map(res => (
+      <SearchItem key={res.id} result={res}  />
+    ));
+
     return (
       <div className="friend-component-container">
         <div className="friend-index-component-container">
@@ -12,8 +35,9 @@ class FriendFinderIndex extends Component {
             <article id="friends-index-tab"><Link to="/find_friends">FIND CONNECTIONS</Link></article>
           </section>
 
-          <section>
-            hello
+          <section id="friend-search-box-container">
+            <input type="text" placeholder={"Search for a connection!"} value={this.state.search} />
+            <button type="submit">SEARCH</button>
           </section>
  
         </div>
