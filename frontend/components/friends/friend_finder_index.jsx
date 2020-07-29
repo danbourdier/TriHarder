@@ -24,7 +24,6 @@ class FriendFinderIndex extends Component {
   render() {
 
     let { getConnections, searchConnections, deleteConnection, createConnection} = this.props;
-
     let index = Object.values(this.props.searchResults).map(res => (
       <SearchItem key={res.id} result={res}  />
     ));
@@ -39,7 +38,11 @@ class FriendFinderIndex extends Component {
 
           <section id="friend-search-box-container">
             <input type="text" placeholder={"Search for a connection!"} value={this.state.search} onChange={this.update('search')}/>
-            <button type="submit">SEARCH</button>
+            <button type="submit" onClick={this.handleSearch}>SEARCH</button>
+          </section>
+
+          <section className="search-item-container">
+            { index }
           </section>
  
         </div>

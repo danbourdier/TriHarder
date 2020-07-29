@@ -6,6 +6,7 @@ import { withRouter } from "react-router-dom";
 
 const mSTP = state => ({
   searchResults: state.entities.connections,
+  currentUserConnections: Object.values(state.entities.users)[0].all_the_connections,
 })
 
 const mDTP = dispatch => ({
