@@ -1,4 +1,4 @@
-if @connections[0][:requester]
+if @connections.length > 0 && @connections[0][:requester]
   @connections.each do |connection|
     json.set! connection.id do
       json.extract! connection, :id, :requester, :requestee, :connection
