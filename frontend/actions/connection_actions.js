@@ -27,7 +27,7 @@ const receiveErrors = errors => ({
   errors
 });
 
-const clearConnections = () => ({
+export const clearConnections = () => ({
   type: CLEAR_CONNECTIONS
 })
 
