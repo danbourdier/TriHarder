@@ -45,7 +45,7 @@ class RouteIndex extends Component {
         </section>
         <RouteChartTotals cal={totalCalories} time={totalTime} distance={totalDistance} numWorkouts={totalWorkouts} />
         <aside className="jss7891">
-          time and graph filter
+          {/* time and graph filter */}
         </aside>
         <figure className="route-index-chart">
           <BarChart routes={ownRoutes}/>
