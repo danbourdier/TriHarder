@@ -8,16 +8,16 @@ class FriendFinderIndex extends Component {
     super(props)
     this.state = { search: "" }
 
+    this.handleSearch = this.handleSearch.bind(this);
   }
 
   handleSearch() {
     let payload = this.state.search;
-
     this.props.searchConnections(payload)
+    this.setState({ search: "" })
   }
 
   update(field) {
-
     return e => this.setState({ [field]: e.currentTarget.value })
   }
 
@@ -36,9 +36,12 @@ class FriendFinderIndex extends Component {
             <article id="friends-index-tab"><Link to="/find_friends">FIND CONNECTIONS</Link></article>
           </section>
 
-          <section id="friend-search-box-container">
-            <input type="text" placeholder={"Search for a connection!"} value={this.state.search} onChange={this.update('search')}/>
-            <button type="submit" onClick={this.handleSearch}>SEARCH</button>
+          <section className="friend-index-component-mid-section">
+            <span>Find Tri'Harder Friends by Email:</span>
+            <div id="friend-search-box-container">
+              <input type="text" value={this.state.search} onChange={this.update('search')}/>
+              <button type="submit" onClick={this.handleSearch}>SEARCH</button>
+            </div>
           </section>
 
           <section className="search-item-container">
