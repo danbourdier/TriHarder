@@ -15,16 +15,25 @@ Route.destroy_all
 demo = User.create!( first_name: "demo", last_name: "user", email: "demo@demo.com", 
   password: "password", birth_date: "01/02/1990", gender: "F", location: "USA"
 )
-user1 = User.create!( first_name: "user1", last_name: "user1", email: "user1@user.com", 
+user1 = User.create!( first_name: "Karna", last_name: "Hindu", email: "Karna@triharder.com", 
   password: "password", birth_date: "01/02/1990", gender: "F", location: "Morraco"
 )
-user2 = User.create!( first_name: "user2", last_name: "user2", email: "user2@user.com", 
+user2 = User.create!( first_name: "Gilgamesh", last_name: "Mesopatamian", email: "Gilgamesh@triharder.com", 
   password: "password", birth_date: "05/12/1990", gender: "M", location: "Afghanistan"
 )
-user3 = User.create!( first_name: "user3", last_name: "user3", email: "user3@user.com", 
+user3 = User.create!( first_name: "Chulainn", last_name: "Irish", email: "Chulainn@triharder.com", 
   password: "password", birth_date: "12/02/1970", gender: "F", location: "Libya"
 )
-user4 = User.create!( first_name: "user4", last_name: "user4", email: "user4@user.com", 
+user4 = User.create!( first_name: "Atalanta", last_name: "Greco-Roman", email: "Atalanta@triharder.com", 
+  password: "password", birth_date: "03/14/1992", gender: "M", location: "USA"
+)
+user4 = User.create!( first_name: "Diarmuid", last_name: "Irish", email: "Diarmuid@triharder.com", 
+  password: "password", birth_date: "03/14/1992", gender: "M", location: "USA"
+)
+user4 = User.create!( first_name: "Samson", last_name: "Israeli", email: "Samson@triharder.com", 
+  password: "password", birth_date: "03/14/1992", gender: "M", location: "USA"
+)
+user4 = User.create!( first_name: "Achilles", last_name: "Greek", email: "Achilles@triharder.com", 
   password: "password", birth_date: "03/14/1992", gender: "M", location: "USA"
 )
 
@@ -75,15 +84,19 @@ route3b = Route.create!(title: "Classified", total_time: 1159.32,
   start_point: "???", end_point: "???", user_id: user4.id
 )
 
- 
+
 comment1 = Comment.create!(author_email: demo.email, body: "Hands down the best run i had in ages! Check out the route in Hell's Kitchen!",
   author_id: demo.id
 )
   comment1a = Comment.create!(author_email: user1.email, body: "I can't wait to run it myself!!!",
     author_id: user1.id, parent_comment_id: comment1.id
   )
+comment2 = Comment.create!(author_email: demo.email, body: "RICE method folks, it really works",
+  author_id: demo.id
+)
 
 comment3 = Comment.create!(author_email: user2.email, body: "I'm looking forward to crushing my next marathon, would anyone like to join and train?",
   author_id: user2.id
 )
+
 
