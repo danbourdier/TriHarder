@@ -12,7 +12,8 @@ class FriendFinderIndex extends Component {
   }
 
   componentDidMount() {
-    this.props.clearConnections()
+    this.props.clearConnections();
+    this.props.getConnectionRequests();
   }
 
   handleSearch() {
@@ -26,11 +27,18 @@ class FriendFinderIndex extends Component {
   }
 
   render() {
+    let conReqIndex = Object.values(this.props.connectionRequests)
 
     let { getConnections, searchConnections, deleteConnection, createConnection, createConnectionRequest, currentUser } = this.props;
-    let index = Object.values(this.props.searchResults).map(res => (
-      <SearchItem key={res.id} result={res} addFriend={createConnectionRequest} author={currentUser} />
-    ));
+
+    let index = Object.values(this.props.searchResults).map(res => {
+        for (let i = 0; i < conReqIndex.length; i++) {
+          const element = conReqIndex[i];
+          if ((element.requestee_id != res.id) && (element.requester_id != res.id) ) {
+            return <SearchItem key={res.id} result={res} addFriend={createConnectionRequest} author={currentUser} />
+          }
+        } 
+    });
 
     return (
       <div className="friend-component-container">
