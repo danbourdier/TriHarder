@@ -26,8 +26,9 @@ const receiveErrors = errors => ({
   errors
 })
 
-// thunk action creators
 
+
+// thunk action creators
 export const getConnectionRequests = () => dispatch => {
   return (
     ConnectionRequestAPIUtil.getConnectionRequests()

@@ -11,6 +11,10 @@ class FriendFinderIndex extends Component {
     this.handleSearch = this.handleSearch.bind(this);
   }
 
+  componentDidMount() {
+    this.props.clearConnections()
+  }
+
   handleSearch() {
     let payload = this.state.search;
     this.props.searchConnections(payload)

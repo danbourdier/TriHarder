@@ -4,6 +4,7 @@ export const RECEIVE_CONNECTIONS = "RECEIVE_CONNECTIONS";
 export const RECEIVE_CONNECTION = "RECEIVE_CONNECTION";
 export const REMOVE_CONNECTION = "REMOVE_CONNECTION";
 export const RECEIVE_ERRORS = "RECEIVE_ERRORS";
+export const CLEAR_CONNECTIONS = "CLEAR_CONNECTIONS";
 
 // action creators
 const receiveConnections = connections => ({
@@ -24,6 +25,10 @@ const removeConnection = connectionId => ({
 const receiveErrors = errors => ({
   type: RECEIVE_ERRORS,
   errors
+});
+
+const clearConnections = () => ({
+  type: CLEAR_CONNECTIONS
 })
 
 // thunk action creators

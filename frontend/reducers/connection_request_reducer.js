@@ -1,4 +1,4 @@
-import { RECEIVE_CONNECTION_REQUESTS, RECEIVE_CONNECTION_REQUEST, REMOVE_CONNECTION_REQUEST } from '../actions/connection_requests_actions';
+import { RECEIVE_CONNECTION_REQUESTS, RECEIVE_CONNECTION_REQUEST, REMOVE_CONNECTION_REQUEST, CLEAR_CONNECTION_REQUESTS } from '../actions/connection_requests_actions';
 
 const connectionRequestReducer = (state = {}, action) => {
   Object.freeze(state);
@@ -15,6 +15,9 @@ const connectionRequestReducer = (state = {}, action) => {
     case REMOVE_CONNECTION_REQUEST:
       delete nextState[action.connectionRequestId]
       return nextState;
+    
+    // case CLEAR_CONNECTION_REQUESTS:
+    //   return {};
 
     default:
       return state;

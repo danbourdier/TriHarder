@@ -1,4 +1,4 @@
-import { RECEIVE_CONNECTIONS, RECEIVE_CONNECTION, REMOVE_CONNECTION } from '../actions/connection_actions';
+import { RECEIVE_CONNECTIONS, RECEIVE_CONNECTION, REMOVE_CONNECTION, CLEAR_CONNECTIONS } from '../actions/connection_actions';
 
 const connectionReducer = (state = {}, action) => {
   Object.freeze(state);
@@ -15,6 +15,9 @@ const connectionReducer = (state = {}, action) => {
     case REMOVE_CONNECTION:
       delete nextState[action.connectionId]
       return nextState;
+
+    case CLEAR_CONNECTIONS:
+      return {};
 
     default:
       return state;
