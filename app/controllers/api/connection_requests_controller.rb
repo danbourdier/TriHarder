@@ -11,8 +11,8 @@ class Api::ConnectionRequestsController < ApplicationController
   end
 
   def create
-    
-    if current_user.id === strong_params[:requester_id].to_i
+    debugger
+    if current_user.id.to_i === strong_params[:requester_id].to_i
         @connection_request = ConnectionRequest.new(strong_params)
 
         if current_user.connection_requests.all? { |connection_req| connection_req[:requestee_id] != strong_params[:requestee_id]  }

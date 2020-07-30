@@ -17,14 +17,12 @@ class SearchItem extends Component {
   }
 
   handleClick() {
-    debugger
     this.hide();
 
     let payload = Object.assign({}, {
-      'requester_id': this.author,
+      'requester_id': this.author.id,
       'requestee_id': this.props.result.id
     });
-    debugger
     // below references our createConnectionRequest
     this.props.addFriend(payload);
 
