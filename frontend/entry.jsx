@@ -4,10 +4,6 @@ import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store';
 
-
-
-import { createConnection, getConnections, deleteConnection, searchConnections } from './actions/connection_actions';
-import { createConnectionRequest, deleteConnectionRequest, getConnectionRequests } from './actions/connection_requests_actions';
   
 document.addEventListener("DOMContentLoaded", () => {
   let store = configureStore();
@@ -27,12 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
   window.dispatch = store.dispatch;
   window.getState = store.getState
 
-  window.getConnections = getConnections;
-  window.searchConnections = searchConnections;
-  
-  window.createConnection = createConnection
-  window.createConnectionRequest = createConnectionRequest;
-
   const root = document.getElementById("root");
   ReactDOM.render(<Root store={store} />, root)
   
@@ -48,9 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
 // window.showRoutes = showRoutes;
 // window.createRoute = createRoute;
 // window.deleteRoute = deleteRoute;
-// window.createComment = createComment;
-// import {deleteComment} from './actions/comment_actions';
-  // window.deleteComment = deleteComment
 
   // window.getConnections = getConnections;
   // window.deleteConnection = deleteConnection;
