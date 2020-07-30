@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 class SearchItem extends Component {
   constructor(props) {
     super(props)
-    this.state = { hidden: false }
+    this.state = { hiddenFlag: false }
 
     this.author = this.props.author;
 
@@ -13,33 +13,41 @@ class SearchItem extends Component {
   }
 
   hide() {
-    this.setState({ hidden: true })
+    this.setState({ hiddenFlag: (!this.state.hiddenFlag) })
   }
 
   handleClick() {
+    debugger
+    this.hide();
+
     let payload = Object.assign({}, {
       'requester_id': this.author,
       'requestee_id': this.props.result.id
     });
-
+    debugger
     // below references our createConnectionRequest
-    this.props.addFriend(payload)
+    this.props.addFriend(payload);
 
   }
 
   render() {
 
-    return (
-      <div className="search-item">
-        <span>
-          <div style={{ backgroundImage: 'url(' + persona + ')', backgroundSize: 'cover'}} className="searched-item-pic"></div>
-          <div style={{height: 'fit-content', margin: 'auto' }}>{this.props.result.email}</div>
-        </span>
+    let sec = this.state.hiddenFlag ?  null : <div className="search-item">
+      <span>
+        <div style={{ backgroundImage: 'url(' + persona + ')', backgroundSize: 'cover' }} className="searched-item-pic"></div>
+        <div style={{ height: 'fit-content', margin: 'auto' }}>{this.props.result.email}</div>
+      </span>
 
-        <button onClick={this.handleClick}>
-          <div>ADD</div>
-        </button>
+      <button onClick={this.handleClick}>
+        <div>ADD</div>
+      </button>
+    </div>
+
+    return (
+      <div>
+        { sec }
       </div>
+      
     )
   }
 }
