@@ -4,6 +4,7 @@
 .friend-index-component-mid-section {
   display: flex;
   flex-direction: column;
+  margin-bottom: 20px;
 }
   .friend-index-component-mid-section span {
     width: 685px;
@@ -46,14 +47,46 @@
     height: fit-content;
     flex-wrap: wrap;
     margin: 0px auto 0px auto;
-
-    background-color: green;
   }
 
   .search-item {
-    width: fit-content;
-    height: fit-content;
-
-    background-color: indigo;
+    width: 350px;
+    background: white;
+    height: 82.75px;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 8px;
   }
+
+    .search-item span {
+      font-size: 14px;
+      color: #009ce9;
+      text-transform: capitalize;
+      display: flex;
+      flex-direction: row;
+    }
+      .searched-item-pic {
+        width: 60px;
+        height: 60px;
+        margin: auto 10px;
+        border-radius: 30px;
+      }
+
+    .search-item button {
+      width: 65px;
+      height: 33px;
+      border-radius: 4px;
+      border: #009ce9 solid 1px;
+      background: white;
+      margin: auto 10px;
+      
+    }
+      .search-item button div {
+        color: #009ce9;
+        font-size: 12.25px;
+        font-weight: 600;
+      }
+
 
