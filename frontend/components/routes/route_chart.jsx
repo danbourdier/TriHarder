@@ -12,19 +12,9 @@ class BarChartComponent extends React.Component {
 
   render() {
     const data = [];
-    
-    // route sample
-
-    // (title: "Pompeii Speedrun", 
-    // total_time: 2.10, 
-    // activity: "run",
-    // distance: 26.2, 
-    // description: "Hydrate or Die", 
-    // start_point: "Marathon, Greece",
-    // end_point: "Athens, Greece", user_id: 1)
 
     this.props.routes.map((route, idx) => { 
-      data.push({name: idx + 1, uv: route.distance, pv: 2400, })
+      data.push({name: idx + 1, distance: route.distance, pv: 2400, })
       }
     );
 
@@ -34,7 +24,7 @@ class BarChartComponent extends React.Component {
       <YAxis />
       <Tooltip />
       <CartesianGrid stroke="#ccc" /*strokeDasharray="5 5" */ />
-      <Bar className="route-chart-bar" dataKey="uv" fill="#7ac5f5" barSize={30} />
+      <Bar className="route-chart-bar" dataKey="distance" fill="#7ac5f5" barSize={30} />
     </BarChart>
     )
   };
