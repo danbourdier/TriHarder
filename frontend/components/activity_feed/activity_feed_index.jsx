@@ -49,6 +49,9 @@ class ActivityFeedIndex extends React.Component {
       backgroundImage: 'url(' + rabbit + ')'
     };
 
+    let postButtonContainer = this.state.body.length < 1 ? null : <aside className="create-comment-hidden-posting">
+                                <button type="submit">POST</button>
+                              </aside>
     return (
       <div id="activity-feed-container">
         <section className="create-comment-container">
@@ -58,10 +61,7 @@ class ActivityFeedIndex extends React.Component {
               <textarea value={this.state.body} placeholder="Add a Status Update Here..." id="status-update-text-box" cols="30" rows="10" onChange={this.update('body')}></textarea>
             </div>
             {/* <input type="submit" value="Submit Post!"/> */}
-            <aside className="create-comment-hidden-posting">
-
-              <button type="submit">POST</button>
-            </aside>
+             { postButtonContainer }
           </form>
         </section>
 
