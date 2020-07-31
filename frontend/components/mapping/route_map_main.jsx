@@ -23,6 +23,7 @@ class RouteMap extends Component {
     this.createPoint = this.createPoint.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.setStatePos = this.setStatePos.bind(this)
+    this.geocodeAddress = this.geocodeAddress.bind(this);
 
     // our binded update method
     this.update = this.update.bind(this)
@@ -76,6 +77,7 @@ class RouteMap extends Component {
       // styles: this.props.mapStyles
     };
 
+    this.geocoder = new google.maps.Geocoder();
     this.directionsService = new google.maps.DirectionsService();
 
     this.directionsDisplay = new google.maps.DirectionsRenderer({
@@ -95,11 +97,29 @@ class RouteMap extends Component {
     // our ONLY map event listener with the purpose of creating points with a call to #createPoint
     google.maps.event.addListener(this.map, 'click', (e) => {
     // map.addListener('click', e => {
-
       this.createPoint(e.latLng);
     });
 
+    document.getElementById("ec-pan-submit").addEventListener("click", () => {
+      this.geocodeAddress(this.geocoder, this.map);
+    });
+
   }
+
+  geocodeAddress(geocoder, resultsMap) {
+    const address = document.getElementById("ec-address").value;
+    geocoder.geocode({ address: address }, (results, status) => {
+      if (status === "OK") {
+        resultsMap.setCenter(results[0].geometry.location);
+        // new google.maps.Marker({
+        //   map: resultsMap,
+        //   position: results[0].geometry.location
+        // });
+      } else {
+        alert("Geocode was not successful for the following reason: " + status);
+      }
+    })
+  } 
 
   createPoint(latLng) {
     // below code serves the purpose of closure or *variable scoping*
@@ -256,6 +276,8 @@ class RouteMap extends Component {
 
         <div className='route-page-container'>
           <RouteMapLeft 
+            geocode={this.geocode}
+            geocodeAddress={this.geocodeAddress}
             handleClick={this.handleClick}
             createRoute={this.createRoute}
             thatState={this.state} 

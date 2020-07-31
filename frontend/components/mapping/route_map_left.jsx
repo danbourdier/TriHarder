@@ -68,7 +68,8 @@ class RouteMapLeft extends Component {
 
           <aside>
             <div>Choose Map Location</div>
-            <input placeholder="Search Location"/>
+            <input id="ec-address" placeholder="Search Location"/>
+            <button id="ec-pan-submit"type="submit">Search</button>
           </aside>
 
           <aside>
