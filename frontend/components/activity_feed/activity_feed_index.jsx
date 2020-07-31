@@ -53,9 +53,15 @@ class ActivityFeedIndex extends React.Component {
       <div id="activity-feed-container">
         <section className="create-comment-container">
           <form onSubmit={this.handleSubmit}>
-            <aside id="status-update-pic" style={profilePic}></aside>
-            <textarea value={this.state.body} placeholder="Add a Status Update Here..." id="status-update-text-box" cols="30" rows="10" onChange={this.update('body')}></textarea>
-            <input type="submit" value="Submit Post!"/>
+            <div>
+              <aside id="status-update-pic" style={profilePic}></aside>
+              <textarea value={this.state.body} placeholder="Add a Status Update Here..." id="status-update-text-box" cols="30" rows="10" onChange={this.update('body')}></textarea>
+            </div>
+            {/* <input type="submit" value="Submit Post!"/> */}
+            <aside className="create-comment-hidden-posting">
+
+              <button type="submit">POST</button>
+            </aside>
           </form>
         </section>
 
