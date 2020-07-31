@@ -12,8 +12,11 @@ class FriendFinderIndex extends Component {
   }
 
   componentDidMount() {
-    this.props.clearConnections();
     this.props.getConnectionRequests();
+  }
+
+  componentWillUnmount() {
+    this.props.clearConnections();
   }
 
   handleSearch() {

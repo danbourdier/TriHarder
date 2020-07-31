@@ -10,14 +10,20 @@ class FriendIndex extends Component {
 
     this.createConnection = this.props.createConnection;
     this.deleteConnection = this.props.deleteConnection;
-    
+    this.props.clearConnections()
   }
 
   componentDidMount() {
+    this.props.clearConnections();
     this.props.getConnections()
   }
 
+  componentWillUnmount() {
+    this.props.clearConnections();
+  }
+
   render() {
+
 
     let { allConnections } = this.props;
     let index = Object.values(allConnections).map(connection => (
