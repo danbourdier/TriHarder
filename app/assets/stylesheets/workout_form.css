@@ -77,8 +77,8 @@
     background: rgba(211, 214, 220, 0.2);
     border: 1px solid #d9d9d9;
     margin-bottom: 20px;
-    width: 41.2vw;
-    height: 73.7vh;
+    width: 44.07vw;
+    height: 79.8vh;
   }
 }
 
@@ -89,10 +89,12 @@
     flex-direction: row;
     display: flex;
   }
+
   #first-aside-first-input {
     width: 17.7vw;
     height: 3.45vh;
   }
+
   #first-aside-date-input {
     width: 14.14vw;
     height: 3.5vh;
@@ -101,6 +103,15 @@
   #first-aside-gear-input {
     width: 24.56vw;
     height: 3.1vh;
+  }
+
+  #first-aside-time-input {
+    width: 14.139vw;
+    height: 3.5vh;
+  }
+
+  #first-aside-description-input {
+
   }
 
 @media only screen and (min-width: 576px) {

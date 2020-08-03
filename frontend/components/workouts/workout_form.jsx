@@ -37,11 +37,11 @@ class WorkoutForm extends Component {
             </aside>
             <aside className="third-section-third-aside">
               <span>Start Time</span>
-              <input type="time"/>
+              <input id="first-aside-time-input"type="time"/>
             </aside>
             <aside className="third-section-fourth-aside">
               <span>How'd it go?</span>
-              <input type="text"/>
+              <textarea id="first-aside-description-input" cols="30" rows="10"></textarea>
             </aside>
           </section>
 
