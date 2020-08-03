@@ -6,6 +6,8 @@ class WorkoutForm extends Component {
 
     return (
       <div id="workout-form-container">
+        <section id="workout-form-wrapper">
+          
         <aside className="workout-form-left">
           <section className="workout-form-first-section">
             <h1>
@@ -49,9 +51,11 @@ class WorkoutForm extends Component {
           <section className="workout-form-fifth-section"></section>
         </aside>
 
-        <aside className="workout-form-right">
-          
-        </aside>
+        {/* <aside className="workout-form-right">
+
+        </aside> */}
+      
+        </section>
       </div>
     )
   }
