@@ -111,7 +111,8 @@
   }
 
   #first-aside-description-input {
-
+    width: 41vw;
+    height: 12.5vh;
   }
 
 @media only screen and (min-width: 576px) {
