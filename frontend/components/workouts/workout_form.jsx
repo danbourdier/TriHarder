@@ -19,15 +19,32 @@ class WorkoutForm extends Component {
               details below, and stay on top of your fitness goals.
             </span>
           </section>
+
           <section className="workout-form-third-section">
             <aside className="third-section-first-aside">
-              <div></div>
-              <div></div>
+              <div className="first-aside-divs">
+                <span>Workout Name</span>
+                <input type="text"/> 
+              </div>
+              <div className="first-aside-divs">
+                <span>Date</span>
+                <input type="date" name=""/>
+              </div>
             </aside>
-            <aside className="third-section-second-aside"></aside>
-            <aside className="third-section-third-aside"></aside>
-            <aside className="third-section-fourth-aside"></aside>
+            <aside className="third-section-second-aside">
+              <span>Gear Used</span>
+              <input type="text"/>
+            </aside>
+            <aside className="third-section-third-aside">
+              <span>Start Time</span>
+              <input type="time"/>
+            </aside>
+            <aside className="third-section-fourth-aside">
+              <span>How'd it go?</span>
+              <input type="text"/>
+            </aside>
           </section>
+
           <section className="workout-form-fourth-section"></section>
           <section className="workout-form-fifth-section"></section>
         </aside>

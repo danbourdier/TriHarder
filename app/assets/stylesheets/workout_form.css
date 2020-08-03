@@ -43,9 +43,12 @@
     flex-basis: 66.66666667%;
     max-width: 66.66666667%;
 
-    background-color: indigo;
+    /* background-color: indigo; */
   }
 }
+  .workout-form-left span {
+    font-size: 14px;
+  }
 
 @media only screen and (min-width: 576px) {
   .workout-form-right {
@@ -54,7 +57,7 @@
     flex-basis: 33.33333333%;
     max-width: 33.33333333%;
 
-    background-color: indigo;
+    /* background-color: indigo; */
   }
 }
 
@@ -80,7 +83,7 @@
 @media only screen and (min-width: 576px) {
   .third-section-first-aside:nth-child(1) {
     flex-basis: 50%;
-    max-width: 50%;
+    /* max-width: 50%; */
   }
   .third-section-first-aside:nth-child(2) {
     margin-left: 8.33333333%;
@@ -107,6 +110,11 @@
     flex: 0 1 auto;
     flex-direction: row;
   }
+    .first-aside-divs {
+      display: flex;
+      flex-direction: column;
+    }
+
 
   .third-section-fourth-aside {
     box-sizing: border-box;
