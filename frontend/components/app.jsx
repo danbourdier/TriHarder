@@ -68,8 +68,8 @@ const App = () => (
           <ProtectedRoute exact path="/activity_feed" component={ActivityFeedContainer} />
           <ProtectedRoute exact path="/friends" component={FriendsContainer} />
           <ProtectedRoute exact path="/find_friends" component={FriendFinderContainer} />
-          {/* <ProtectedRoute exact path="/create_workout" component={}/>
-          <ProtectedRoute exact path="/create_goal" component={}/> */}
+          <ProtectedRoute exact path="/create_workout" component={}/>
+          {/* <ProtectedRoute exact path="/create_goal" component={}/> */}
         </Switch>
       </div>
     </main>

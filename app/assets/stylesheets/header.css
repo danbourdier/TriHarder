@@ -285,6 +285,7 @@
     cursor: pointer;
     background-image: url(rabbit.png);
     background-size: cover;
+    border-radius: 30px;
   }
 
   .header-button {
