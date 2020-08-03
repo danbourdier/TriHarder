@@ -1,5 +1,7 @@
 import { connect } from 'react-redux';
 
+import WorkoutForm from './workout_form';
+
 const mSTP = state => ({
 
 });

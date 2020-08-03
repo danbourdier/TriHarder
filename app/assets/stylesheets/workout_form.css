@@ -1,0 +1,117 @@
+#workout-form-container {
+  display: flex;
+  flex-direction: row;
+  margin: auto;
+}
+
+.workout-form-first-section {
+  padding: 10px 0;
+}
+  .workout-form-first-section h1{
+    font-size: 30px;
+    text-transform: uppercase;
+  }
+
+  .workout-form-first-section strong {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+.workout-form-second-section {
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  flex-direction: row;
+}
+  .workout-form-second-section div {
+    fill: #1b77b9;
+    width: 60px;
+    height: 60px;
+    box-sizing: content-box;
+    margin-right: 30px;
+  }
+  .workout-form-second-section span {
+    flex: 1;
+  }
+
+@media only screen and (min-width: 576px) {
+  .workout-form-left {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 66.66666667%;
+    max-width: 66.66666667%;
+
+    background-color: indigo;
+  }
+}
+
+@media only screen and (min-width: 576px) {
+  .workout-form-right {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 33.33333333%;
+    max-width: 33.33333333%;
+
+    background-color: indigo;
+  }
+}
+
+
+
+@media only screen and (min-width: 48em) {
+  .workout-form-third-section {
+    padding: 20px 20px 10px;
+    background: rgba(211, 214, 220, 0.2);
+    border: 1px solid #d9d9d9;
+    margin-bottom: 20px;
+  }
+}
+
+  .third-section-first-aside {
+    flex-wrap: wrap;
+    margin-right: -8px;
+    margin-left: -8px;
+    flex-direction: row;
+    display: flex;
+  }
+
+@media only screen and (min-width: 576px) {
+  .third-section-first-aside:nth-child(1) {
+    flex-basis: 50%;
+    max-width: 50%;
+  }
+  .third-section-first-aside:nth-child(2) {
+    margin-left: 8.33333333%;
+    flex-basis: 41.66666667%;
+    max-width: 41.66666667%;
+  }
+
+}
+
+  .third-section-first-aside {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -8px;
+    margin-left: -8px;
+  }
+
+  .third-section-third-aside {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -8px;
+    margin-left: -8px;
+    flex: 0 1 auto;
+    flex-direction: row;
+  }
+
+  .third-section-fourth-aside {
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -8px;
+    margin-left: -8px;
+  }
