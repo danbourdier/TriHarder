@@ -26,7 +26,7 @@
 }
 .route-index-chart div{
   height: 55px;
-  width: 620px !important;
+  width: 620px;
   background-color: #f7f7f7;
   border: lightgrey 1px solid;
   background: linear-gradient(to bottom, white, transparent);

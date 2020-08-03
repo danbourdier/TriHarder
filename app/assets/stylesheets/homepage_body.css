@@ -103,3 +103,24 @@
   left: 3px;
 }
 
+/* .recharts-tooltip-wrapper {
+  background-color: greenyellow !important;
+  width: fit-content !important;
+}
+.recharts-tooltip-item-tip {
+  background-color: greenyellow !important;
+  width: fit-content !important;
+} */
+
+/* .recharts-tooltip-wrapper, .recharts-tooltip-wrapper-left, .recharts-tooltip-wrapper-top {
+  background-color: greenyellow !important;
+  width: fit-content !important;
+} */
+
+.recharts-wrapper div {
+  width: fit-content !important;
+}
+
+.recharts-wrapper {
+  width: 620px !important;
+}
