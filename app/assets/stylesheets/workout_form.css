@@ -6,6 +6,7 @@
 
 #workout-form-wrapper {
   margin: auto;
+  padding: 40px 0px;
 }
 
 .workout-form-first-section {
@@ -182,4 +183,39 @@
   #ef-9r3f2 {
     background-image: url(dumbbell.png);
     background-size: cover;
+  }
+  /* fourth section */
+  .workout-form-fourth-section {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 24px;
+    border-bottom: lightgrey solid 1px;
+  }
+    #fifth-section-button {
+      color: #fff;
+      align-items: center;
+      justify-content: center;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 12px 15px;
+      letter-spacing: 0.06em;
+      line-height: 20px;
+      transition-property: color, background, border-color;
+      transition-duration: 200ms;
+      transition-timing-function: ease-out;
+      cursor: pointer;
+      font-size: 16px;
+      min-width: 187px;
+      background: #0076C0;
+      margin-top: 20px;
+      border: none;
+    }
+  #ec-selectore-245 {
+    width: 100%;
+    padding: 14px 16px 12px;
+    font-size: 14px;
+    max-width: 100%;
+    white-space: nowrap;
+    border: solid lightgrey 1px;
+    color: grey;
   }

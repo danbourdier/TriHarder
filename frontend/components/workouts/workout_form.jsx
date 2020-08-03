@@ -47,8 +47,25 @@ class WorkoutForm extends Component {
             </aside>
           </section>
 
-          <section className="workout-form-fourth-section"></section>
-          <section className="workout-form-fifth-section"></section>
+          <section className="workout-form-fourth-section">
+              <span>Activity</span>
+              <select id="ec-selectore-245"
+                name="activity"
+                placeholder="Choose Activity">
+
+                {/* <option disabled >Choose an Activity</option> */}
+                <option value="">Choose an Activity</option>
+                <option value="Run">Run</option>
+                <option value="Walk">Walk</option>
+                <option value="Ruck">Ruck</option>
+                <option value="Bike">Bike</option>
+                <option value="Manic Sprint">Manic Sprint</option>
+              </select>
+          </section>
+
+          <section className="workout-form-fifth-section">
+              <button id="fifth-section-button" type="submit">SAVE</button>
+          </section>
         </aside>
 
         {/* <aside className="workout-form-right">
