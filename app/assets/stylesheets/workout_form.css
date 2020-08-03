@@ -49,6 +49,14 @@
   .workout-form-left span {
     font-size: 14px;
   }
+  .workout-form-left input {
+    display: block;
+    padding: 12px 16px 12px;
+    border: 1px solid #D3D6DC;
+    color: #222628;
+    font-size: 14px;
+    line-height: 1.21;
+  }
 
 @media only screen and (min-width: 576px) {
   .workout-form-right {
@@ -69,20 +77,37 @@
     background: rgba(211, 214, 220, 0.2);
     border: 1px solid #d9d9d9;
     margin-bottom: 20px;
+    width: 41.2vw;
+    height: 73.7vh;
   }
 }
 
   .third-section-first-aside {
     flex-wrap: wrap;
-    margin-right: -8px;
-    margin-left: -8px;
+    /* margin-right: -8px;
+    margin-left: -8px; */
     flex-direction: row;
     display: flex;
+  }
+  #first-aside-first-input {
+    width: 17.7vw;
+    height: 3.45vh;
+  }
+  #first-aside-date-input {
+    width: 14.14vw;
+    height: 3.5vh;
+  }
+
+  #first-aside-gear-input {
+    width: 24.56vw;
+    height: 3.1vh;
   }
 
 @media only screen and (min-width: 576px) {
   .third-section-first-aside:nth-child(1) {
     flex-basis: 50%;
+    display: flex;
+    justify-content: space-between;
     /* max-width: 50%; */
   }
   .third-section-first-aside:nth-child(2) {
@@ -97,16 +122,16 @@
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
-    margin-right: -8px;
-    margin-left: -8px;
+    /* margin-right: -8px;
+    margin-left: -8px; */
   }
 
   .third-section-third-aside {
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
-    margin-right: -8px;
-    margin-left: -8px;
+    /* margin-right: -8px;
+    margin-left: -8px; */
     flex: 0 1 auto;
     flex-direction: row;
   }
@@ -120,6 +145,13 @@
     box-sizing: border-box;
     display: flex;
     flex-wrap: wrap;
-    margin-right: -8px;
-    margin-left: -8px;
+    /* margin-right: -8px;
+    margin-left: -8px; */
+  }
+
+
+
+  #ef-9r3f2 {
+    background-image: url(dumbbell.png);
+    background-size: cover;
   }
