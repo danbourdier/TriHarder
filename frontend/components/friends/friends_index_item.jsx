@@ -27,8 +27,8 @@ class FriendIndexItem extends Component {
       backgroundSize: 'cover',
       backgroundImage: 'url(' + profilePicCollection[Math.floor(Math.random() * profilePicCollection.length)] + ')'
     };
+    
     if (connection.connection) {
-
       return (
         <article className="friend-index-item-component-container">
           <div style={profilePic} id="friend-index-item-pic"></div>
@@ -48,7 +48,8 @@ class FriendIndexItem extends Component {
           </aside>
         </article>
       )
-    }
+    };
+
   } 
 
 

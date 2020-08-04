@@ -12,7 +12,7 @@ class SearchItem extends Component {
     this.hide = this.hide.bind(this);
   }
 
-  hide() {
+  hide() { 
     this.setState({ hiddenFlag: (!this.state.hiddenFlag) })
   }
 
