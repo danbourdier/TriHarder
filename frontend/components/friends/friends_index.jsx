@@ -21,11 +21,12 @@ class FriendIndex extends Component {
   componentWillUnmount() {
     this.props.clearConnections();
   }
-
+ 
   render() {
 
 
     let { allConnections } = this.props;
+    // debugger
     let index = Object.values(allConnections).map(connection => (
       <Friend key={connection.id} connection={connection} deleteConnection={this.deleteConnection} />
     ))

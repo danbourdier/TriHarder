@@ -10,7 +10,7 @@ class FriendFinderIndex extends Component {
 
     this.handleSearch = this.handleSearch.bind(this);
   }
-
+ 
   componentDidMount() {
     this.props.getConnectionRequests();
   }
@@ -35,7 +35,9 @@ class FriendFinderIndex extends Component {
     let { getConnections, searchConnections, deleteConnection, createConnection, createConnectionRequest, currentUser } = this.props;
 
     let index = Object.values(this.props.searchResults).map(res => {
+      // debugger
         for (let i = 0; i < conReqIndex.length; i++) {
+          // debugger
           const element = conReqIndex[i];
           if ((element.requestee_id != res.id) && (element.requester_id != res.id) ) {
             return <SearchItem key={res.id} result={res} addFriend={createConnectionRequest} author={currentUser} />
