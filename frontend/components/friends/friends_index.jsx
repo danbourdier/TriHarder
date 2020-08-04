@@ -10,7 +10,7 @@ class FriendIndex extends Component {
 
     this.createConnection = this.props.createConnection;
     this.deleteConnection = this.props.deleteConnection;
-    this.props.clearConnections()
+
   }
 
   componentDidMount() {

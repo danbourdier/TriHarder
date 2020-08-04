@@ -19,7 +19,7 @@ class FriendIndexItem extends Component {
   }
 
   render() {
-    let { connection } = this.props;
+    let connection = this.props.connection;
 
     let profilePicCollection = [camel, shark, turtle, bear, squirrel]
 
@@ -27,16 +27,28 @@ class FriendIndexItem extends Component {
       backgroundSize: 'cover',
       backgroundImage: 'url(' + profilePicCollection[Math.floor(Math.random() * profilePicCollection.length)] + ')'
     };
-    // debugger
-    return (
-      <article className="friend-index-item-component-container">
-        <div style={profilePic} id="friend-index-item-pic"></div>
-        <aside className="friend-index-item-body">
-          <div className="friend-index-item-body-email">{connection.connection.email}</div>
-          <div style={{ cursor: 'pointer', color: "#0076C0", fontSize: 11 }} onClick={ this.handleClick }>Delete Connection</div>
-        </aside>
-      </article>
-    )
+    if (connection.connection) {
+
+      return (
+        <article className="friend-index-item-component-container">
+          <div style={profilePic} id="friend-index-item-pic"></div>
+          <aside className="friend-index-item-body">
+            <div className="friend-index-item-body-email">{connection.connection.email}</div>
+            <div style={{ cursor: 'pointer', color: "#0076C0", fontSize: 11 }} onClick={ this.handleClick }>Delete Connection</div>
+          </aside>
+        </article>
+      )
+    } else {
+      return (
+        <article className="friend-index-item-component-container">
+          <div style={profilePic} id="friend-index-item-pic"></div>
+          <aside className="friend-index-item-body">
+            <div className="friend-index-item-body-email">{connection.email}</div>
+            <div style={{ cursor: 'pointer', color: "#0076C0", fontSize: 11 }} onClick={this.handleClick}>Delete Connection</div>
+          </aside>
+        </article>
+      )
+    }
   } 
 
 
