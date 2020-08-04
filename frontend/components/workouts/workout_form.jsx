@@ -1,6 +1,25 @@
 import React, { Component } from 'react';
 
 class WorkoutForm extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = { 'activity': "", 
+                   'distance': 0, 
+                   'total_time': 0, 
+                   'title': "", 
+                   'description': "", 
+                   'start_point': "",
+                   'end_point': "", 
+                   'user_id': 0 
+    };
+
+  }
+
+  update(field) {
+    return e => this.setState({ [field]: e.currentTarget.value })
+  }
+  
 
   render() {
 
