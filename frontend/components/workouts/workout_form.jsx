@@ -17,8 +17,8 @@ class WorkoutForm extends Component {
 
           <section className="workout-form-second-section">
             <div id="ef-9r3f2"></div>
-            <span>If you've been active, get credit for it! Add your workout 
-              details below, and stay on top of your fitness goals.
+              <span>Get credit for your workouts! Add your workout details below, 
+                and stay on top of your goals.
             </span>
           </section>
 
@@ -64,7 +64,7 @@ class WorkoutForm extends Component {
           </section>
 
           <section className="workout-form-fifth-section">
-              <button id="fifth-section-button" type="submit">SAVE</button>
+              <button id="fifth-section-button" type="submit">LOG</button>
           </section>
         </aside>
 
