@@ -224,3 +224,9 @@
     color: grey;
     cursor: pointer;
   }
+
+  .third-aside-points-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }

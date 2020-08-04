@@ -4,22 +4,22 @@ class WorkoutForm extends Component {
   constructor(props) {
     super(props)
 
-    this.state = { 'activity': "", 
-                   'distance': 0, 
-                   'total_time': 0, 
-                   'title': "", 
-                   'description': "", 
-                   'start_point': "",
-                   'end_point': "", 
-                   'user_id': 0 
-    };
+    // this.state = { 'activity': "", 
+                  //  'distance': 0, 
+    //                'total_time': 0, 
+    //               //  'title': "", 
+    //               //  'description': "", 
+    //               //  'start_point': "",
+    //                'end_point': "", 
+    //                'user_id': 0 
+    // };
 
   }
 
   update(field) {
     return e => this.setState({ [field]: e.currentTarget.value })
   }
-  
+
 
   render() {
 
@@ -45,24 +45,33 @@ class WorkoutForm extends Component {
             <aside className="third-section-first-aside">
               <div className="first-aside-divs">
                 <span>Workout Name</span>
-                <input id="first-aside-first-input" type="text"/> 
+                <input id="first-aside-first-input" type="text" onChange={this.update('title')}/> 
               </div>
               <div className="first-aside-divs">
                 <span>Date</span>
-                <input id="first-aside-date-input" type="date" name=""/>
+                <input id="first-aside-date-input" type="date"/>
               </div>
             </aside>
             <aside className="third-section-second-aside">
-              <span>Gear Used</span>
-              <input id="first-aside-gear-input" type="text"/>
+              <span>Distance</span>
+              <input id="first-aside-gear-input" type="text" onChange={this.update('distance')}/>
             </aside>
             <aside className="third-section-third-aside">
-              <span>Start Time</span>
-              <input id="first-aside-time-input"type="time"/>
+              <div className="third-aside-points-wrapper">
+                <div className="first-aside-divs">
+                    <span>Start Point</span>
+                    <input id="first-aside-time-input" type="text" onChange={this.update('start_point')} />
+                </div>
+                <div className="first-aside-divs">
+                  <span>End Point</span>
+                  <input id="first-aside-time-input"type="text" onChange={this.update('end_point')}/>
+                </div>
+              </div>
+              
             </aside>
             <aside className="third-section-fourth-aside">
               <span>How'd it go?</span>
-              <textarea id="first-aside-description-input" cols="30" rows="10"></textarea>
+              <textarea id="first-aside-description-input" cols="30" rows="10" onChange={this.update('description')}></textarea>
             </aside>
           </section>
 
@@ -70,8 +79,9 @@ class WorkoutForm extends Component {
               <span>Activity</span>
               <select id="ec-selectore-245"
                 name="activity"
-                placeholder="Choose Activity">
-
+                placeholder="Choose Activity"
+                onChange={this.update('activity')}>
+                
                 {/* <option disabled >Choose an Activity</option> */}
                 <option value="">Choose an Activity</option>
                 <option value="Run">Run</option>
