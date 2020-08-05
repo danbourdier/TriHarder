@@ -2,12 +2,16 @@ import React, {Component} from 'react';
 
 import RouteMapLeft from "./route_map_left";
 import RouteMapRight from "./route_map_right";
+import { Redirect } from 'react-router-dom';
 
 // rendered from the higher component: Search located at search.jsx
 class RouteMap extends Component {
   constructor(props) {
     super(props);
-    this.state = { total_time: 0, distance: 0, lastLegDuration: 0, lastDistanceLeg: 0, title: "", activity: "", description: "", start_point: "", end_point: "" };
+    this.state = { total_time: 0, distance: 0, lastLegDuration: 0, 
+      lastDistanceLeg: 0, title: "", activity: "", description: "", 
+      start_point: "", end_point: "", check: false
+    };
     // array below used so we can store our points and conveniently delete them
     this.points = [];
 
@@ -48,8 +52,9 @@ class RouteMap extends Component {
         'body': `${this.props.currentUser.email} has completed a ${this.props.lastRoute.activity}! `,
         'author_id': this.props.currentUser.id
       });
-      debugger
+
       this.createRouteComment(postRouteComment);
+      this.setState({check: true})
     }
   }
 
@@ -269,6 +274,9 @@ class RouteMap extends Component {
   }
 
   render() {
+    if (this.state.check === true) {
+      return <Redirect to="/home_page"/>
+    }
     // we pass our null functions as props below so our asides have functionality to interact with our main component!
     return (
       <div>
