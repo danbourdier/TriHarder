@@ -19,8 +19,8 @@ class WorkoutForm extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (Object.values(prevProps.comments).length !== Object.values(this.props.comments).length) {
-      this.props.getComments();
+    if (Object.values(prevProps.routes).length !== Object.values(this.props.routes).length) {
+      this.setState({check: true})
     }
   }
 
@@ -42,7 +42,7 @@ class WorkoutForm extends Component {
       'end_point': end_point,
       'user_id': this.props.currentUserId
     });
-    this.setState({check: true})
+
     this.props.createRoute(newRoute);
   }
 
