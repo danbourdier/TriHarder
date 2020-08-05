@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 
 import WorkoutForm from './workout_form';
 import { createRoute } from '../../actions/route_actions';
+import { withRouter } from 'react-router-dom';
 
 
 const mSTP = state => ({
@@ -13,4 +14,4 @@ const mDTP = dispatch => ({
 })
 
 
-export default connect(mSTP, mDTP)(WorkoutForm);
+export default withRouter(connect(mSTP, mDTP)(WorkoutForm));

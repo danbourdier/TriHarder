@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Redirect } from 'react-router-dom';
 
 class WorkoutForm extends Component {
   constructor(props) {
@@ -34,7 +35,7 @@ class WorkoutForm extends Component {
       'end_point': end_point,
       'user_id': this.props.currentUserId
     });
-
+    
     this.props.createRoute(newRoute);
   }
 
