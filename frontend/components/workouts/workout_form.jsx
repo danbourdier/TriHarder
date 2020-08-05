@@ -12,9 +12,16 @@ class WorkoutForm extends Component {
                    'description': "", 
                    'start_point': "",
                    'end_point': "", 
+                   check: false,
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  componentDidUpdate(prevProps) {
+    if (Object.values(prevProps.comments).length !== Object.values(this.props.comments).length) {
+      this.props.getComments();
+    }
   }
 
   update(field) {
@@ -35,11 +42,14 @@ class WorkoutForm extends Component {
       'end_point': end_point,
       'user_id': this.props.currentUserId
     });
-    
+    this.setState({check: true})
     this.props.createRoute(newRoute);
   }
 
   render() {
+    if (this.state.check === true) {
+      return <Redirect to="/home_page" />
+    }
 
     return (
       <div id="workout-form-container">

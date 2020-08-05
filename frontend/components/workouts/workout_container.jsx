@@ -6,7 +6,8 @@ import { withRouter } from 'react-router-dom';
 
 
 const mSTP = state => ({
-  currentUserId: state.entities.users[Number(Object.keys(state.entities.users)[0])].id
+  currentUserId: state.entities.users[Number(Object.keys(state.entities.users)[0])].id,
+  routes: state.entities.routes
 });
 
 const mDTP = dispatch => ({
