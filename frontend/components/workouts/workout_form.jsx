@@ -11,15 +11,31 @@ class WorkoutForm extends Component {
                    'description': "", 
                    'start_point': "",
                    'end_point': "", 
-                   'user_id': 0 
     };
 
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   update(field) {
     return e => this.setState({ [field]: e.currentTarget.value })
   }
 
+  handleSubmit() {
+    let { activity, description, distance, title,
+      total_time, start_point, end_point } = this.state;
+
+    let newRoute = Object.assign({}, {
+      'activity': activity,
+      'distance': parseFloat(distance),
+      'total_time': parseFloat(total_time),
+      'title': title,
+      'description': description,
+      'start_point': start_point,
+      'end_point': end_point,
+      'user_id': this.props.currentUserId
+    });
+    console.log(newRoute)
+  }
 
   render() {
 
@@ -53,14 +69,14 @@ class WorkoutForm extends Component {
               </div>
             </aside>
             <aside className="third-section-second-aside">
-              
+
               <div>
                 <span>Distance</span>
-                <input id="first-aside-gear-input" type="text" onChange={this.update('distance')}/>
+                <input id="first-aside-gear-input" type="text" placeholder="Please use decimal format (12.34)" onChange={this.update('distance')}/>
               </div>
               <div>
-                <span>Total Time</span>
-                <input id="first-aside-gear-input" type="text" onChange={this.update('total_time')}/>
+                <span>Total Time (Minutes)</span>
+                <input id="first-aside-gear-input" type="text" placeholder="Please use decimal format (12.34)" onChange={this.update('total_time')}/>
               </div>
 
             </aside>
@@ -68,12 +84,12 @@ class WorkoutForm extends Component {
               <div className="third-aside-points-wrapper">
                 <div className="first-aside-divs">
                   <span>Start Point</span>
-                  <input id="first-aside-time-input" type="text" onChange={this.update('start_point')} />
+                  <input id="first-aside-time-input" placeholder="Please use an address" type="text" onChange={this.update('start_point')} />
                 </div>
 
                 <div className="first-aside-divs">
                   <span>End Point</span>
-                  <input id="first-aside-time-input"type="text" onChange={this.update('end_point')}/>
+                  <input id="first-aside-time-input"type="text" placeholder="Please use an address" onChange={this.update('end_point')}/>
                 </div>
               </div>
               
@@ -102,7 +118,7 @@ class WorkoutForm extends Component {
           </section>
 
           <section className="workout-form-fifth-section">
-              <button id="fifth-section-button" type="submit">LOG</button>
+              <button id="fifth-section-button" onClick={this.handleSubmit} type="submit">LOG</button>
           </section>
         </aside>
 
