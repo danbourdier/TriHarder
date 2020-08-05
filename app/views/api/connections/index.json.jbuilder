@@ -3,7 +3,7 @@ if @connections.length > 0 && @connections[0][:requester]
     json.set! connection.id do
       json.extract! connection, :id, :connection
     end
-  end
+  end 
 else
   @connections.each do |connection|
     json.set! connection.id do

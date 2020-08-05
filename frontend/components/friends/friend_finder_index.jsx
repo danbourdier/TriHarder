@@ -33,11 +33,12 @@ class FriendFinderIndex extends Component {
   render() {
     let conReqIndex = Object.values(this.props.connectionRequests)
 
-    let { searchResults, getConnections, searchConnections, deleteConnection, createConnection, createConnectionRequest, currentUser } = this.props;
+    let { searchResults, createConnectionRequest, currentUser } = this.props;
 
-    let index = Object.values(searchResults).map(res => {
-            return <SearchItem key={res.id} result={res} addFriend={createConnectionRequest} author={currentUser} />
-    });
+    let index = Object.values(searchResults).map(res => (
+      currentUser.id != res.id ? <SearchItem key={res.id} result={res} addFriend={createConnectionRequest} author={currentUser} /> : null
+    ));
+    console.log(conReqIndex)
 
     return (
       <div className="friend-component-container">

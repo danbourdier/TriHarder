@@ -3,7 +3,7 @@ import { getConnections, createConnection, deleteConnection, searchConnections, 
 import { createConnectionRequest, getConnectionRequests } from "../../actions/connection_requests_actions";
 
 import FriendFinderIndex from './friend_finder_index';
-import { withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom"; 
 
 const mSTP = state => ({
   searchResults: state.entities.connections,
