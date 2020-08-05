@@ -4,15 +4,15 @@ class WorkoutForm extends Component {
   constructor(props) {
     super(props)
 
-    // this.state = { 'activity': "", 
-                  //  'distance': 0, 
-    //                'total_time': 0, 
-    //               //  'title': "", 
-    //               //  'description': "", 
-    //               //  'start_point': "",
-    //                'end_point': "", 
-    //                'user_id': 0 
-    // };
+    this.state = { 'activity': "", 
+                   'distance': 0, 
+                   'total_time': 0, 
+                   'title': "", 
+                   'description': "", 
+                   'start_point': "",
+                   'end_point': "", 
+                   'user_id': 0 
+    };
 
   }
 
@@ -53,15 +53,24 @@ class WorkoutForm extends Component {
               </div>
             </aside>
             <aside className="third-section-second-aside">
-              <span>Distance</span>
-              <input id="first-aside-gear-input" type="text" onChange={this.update('distance')}/>
+              
+              <div>
+                <span>Distance</span>
+                <input id="first-aside-gear-input" type="text" onChange={this.update('distance')}/>
+              </div>
+              <div>
+                <span>Total Time</span>
+                <input id="first-aside-gear-input" type="text" onChange={this.update('total_time')}/>
+              </div>
+
             </aside>
             <aside className="third-section-third-aside">
               <div className="third-aside-points-wrapper">
                 <div className="first-aside-divs">
-                    <span>Start Point</span>
-                    <input id="first-aside-time-input" type="text" onChange={this.update('start_point')} />
+                  <span>Start Point</span>
+                  <input id="first-aside-time-input" type="text" onChange={this.update('start_point')} />
                 </div>
+
                 <div className="first-aside-divs">
                   <span>End Point</span>
                   <input id="first-aside-time-input"type="text" onChange={this.update('end_point')}/>

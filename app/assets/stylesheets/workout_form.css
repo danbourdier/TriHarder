@@ -118,7 +118,8 @@
   }
 
   #first-aside-gear-input {
-    width: 24.56vw;
+    /* width: 24.56vw; */
+    width: 14.139vw;
     height: 3.1vh;
   }
 
@@ -226,6 +227,12 @@
   }
 
   .third-aside-points-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .third-section-second-aside {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
