@@ -298,6 +298,7 @@
     color: grey;
     cursor: pointer;
     line-height: 25px;
+    text-decoration: none;
   }
     .header-button a {
       text-decoration: none;

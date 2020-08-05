@@ -46,9 +46,9 @@ class photoDropDown extends Component {
       <div className="header-group">
         <h2 id="ez-drop-01249" className="header-name"></h2>
           <section className={this.state['hiddenFlag'] ? "header-pic-dropdown-container" : "header-pic-dropdown-container-visible"}>
-          <div className="header-button"><Link to="/friends">Friends</Link></div> 
-          <div className="header-button">Support</div>
-          <div className="header-button">Profile and Settings</div>
+          <Link className="header-button" to="/friends">Friends</Link>
+          <Link className="header-button" to="/friends">Support</Link>
+          <Link className="header-button" to="/friends">Profile and Settings</Link>
           <div className="header-button" onClick={this.props.logout}>Log Out</div>
         </section>
       </div>
