@@ -23,9 +23,9 @@ const HomePageComponent = props => (
           <label>MY DASHBOARD</label> 
         </Link> 
 
-        <Link to="">
+        {/* <Link to="">
           <label>STATS</label>
-        </Link>
+        </Link> */}
           
 
        

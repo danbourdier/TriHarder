@@ -122,8 +122,17 @@
     width: 14.139vw;
     height: 3.1vh;
   }
+  #first-aside-gear-input2 {
+    /* width: 24.56vw; */
+    width: 14.139vw;
+    height: 3.1vh;
+  }
 
   #first-aside-time-input {
+    width: 14.139vw;
+    height: 3.5vh;
+  }
+  #first-aside-time-input2 {
     width: 14.139vw;
     height: 3.5vh;
   }

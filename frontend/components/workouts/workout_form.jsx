@@ -34,7 +34,8 @@ class WorkoutForm extends Component {
       'end_point': end_point,
       'user_id': this.props.currentUserId
     });
-    console.log(newRoute)
+
+    this.props.createRoute(newRoute);
   }
 
   render() {
@@ -76,7 +77,7 @@ class WorkoutForm extends Component {
               </div>
               <div>
                 <span>Total Time (Minutes)</span>
-                <input id="first-aside-gear-input" type="text" placeholder="Please use decimal format (12.34)" onChange={this.update('total_time')}/>
+                <input id="first-aside-gear-input2" type="text" placeholder="Please use decimal format (12.34)" onChange={this.update('total_time')}/>
               </div>
 
             </aside>
@@ -89,7 +90,7 @@ class WorkoutForm extends Component {
 
                 <div className="first-aside-divs">
                   <span>End Point</span>
-                  <input id="first-aside-time-input"type="text" placeholder="Please use an address" onChange={this.update('end_point')}/>
+                  <input id="first-aside-time-input2"type="text" placeholder="Please use an address" onChange={this.update('end_point')}/>
                 </div>
               </div>
               

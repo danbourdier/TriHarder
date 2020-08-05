@@ -35,7 +35,7 @@
 }
 
 .homepage-body-header-radios {
-  width: 770px;
+  width: fit-content;
   height: 44px;
   background-color: #f0f0f0;
   margin-top: auto;
@@ -94,6 +94,7 @@
 }
 
 .homepage-body-inner-dashboard-container {
+  margin-bottom: 100px;
   display: flex;
   max-width: 960px;
   min-height: 1280px;
