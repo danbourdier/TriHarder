@@ -15,45 +15,14 @@ import FriendFinderContainer from './friends/friend_finder_container';
 import SearchContainer from './mapping/search_container';
 import ActivityFeedContainer from './activity_feed/activity_feed_container';
 import WorkOutFormContainer from './workouts/workout_container';
+import HeaderMainContainer from './header/header_main_container';
 
 var SESSION_HIDDEN = false;
 
 const App = () => (
   <div className="render"> 
-    <header className="header-container">
 
-      <div className="header-main">
-
-          {/* left */}
-          <div className="logo-container">
-            <a href="#/">
-              <img src={window.logoText} alt="logo"/>
-            </a>
-          </div>
-          
-          {/* to contain a component for links */}
-          <div className="link-container">
-            <p className="ec-123-5-link">Training</p>
-            <p className="ec-123-5-link">Routes</p>
-            <a className="ec-123-5-link" href="https://github.com/danbourdier">GitHub</a>
-            <a className="ec-123-5-link" href="https://angel.co/u/daniel-bourdier">AngelList</a>
-            <a className="ec-123-5-link" href="https://twitter.com/BourdierDaniel">Twitter</a>
-            <a href="https://www.linkedin.com/in/daniel-bourdier-17075194"> 
-              <img src={window.linkedInBW} />LinkedIn
-            </a>
-          </div>
-
-          {/* right */}
-          <div className={!SESSION_HIDDEN ? "auth-container" : "SESSION_HIDDEN-container"} onClick={ () => SESSION_HIDDEN = (!SESSION_HIDDEN ? true : false)}>
-              <NavBarContainer />
-          </div>
-      </div>
-
-      <section>
-        <HeaderTabsContainer />
-      </section> 
-
-    </header>
+    <HeaderMainContainer />
 
     <main className="body">
       <div>
