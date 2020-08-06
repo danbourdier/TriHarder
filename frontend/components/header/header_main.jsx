@@ -16,9 +16,13 @@ class HeaderMain extends Component {
     let communityTargetTwo = document.getElementById("uscn9138123");
 
     communityTargetOne.addEventListener("mouseenter", () => {
+      if (!this.state.routes) {
+        this.flipRoutes()
+      }
       this.flipCommunity();
       }
     );
+    
     communityTargetTwo.addEventListener("mouseout", () => {
       this.flipCommunity();
       }
@@ -28,6 +32,9 @@ class HeaderMain extends Component {
     let routeTargetTwo = document.getElementById("ji-8291765")
 
     routeTargetOne.addEventListener("mouseenter", () => {
+      if (!this.state.community) {
+        this.flipCommunity()
+      }
       this.flipRoutes();
     }
     );
