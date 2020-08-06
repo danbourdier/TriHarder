@@ -183,9 +183,8 @@
   display: flex;
   position: relative;
   left: 33.5px;
-  margin-top: 28px;
-  margin-bottom: 28px;
   cursor: initial;
+  margin: 28px 0px 28px -36px;
 }
 
 .auth-container-div {
@@ -329,7 +328,8 @@
   .header-group {
     display: flex;
     flex-direction: column;
-    max-width: 40px;
+    height: 200px;
+    width: fit-content;
   }
 
   .header-name {

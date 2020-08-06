@@ -14,7 +14,7 @@ class photoDropDown extends Component {
     let target = document.getElementById("ez-drop-01249")
     let secondTarget = document.getElementsByClassName("header-group")[0]
 
-    target.addEventListener("mouseenter", () => {
+    target.addEventListener("mouseenter", () => { 
         this.flagFalse()
       }
     )
