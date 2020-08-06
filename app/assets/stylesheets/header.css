@@ -148,6 +148,20 @@
   /* background-color: white; */
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
+.ec-123-5-link-community {
+  padding: 0px 10px;
+  color: #6d717a;
+  text-decoration: none;
+  /* background-color: white; */
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.ec-123-5-link-routes {
+  padding: 0px 10px;
+  color: #6d717a;
+  text-decoration: none;
+  /* background-color: white; */
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;  
+}
 
   .ec-123-5-link:hover {
     color: limegreen;
@@ -251,6 +265,10 @@
     display: none;
     z-index: 10000 !important;
   }
+  .community-header-pic-dropdown-container {
+    display: none;
+    z-index: 10000 !important;
+  }
 
   .header-pic-dropdown-container-visible {
     display: flex !important;
@@ -267,6 +285,42 @@
     z-index: 10000 !important;
     position: relative;
     bottom: 3px;
+  }
+  .community-header-pic-dropdown-container-visible {
+    display: flex !important;
+    flex-direction: column;
+    z-index: 3 !important;
+    font-size: 12.25px !important;
+    margin-top: 15px;
+    border: lightgrey solid 1px;
+    width: 167px;
+    border-radius: 6px;
+    overflow: hidden;
+    border-bottom: none;
+    box-shadow: black 0px 0px 5px -2px;
+    z-index: 10000 !important;
+    position: absolute;
+    top: 6px;
+    height: fit-content;
+    left: -8px;
+  }
+  .routes-header-pic-dropdown-container-visible {
+    display: flex !important;
+    flex-direction: column;
+    z-index: 3 !important;
+    font-size: 12.25px !important;
+    margin-top: 15px;
+    border: lightgrey solid 1px;
+    width: 167px;
+    border-radius: 6px;
+    overflow: hidden;
+    border-bottom: none;
+    box-shadow: black 0px 0px 5px -2px;
+    z-index: 10000 !important;
+    position: absolute;
+    top: 6px;
+    height: fit-content;
+    left: 78px;
   }
 
 
@@ -292,13 +346,15 @@
     min-height: 48px;
     min-width: 135px;
     padding: 11px 16px;
-    background-color: #ffffff;
+    background-color: #ffffff !important;
     color: black;
     border-bottom: lightgrey 1px solid;
     color: grey;
     cursor: pointer;
     line-height: 25px;
     text-decoration: none;
+    margin-left: 0 !important;
+    z-index: 20000;
   }
     .header-button a {
       text-decoration: none;
@@ -307,6 +363,7 @@
 
   .header-button:hover {
     color: black;
+    background-color: white !important;
   }
 
 
