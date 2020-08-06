@@ -22,7 +22,7 @@ class HeaderMain extends Component {
       this.flipCommunity();
       }
     );
-    
+
     communityTargetTwo.addEventListener("mouseout", () => {
       this.flipCommunity();
       }
@@ -98,9 +98,9 @@ class HeaderMain extends Component {
           { turnaryElement }
         </div>
 
-        <section>
+        {/* <section>
           <HeaderTabsContainer />
-        </section>
+        </section> */}
 
       </header>
     )

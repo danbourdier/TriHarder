@@ -127,9 +127,9 @@
 
 /* route-chart----------------- */
 
-/* .route-chart-bar {
-  border: solid 2px black;
-} */
+#chart-container-9429 {
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.15);
+}
 
 .recharts-rectangle {
   border: black 2px solid;

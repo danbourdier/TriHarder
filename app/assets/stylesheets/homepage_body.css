@@ -1,7 +1,7 @@
 .homepage-body-container {
   display: flex;
   width: 100%;
-  background-color: snow;
+  background-color: #f9f9f9;
 }
 
 .homepage-body {
@@ -11,7 +11,7 @@
   height: fit-content;
   margin: 0px auto 0px auto;
   position: relative;
-  top: 62px;
+  top: 72px;
   margin-bottom: 55px;
 }
 
@@ -21,7 +21,6 @@
   border-top: solid 1px aliceblue;
   display: flex;
   flex-direction: column;
-  margin-top: 16px;
 }
 
 #ecbannerblue {
@@ -34,6 +33,7 @@
   font-family: Arial, Helvetica, sans-serif;
   color: black;
   font-size: 12.5px;
+  border: solid 0.1px cornflowerblue;
 }
 
 #ecbannerblue figure {
@@ -47,11 +47,11 @@
   margin-top: auto;
   display: flex;
   flex-direction: row;
-
+  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.15);
   position: relative;
   left: 3px;
 }
-/* 622 1288 */
+
 
 .homepage-body-header-radios :nth-child(1) label {
   left: 65px !important;

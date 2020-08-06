@@ -39,18 +39,20 @@ class RouteIndex extends Component {
 
     return (
       <div className="route-index-container">
-        <section className="route-index-blue-buttons">
+        {/* <section className="route-index-blue-buttons">
           <div><a href="">Lifetime Stats</a></div>
           <div><a href="">View Calendar</a></div>
-        </section>
-        <RouteChartTotals cal={totalCalories} time={totalTime} distance={totalDistance} numWorkouts={totalWorkouts} />
-        <aside className="jss7891">
-          {/* time and graph filter */}
-        </aside>
-        <figure className="route-index-chart">
-          <BarChart routes={ownRoutes}/>
-          <div></div>
-        </figure>
+        </section> */}
+        <div id="chart-container-9429">
+          <RouteChartTotals cal={totalCalories} time={totalTime} distance={totalDistance} numWorkouts={totalWorkouts} />
+          <aside className="jss7891">
+            {/* time and graph filter */}
+          </aside>
+          <figure className="route-index-chart">
+            <BarChart routes={ownRoutes}/>
+            <div></div>
+          </figure>
+        </div>
 
         <ul className="route-index-container-after-chart">
           <h3>RECENT WORKOUTS</h3>

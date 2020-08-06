@@ -9,7 +9,7 @@ class HeaderTabs extends Component {
         <nav className="header-nav-container">
 
           <section className="header-nav-tab">
-            <Link to="/map">Create Route</Link>
+            <Link to="/map">Create Route</Link> 
           </section>
             {/* split */}
           <section className="header-nav-tab">
