@@ -70,8 +70,7 @@ class HeaderMain extends Component {
           </div>
 
           <div className="link-container">
-            <section id="uscn9138" className="ec-123-5-link-community" >Community
-            
+            <section id="uscn9138" className="ec-123-5-link-community" >Community</section>
             <div id="uscn9138123">
               <div  className={this.state.community ? "display-none" : "community-header-pic-dropdown-container-visible"} >
                 <Link className="header-button" to="/friends">Friends</Link>
@@ -79,17 +78,14 @@ class HeaderMain extends Component {
                 <a className="header-button" href="https://www.linkedin.com/in/daniel-bourdier-17075194">Import Talent</a>
               </div>
             </div>
-            </section>
 
-            <section id="ji-8291" className="ec-123-5-link-routes">Routes
-            
-              <div id="ji-8291765" >
-                <div className={this.state.routes ? "display-none" : "routes-header-pic-dropdown-container-visible"}>
-                  <Link className="header-button" to="/create_workout">Log Workout</Link>
-                  <Link className="header-button" to="/map">Map Route</Link>
-                </div>
+            <section id="ji-8291" className="ec-123-5-link-routes">Routes</section>
+            <div id="ji-8291765" >
+              <div className={this.state.routes ? "display-none" : "routes-header-pic-dropdown-container-visible"}>
+                <Link className="header-button" to="/create_workout">Log Workout</Link>
+                <Link className="header-button" to="/map">Map Route</Link>
               </div>
-            </section>
+            </div>
 
             <a className="ec-123-5-link" href="https://github.com/danbourdier">GitHub</a>
             <a className="ec-123-5-link" href="https://angel.co/u/daniel-bourdier">AngelList</a>
