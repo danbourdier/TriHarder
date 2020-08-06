@@ -283,8 +283,10 @@
     border-bottom: none;
     box-shadow: black 0px 0px 5px -2px;
     z-index: 10000 !important;
-    position: relative;
-    bottom: 3px;
+    position: absolute;
+    top: 37px;
+    left: -37px;
+    height: fit-content;
   }
   .community-header-pic-dropdown-container-visible {
     display: flex !important;

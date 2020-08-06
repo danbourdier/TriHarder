@@ -16,13 +16,11 @@ class photoDropDown extends Component {
 
     target.addEventListener("mouseenter", () => {
         this.flagFalse()
-        // this.forceUpdate();
       }
     )
 
     secondTarget.addEventListener("mouseleave", () => {
         this.flagTrue()
-        // this.forceUpdate();
       }
     )
 
@@ -36,10 +34,7 @@ class photoDropDown extends Component {
     return this.setState({hiddenFlag: false})
   }
 
-
- 
   render() {
-
 
     return (
     <div className="revealed-container-div">

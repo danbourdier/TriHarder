@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: row;
   margin: auto;
+  background-color: #f9f9f9;
 }
 
 #workout-form-wrapper {
