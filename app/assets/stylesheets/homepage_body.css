@@ -1,3 +1,9 @@
+.homepage-body-container {
+  display: flex;
+  width: 100%;
+  background-color: snow;
+}
+
 .homepage-body {
   min-width: 960px;
   max-width: 960px;

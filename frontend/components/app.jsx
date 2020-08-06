@@ -36,7 +36,6 @@ const App = () => (
           <ProtectedRoute exact path="/friends" component={FriendsContainer} />
           <ProtectedRoute exact path="/find_friends" component={FriendFinderContainer} />
           <ProtectedRoute exact path="/create_workout" component={WorkOutFormContainer}/>
-          {/* <ProtectedRoute exact path="/create_goal" component={}/> */}
         </Switch>
       </div>
     </main>
@@ -75,16 +74,16 @@ const App = () => (
                   <img src={window.logoGrey} alt="logo" />
                 </aside>
                 <div>
-                  <a href="">RIDE</a>
+                  <a>BIKE</a>
+                </div>
+                <div>  
+                  <a>RUN</a>
                 </div>
                 <div>
-                  <a href="">RUN</a>
+                  <a>RUCK</a>
                 </div>
                 <div>
-                  <a href="">HIKE</a>
-                </div>
-                <div>
-                <a href="">FITNESS</a>  
+                <a>FITNESS</a>  
                 </div>
               </section>
             </nav>

@@ -6,39 +6,36 @@ import { Link } from 'react-router-dom';
 import RouteIndexContainer from '../routes/route_index_container';
  
 const HomePageComponent = props => (
-  <div className="homepage-body">
-    <section className="homepage-body-header">
-      <div id="ecbannerblue">
-        <figure>
-          Changes are coming to this website!
-        </figure>
-      </div>
+  <div className="homepage-body-container">
 
-      <nav className="homepage-body-header-radios">
-        <Link to="/activity_feed">
-          <label>ACTIVITY FEED</label>
-        </Link> 
+    <div className="homepage-body">
+      <section className="homepage-body-header">
+        <div id="ecbannerblue">
+          <figure>
+            Changes are coming to this website!
+          </figure>
+        </div>
 
-        <Link to="">
-          <label>MY DASHBOARD</label> 
-        </Link> 
+        <nav className="homepage-body-header-radios">
+          <Link to="/activity_feed">
+            <label>ACTIVITY FEED</label>
+          </Link> 
 
-        {/* <Link to="">
-          <label>STATS</label>
-        </Link> */}
-          
+          <Link to="">
+            <label>MY DASHBOARD</label> 
+          </Link> 
+        
+        </nav>
 
-       
-      </nav>
+      </section>
+      <main className="homepage-body-inner-dashboard-container">
 
-    </section>
-    <main className="homepage-body-inner-dashboard-container">
+        <RouteIndexContainer prop={props}/>
+        
 
-      <RouteIndexContainer prop={props}/>
-      
-
-    </main>
-      
+      </main>
+        
+    </div>
   </div>
 );
 

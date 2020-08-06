@@ -4,12 +4,12 @@
 
 .body {
   display: flex;
-  /* position: relative; */
+
   top: 4px;
   margin: 0px auto 0px auto;
-  max-width: 1320px;
+  width: 100vw;
   width:1320px;
-  /* background-color: cornflowerblue; */
+  /* background-color: snow; */
     justify-content: center;
     flex-direction: column;
 }
