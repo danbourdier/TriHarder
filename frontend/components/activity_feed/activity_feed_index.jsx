@@ -5,7 +5,7 @@ import IndexItem from './activity_feed_index_item'
 class ActivityFeedIndex extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { body: "" }
+    this.state = { body: "", ourCommentsOrTheirsFlag: true }
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.email = this.props.currentUser.email;
@@ -16,12 +16,16 @@ class ActivityFeedIndex extends React.Component {
 
   componentDidMount() {
     this.props.getComments();
+    this.props.getConnections();
   }
 
   componentDidUpdate(prevProps) {
     if (Object.values(prevProps.comments).length !== Object.values(this.props.comments).length) {
       this.props.getComments();
     }
+    // if (Object.values(prevProps.comments).length !== Object.values(this.props.comments).length) {
+    //   this.props.getComments();
+    // }
   }
 
   update(field) {
@@ -41,9 +45,11 @@ class ActivityFeedIndex extends React.Component {
 
   render() {
     let { createComment, comments, deleteComment } = this.props;
-    let index = Object.values(comments).map(comment => (
+
+    let index = this.ourCommentsOrTheirsFlag ? Object.values(comments).map(comment => (
       <IndexItem key={comment.id} allComments={this.props.comments} authorEmail={this.email} comment={comment} createComment={createComment} deleteComment={deleteComment} currentUserId={this.authorId}/>
-    ))
+    )) : 'insert geniousness here!!!!'
+
     let profilePic = {
       backgroundSize: 'cover',
       backgroundImage: 'url(' + rabbit + ')'
@@ -60,7 +66,7 @@ class ActivityFeedIndex extends React.Component {
               <aside id="status-update-pic" style={profilePic}></aside>
               <textarea value={this.state.body} placeholder="Add a Status Update Here..." id="status-update-text-box" cols="30" rows="10" onChange={this.update('body')}></textarea>
             </div>
-            {/* <input type="submit" value="Submit Post!"/> */}
+
              { postButtonContainer }
           </form>
         </section>

@@ -16,8 +16,6 @@ import WorkOutFormContainer from './workouts/workout_container';
 import HeaderMainContainer from './header/header_main_container';
 import FooterContainer from './footer/footer_container';
 
-var SESSION_HIDDEN = false;
-
 const App = () => (
   <div className="render"> 
 
