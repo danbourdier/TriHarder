@@ -19,7 +19,7 @@ class RouteMapLeft extends Component {
 
     target.addEventListener("click", () => {
       that;
-      // debugger
+
       if ((!Array.isArray(that.props.currentErrors)) && (Object.keys(that.props.currentErrors).length > 0)) {
         // console.log(that.props.currentErrors)
         if (that.props.currentErrors.responseText.includes("duplicate")) {

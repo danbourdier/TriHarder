@@ -26,7 +26,7 @@ class FriendIndex extends Component {
 
 
     let { allConnections } = this.props;
-    // debugger
+
     let index = Object.values(allConnections).map(connection => (
       <Friend key={connection.id} connection={connection} deleteConnection={this.deleteConnection} />
     ))

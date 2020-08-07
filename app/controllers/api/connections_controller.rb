@@ -9,8 +9,8 @@ class Api::ConnectionsController < ApplicationController
       query = params[:connection]
       # @connections = User.find_by_sql("SELECT * FROM users WHERE email LIKE '#{query}'")
       @connections = User.where("lower(email) LIKE :query", query: "%#{query.downcase}%")
-      # debugger
-      render "api/connections/index"
+
+      render "api/connections/index" 
     else
       @connections = current_user.connections.all
       render "api/connections/index"

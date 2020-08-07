@@ -27,6 +27,6 @@ export const searchConnections = connection => {
     $.ajax({
       url: "api/connections",
       data:  { connection } 
-    })
+    })  
   )
 }

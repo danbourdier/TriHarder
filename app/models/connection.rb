@@ -14,4 +14,8 @@ validates :requestee, presence: true
     class_name: :User,
     primary_key: :id
 
+    def all_the_user_comments 
+      connection.comments
+    end
+
 end

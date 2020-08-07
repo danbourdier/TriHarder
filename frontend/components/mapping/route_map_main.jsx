@@ -176,7 +176,7 @@ class RouteMap extends Component {
       waypoints: wayPoints
     }, (res, status) => {
       if (status === 'OK') {
-        // debugger
+
         // https://developers.google.com/maps/documentation/javascript/directions#DirectionsResults for understanding repsonse of directions request
         // stores our latest leg from the array returned within the responses routes key-value
           // each click is a new object stored under the response's [routes]: []
