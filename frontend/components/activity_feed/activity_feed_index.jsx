@@ -1,6 +1,7 @@
 import React from 'react';
 
 import IndexItem from './activity_feed_index_item'
+import FriendIndexItem from './friend_index_item';
 
 class ActivityFeedIndex extends React.Component {
   constructor(props) {
@@ -11,6 +12,7 @@ class ActivityFeedIndex extends React.Component {
     this.email = this.props.currentUser.email;
     this.authorId = this.props.currentUser.id;
     this.createComment = this.props.createComment;
+    this.friendFlip = this.friendFlip.bind(this);
   }
 
 
@@ -26,6 +28,10 @@ class ActivityFeedIndex extends React.Component {
     // if (Object.values(prevProps.comments).length !== Object.values(this.props.comments).length) {
     //   this.props.getComments();
     // }
+  }
+
+  friendFlip() {
+    return this.setState({ourCommentsOrTheirsFlag: (!this.state.ourCommentsOrTheirsFlag)})
   }
 
   update(field) {
@@ -44,11 +50,13 @@ class ActivityFeedIndex extends React.Component {
 
 
   render() {
-    let { createComment, comments, deleteComment } = this.props;
+    let { createComment, comments, deleteComment, connections } = this.props;
 
-    let index = this.ourCommentsOrTheirsFlag ? Object.values(comments).map(comment => (
+    let index = this.state.ourCommentsOrTheirsFlag ? Object.values(comments).map(comment => (
       <IndexItem key={comment.id} allComments={this.props.comments} authorEmail={this.email} comment={comment} createComment={createComment} deleteComment={deleteComment} currentUserId={this.authorId}/>
-    )) : 'insert geniousness here!!!!'
+    )) : Object.values(connections).map(connection => ( 
+      <FriendIndexItem key={connection.id} everything={connection} connectsComments={connection.all_the_user_comments} />
+    ));
 
     let profilePic = {
       backgroundSize: 'cover',
@@ -70,6 +78,8 @@ class ActivityFeedIndex extends React.Component {
              { postButtonContainer }
           </form>
         </section>
+
+        <button onClick={this.friendFlip}>FRIEND FLIP</button>
 
         <section className="other-comments-posts-container">
           {index}
