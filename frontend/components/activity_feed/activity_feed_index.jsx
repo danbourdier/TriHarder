@@ -55,7 +55,7 @@ class ActivityFeedIndex extends React.Component {
     let index = this.state.ourCommentsOrTheirsFlag ? Object.values(comments).map(comment => (
       <IndexItem key={comment.id} allComments={this.props.comments} authorEmail={this.email} comment={comment} createComment={createComment} deleteComment={deleteComment} currentUserId={this.authorId}/>
     )) : Object.values(connections).map(connection => ( 
-      <FriendIndexItem key={connection.id} everything={connection} connectsComments={connection.all_the_user_comments} />
+      <FriendIndexItem key={connection.id} everything={connection} allComments={connection.all_the_user_comments} />
     ));
 
     let profilePic = {
