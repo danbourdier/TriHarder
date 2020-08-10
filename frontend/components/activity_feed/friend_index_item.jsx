@@ -25,7 +25,7 @@ class FriendIndexItem extends Component {
         <aside id="status-update-pic" style={profilePic}></aside>
               <div className="ec-comments-and-posts">
                 <div id="ec-comment-first-section">
-                  Author Email <span className="delete-button">X</span>
+                  Author Email 
                 </div>
                 <span className="ec-comment-body">
                   Body goes here
