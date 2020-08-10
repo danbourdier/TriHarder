@@ -21,7 +21,7 @@ class FriendIndexItem extends Component {
     let { everything, allComments } = this.props;
 
     let commentIndex = allComments.map(obj => (
-      <div key={obj.id}>
+      <div key={obj.id} className="comment-friend-index-item" >
         <aside id="status-update-pic" style={profilePic}></aside>
               <div className="ec-comments-and-posts">
                 <div id="ec-comment-first-section">

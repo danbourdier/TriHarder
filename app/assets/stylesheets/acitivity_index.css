@@ -153,6 +153,13 @@
       margin-right: 4px;
     }
 
+  
+  /* friend index item  */
+
+.comment-friend-index-item {
+  display: flex;
+  flex-direction: row;
+}
 
   /* replies section */
 
