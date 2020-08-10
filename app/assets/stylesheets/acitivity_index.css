@@ -9,11 +9,11 @@
 /* create comment */
 
 .create-comment-container {
-  width: 690px;
+  width: 630px;
   height: fit-content;
   display: flex;
   flex-direction: row;
-  margin: 92px auto 0px;
+  margin: 40px auto 33px;
 }
     .create-comment-container form {
       display: flex;
@@ -46,7 +46,7 @@
 
 #status-update-text-box {
   width: 512px;
-  height: 96px;
+  height: 86px;
 
   padding: 12px 16px 12px;
   font-family: arial;
@@ -64,7 +64,7 @@
   background-image: url(rabbit.png);
   background-size: cover;
   border-radius: 30px;
-  margin-right: 25px;
+  margin-right: 24px;
 }
 
 
@@ -153,7 +153,29 @@
       margin-right: 4px;
     }
 
-  
+  /* activity filter dropdown */
+
+  #activity-index-activity-filter-container {
+    display: flex;
+    flex-direction: row;
+    width: 690px;
+    margin: auto;
+  }
+  #activity-index-activity-filter {
+    font-size: 14px;
+    color: #6D717A;
+    max-width: 300px;
+    border: none;
+    background-color: transparent;
+    width: 70px;
+    text-decoration: none;
+    font-weight: 600;
+    position: absolute;
+    bottom: 185px;
+    right: 875px;
+    outline: none;
+  }
+
   /* friend index item  */
 
 .comment-friend-index-item {

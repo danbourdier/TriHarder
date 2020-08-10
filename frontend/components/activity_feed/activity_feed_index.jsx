@@ -79,7 +79,12 @@ class ActivityFeedIndex extends React.Component {
           </form>
         </section>
 
-        <button onClick={this.friendFlip}>FRIEND FLIP</button>
+        <div id="activity-index-activity-filter-container">
+          <select name="flip" id="activity-index-activity-filter" onChange={this.friendFlip}> Friend Flip
+            <option value="Friends">Myself</option>
+            <option value="Myself">Friends</option>
+          </select>
+        </div>
 
         <section className="other-comments-posts-container">
           {index}
