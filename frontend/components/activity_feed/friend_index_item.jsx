@@ -20,15 +20,15 @@ class FriendIndexItem extends Component {
 
     let { everything, allComments } = this.props;
 
-    let commentIndex = allComments.map(obj => (
-      <div key={obj.id} className="comment-friend-index-item" >
+    let commentIndex = allComments.map((obj, i) => (
+      <div key={i} className="comment-friend-index-item" >
         <aside id="status-update-pic" style={profilePic}></aside>
               <div className="ec-comments-and-posts">
                 <div id="ec-comment-first-section">
-                  {everything.connection.email}
+                  {obj.comment.author_email}
                 </div>
                 <span className="ec-comment-body">
-                  {obj.body}
+                  {obj.comment.body}
                     </span>
 
                 <section className="ec-comments-last-section">
@@ -38,7 +38,7 @@ class FriendIndexItem extends Component {
                   </div>
                   <div className="comment-count">
                     <aside id='comment-symbol'></aside>
-                    <div>like count</div>
+                    <div>comment count</div>
                   </div>
                 </section>
 
@@ -48,7 +48,6 @@ class FriendIndexItem extends Component {
       
     ));
     // if (this.props.comment['parent_comment_id'] === null) {
-      console.log(everything)
       return (
         <article className="create-comment-container">
 
