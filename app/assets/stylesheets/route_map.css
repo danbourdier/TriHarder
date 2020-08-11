@@ -3,10 +3,10 @@
 
 .route-page-container {
   width: 100vw;
-  height: 85vh;
+  height: 92vh;
   position: absolute;
   z-index: 300;
-  top: 107px;
+  top: 64px;
   right: 0px;
   display: flex;
   flex-direction: row;
