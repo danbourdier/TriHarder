@@ -42,7 +42,7 @@ class Comment < ApplicationRecord
   def the_author_email
     user.email
   end
-
+ 
   def sub_comments
     child_comments
   end

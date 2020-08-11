@@ -10,7 +10,7 @@ validates :requestee, presence: true
     primary_key: :id
 
   belongs_to :connection,
-    foreign_key: :requestee,
+    foreign_key: :requestee, 
     class_name: :User,
     primary_key: :id
 

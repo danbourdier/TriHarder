@@ -25,10 +25,10 @@ class FriendIndexItem extends Component {
         <aside id="status-update-pic" style={profilePic}></aside>
               <div className="ec-comments-and-posts">
                 <div id="ec-comment-first-section">
-                  Author Email 
+                  {everything.connection.email}
                 </div>
                 <span className="ec-comment-body">
-                  Body goes here
+                  {obj.body}
                     </span>
 
                 <section className="ec-comments-last-section">
@@ -48,7 +48,7 @@ class FriendIndexItem extends Component {
       
     ));
     // if (this.props.comment['parent_comment_id'] === null) {
-
+      console.log(everything)
       return (
         <article className="create-comment-container">
 
