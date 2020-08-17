@@ -15,25 +15,25 @@ Route.destroy_all
 demo = User.create!( first_name: "demo", last_name: "user", email: "demo@demo.com", 
   password: "password", birth_date: "01/02/1990", gender: "F", location: "USA"
 )
-user1 = User.create!( first_name: "Karna", last_name: "Hindu", email: "Karna@triharder.com", 
+user1 = User.create!( first_name: "Adi", last_name: "Jeronimo", email: "Adi@triharder.com", 
   password: "password", birth_date: "01/02/1990", gender: "F", location: "Morraco"
 )
-user2 = User.create!( first_name: "Gilgamesh", last_name: "Mesopatamian", email: "Gilgamesh@triharder.com", 
+user2 = User.create!( first_name: "Rosalia", last_name: "Davika", email: "Rosalia@triharder.com", 
   password: "password", birth_date: "05/12/1990", gender: "M", location: "Afghanistan"
 )
-user3 = User.create!( first_name: "Chulainn", last_name: "Irish", email: "Chulainn@triharder.com", 
+user3 = User.create!( first_name: "Toshika", last_name: "Kermit", email: "Toshika@triharder.com", 
   password: "password", birth_date: "12/02/1970", gender: "F", location: "Libya"
 )
-user4 = User.create!( first_name: "Atalanta", last_name: "Greco-Roman", email: "Atalanta@triharder.com", 
+user4 = User.create!( first_name: "Oleysa", last_name: "Prasad", email: "Oleysa@triharder.com", 
   password: "password", birth_date: "03/14/1992", gender: "M", location: "USA"
 )
-user4 = User.create!( first_name: "Diarmuid", last_name: "Irish", email: "Diarmuid@triharder.com", 
+user4 = User.create!( first_name: "Manjeet", last_name: "Zighaed", email: "Manjeet@triharder.com", 
   password: "password", birth_date: "03/14/1992", gender: "M", location: "USA"
 )
-user4 = User.create!( first_name: "Samson", last_name: "Israeli", email: "Samson@triharder.com", 
+user4 = User.create!( first_name: "Mandy", last_name: "Ebba", email: "Mandy@triharder.com", 
   password: "password", birth_date: "03/14/1992", gender: "M", location: "USA"
 )
-user4 = User.create!( first_name: "Achilles", last_name: "Greek", email: "Achilles@triharder.com", 
+user4 = User.create!( first_name: "Damyan", last_name: "Jonathan", email: "Damyan@triharder.com", 
   password: "password", birth_date: "03/14/1992", gender: "M", location: "USA"
 )
 
