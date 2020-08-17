@@ -71,7 +71,7 @@ class FriendIndexItem extends Component {
                     <aside id="like-symbol"></aside>
                     <div>like count</div>
                   </div>
-                  <div className="comment-count">
+                  <div className="comment-count" onClick={this.hideAndShow}>
                     <aside id='comment-symbol'></aside>
                     <div>comment count</div>
                   </div>
