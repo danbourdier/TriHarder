@@ -8,6 +8,8 @@ class FriendIndexItem extends Component {
     this.state = { hiddenFlag: true, postBody: "" }
 
     this.createComment = this.props.createComment;
+    this.deleteComment = this.props.deleteComment;
+
     this.handleSubmit = this.handleSubmit.bind(this);
     this.hideAndShow = this.hideAndShow.bind(this);
   }
@@ -46,25 +48,29 @@ class FriendIndexItem extends Component {
       backgroundImage: 'url(' + rabbit + ')'
     };
 
-    let replies = this.state.hiddenFlag ? null : <section className="ec-comment-replies-section">
-      {/* {replyIndex} */}
+
+
+    let replyIndex = (obj) => (obj.map((com, i) => (
+      <Reply key={i} reply={com} deleteReply={this.deleteComment} />)
+    ));
+
+    let replies = (replyIndexParam) => this.state.hiddenFlag ? null : <section className="ec-comment-replies-section">
+      {replyIndex(replyIndexParam)}
       <form onSubmit={this.handleSubmit} className="ec-comment-reply-section-form">
         <aside id="reply-profile-pic" style={profilePic}></aside>
         <input type="text" placeholder="Write a Comment" value={this.state.postBody} onChange={this.update('postBody')} />
         <button id="reply-form-post-button" type="submit">POST</button>
       </form>
     </section>
-
     // all comments are the comments belonging to each of our connections
-      // this includes their originals and replies to other posts
-    let { everything, allComments } = this.props;
-
+    // this includes their originals and replies to other posts
+    const { allComments } = this.props;
     // because we are passing each object that contains a collection of their activity
       // we need to learn how to filter it on our end below
-
     let commentIndex = allComments.map((obj, i) => {
-      debugger
 
+      
+      // if a parent comment...
       if (obj.parent_comment === null) {
 
         return (
@@ -89,18 +95,17 @@ class FriendIndexItem extends Component {
                       </div>
                     </section>
   
-                    { replies }
+                    { replies(obj.replies) }
                   </div>
           </article>
         )
+        // if not a parent comment...
       } else {
-        // else the obj has a parent comment
+
         let { parent_comment, comment } = obj;
-
-        let replyIndex = obj.replies.map(com => (
-          <Reply key={com.id} reply={com} deleteReply={this.deleteComment} /> //CHANGE <----------------
-        ));
-
+        let replyCollection = obj.replies;
+          replyCollection[replyCollection.length] = comment;
+        
         return (
           <article key={i} className="comment-friend-index-item" >
             <aside id="status-update-pic" style={profilePic}></aside>
@@ -123,12 +128,11 @@ class FriendIndexItem extends Component {
                 </div>
               </section>
 
-              {replies}
+              {replies(replyCollection)}
             </div>
           </article>
         )
       }
-      
     });
 
     // below returns our render's return
