@@ -9,13 +9,17 @@ class FriendIndexItem extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  update(field) {
+    return e => this.setState({ [field]: e.currentTarget.value })
+  }
+
   handleSubmit() {
     let payload = Object.assign({},
       {
         'body': this.state.postBody,
-        'author_email': this.authorEmail,
-        'parent_comment_id': this.commentId,
-        'author_id': this.authorId
+        // 'author_email': this.authorEmail,
+        // 'parent_comment_id': this.commentId,
+        // 'author_id': this.authorId
       })
 
     this.createComment(payload);
@@ -35,10 +39,19 @@ class FriendIndexItem extends Component {
       backgroundImage: 'url(' + rabbit + ')'
     };
 
+    let replies = this.state.hiddenFlag ? null : <section className="ec-comment-replies-section">
+      {/* {replyIndex} */}
+      <form id="ex-920" onSubmit={this.handleSubmit} className="ec-comment-reply-section-form">
+        <aside id="reply-profile-pic" style={profilePic}></aside>
+        <input type="text" placeholder="Write a Comment" value={this.state.postBody} onChange={this.update('postBody')} />
+        <button id="reply-form-post-button" type="submit">POST</button>
+      </form>
+    </section>
+
     let { everything, allComments } = this.props;
 
     let commentIndex = allComments.map((obj, i) => (
-      <div key={i} className="comment-friend-index-item" >
+      <article key={i} className="comment-friend-index-item" >
         <aside id="status-update-pic" style={profilePic}></aside>
               <div className="ec-comments-and-posts">
                 <div id="ec-comment-first-section">
@@ -59,9 +72,9 @@ class FriendIndexItem extends Component {
                   </div>
                 </section>
 
-                {/* {replies} */}
+                { replies }
               </div>
-      </div>
+      </article>
       
     ));
     // if (this.props.comment['parent_comment_id'] === null) {
