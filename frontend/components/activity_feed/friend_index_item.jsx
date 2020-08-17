@@ -1,8 +1,25 @@
 import React, {Component} from 'react';
 
 class FriendIndexItem extends Component {
+  constructor(props) {
+    super(props)
+    this.state = { hiddenFlag: true, postBody: "" }
 
+    this.createComment = this.props.createComment;
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
 
+  handleSubmit() {
+    let payload = Object.assign({},
+      {
+        'body': this.state.postBody,
+        'author_email': this.authorEmail,
+        'parent_comment_id': this.commentId,
+        'author_id': this.authorId
+      })
+
+    this.createComment(payload);
+  }
 
   render() {
 
