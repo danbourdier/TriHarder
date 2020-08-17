@@ -7,6 +7,11 @@ class FriendIndexItem extends Component {
 
     this.createComment = this.props.createComment;
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.hideAndShow = this.hideAndShow.bind(this);
+  }
+
+  hideAndShow() {
+    this.setState({ hiddenFlag: (!this.state.hiddenFlag) })
   }
 
   update(field) {
