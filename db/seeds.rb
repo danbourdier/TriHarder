@@ -98,5 +98,8 @@ comment2 = Comment.create!(author_email: demo.email, body: "RICE method folks, i
 comment3 = Comment.create!(author_email: user2.email, body: "I'm looking forward to crushing my next marathon, would anyone like to join and train?",
   author_id: user2.id
 )
+  comment3a = Comment.create!(author_email: user1.email, body: "Sign me up brother",
+    author_id: user1.id, parent_comment_id: comment3.id
+  )
 
 

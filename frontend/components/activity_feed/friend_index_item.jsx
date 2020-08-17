@@ -31,7 +31,7 @@ class FriendIndexItem extends Component {
   }
 
   render() {
-
+    // debugger
     let profilePicCollection = [camel, shark, turtle, bear, squirrel]
 
     let profilePic = {
@@ -46,7 +46,7 @@ class FriendIndexItem extends Component {
 
     let replies = this.state.hiddenFlag ? null : <section className="ec-comment-replies-section">
       {/* {replyIndex} */}
-      <form id="ex-920" onSubmit={this.handleSubmit} className="ec-comment-reply-section-form">
+      <form onSubmit={this.handleSubmit} className="ec-comment-reply-section-form">
         <aside id="reply-profile-pic" style={profilePic}></aside>
         <input type="text" placeholder="Write a Comment" value={this.state.postBody} onChange={this.update('postBody')} />
         <button id="reply-form-post-button" type="submit">POST</button>

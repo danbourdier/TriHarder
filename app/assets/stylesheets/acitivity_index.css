@@ -193,6 +193,10 @@
   .ec-comment-replies-section {
     height: fit-content;
   }
+  .ec-comment-replies-section form {
+    display: flex;
+    flex-direction: row !important;
+  }
 
     .ec-comment-reply-container {
       display: flex;
