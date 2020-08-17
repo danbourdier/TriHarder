@@ -98,7 +98,7 @@ class FriendIndexItem extends Component {
         let { parent_comment, comment } = obj;
 
         let replyIndex = obj.replies.map(com => (
-          <Reply key={com.id} reply={com} deleteReply={this.deleteComment} />
+          <Reply key={com.id} reply={com} deleteReply={this.deleteComment} /> //CHANGE <----------------
         ));
 
         return (
