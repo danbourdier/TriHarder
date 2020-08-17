@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 
+import Reply from './replies';
+
 class FriendIndexItem extends Component {
   constructor(props) {
     super(props)
@@ -93,16 +95,11 @@ class FriendIndexItem extends Component {
         )
       } else {
         // else the obj has a parent comment
-        let { parent_comment } = obj;
-        
-        replies = this.state.hiddenFlag ? null : <section className="ec-comment-replies-section">
-          {/* {replyIndex} */}
-          <form onSubmit={this.handleSubmit} className="ec-comment-reply-section-form">
-            <aside id="reply-profile-pic" style={profilePic}></aside>
-            <input type="text" placeholder="Write a Comment" value={this.state.postBody} onChange={this.update('postBody')} />
-            <button id="reply-form-post-button" type="submit">POST</button>
-          </form>
-        </section>
+        let { parent_comment, comment } = obj;
+
+        let replyIndex = obj.replies.map(com => (
+          <Reply key={com.id} reply={com} deleteReply={this.deleteComment} />
+        ));
 
         return (
           <article key={i} className="comment-friend-index-item" >

@@ -1,6 +1,5 @@
 import React, {Component } from 'react';
 
-import RepliesContainer from './replies_container';
 import Reply from './replies';
 
 class ActivityFeedIndexItem extends Component {
