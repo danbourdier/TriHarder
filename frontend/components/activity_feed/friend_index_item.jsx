@@ -50,8 +50,8 @@ class FriendIndexItem extends Component {
 
     const { theirComments } = this.props;
 
-    let replyIndex = theirComments.replies.map((com, i) => (
-      <Reply key={i} reply={com} deleteReply={this.deleteComment} />)
+    let replyIndex = theirComments.replies.map(com => (
+      <Reply key={com.id} reply={com} deleteReply={this.deleteComment} />)
     );
 
     let replies = this.state.hiddenFlag ? null : <section className="ec-comment-replies-section">
@@ -61,11 +61,7 @@ class FriendIndexItem extends Component {
         <input type="text" placeholder="Write a Comment" value={this.state.postBody} onChange={this.update('postBody')} />
         <button id="reply-form-post-button" type="submit">POST</button>
       </form>
-    </section>
-    // all comments are the comments belonging to each of our connections
-    // this includes their originals and replies to other posts
-    
-
+    </section>    
 
       // if a parent comment...
       if (theirComments.parent_comment === null) {
@@ -138,18 +134,8 @@ class FriendIndexItem extends Component {
           </article>
         )
       }
+  };
 
-
-    // below returns our render's return
-    // if (this.props.comment['parent_comment_id'] === null) {
-
-
-    // } else {
-    //   return (
-    //     <div></div>
-    //   )
-
-  }
 }
 
 export default FriendIndexItem
