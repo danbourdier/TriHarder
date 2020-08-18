@@ -52,25 +52,43 @@ class ActivityFeedIndex extends React.Component {
   render() {
     let { createComment, comments, deleteComment, connections } = this.props;
     let connectionCollection = [];
-    let newConnectionCollection = [];
+    // let newConnectionCollection = [];
     // array that contains [ [{}, {}], [{}], [] ]
       Object.values(connections).map(connection => { 
         connectionCollection.push(...connection.all_the_user_comments)
       });
+      // console.log(connectionCollection)
 
-      for (let i = 0; i < )
+      // for (let i = 0; i < connectionCollection.length; i += 1) {
+      //   const obj = connectionCollection[i];
+      //   // each obj contains:
+      //     // comment
+      //     // parent_comment
+      //     // replies - can contain x num of objects
+      //     if (!newConnectionCollection.includes(obj.comment)) {
+      //       newConnectionCollection.push(obj.comment);
+      //     }  
 
-      debugger
-      for (let i = 0; i < connectionCollection.length; i += 1) {
-        const ele = connectionCollection[i];
-      }
+      //     if (!newConnectionCollection.includes(obj.parent_comment)) {
+      //       newConnectionCollection.push(obj.parent_comment);
+      //     }
+          
+      //   for (let j = 0; j < 4; j += 1) {
+      //     const nestedEle = obj[j];
+
+      //     if (!newConnectionCollection.includes(nestedEle)) {
+      //       newConnectionCollection.push(nestedEle)
+      //     }
+      //   }
+
+      // }
 
     let index = this.state.ourCommentsOrTheirsFlag ? Object.values(comments).map(comment => (
       <IndexItem key={comment.id} allComments={this.props.comments} authorEmail={this.email} comment={comment} createComment={createComment} deleteComment={deleteComment} currentUserId={this.authorId}/>
-    )) : Object.values(connections).map((connection, i) => { 
+    )) : connectionCollection.map((connection, i) => { 
 
       return (
-        <FriendIndexItem key={i} allComments={connection.all_the_user_comments} createComment={createComment} deleteComment={deleteComment}/>
+        <FriendIndexItem key={i} allComments={connection} createComment={createComment} deleteComment={deleteComment}/>
       )
     });
 
