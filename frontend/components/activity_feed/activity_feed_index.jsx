@@ -80,7 +80,6 @@ class ActivityFeedIndex extends React.Component {
       //       newConnectionCollection.push(nestedEle)
       //     }
       //   }
-
       // }
 
     let index = this.state.ourCommentsOrTheirsFlag ? Object.values(comments).map(comment => (
@@ -88,7 +87,7 @@ class ActivityFeedIndex extends React.Component {
     )) : connectionCollection.map((connection, i) => { 
 
       return (
-        <FriendIndexItem key={i} allComments={connection} createComment={createComment} deleteComment={deleteComment}/>
+        <FriendIndexItem key={i} theirComments={connection} createComment={createComment} deleteComment={deleteComment}/>
       )
     });
 

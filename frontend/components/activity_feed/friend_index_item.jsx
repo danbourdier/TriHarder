@@ -47,15 +47,14 @@ class FriendIndexItem extends Component {
       backgroundSize: 'cover',
       backgroundImage: 'url(' + rabbit + ')'
     };
+    const { theirComments } = this.props;
 
-
-
-    let replyIndex = (obj) => (obj.map((com, i) => (
+    let replyIndex = theirComments.replies.map((com, i) => (
       <Reply key={i} reply={com} deleteReply={this.deleteComment} />)
-    ));
+    );
 
-    let replies = (replyIndexParam) => this.state.hiddenFlag ? null : <section className="ec-comment-replies-section">
-      {replyIndex(replyIndexParam)}
+    let replies = this.state.hiddenFlag ? null : <section className="ec-comment-replies-section">
+      {replyIndex}
       <form onSubmit={this.handleSubmit} className="ec-comment-reply-section-form">
         <aside id="reply-profile-pic" style={profilePic}></aside>
         <input type="text" placeholder="Write a Comment" value={this.state.postBody} onChange={this.update('postBody')} />
@@ -64,24 +63,21 @@ class FriendIndexItem extends Component {
     </section>
     // all comments are the comments belonging to each of our connections
     // this includes their originals and replies to other posts
-    const { allComments } = this.props;
-    // because we are passing each object that contains a collection of their activity
-      // we need to learn how to filter it on our end below
-    let commentIndex = allComments.map((obj, i) => {
+    
 
-      
+    let commentIndex = theirComments => {
       // if a parent comment...
-      if (obj.parent_comment === null) {
+      if (theirComments.parent_comment === null) {
 
         return (
-          <article key={i} className="comment-friend-index-item" >
+          <article key={theirComments.comment.id} className="comment-friend-index-item" >
             <aside id="status-update-pic" style={profilePic}></aside>
                   <div className="ec-comments-and-posts">
                     <div id="ec-comment-first-section">
-                      {obj.comment.author_email}
+                      {theirComments.comment.author_email}
                     </div>
                     <span className="ec-comment-body">
-                      {obj.comment.body}
+                      {theirComments.comment.body}
                         </span>
   
                     <section className="ec-comments-last-section">
@@ -95,19 +91,19 @@ class FriendIndexItem extends Component {
                       </div>
                     </section>
   
-                    { replies(obj.replies) }
+                    { replies(theirComments.replies) }
                   </div>
           </article>
         )
         // if not a parent comment...
       } else {
 
-        let { parent_comment, comment } = obj;
-        let replyCollection = obj.replies;
+        let { parent_comment, comment } = theirComments;
+        let replyCollection = theirComments.replies;
           replyCollection[replyCollection.length] = comment;
         
         return (
-          <article key={i} className="comment-friend-index-item" >
+          <article key={comment.id} className="comment-friend-index-item" >
             <aside id="status-update-pic" style={profilePic}></aside>
             <div className="ec-comments-and-posts">
               <div id="ec-comment-first-section">
@@ -133,13 +129,12 @@ class FriendIndexItem extends Component {
           </article>
         )
       }
-    });
+    };
 
     // below returns our render's return
     // if (this.props.comment['parent_comment_id'] === null) {
       return (
         <article className="create-comment-container">
-
           { commentIndex }
         </article>
       )
