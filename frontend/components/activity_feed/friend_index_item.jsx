@@ -48,9 +48,9 @@ class FriendIndexItem extends Component {
       backgroundImage: 'url(' + rabbit + ')'
     };
 
-    const { theirComments } = this.props;
+    const { theirComments, subComments } = this.props;
 
-    let replyIndex = theirComments.replies.map(com => (
+    let replyIndex = subComments.map(com => (
       <Reply key={com.id} reply={com} deleteReply={this.deleteComment} />)
     );
 
@@ -98,7 +98,7 @@ class FriendIndexItem extends Component {
       } else {
 
         let { parent_comment, comment } = theirComments;
-        let replyCollection = theirComments.replies;
+        let replyCollection = subComments;
           replyCollection[replyCollection.length] = comment;
         
         replyIndex = replyCollection.map((com, i) => (

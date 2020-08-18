@@ -57,7 +57,6 @@ class ActivityFeedIndex extends React.Component {
       Object.values(connections).map(connection => { 
         connectionCollection.push(...connection.all_the_user_comments)
       });
-      // console.log(connectionCollection)
 
       // for (let i = 0; i < connectionCollection.length; i += 1) {
       //   const obj = connectionCollection[i];
@@ -87,7 +86,7 @@ class ActivityFeedIndex extends React.Component {
     )) : connectionCollection.map((connection, i) => { 
 
       return (
-        <FriendIndexItem key={i} theirComments={connection} createComment={createComment} deleteComment={deleteComment}/>
+        <FriendIndexItem key={i} theirComments={connection} subComments={connection.replies} createComment={createComment} deleteComment={deleteComment}/>
       )
     });
 

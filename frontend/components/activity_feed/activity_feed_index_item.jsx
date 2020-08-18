@@ -57,6 +57,7 @@ class ActivityFeedIndexItem extends Component {
       backgroundSize: 'cover',
       backgroundImage: 'url(' + rabbit + ')'
     }
+    
     // this deconstructs our main comment
     const { body, the_author, the_author_email } = this.props.comment;
     // this deconstructs and provides direct access to our replies that are a lower level key in each comment
