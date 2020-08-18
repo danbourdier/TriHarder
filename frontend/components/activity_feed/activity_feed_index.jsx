@@ -52,10 +52,13 @@ class ActivityFeedIndex extends React.Component {
   render() {
     let { createComment, comments, deleteComment, connections } = this.props;
     let connectionCollection = [];
+    let newConnectionCollection = [];
     // array that contains [ [{}, {}], [{}], [] ]
       Object.values(connections).map(connection => { 
         connectionCollection.push(...connection.all_the_user_comments)
       });
+
+      for (let i = 0; i < )
 
       debugger
       for (let i = 0; i < connectionCollection.length; i += 1) {
