@@ -47,6 +47,7 @@ class FriendIndexItem extends Component {
       backgroundSize: 'cover',
       backgroundImage: 'url(' + rabbit + ')'
     };
+
     const { theirComments } = this.props;
 
     let replyIndex = theirComments.replies.map((com, i) => (
@@ -65,34 +66,36 @@ class FriendIndexItem extends Component {
     // this includes their originals and replies to other posts
     
 
-    let commentIndex = theirComments => {
+
       // if a parent comment...
       if (theirComments.parent_comment === null) {
 
         return (
-          <article key={theirComments.comment.id} className="comment-friend-index-item" >
-            <aside id="status-update-pic" style={profilePic}></aside>
-                  <div className="ec-comments-and-posts">
-                    <div id="ec-comment-first-section">
-                      {theirComments.comment.author_email}
+          <article className="create-comment-container">
+            <article key={theirComments.comment.id} className="comment-friend-index-item" >
+              <aside id="status-update-pic" style={profilePic}></aside>
+                    <div className="ec-comments-and-posts">
+                      <div id="ec-comment-first-section">
+                        {theirComments.comment.author_email}
+                      </div>
+                      <span className="ec-comment-body">
+                        {theirComments.comment.body}
+                          </span>
+    
+                      <section className="ec-comments-last-section">
+                        <div className="like-count">
+                          <aside id="like-symbol"></aside>
+                          <div>like count</div>
+                        </div>
+                        <div className="comment-count" onClick={this.hideAndShow}>
+                          <aside id='comment-symbol'></aside>
+                          <div>comment count</div>
+                        </div>
+                      </section>
+    
+                      { replies }
                     </div>
-                    <span className="ec-comment-body">
-                      {theirComments.comment.body}
-                        </span>
-  
-                    <section className="ec-comments-last-section">
-                      <div className="like-count">
-                        <aside id="like-symbol"></aside>
-                        <div>like count</div>
-                      </div>
-                      <div className="comment-count" onClick={this.hideAndShow}>
-                        <aside id='comment-symbol'></aside>
-                        <div>comment count</div>
-                      </div>
-                    </section>
-  
-                    { replies(theirComments.replies) }
-                  </div>
+            </article>
           </article>
         )
         // if not a parent comment...
@@ -102,42 +105,45 @@ class FriendIndexItem extends Component {
         let replyCollection = theirComments.replies;
           replyCollection[replyCollection.length] = comment;
         
+        replyIndex = replyCollection.map((com, i) => (
+          <Reply key={i} reply={com} deleteReply={this.deleteComment} />)
+        );
+
         return (
-          <article key={comment.id} className="comment-friend-index-item" >
-            <aside id="status-update-pic" style={profilePic}></aside>
-            <div className="ec-comments-and-posts">
-              <div id="ec-comment-first-section">
-                {parent_comment.author_email}
+          <article className="create-comment-container">
+            <article key={comment.id} className="comment-friend-index-item" >
+              <aside id="status-update-pic" style={profilePic}></aside>
+              <div className="ec-comments-and-posts">
+                <div id="ec-comment-first-section">
+                  {parent_comment.author_email}
+                </div>
+                <span className="ec-comment-body">
+                  {parent_comment.body}
+                </span>
+
+                <section className="ec-comments-last-section">
+                  <div className="like-count">
+                    <aside id="like-symbol"></aside>
+                    <div>like count</div>
+                  </div>
+                  <div className="comment-count" onClick={this.hideAndShow}>
+                    <aside id='comment-symbol'></aside>
+                    <div>comment count</div>
+                  </div>
+                </section>
+
+                { replies }
               </div>
-              <span className="ec-comment-body">
-                {parent_comment.body}
-              </span>
-
-              <section className="ec-comments-last-section">
-                <div className="like-count">
-                  <aside id="like-symbol"></aside>
-                  <div>like count</div>
-                </div>
-                <div className="comment-count" onClick={this.hideAndShow}>
-                  <aside id='comment-symbol'></aside>
-                  <div>comment count</div>
-                </div>
-              </section>
-
-              {replies(replyCollection)}
-            </div>
+            </article>
           </article>
         )
       }
-    };
+
 
     // below returns our render's return
     // if (this.props.comment['parent_comment_id'] === null) {
-      return (
-        <article className="create-comment-container">
-          { commentIndex }
-        </article>
-      )
+
+
     // } else {
     //   return (
     //     <div></div>
