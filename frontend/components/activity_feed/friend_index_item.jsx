@@ -48,9 +48,9 @@ class FriendIndexItem extends Component {
       backgroundImage: 'url(' + rabbit + ')'
     };
 
-    const { theirComments, subComments } = this.props;
+    const { theirComments } = this.props;
 
-    let replyIndex = subComments.map(com => (
+    let replyIndex = theirComments.replies.map(com => (
       <Reply key={com.id} reply={com} deleteReply={this.deleteComment} />)
     );
 
@@ -63,9 +63,11 @@ class FriendIndexItem extends Component {
       </form>
     </section>    
 
+
+
       // if a parent comment...
       if (theirComments.parent_comment === null) {
-
+        // debugger
         return (
           <article className="create-comment-container">
             <article key={theirComments.comment.id} className="comment-friend-index-item" >
@@ -97,9 +99,8 @@ class FriendIndexItem extends Component {
         // if not a parent comment...
       } else {
 
-        let { parent_comment, comment } = theirComments;
-        let replyCollection = subComments;
-          replyCollection[replyCollection.length] = comment;
+        let replyCollection = theirComments.replies.slice(0);
+          replyCollection[replyCollection.length] = theirComments.comment;
         
         replyIndex = replyCollection.map((com, i) => (
           <Reply key={i} reply={com} deleteReply={this.deleteComment} />)
@@ -107,14 +108,14 @@ class FriendIndexItem extends Component {
 
         return (
           <article className="create-comment-container">
-            <article key={comment.id} className="comment-friend-index-item" >
+            <article key={theirComments.comment.id} className="comment-friend-index-item" >
               <aside id="status-update-pic" style={profilePic}></aside>
               <div className="ec-comments-and-posts">
                 <div id="ec-comment-first-section">
-                  {parent_comment.author_email}
+                  {theirComments.parent_comment.author_email}
                 </div>
                 <span className="ec-comment-body">
-                  {parent_comment.body}
+                  {theirComments.parent_comment.body}
                 </span>
 
                 <section className="ec-comments-last-section">

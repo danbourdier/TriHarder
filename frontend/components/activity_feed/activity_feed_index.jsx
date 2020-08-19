@@ -54,6 +54,7 @@ class ActivityFeedIndex extends React.Component {
     let connectionCollection = [];
     // let newConnectionCollection = [];
     // array that contains [ [{}, {}], [{}], [] ]
+    //  [{}, {}, {}]
       Object.values(connections).map(connection => { 
         connectionCollection.push(...connection.all_the_user_comments)
       });
@@ -80,13 +81,13 @@ class ActivityFeedIndex extends React.Component {
       //     }
       //   }
       // }
-
+      debugger
     let index = this.state.ourCommentsOrTheirsFlag ? Object.values(comments).map(comment => (
       <IndexItem key={comment.id} allComments={this.props.comments} authorEmail={this.email} comment={comment} createComment={createComment} deleteComment={deleteComment} currentUserId={this.authorId}/>
     )) : connectionCollection.map((connection, i) => { 
-
+      // {parent_comment, comment, replies}
       return (
-        <FriendIndexItem key={i} theirComments={connection} subComments={connection.replies} createComment={createComment} deleteComment={deleteComment}/>
+        <FriendIndexItem key={i} theirComments={connection} createComment={createComment} deleteComment={deleteComment}/>
       )
     });
 
