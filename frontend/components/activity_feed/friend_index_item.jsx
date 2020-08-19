@@ -67,7 +67,7 @@ class FriendIndexItem extends Component {
 
       // if a parent comment...
       if (theirComments.parent_comment === null) {
-        // debugger
+
         return (
           <article className="create-comment-container">
             <article key={theirComments.comment.id} className="comment-friend-index-item" >

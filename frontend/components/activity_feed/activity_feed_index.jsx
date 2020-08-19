@@ -52,36 +52,33 @@ class ActivityFeedIndex extends React.Component {
   render() {
     let { createComment, comments, deleteComment, connections } = this.props;
     let connectionCollection = [];
-    // let newConnectionCollection = [];
+    let newConnectionCollection = [];
     // array that contains [ [{}, {}], [{}], [] ]
     //  [{}, {}, {}]
+
       Object.values(connections).map(connection => { 
         connectionCollection.push(...connection.all_the_user_comments)
       });
+      // checking for uniqueness
+      connectionCollection.forEach(con => { // if the collection below doesn't have an object with a key belonging to an iteration of the above collection then we push the entire object to a new collection
 
-      // for (let i = 0; i < connectionCollection.length; i += 1) {
-      //   const obj = connectionCollection[i];
-      //   // each obj contains:
-      //     // comment
-      //     // parent_comment
-      //     // replies - can contain x num of objects
-      //     if (!newConnectionCollection.includes(obj.comment)) {
-      //       newConnectionCollection.push(obj.comment);
-      //     }  
+        if (newConnectionCollection.length > 0) {
 
-      //     if (!newConnectionCollection.includes(obj.parent_comment)) {
-      //       newConnectionCollection.push(obj.parent_comment);
-      //     }
+          if (con.parent_comment) {
+            if (  newConnectionCollection.some(el => ( (el.comment.id !== con.parent_comment.id) || (el.comment.id !== con.comment.id) ) )  ) {
+              newConnectionCollection.push(con)
+            }
+          }
+
+        } else {
           
-      //   for (let j = 0; j < 4; j += 1) {
-      //     const nestedEle = obj[j];
+          newConnectionCollection.push(con)
+        }
 
-      //     if (!newConnectionCollection.includes(nestedEle)) {
-      //       newConnectionCollection.push(nestedEle)
-      //     }
-      //   }
-      // }
-      debugger
+      });
+      
+      // debugger
+
     let index = this.state.ourCommentsOrTheirsFlag ? Object.values(comments).map(comment => (
       <IndexItem key={comment.id} allComments={this.props.comments} authorEmail={this.email} comment={comment} createComment={createComment} deleteComment={deleteComment} currentUserId={this.authorId}/>
     )) : connectionCollection.map((connection, i) => { 
