@@ -22,6 +22,7 @@ validates :requestee, presence: true
         newObj = {}
         newObj['comment'] = comment
         newObj['parent_comment'] = comment.parent_comment
+        # newObj['parent_comment_replies'] = comment.parent_comment.child_comments
         newObj['replies'] = comment.child_comments
         collection << newObj
       end

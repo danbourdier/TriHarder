@@ -53,15 +53,12 @@ class ActivityFeedIndex extends React.Component {
     let { createComment, comments, deleteComment, connections } = this.props;
     let connectionCollection = [];
     let newConnectionCollection = [];
-    // array that contains [ [{}, {}], [{}], [] ]
-    //  [{}, {}, {}]
 
       Object.values(connections).map(connection => { 
         connectionCollection.push(...connection.all_the_user_comments)
       });
       // checking for uniqueness
       connectionCollection.forEach(con => { // if the collection below doesn't have an object with a key belonging to an iteration of the above collection then we push the entire object to a new collection
-
         if (newConnectionCollection.length > 0) {
 
           if (con.parent_comment) {
@@ -69,19 +66,16 @@ class ActivityFeedIndex extends React.Component {
               newConnectionCollection.push(con)
             }
           }
-
         } else {
           
           newConnectionCollection.push(con)
         }
 
       });
-      
-      // debugger
-
+      // console.log(newConnectionCollection)
     let index = this.state.ourCommentsOrTheirsFlag ? Object.values(comments).map(comment => (
       <IndexItem key={comment.id} allComments={this.props.comments} authorEmail={this.email} comment={comment} createComment={createComment} deleteComment={deleteComment} currentUserId={this.authorId}/>
-    )) : connectionCollection.map((connection, i) => { 
+    )) : newConnectionCollection.map((connection, i) => { 
       // {parent_comment, comment, replies}
       return (
         <FriendIndexItem key={i} theirComments={connection} createComment={createComment} deleteComment={deleteComment}/>

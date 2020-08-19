@@ -50,8 +50,15 @@ class FriendIndexItem extends Component {
 
     const { theirComments } = this.props;
 
-    let replyIndex = theirComments.replies.map(com => (
+    let replyCollection = theirComments.replies.slice(0);
+    replyCollection[replyCollection.length] = theirComments.comment;
+    
+
+
+    let replyIndex = !theirComments.parent_comment ? theirComments.replies.map(com => (
       <Reply key={com.id} reply={com} deleteReply={this.deleteComment} />)
+    ) : replyCollection.map((com, i) => (
+      <Reply key={i} reply={com} deleteReply={this.deleteComment} />)
     );
 
     let replies = this.state.hiddenFlag ? null : <section className="ec-comment-replies-section">
@@ -99,12 +106,13 @@ class FriendIndexItem extends Component {
         // if not a parent comment...
       } else {
 
-        let replyCollection = theirComments.replies.slice(0);
-          replyCollection[replyCollection.length] = theirComments.comment;
+        // let replyCollection = theirComments.replies.slice(0);
+        //   replyCollection[replyCollection.length] = theirComments.comment;
+        // debugger
         
-        replyIndex = replyCollection.map((com, i) => (
-          <Reply key={i} reply={com} deleteReply={this.deleteComment} />)
-        );
+        // replyIndex = replyCollection.map((com, i) => (
+        //   <Reply key={i} reply={com} deleteReply={this.deleteComment} />)
+        // );
 
         return (
           <article className="create-comment-container">
