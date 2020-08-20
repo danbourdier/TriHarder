@@ -45,7 +45,6 @@ class FriendIndexItem extends Component {
 
   render() {
 
-    debugger
 
     let profilePicCollection = [camel, shark, turtle, bear, squirrel]
 
@@ -83,6 +82,7 @@ class FriendIndexItem extends Component {
     
   // my attempt at hoisting
     var deleteButton;
+
 
       // if a parent comment...
       if (theirComments.parent_comment === null) {
@@ -122,7 +122,7 @@ class FriendIndexItem extends Component {
         // if not a parent comment...
       } else {
 
-        deleteButton = theirComments.comment.id === this.authorId ?
+        deleteButton = theirComments.parent_comment.id === this.authorId ?
           <span className="delete-button" onClick={this.handleClick(theirComments.comment.id)}>X</span> :
           null;
 
