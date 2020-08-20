@@ -7,6 +7,8 @@ class FriendIndexItem extends Component {
     super(props)
     this.state = { hiddenFlag: true, postBody: "" }
 
+    this.authorId = this.props.currentUserId;
+
     this.createComment = this.props.createComment;
     this.deleteComment = this.props.deleteComment;
 
@@ -84,8 +86,10 @@ class FriendIndexItem extends Component {
 
       // if a parent comment...
       if (theirComments.parent_comment === null) {
-        deleteButton = theirComments.comment.id === 
-          <span className="delete-button" onClick={this.handleClick}>X</span>
+
+        deleteButton = theirComments.comment.id === this.authorId ? 
+          <span className="delete-button" onClick={ this.handleClick(theirComments.comment.id)  }>X</span> :
+          null;
 
         return (
           <article className="create-comment-container">
@@ -93,7 +97,7 @@ class FriendIndexItem extends Component {
               <aside id="status-update-pic" style={profilePic}></aside>
                     <div className="ec-comments-and-posts">
                       <div id="ec-comment-first-section">
-                        {theirComments.comment.author_email} <span className="delete-button" onClick={ this.handleClick(theirComments.comment.id) }>X</span>
+                        { theirComments.comment.author_email } { deleteButton }
                       </div>
                       <span className="ec-comment-body">
                         {theirComments.comment.body}
@@ -118,6 +122,9 @@ class FriendIndexItem extends Component {
         // if not a parent comment...
       } else {
 
+        deleteButton = theirComments.comment.id === this.authorId ?
+          <span className="delete-button" onClick={this.handleClick(theirComments.comment.id)}>X</span> :
+          null;
 
         return (
           <article className="create-comment-container">
@@ -125,7 +132,7 @@ class FriendIndexItem extends Component {
               <aside id="status-update-pic" style={profilePic}></aside>
               <div className="ec-comments-and-posts">
                 <div id="ec-comment-first-section">
-                  {theirComments.parent_comment.author_email} <span className="delete-button" onClick={this.handleClick}>X</span>
+                  {theirComments.parent_comment.author_email} { deleteButton }
                 </div>
                 <span className="ec-comment-body">
                   {theirComments.parent_comment.body}
