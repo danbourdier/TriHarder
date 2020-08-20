@@ -87,7 +87,7 @@ class FriendIndexItem extends Component {
               <aside id="status-update-pic" style={profilePic}></aside>
                     <div className="ec-comments-and-posts">
                       <div id="ec-comment-first-section">
-                        {theirComments.comment.author_email}
+                        {theirComments.comment.author_email} <span className="delete-button" onClick={ this.handleClick }>X</span>
                       </div>
                       <span className="ec-comment-body">
                         {theirComments.comment.body}
@@ -112,13 +112,6 @@ class FriendIndexItem extends Component {
         // if not a parent comment...
       } else {
 
-        // let replyCollection = theirComments.replies.slice(0);
-        //   replyCollection[replyCollection.length] = theirComments.comment;
-        // debugger
-        
-        // replyIndex = replyCollection.map((com, i) => (
-        //   <Reply key={i} reply={com} deleteReply={this.deleteComment} />)
-        // );
 
         return (
           <article className="create-comment-container">
@@ -126,7 +119,7 @@ class FriendIndexItem extends Component {
               <aside id="status-update-pic" style={profilePic}></aside>
               <div className="ec-comments-and-posts">
                 <div id="ec-comment-first-section">
-                  {theirComments.parent_comment.author_email}
+                  {theirComments.parent_comment.author_email} <span className="delete-button" onClick={this.handleClick}>X</span>
                 </div>
                 <span className="ec-comment-body">
                   {theirComments.parent_comment.body}
