@@ -40,7 +40,7 @@ class FriendIndexItem extends Component {
 
   handleClick(field) {
     // return this.deleteComment(this.commentId) // FIX <--------------
-    return this.deleteComment(field) // FIX <--------------
+    return e => this.deleteComment(field) // FIX <--------------
   }
 
   render() {
