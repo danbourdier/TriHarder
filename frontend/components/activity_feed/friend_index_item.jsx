@@ -34,6 +34,10 @@ class FriendIndexItem extends Component {
     this.createComment(payload);
   }
 
+  handleClick() {
+    return this.deleteComment(this.commentId)
+  }
+
   render() {
 
     let profilePicCollection = [camel, shark, turtle, bear, squirrel]
