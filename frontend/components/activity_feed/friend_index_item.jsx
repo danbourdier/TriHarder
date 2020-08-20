@@ -8,6 +8,7 @@ class FriendIndexItem extends Component {
     this.state = { hiddenFlag: true, postBody: "" }
 
     this.authorId = this.props.currentUserId;
+    this.authorEmail = this.props.authorEmail;
 
     this.createComment = this.props.createComment;
     this.deleteComment = this.props.deleteComment;
@@ -30,9 +31,9 @@ class FriendIndexItem extends Component {
     let payload = Object.assign({},
       {
         'body': this.state.postBody,
-        // 'author_email': this.authorEmail,
+        'author_email': this.authorEmail,
         // 'parent_comment_id': this.commentId,
-        // 'author_id': this.authorId
+        'author_id': this.authorId
       })
 
     this.createComment(payload);
@@ -62,7 +63,7 @@ class FriendIndexItem extends Component {
     // my attempt at hoisting
       // instantiated to develop logic in rendering delete button only for authored activity
     var deleteButtonMain;
-    
+
 
     let replyCollection = theirComments.replies.slice(0);
     replyCollection[replyCollection.length] = theirComments.comment;
