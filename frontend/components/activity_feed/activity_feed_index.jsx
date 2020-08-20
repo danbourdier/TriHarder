@@ -25,9 +25,6 @@ class ActivityFeedIndex extends React.Component {
     if (Object.values(prevProps.comments).length !== Object.values(this.props.comments).length) {
       this.props.getComments();
     }
-    // if (Object.values(prevProps.comments).length !== Object.values(this.props.comments).length) {
-    //   this.props.getComments();
-    // }
   }
 
   friendFlip() {
