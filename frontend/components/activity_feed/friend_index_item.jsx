@@ -36,11 +36,14 @@ class FriendIndexItem extends Component {
     this.createComment(payload);
   }
 
-  handleClick() {
-    return this.deleteComment(this.commentId)
+  handleClick(field) {
+    // return this.deleteComment(this.commentId) // FIX <--------------
+    return this.deleteComment(field) // FIX <--------------
   }
 
   render() {
+
+    debugger
 
     let profilePicCollection = [camel, shark, turtle, bear, squirrel]
 
@@ -75,11 +78,14 @@ class FriendIndexItem extends Component {
         <button id="reply-form-post-button" type="submit">POST</button>
       </form>
     </section>    
-
-
+    
+  // my attempt at hoisting
+    var deleteButton;
 
       // if a parent comment...
       if (theirComments.parent_comment === null) {
+        deleteButton = theirComments.comment.id === 
+          <span className="delete-button" onClick={this.handleClick}>X</span>
 
         return (
           <article className="create-comment-container">
@@ -87,7 +93,7 @@ class FriendIndexItem extends Component {
               <aside id="status-update-pic" style={profilePic}></aside>
                     <div className="ec-comments-and-posts">
                       <div id="ec-comment-first-section">
-                        {theirComments.comment.author_email} <span className="delete-button" onClick={ this.handleClick }>X</span>
+                        {theirComments.comment.author_email} <span className="delete-button" onClick={ this.handleClick(theirComments.comment.id) }>X</span>
                       </div>
                       <span className="ec-comment-body">
                         {theirComments.comment.body}

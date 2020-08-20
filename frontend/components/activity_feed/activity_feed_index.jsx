@@ -78,7 +78,7 @@ class ActivityFeedIndex extends React.Component {
     )) : newConnectionCollection.map((connection, i) => { 
       // {parent_comment, comment, replies}
       return (
-        <FriendIndexItem key={i} theirComments={connection} createComment={createComment} deleteComment={deleteComment}/>
+        <FriendIndexItem key={i} theirComments={connection} createComment={createComment} deleteComment={deleteComment} currentUserId={this.authorId} />
       )
     });
 
