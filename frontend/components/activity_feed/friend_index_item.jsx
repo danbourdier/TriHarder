@@ -32,7 +32,8 @@ class FriendIndexItem extends Component {
       {
         'body': this.state.postBody,
         'author_email': this.authorEmail,
-        // 'parent_comment_id': this.commentId,
+        'parent_comment_id':  this.props.theirComments.parent_comment === null ? 
+          this.props.theirComments.comment.id : this.props.theirComments.parent_comment.id ,
         'author_id': this.authorId
       })
 
