@@ -66,8 +66,9 @@ class FriendIndexItem extends Component {
     var deleteButtonMain;
 
 
-    let replyCollection = theirComments.replies.slice(0);
-    replyCollection[replyCollection.length] = theirComments.comment;
+    // let replyCollection = theirComments.replies.slice(0);
+    // replyCollection[replyCollection.length] = theirComments.comment;
+    let replyCollection = theirComments.parent_comment_replies;
     
 
     let replyIndex = !theirComments.parent_comment ? theirComments.replies.map(com => (
