@@ -11,6 +11,8 @@ class FriendIndexItem extends Component {
     this.deleteComment = this.props.deleteComment;
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+
     this.hideAndShow = this.hideAndShow.bind(this);
   }
 
