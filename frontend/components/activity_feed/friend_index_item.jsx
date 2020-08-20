@@ -45,7 +45,6 @@ class FriendIndexItem extends Component {
 
   render() {
 
-
     let profilePicCollection = [camel, shark, turtle, bear, squirrel]
 
     let profilePic = {
@@ -60,15 +59,19 @@ class FriendIndexItem extends Component {
 
     const { theirComments } = this.props;
 
+    // my attempt at hoisting
+      // instantiated to develop logic in rendering delete button only for authored activity
+    var deleteButtonMain;
+    
+
     let replyCollection = theirComments.replies.slice(0);
     replyCollection[replyCollection.length] = theirComments.comment;
     
 
-
     let replyIndex = !theirComments.parent_comment ? theirComments.replies.map(com => (
-      <Reply key={com.id} reply={com} deleteReply={this.deleteComment} />)
+      <Reply key={com.id} reply={com} deleteReply={this.deleteComment} authorId={this.authorId} />)
     ) : replyCollection.map((com, i) => (
-      <Reply key={i} reply={com} deleteReply={this.deleteComment} />)
+      <Reply key={i} reply={com} deleteReply={this.deleteComment} authorId={this.authorId} />)
     );
 
     let replies = this.state.hiddenFlag ? null : <section className="ec-comment-replies-section">
@@ -80,14 +83,11 @@ class FriendIndexItem extends Component {
       </form>
     </section>    
     
-  // my attempt at hoisting
-    var deleteButton;
-
 
       // if a parent comment...
       if (theirComments.parent_comment === null) {
 
-        deleteButton = theirComments.comment.id === this.authorId ? 
+        deleteButtonMain = theirComments.comment.id === this.authorId ? 
           <span className="delete-button" onClick={ this.handleClick(theirComments.comment.id)  }>X</span> :
           null;
 
@@ -97,7 +97,7 @@ class FriendIndexItem extends Component {
               <aside id="status-update-pic" style={profilePic}></aside>
                     <div className="ec-comments-and-posts">
                       <div id="ec-comment-first-section">
-                        { theirComments.comment.author_email } { deleteButton }
+                        { theirComments.comment.author_email } { deleteButtonMain }
                       </div>
                       <span className="ec-comment-body">
                         {theirComments.comment.body}
@@ -122,7 +122,7 @@ class FriendIndexItem extends Component {
         // if not a parent comment...
       } else {
 
-        deleteButton = theirComments.parent_comment.id === this.authorId ?
+        deleteButtonMain = theirComments.parent_comment.id === this.authorId ?
           <span className="delete-button" onClick={this.handleClick(theirComments.comment.id)}>X</span> :
           null;
 
@@ -132,7 +132,7 @@ class FriendIndexItem extends Component {
               <aside id="status-update-pic" style={profilePic}></aside>
               <div className="ec-comments-and-posts">
                 <div id="ec-comment-first-section">
-                  {theirComments.parent_comment.author_email} { deleteButton }
+                  {theirComments.parent_comment.author_email} { deleteButtonMain }
                 </div>
                 <span className="ec-comment-body">
                   {theirComments.parent_comment.body}

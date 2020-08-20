@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 class Reply extends Component {
   constructor(props) {
     super(props)
+    this.currentUserId = this.props.authorId;
 
     this.reply = this.props.reply;
     this.handleClick = this.handleClick.bind(this)
@@ -14,7 +15,14 @@ class Reply extends Component {
   }
 
   render () {
-    const { author_email, body } = this.props.reply;
+    const { author_email, body, id } = this.props.reply;
+
+    // instantiated to develop logic in rendering delete button only for authored sub-activity
+    let deleteButtonSub = this.currentUserId === id ?
+      <aside onClick={this.handleClick}>
+          delete
+        </aside> :
+      null;
 
     return  (
       <article className="ec-comment-reply-container">
@@ -28,9 +36,7 @@ class Reply extends Component {
           </span>
         </section>
 
-        <aside onClick={this.handleClick}>
-          delete
-        </aside>
+        { deleteButtonSub }
       </article>
     )
   }
