@@ -25,6 +25,13 @@ class FriendIndexItem extends Component {
     return e => this.setState({ [field]: e.currentTarget.value })
   }
 
+  componentDidUpdate(prevProps) {
+    if ( prevProps.parent_comment_replies.length !== this.props.prevIndicator.parent_comment_replies.length ) {
+      this.props.stateRefresh();
+    }
+
+  }
+
   handleSubmit() {
     let payload = Object.assign({},
       {
