@@ -9,13 +9,11 @@ class FriendIndexItem extends Component {
 
     this.authorId = this.props.currentUserId;
     this.authorEmail = this.props.authorEmail;
-
     this.createComment = this.props.createComment;
     this.deleteComment = this.props.deleteComment;
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleClick = this.handleClick.bind(this);
-
     this.hideAndShow = this.hideAndShow.bind(this);
   }
 
@@ -41,7 +39,6 @@ class FriendIndexItem extends Component {
   }
 
   handleClick(field) {
-
     return e => this.deleteComment(field) 
   }
 
