@@ -23,8 +23,6 @@ validates :requestee, presence: true
         newObj = {}
         newObj['comment'] = comment
         newObj['parent_comment'] = comment.parent_comment
-        # debugger
-        # newObj['parent_comment_replies'] = comment.parent_comment.child_comments
         comment.parent_comment ? newObj['parent_comment_replies'] = comment.parent_comment.child_comments : newObj['parent_comment_replies'] = []
         newObj['replies'] = comment.child_comments
         collection << newObj

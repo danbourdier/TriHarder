@@ -16,7 +16,7 @@ class Reply extends Component {
 
   render () {
     const { author_email, body, author_id } = this.props.reply;
-    // debugger
+
     // instantiated to develop logic in rendering delete button only for authored sub-activity
     let deleteButtonSub = this.currentUserId === author_id ?
       <aside onClick={this.handleClick}>
