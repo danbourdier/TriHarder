@@ -22,7 +22,6 @@ class ActivityFeedIndex extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
-    
     if (Object.values(prevProps.comments).length !== Object.values(this.props.comments).length) {
       this.props.getComments();
     }
@@ -52,18 +51,20 @@ class ActivityFeedIndex extends React.Component {
     let connectionCollection = [];
     let newConnectionCollection = [];
 
-      Object.values(connections).map(connection => { 
-        connectionCollection.push(...connection.all_the_user_comments)
-      });
+      Object.values(connections).map(connection => { connectionCollection.push(...connection.all_the_user_comments) });
       // checking for uniqueness
-      connectionCollection.forEach(con => { // if the collection below doesn't have an object with a key belonging to an iteration of the above collection then we push the entire object to a new collection
+      connectionCollection.forEach(con => { // if the collection below doesn't 
+          // have an object with a key belonging to an iteration of the above 
+            // collection then we push the entire object to a new collection
         if (newConnectionCollection.length > 0) {
 
           if (con.parent_comment) {
-            if (  newConnectionCollection.some(el => ( (el.comment.id !== con.parent_comment.id) || (el.comment.id !== con.comment.id) ) )  ) {
+            if (  newConnectionCollection.some(el => ( 
+                (el.comment.id !== con.parent_comment.id) || (el.comment.id !== con.comment.id) ) 
+                  )) {
               newConnectionCollection.push(con)
+              }
             }
-          }
         } else {
           
           newConnectionCollection.push(con)
@@ -71,27 +72,35 @@ class ActivityFeedIndex extends React.Component {
 
       });
       // console.log(newConnectionCollection)
-    let index = this.state.ourCommentsOrTheirsFlag ? Object.values(comments).map(comment => (
-      <IndexItem key={comment.id} allComments={this.props.comments} authorEmail={this.email} comment={comment} createComment={createComment} deleteComment={deleteComment} currentUserId={this.authorId}/>
-    )) : newConnectionCollection.map((connection, i) => { 
-      // {parent_comment, comment, replies}
-      return (
-        <FriendIndexItem key={i} theirComments={connection} prevIndicator={connection} 
-                         createComment={createComment} deleteComment={deleteComment}
-                         currentUserId={this.authorId} authorEmail={this.email} 
-                         stateRefresh={this.props.getConnections}
-                         />
-      )
-    });
+    let index = this.state.ourCommentsOrTheirsFlag ? 
+      Object.values(comments).map(comment => (
+        <IndexItem 
+          key={comment.id} allComments={this.props.comments} 
+          authorEmail={this.email} comment={comment} 
+          createComment={createComment} deleteComment={deleteComment} 
+          currentUserId={this.authorId}
+        />
+      )) : newConnectionCollection.map((connection, i) => { 
+          // {parent_comment, comment, replies}
+          return (
+            <FriendIndexItem 
+              key={i} theirComments={connection} prevIndicator={connection} 
+              createComment={createComment} deleteComment={deleteComment}
+              currentUserId={this.authorId} authorEmail={this.email} 
+            />
+          )
+        });
 
     let profilePic = {
       backgroundSize: 'cover',
       backgroundImage: 'url(' + rabbit + ')'
     };
 
-    let postButtonContainer = this.state.body.length < 1 ? null : <aside className="create-comment-hidden-posting">
-                                <button type="submit">POST</button>
-                              </aside>
+    let postButtonContainer = this.state.body.length < 1 ? null :
+       <aside className="create-comment-hidden-posting">
+          <button type="submit">POST</button>
+        </aside>
+
     return (
       <div id="activity-feed-container">
         <section className="create-comment-container">

@@ -25,13 +25,6 @@ class FriendIndexItem extends Component {
     return e => this.setState({ [field]: e.currentTarget.value })
   }
 
-  componentDidUpdate(prevProps) {
-    if ( prevProps.parent_comment_replies.length !== this.props.prevIndicator.parent_comment_replies.length ) {
-      this.props.stateRefresh();
-    }
-
-  }
-
   handleSubmit() {
     let payload = Object.assign({},
       {
@@ -69,9 +62,6 @@ class FriendIndexItem extends Component {
       // instantiated to develop logic in rendering delete button only for authored activity
     var deleteButtonMain;
 
-
-    // let replyCollection = theirComments.replies.slice(0);
-    // replyCollection[replyCollection.length] = theirComments.comment;
     let replyCollection = theirComments.parent_comment_replies;
     
 

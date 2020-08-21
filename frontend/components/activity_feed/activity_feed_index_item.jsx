@@ -64,7 +64,7 @@ class ActivityFeedIndexItem extends Component {
     let { sub_comments } = this.props.comment;
     // this maps and renders our replies!
     let replyIndex = sub_comments.map(com => (
-      <Reply key={com.id} reply={com} deleteReply={this.deleteComment} />
+      <Reply key={com.id} reply={com} deleteReply={this.deleteComment} authorId={this.authorId}/>
     ));
 
     let replies = this.state.hiddenFlag ? null : <section className="ec-comment-replies-section">
