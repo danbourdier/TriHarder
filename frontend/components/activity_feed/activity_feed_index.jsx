@@ -22,6 +22,7 @@ class ActivityFeedIndex extends React.Component {
   }
 
   componentDidUpdate(prevProps) {
+    
     if (Object.values(prevProps.comments).length !== Object.values(this.props.comments).length) {
       this.props.getComments();
     }
