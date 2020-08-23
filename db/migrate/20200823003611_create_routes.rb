@@ -1,5 +1,5 @@
 class CreateRoutes < ActiveRecord::Migration[5.2]
-  drop_table :routes
+
   def change
     create_table :routes do |t|
       t.string :title, null: false
