@@ -10,7 +10,7 @@ class RouteMap extends Component {
     super(props);
     this.state = { total_time: 0, distance: 0, lastLegDuration: 0, 
       lastDistanceLeg: 0, title: "", activity: "", description: "", 
-      start_point: "", end_point: "", check: false, route_data: ""
+      start_point: "", end_point: "", check: false, route_data: "[]"
     };
     // array below used so we can store our points and conveniently delete them
     this.points = [];
