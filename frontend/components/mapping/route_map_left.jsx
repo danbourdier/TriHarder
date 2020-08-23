@@ -50,7 +50,7 @@ class RouteMapLeft extends Component {
 
   render() {
     let { activity, description, distance, title, 
-        total_time, start_point, end_point } = this.props.thatState
+        total_time, start_point, end_point, route_data } = this.props.thatState
     
     let newRoute = Object.assign({}, {
       'activity': activity,
@@ -60,7 +60,8 @@ class RouteMapLeft extends Component {
       'description': description,
       'start_point': start_point,
       'end_point': end_point,
-      'user_id': window.getState().entities.users[Number(Object.keys(window.getState().entities.users)[0])].id
+      'user_id': window.getState().entities.users[Number(Object.keys(window.getState().entities.users)[0])].id,
+      'route_data': route_data
     });
 
     return (
