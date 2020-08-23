@@ -59,7 +59,7 @@ class RouteMap extends Component {
   }
 
   handleClick(arg) {
-    const {createRoute} = this.props; // when destructuring objects we must name the names of keys we want
+    const { createRoute } = this.props; // when destructuring objects we must name the names of keys we want
 
     return () => createRoute(arg);
   }
@@ -130,7 +130,7 @@ class RouteMap extends Component {
     // below code serves the purpose of closure or *variable scoping*
     // we needed closure because the context of *this* in the api res is applied to a different class
     let that = this;
-
+    debugger
     this.directionsService.route({
       origin: latLng,
       destination: latLng,
@@ -294,6 +294,7 @@ class RouteMap extends Component {
             total_time={this.state.total_time} 
             distance={this.state.distance} 
             createComment={this.createRouteComment}
+            points={this.points}
           />
 
           <section  
