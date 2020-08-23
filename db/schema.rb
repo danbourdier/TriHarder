@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_21_215841) do
+ActiveRecord::Schema.define(version: 2020_08_23_003611) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 2020_07_21_215841) do
     t.string "start_point", null: false
     t.string "end_point", null: false
     t.integer "user_id", null: false
+    t.string "route_data"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["title"], name: "index_routes_on_title", unique: true

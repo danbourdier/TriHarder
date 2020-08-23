@@ -1,4 +1,5 @@
 class CreateRoutes < ActiveRecord::Migration[5.2]
+  drop_table :routes
   def change
     create_table :routes do |t|
       t.string :title, null: false
@@ -9,6 +10,7 @@ class CreateRoutes < ActiveRecord::Migration[5.2]
       t.string :start_point, null: false
       t.string :end_point, null: false
       t.integer :user_id, null: false
+      t.string :route_data
 
       t.timestamps
     end
