@@ -14,10 +14,11 @@
 #  created_at  :datetime         not null
 #  updated_at  :datetime         not null
 #
+
 class Route < ApplicationRecord
 
   validates :title, :total_time, :activity, :distance, :description, :start_point,
-      :end_point, :user_id, presence: true
+      :end_point, :user_id, :route_date, presence: true
   validates :activity, :title, :description, length: { minimum: 3 }
 
   belongs_to :user, 
