@@ -1,12 +1,16 @@
  
 
-export const createRoute = route => (
-  $.ajax({
-    method: "post",
-    url: "/api/routes",
-    data: { route },
-  })
-);
+export const createRoute = route => {
+
+
+  return (
+    $.ajax({
+      method: "post",
+      url: "/api/routes",
+      data: { route },
+    })
+  )
+};
 
 export const deleteRoute = routeId => (
   $.ajax({

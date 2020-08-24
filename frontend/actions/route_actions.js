@@ -34,10 +34,13 @@ const changeRoute = route => ({
 })
 //////////////
 
-export const createRoute = route => dispatch => (
-  RouteUtil.createRoute(route)
-    .then(route => dispatch(receiveRoute(route)), errors => dispatch(receiveErrors(errors)) )
-);
+export const createRoute = route => dispatch => {
+
+  return (
+    RouteUtil.createRoute(route)
+      .then(route => dispatch(receiveRoute(route)), errors => dispatch(receiveErrors(errors)) )
+  )
+};
 
 export const deleteRoute = routeId => dispatch => (
   RouteUtil.deleteRoute(routeId)
