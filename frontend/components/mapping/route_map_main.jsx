@@ -62,7 +62,7 @@ class RouteMap extends Component {
     const { createRoute } = this.props; // when destructuring objects we must name the names of keys we want
 
     return () => {
-      debugger
+
       createRoute(arg)
     };
   }

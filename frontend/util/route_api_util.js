@@ -2,7 +2,6 @@
 
 export const createRoute = route => {
 
-  debugger
   return (
     $.ajax({
       method: "post",
