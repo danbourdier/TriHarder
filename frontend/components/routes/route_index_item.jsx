@@ -40,9 +40,7 @@ class RouteIndexItem extends Component {
 
       <li className="route-index-item">
 
-        {/* <section className="route-index-item-first-section">
-          map picture 
-        </section> */}
+        
         {/*  */}
         <section className="route-index-item-second-section">
         <Link to="">{title}</Link>
