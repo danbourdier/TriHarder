@@ -43,7 +43,7 @@ class RouteIndexItem extends Component {
         
         {/*  */}
         <section className="route-index-item-second-section">
-        <Link to="">{title}</Link>
+        <Link to={`/routes/${id}`}>{title}</Link>
           <p>Distance </p>
           <span>{Number(distance).toFixed(2)}<p id="ec-mi-next-to-big">mi</p></span>
         </section>
