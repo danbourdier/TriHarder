@@ -15,6 +15,7 @@ import ActivityFeedContainer from './activity_feed/activity_feed_container';
 import WorkOutFormContainer from './workouts/workout_container';
 import HeaderMainContainer from './header/header_main_container';
 import FooterContainer from './footer/footer_container';
+import RouteShowContainer from './routes/route_show_container';
 
 const App = () => (
   <div className="render"> 
@@ -31,7 +32,7 @@ const App = () => (
           <AuthRoute exact path="/signup" component={SignupFormContainer} />
           <ProtectedRoute exact path="/home_page" component={HomePageContainer}/>
           <ProtectedRoute exact path="/map" component={SearchContainer} />
-          <ProtectedRoute exact path="/routes/:routeId" component={RouteShow} />
+          <ProtectedRoute exact path="/routes/:routeId" component={RouteShowContainer} />
           <ProtectedRoute exact path="/activity_feed" component={ActivityFeedContainer} />
           <ProtectedRoute exact path="/friends" component={FriendsContainer} />
           <ProtectedRoute exact path="/find_friends" component={FriendFinderContainer} />
