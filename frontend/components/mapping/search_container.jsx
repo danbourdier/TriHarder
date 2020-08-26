@@ -8,13 +8,6 @@ const mSTP = (state, ownProps) => {
 
 
   return {
-    title: "",
-    total_time: 0,
-    activity: "",
-    distance: 0,
-    description: "",
-    start_point: "",
-    end_point: "",
     currentErrors: state.errors.routes,
     routes: state.entities.routes,
     currentUser: state.entities.users[state.session.id],
