@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { Redirect } from 'react-router-dom';
 
 class Route extends Component {
   constructor(props) {
@@ -13,9 +14,10 @@ class Route extends Component {
   }
 
 
+
+
   render () {
 
-    if (this.route) {
       const { total_time, distance, activity, description, 
         title, created_at, updated_at 
       } = this.route
@@ -28,9 +30,7 @@ class Route extends Component {
         </main>
       )
 
-    } else {
-      return <div></div>
-    }
+
     
 
     

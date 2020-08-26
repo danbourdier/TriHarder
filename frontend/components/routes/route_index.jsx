@@ -39,10 +39,7 @@ class RouteIndex extends Component {
 
     return (
       <div className="route-index-container">
-        {/* <section className="route-index-blue-buttons">
-          <div><a href="">Lifetime Stats</a></div>
-          <div><a href="">View Calendar</a></div>
-        </section> */}
+       
         <div id="chart-container-9429">
           <RouteChartTotals cal={totalCalories} time={totalTime} distance={totalDistance} numWorkouts={totalWorkouts} />
           <aside className="jss7891">
