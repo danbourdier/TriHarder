@@ -5,7 +5,7 @@ import { createRoute } from '../../actions/route_actions'
 import { createComment } from '../../actions/comment_actions';
 
 const mSTP = (state, ownProps) => {
-  debugger
+
 
   return {
     title: "",

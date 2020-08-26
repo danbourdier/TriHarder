@@ -52,7 +52,7 @@ class RouteMap extends Component {
         'body': `${this.props.currentUser.email} has completed a ${this.props.lastRoute.activity}! `,
         'author_id': this.props.currentUser.id
       });
-
+ 
       this.createRouteComment(postRouteComment);
       this.setState({check: true})
     }
