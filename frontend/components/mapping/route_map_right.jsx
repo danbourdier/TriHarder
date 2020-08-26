@@ -20,7 +20,6 @@ class RouteMapRight extends Component {
           
           </div>
         </div>
-        {/* <div>ESTIMATED TIME: &nbsp;{total_time}&nbsp;Minutes</div> */}
         <section className="map-page-right-buttons-container">
           <button onClick={nullAllPoints}>Clear All Points</button>
           <button onClick={nullPoint}>Clear Last Point</button>

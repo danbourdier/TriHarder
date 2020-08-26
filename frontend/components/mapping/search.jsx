@@ -8,7 +8,6 @@ const Search = props => (
 
   <div>
     <RouteMap {...props}/>
-{/* RouteMap crestRoute activity description */}
   </div>
 )
 
