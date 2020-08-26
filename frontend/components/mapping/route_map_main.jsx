@@ -18,10 +18,6 @@ class RouteMap extends Component {
     // props
     this.createRouteComment = this.props.createComment;
 
-    // tied to our route creation and our info display on right of map
-    this.total_time = this.props.total_time;
-    this.distance = this.props.distance;
-
     // our binded class methods
     this.calcRouteAndRender = this.calcRouteAndRender.bind(this);
     this.createPoint = this.createPoint.bind(this);

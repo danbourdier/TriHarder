@@ -7,6 +7,18 @@ class Route extends Component {
 
     this.route = this.props.route
 
+    this.points = [];
+
+    this.total_time = this.props.total_time;
+    this.distance = this.props.distance;
+
+    // our binded class methods
+    this.calcRouteAndRender = this.calcRouteAndRender.bind(this);
+    this.createPoint = this.createPoint.bind(this);
+    this.handleClick = this.handleClick.bind(this);
+    this.setStatePos = this.setStatePos.bind(this)
+    this.geocodeAddress = this.geocodeAddress.bind(this);
+
   }
 
   componentDidMount() {
