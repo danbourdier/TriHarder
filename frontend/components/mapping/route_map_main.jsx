@@ -77,7 +77,7 @@ class RouteMap extends Component {
     let map;
     const mapOptions = {
       center: { lat: 40.744661381538805, lng: -73.98616038721435 },
-      zoom: 17, // zoom level bench marks are 0: globeview, 5: continent view, 10: state...
+      zoom: 15, // zoom level bench marks are 0: globeview, 5: continent view, 10: state...
       styles: [
         {
           'featureType': 'poi',
