@@ -57,7 +57,7 @@ route1 = Route.create!(title: "Pompeii Speedrun", total_time: 2.10, activity: "r
 route1a = Route.create!(title: "Bike Bonanza", total_time: 35.29, activity: "bike", 
   distance: 32.35, description: "Hills and scenery for the biker", start_point: "Fort Bragg, All American Expressway (Gruber Gate)", 
   end_point: "Fort Bragg, 82nd Land", user_id: demo.id, 
-  route_data: "[{\"lat\":\"40.725962147255785\",\"lng\":\"-74.00713919405854\"},
+  route_data: "[{\"lat\":40.725962147255785,\"lng\":-74.00713919405854},
     {\"lat\":40.70696605646243,\"lng\":-74.01160238985932},
     {\"lat\":40.714252869067494,\"lng\":-73.98173331026948},
     {\"lat\":40.735848378070145,\"lng\":-73.97795675997651}]",

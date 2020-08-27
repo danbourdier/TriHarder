@@ -11,6 +11,7 @@ class Route extends Component {
     };
 
     this.route = this.props.route
+    debugger
     this.routeData = JSON.parse(this.route.route_data)
     // used by our maps service to store and reference markers
     this.points = [];
