@@ -6,7 +6,7 @@ class Route extends Component {
     super(props)
 
     this.route = this.props.route
-
+    this.routeData = JSON.parse(this.route.route_data)
     // used by our maps service to store and reference markers
     this.points = [];
 
@@ -60,6 +60,8 @@ class Route extends Component {
     google.maps.event.addListener(this.map, 'click', (e) => {
       this.createPoint(e.latLng);
     });
+
+
 
 
   }
@@ -165,7 +167,7 @@ class Route extends Component {
 
 
   render () {
-
+      debugger
       const { total_time, distance, activity, description, 
         title, created_at, updated_at 
       } = this.route
