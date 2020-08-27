@@ -56,15 +56,7 @@ class Route extends Component {
     this.directionsDisplay.setMap(this.map);
     // this.directionsDisplay.setMap(map);
 
-    // our ONLY map event listener with the purpose of creating points with a call to #createPoint
-    google.maps.event.addListener(this.map, 'click', (e) => {
-      this.createPoint(e.latLng);
-    });
-
-
-    // example element in our route_data above
-// [24.1234115, -74.123124]
-    // we want to convert each element in such a way that it can be successfully processed by the below function
+    
 
   }
 
