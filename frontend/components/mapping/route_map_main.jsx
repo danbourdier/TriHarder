@@ -56,9 +56,7 @@ class RouteMap extends Component {
 
   handleClick(arg) {
     const { createRoute } = this.props; // when destructuring objects we must name the names of keys we want
-
     return () => {
-
       createRoute(arg)
     };
   }

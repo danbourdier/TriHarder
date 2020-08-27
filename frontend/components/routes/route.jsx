@@ -4,6 +4,11 @@ import { Redirect } from 'react-router-dom';
 class Route extends Component {
   constructor(props) {
     super(props)
+    this.state = {
+      total_time: 0, distance: 0, lastLegDuration: 0,
+      lastDistanceLeg: 0, title: "", activity: "", description: "",
+      start_point: "", end_point: "", check: false, route_data: []
+    };
 
     this.route = this.props.route
     this.routeData = JSON.parse(this.route.route_data)
