@@ -11,7 +11,6 @@ class Route extends Component {
     };
 
     this.route = this.props.route
-    debugger
     this.routeData = JSON.parse(this.route.route_data)
     // used by our maps service to store and reference markers
     this.points = [];
@@ -32,7 +31,7 @@ class Route extends Component {
   componentDidMount() {
     let map;
     const mapOptions = {
-      center: { lat: 40.744661381538805, lng: -73.98616038721435 },
+      center: { lat: this.routeData[0].lat, lng: this.routeData[0].lng},
       zoom: 17, // zoom level bench marks are 0: globeview, 5: continent view, 10: state...
       styles: [
         {
