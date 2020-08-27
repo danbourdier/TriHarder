@@ -13,8 +13,7 @@ class Route extends Component {
     // our binded class methods
     this.calcRouteAndRender = this.calcRouteAndRender.bind(this);
     this.createPoint = this.createPoint.bind(this);
-    // this.handleClick = this.handleClick.bind(this);
-    // this.setStatePos = this.setStatePos.bind(this);
+    this.setStatePos = this.setStatePos.bind(this);
 
 
     this.currentPoint = 0;
@@ -56,8 +55,20 @@ class Route extends Component {
     this.directionsDisplay.setMap(this.map);
     // this.directionsDisplay.setMap(map);
 
-    
+    this.routeData.forEach(route => {
+      this.createPoint(route)
+    })
 
+  }
+
+
+  update(field) {
+    // although #setState is asynchronous, we make it synchronous by enclosing it in an sync function
+    return e => this.setState({ [field]: e.currentTarget.value })
+  };
+
+  setStatePos(field, value) {
+    return this.setState({ [field]: value })
   }
 
   createPoint(latLng) {

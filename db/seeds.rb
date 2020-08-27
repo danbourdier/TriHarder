@@ -48,10 +48,10 @@ connection3 = Connection.create!(requester: demo.id, requestee: user3.id)
 route1 = Route.create!(title: "Pompeii Speedrun", total_time: 2.10, activity: "run", 
   distance: 26.2, description: "Hydrate or Die", start_point: "Marathon, Greece", 
   end_point: "Athens, Greece", user_id: demo.id, 
-  route_data: "[{\"lat\":\"40.74691368416189\",\"lng\":\"-74.00485538404816\"},
-    {\"lat\":\"40.7439874793943\",\"lng\":\"-73.99215244215362\"},
-    {\"lat\":\"40.75892283663857\",\"lng\":\"-73.97663021486471\"},
-    {\"lat\":\"40.766463986219414\",\"lng\":\"-73.98881817262838\"}]",
+  route_data: "[{\"lat\":40.74691368416189,\"lng\":-74.00485538404816},
+    {\"lat\":40.7439874793943,\"lng\":-73.99215244215362},
+    {\"lat\":40.75892283663857,\"lng\":-73.97663021486471},
+    {\"lat\":40.766463986219414,\"lng\":-73.98881817262838}]",
 )
 
 route1a = Route.create!(title: "Bike Bonanza", total_time: 35.29, activity: "bike", 
