@@ -62,7 +62,9 @@ class Route extends Component {
     });
 
 
-
+    // example element in our route_data above
+// [24.1234115, -74.123124]
+    // we want to convert each element in such a way that it can be successfully processed by the below function
 
   }
 

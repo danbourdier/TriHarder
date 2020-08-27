@@ -107,7 +107,7 @@ class RouteMap extends Component {
 
     // our ONLY map event listener with the purpose of creating points with a call to #createPoint
     google.maps.event.addListener(this.map, 'click', (e) => {
-
+      debugger
       this.createPoint(e.latLng);
     });
 
@@ -133,11 +133,11 @@ class RouteMap extends Component {
   } 
 
   createPoint(latLng) {
-    // below code serves the purpose of closure or *variable scoping*
+    // below code (l:138) serves the purpose of closure or *variable scoping*
     // we needed closure because the context of *this* in the api res is applied to a different class
     let that = this;
- 
-    this.setState( {route_data: this.state.route_data.concat( [[`${latLng.lat()}`, `${latLng.lng()}`]] ) } )
+    //  [[`${latLng.lat()}`, `${latLng.lng()}`]]
+    this.setState( {route_data: this.state.route_data.concat( { 'lat': `${latLng.lat()}`, 'lng': `${latLng.lng()}` } ) } )
 
     this.directionsService.route({
       origin: latLng,
