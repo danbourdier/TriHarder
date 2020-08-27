@@ -79,7 +79,7 @@ class Route extends Component {
         that.currentPoint = new google.maps.Marker({
           position: res.routes[0].legs[0].start_location,
           map: that.map,
-          icon: window.logo_marker
+          // icon: window.flag
         })
         that.points.push(that.currentPoint);
         // sets our state's start/end point to res pos
