@@ -177,7 +177,7 @@ class Route extends Component {
 
 
   render () {
-      debugger
+
       const { total_time, distance, activity, description, 
         title, created_at, updated_at 
       } = this.route
