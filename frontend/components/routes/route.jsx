@@ -7,17 +7,20 @@ class Route extends Component {
 
     this.route = this.props.route
 
+    // used by our maps service to store and reference markers
     this.points = [];
-
-    this.total_time = this.props.total_time;
-    this.distance = this.props.distance;
 
     // our binded class methods
     this.calcRouteAndRender = this.calcRouteAndRender.bind(this);
     this.createPoint = this.createPoint.bind(this);
-    this.handleClick = this.handleClick.bind(this);
-    this.setStatePos = this.setStatePos.bind(this)
-    this.geocodeAddress = this.geocodeAddress.bind(this);
+    // this.handleClick = this.handleClick.bind(this);
+    // this.setStatePos = this.setStatePos.bind(this);
+
+
+    this.currentPoint = 0;
+    this.roadSnappedLatLng = 0;
+    this.nullPointExecuted = false;
+    this.nullPointReset = false;
 
   }
 
@@ -58,7 +61,7 @@ class Route extends Component {
     // below code serves the purpose of closure or *variable scoping*
     // we needed closure because the context of *this* in the api res is applied to a different class
     let that = this;
-    this.setState({ route_data: this.state.route_data.concat([[`${latLng.lat()}`, `${latLng.lng()}`]]) })
+    // this.setState({ route_data: this.state.route_data.concat([[`${latLng.lat()}`, `${latLng.lng()}`]]) })
 
     this.directionsService.route({
       origin: latLng,
@@ -161,21 +164,15 @@ class Route extends Component {
       } = this.route
 
       return (
-        <main>
+        <main className="route-show-container-parent">
 
-          <div>
-            <div id="ec-123-map-spacer"></div>
-
-            <div className='route-page-container'>
+            <div className='route-show-container'>
               <section
-                id="map-container"
+                id="route-show-map-container"
                 ref={map => this.mapNode = map}>Our Map!
               </section>
             </div>
 
-
-          </div>
-          
         </main>
       )
 

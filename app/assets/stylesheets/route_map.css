@@ -12,6 +12,20 @@
   flex-direction: row;
 }
 
+.route-show-container-parent {
+
+}
+
+.route-show-container {
+  /* width: 100vw; */
+  height: 92vh;
+  z-index: 300;
+  /* top: 64px;
+  right: 0px;
+  display: flex;
+  flex-direction: row; */
+}
+
 /* page left */
 #map-page-left {
   width: 23.7%;
@@ -150,6 +164,13 @@
   width: 76.3%;
   height: 100%;
   position: relative;
+  overflow: hidden !important;
+}
+
+#route-show-map-container {
+
+  height: 100%;
+  /* position: relative; */
   overflow: hidden !important;
 }
 
