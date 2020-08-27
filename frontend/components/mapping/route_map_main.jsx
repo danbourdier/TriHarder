@@ -107,7 +107,7 @@ class RouteMap extends Component {
 
     // our ONLY map event listener with the purpose of creating points with a call to #createPoint
     google.maps.event.addListener(this.map, 'click', (e) => {
-      debugger
+
       this.createPoint(e.latLng);
     });
 
