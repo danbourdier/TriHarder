@@ -189,6 +189,8 @@ class Route extends Component {
             <div className='route-show-container'>
               <section id="route-show-HUD-container">
                 HUD Container
+                <div id="route-HUD-container-first-div">First </div>
+                <div id="route-HUD-container-second-div">Second </div>
               </section>
 
               <section id="route-show-map-container"

@@ -18,13 +18,18 @@
 .route-show-container {
   height: 92vh;
   z-index: 300;
+  position: relative;
 }
 
   #route-show-HUD-container {
-    background-color: yellow;
     opacity: .6;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
     position: absolute;
-    z-index: 200;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4px);
   }
 
 /* page left */
