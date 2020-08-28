@@ -80,7 +80,6 @@ class Route extends Component {
     // below code serves the purpose of closure or *variable scoping*
     // we needed closure because the context of *this* in the api res is applied to a different class
     let that = this;
-    // this.setState({ route_data: this.state.route_data.concat([[`${latLng.lat()}`, `${latLng.lng()}`]]) })
 
     this.directionsService.route({
       origin: latLng,
@@ -117,7 +116,9 @@ class Route extends Component {
     let that = this;
     // to effectively use directions service to take stops into consideration we slice the below from our points array
     let wayPoints =
-      this.points.slice(1, this.points.length - 1).map(point => ({ location: point.position, stopover: true })) || [];
+      this.points.slice(1, this.points.length - 1).map(point => ({ 
+        location: point.position, stopover: true }
+        )) || [];
     // directions service API takes at minimum 3 objects with optional waypoints
     directionsService.route({
       origin: this.points[0].position,
