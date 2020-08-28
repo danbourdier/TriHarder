@@ -187,9 +187,13 @@ class Route extends Component {
         <main className="route-show-container-parent">
 
             <div className='route-show-container'>
-              <section
-                id="route-show-map-container"
-                ref={map => this.mapNode = map}>Our Map!
+              <section id="route-show-HUD-container">
+                HUD Container
+              </section>
+
+              <section id="route-show-map-container"
+                       ref={map => this.mapNode = map}>
+                        Our Map!
               </section>
             </div>
 

@@ -12,19 +12,20 @@
   flex-direction: row;
 }
 
-.route-show-container-parent {
-
-}
+/* .route-show-container-parent {
+} */
 
 .route-show-container {
-  /* width: 100vw; */
   height: 92vh;
   z-index: 300;
-  /* top: 64px;
-  right: 0px;
-  display: flex;
-  flex-direction: row; */
 }
+
+  #route-show-HUD-container {
+    background-color: yellow;
+    opacity: .6;
+    position: absolute;
+    z-index: 200;
+  }
 
 /* page left */
 #map-page-left {
