@@ -190,12 +190,16 @@ class Route extends Component {
               <section id="route-show-HUD-container">
                 HUD Container
                 <aside id="route-HUD-container-first-aside">First
-                  <div>Profile Pic and name</div>
-                  <div>Route Details</div>
-                  <div>Route title</div>
+                  <div id="route-HUD-profile-details">Profile Pic and name</div>
+                  <div id="route-HUD-route-details">
+                    Route Details (distance, location, etc)
+                  
+                  </div>
+                  <div id="route-HUD-route-title">Route title</div>
                 </aside>
+
                 <aside id="route-HUD-container-second-aside">Second 
-                  <div>route options to edit or duplicate</div>
+                  <div>route option to edit or duplicate</div>
                 </aside>
               </section>
 
