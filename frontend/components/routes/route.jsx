@@ -188,9 +188,14 @@ class Route extends Component {
 
             <div className='route-show-container'>
               <section id="route-show-HUD-container">
-                HUD Container
-                <aside id="route-HUD-container-first-aside">First
-                  <div id="route-HUD-profile-details">Profile Pic and name</div>
+
+                <aside id="route-HUD-container-first-aside">
+                  <div id="route-HUD-profile-details">
+                    <img src="" alt="Profile Icon"/>
+                    <span>Author Email | </span>
+                    <div>Icon</div>
+                    <span>Friends</span>
+                  </div>
                   <div id="route-HUD-route-details">
                     Route Details (distance, location, etc)
                   
@@ -198,7 +203,7 @@ class Route extends Component {
                   <div id="route-HUD-route-title">Route title</div>
                 </aside>
 
-                <aside id="route-HUD-container-second-aside">Second 
+                <aside id="route-HUD-container-second-aside">
                   <div>route option to edit or duplicate</div>
                 </aside>
               </section>
