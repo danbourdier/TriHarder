@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { FaUserFriends } from 'react-icons/fa';
 import { Redirect } from 'react-router-dom';
 
 class Route extends Component {
@@ -193,7 +194,7 @@ class Route extends Component {
                   <div id="route-HUD-profile-details">
                     <img src="" alt="Profile Icon"/>
                     <span>Author Email | </span>
-                    <div>Icon</div>
+                    <FaUserFriends />
                     <span>Friends</span>
                   </div>
                   <div id="route-HUD-route-details">
