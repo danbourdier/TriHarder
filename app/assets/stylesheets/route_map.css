@@ -22,15 +22,27 @@
 }
 
   #route-show-HUD-container {
-    opacity: .6;
     top: 0;
     left: 0;
     width: 100%;
+    min-height: 178px;
     z-index: 20;
     position: absolute;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(4px);
   }
+
+    #route-HUD-container-first-aside {
+      width: 964px;
+      margin: 0 auto;
+    }
+      #route-HUD-profile-details {
+        display: flex;
+        margin-top: 16px;
+        align-items: center;
+        justify-content: start;
+        color: black;
+      }
 
 /* page left */
 #map-page-left {
