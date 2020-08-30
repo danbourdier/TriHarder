@@ -53,6 +53,31 @@
         border-radius: 30px;
       }
 
+    #route-HUD-route-details-container {
+      display: flex;
+      flex-direction: row;
+      margin-bottom: 14px;
+    }
+
+    #route-HUD-route-details-container div {
+      background-color: cornflowerblue;
+      color: #fff;
+      height: 22px;
+      font-size: 12px;
+      margin-top: 10px;
+      font-weight: 800;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.17;
+      margin-left: 2px;
+      margin-right: 2px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      background-color: #15a8e6;
+    }
+      /* #route-details-container-activity {
+        background-color: cornflowerblue;
+      } */
+
 /* page left */
 #map-page-left {
   width: 23.7%;

@@ -210,8 +210,8 @@ class Route extends Component {
                     
                   </article>
                   <article id="route-HUD-route-details-container">
-                    <div>{activity}</div>
-                    <div>
+                    <div id="route-details-container-activity">{activity}</div>
+                    <div id="route-details-container-distance">
                       <GiPathDistance />
                       {distance}
                     </div>
