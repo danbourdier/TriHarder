@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { FaUserFriends } from 'react-icons/fa';
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
 
 class Route extends Component {
   constructor(props) {
@@ -180,7 +180,7 @@ class Route extends Component {
 
   render () {
 
-      const { first_name, last_name, email } = this.props.currentUser;
+      const { email } = this.props.currentUser;
 
       const { total_time, distance, activity, description, 
         title, created_at, updated_at 
@@ -201,9 +201,12 @@ class Route extends Component {
                 <aside id="route-HUD-container-first-aside">
                   <div id="route-HUD-profile-details">
                     <div style={userProfilePic}></div>
-                    <span>{email} | </span>
-                    <FaUserFriends />
-                    <span>Friends</span>
+                    <span>{email} |&nbsp;</span>
+                    <Link to="/friends">
+                      <FaUserFriends />
+                      <span>&nbsp;Friends</span>
+                    </Link>
+                    
                   </div>
                   <div id="route-HUD-route-details">
                     Route Details (distance, location, etc)
