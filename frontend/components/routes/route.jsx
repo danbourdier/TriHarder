@@ -184,6 +184,11 @@ class Route extends Component {
         title, created_at, updated_at 
       } = this.route
 
+    let userProfilePic = {
+      backgroundSize: 'cover',
+      backgroundImage: 'url(' + rabbit + ')'
+    }
+
       return (
         <main className="route-show-container-parent">
 
@@ -192,7 +197,7 @@ class Route extends Component {
 
                 <aside id="route-HUD-container-first-aside">
                   <div id="route-HUD-profile-details">
-                    <img src="" alt="Profile Icon"/>
+                    <div style={userProfilePic}></div>
                     <span>Author Email | </span>
                     <FaUserFriends />
                     <span>Friends</span>

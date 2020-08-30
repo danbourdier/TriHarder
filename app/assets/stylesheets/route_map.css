@@ -44,6 +44,15 @@
         color: black;
       }
 
+      #route-HUD-profile-details div {
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+        text-align: center;
+        object-fit: cover;
+        border-radius: 30px;
+      }
+
 /* page left */
 #map-page-left {
   width: 23.7%;
