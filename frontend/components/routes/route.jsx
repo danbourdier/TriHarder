@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { FaUserFriends } from 'react-icons/fa';
+import { GiPathDistance } from 'react-icons/gi';
 import { Redirect, Link } from 'react-router-dom';
 
 class Route extends Component {
@@ -199,7 +200,7 @@ class Route extends Component {
               <section id="route-show-HUD-container">
 
                 <aside id="route-HUD-container-first-aside">
-                  <div id="route-HUD-profile-details">
+                  <article id="route-HUD-profile-details">
                     <div style={userProfilePic}></div>
                     <span>{email} |&nbsp;</span>
                     <Link to="/friends">
@@ -207,12 +208,16 @@ class Route extends Component {
                       <span>&nbsp;Friends</span>
                     </Link>
                     
-                  </div>
-                  <div id="route-HUD-route-details">
-                    Route Details (distance, location, etc)
+                  </article>
+                  <article id="route-HUD-route-details-container">
+                    <div>{activity}</div>
+                    <div>
+                      <GiPathDistance />
+                      {distance}
+                    </div>
                   
-                  </div>
-                  <div id="route-HUD-route-title">Route title</div>
+                  </article>
+                <div id="route-HUD-route-title">{title}</div>
                 </aside>
 
                 <aside id="route-HUD-container-second-aside">
