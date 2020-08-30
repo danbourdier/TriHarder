@@ -180,9 +180,12 @@ class Route extends Component {
 
   render () {
 
+      const { first_name, last_name, email } = this.props.currentUser;
+
       const { total_time, distance, activity, description, 
         title, created_at, updated_at 
       } = this.route
+
 
     let userProfilePic = {
       backgroundSize: 'cover',
@@ -198,7 +201,7 @@ class Route extends Component {
                 <aside id="route-HUD-container-first-aside">
                   <div id="route-HUD-profile-details">
                     <div style={userProfilePic}></div>
-                    <span>Author Email | </span>
+                    <span>{email} | </span>
                     <FaUserFriends />
                     <span>Friends</span>
                   </div>
