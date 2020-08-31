@@ -14,7 +14,7 @@ class RouteMap extends Component {
     };
     // array below used so we can store our points and conveniently delete them
     this.points = [];
-
+    this.routeData = this.props.routeEditing ? JSON.parse(this.props.routeEditing.route_data) : null
     // props
     this.createRouteComment = this.props.createComment;
 
@@ -31,8 +31,10 @@ class RouteMap extends Component {
     // to remove all points located on line: 
     this.nullAllPoints = this.nullAllPoints.bind(this);
     this.nullPoint = this.nullPoint.bind(this);
-    // below are our two flags to help track concurrency so our final outcome stays the same
-      // Much used for execution of asynchronous requests see: https://en.wikipedia.org/wiki/Concurrency_(computer_science)
+    // below are our two flags to help track concurrency so our final outcome stays 
+      // the same
+      // Much used for execution of asynchronous requests 
+        // see: https://en.wikipedia.org/wiki/Concurrency_(computer_science)
     this.currentPoint = 0;
     this.roadSnappedLatLng = 0;
     this.nullPointExecuted = false;
@@ -81,7 +83,8 @@ class RouteMap extends Component {
   componentDidMount() {
     let map;
     const mapOptions = {
-      center: { lat: 40.744661381538805, lng: -73.98616038721435 },
+      center: !this.routeData ? { lat: 40.744661381538805, lng: -73.98616038721435 } 
+        : { lat: this.routeData[0].lat, lng: this.routeData[0].lng },
       zoom: 15, // zoom level bench marks are 0: globeview, 5: continent view, 10: state...
       styles: [
         {
@@ -120,6 +123,13 @@ class RouteMap extends Component {
       this.geocodeAddress(this.geocoder, this.map);
     });
 
+
+    if (this.routeData) {
+      this.routeData.forEach(route => {
+        this.createPoint(route)
+      })
+    }
+
   }
 
   geocodeAddress(geocoder, resultsMap) {
@@ -141,8 +151,13 @@ class RouteMap extends Component {
     // below code (l:138) serves the purpose of closure or *variable scoping*
     // we needed closure because the context of *this* in the api res is applied to a different class
     let that = this;
-    //  [[`${latLng.lat()}`, `${latLng.lng()}`]]
-    this.setState( {route_data: this.state.route_data.concat( { 'lat': `${latLng.lat()}`, 'lng': `${latLng.lng()}` } ) } )
+    debugger
+    
+    if (typeof latLng.lat === "function") {
+      this.setState( {route_data: this.state.route_data.concat( { 'lat': `${latLng.lat()}`, 'lng': `${latLng.lng()}` } ) } )
+    } else {
+      this.setState({ route_data: this.props.routeEditing.route_data })
+    }
 
     this.directionsService.route({
       origin: latLng,

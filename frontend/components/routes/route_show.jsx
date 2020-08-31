@@ -69,6 +69,10 @@ class RouteShow extends Component {
 
   }
 
+  componentWillUnmount() {
+    this.props.getRoutes()
+  }
+
   flagFlip() {
     return this.setState({ hiddenFlag: (!this.state.hiddenFlag) })
   }

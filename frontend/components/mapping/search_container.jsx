@@ -12,7 +12,7 @@ const mSTP = (state, ownProps) => {
     routes: state.entities.routes,
     currentUser: state.entities.users[state.session.id],
     lastRoute: Object.values(state.entities.routes)[Object.values(state.entities.routes).length - 1],
-    editRoute: state.entities.routes[Number(ownProps.match.params.routeId)],
+    routeEditing: state.entities.routes[Number(ownProps.match.params.routeId)],
   }
 
 };
