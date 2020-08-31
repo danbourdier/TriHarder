@@ -8,7 +8,7 @@ class Route extends Component {
     super(props)
     this.state = {
       total_time: 0, distance: 0, lastLegDuration: 0,
-      lastDistanceLeg: 0, title: "", activity: "", description: "",
+      lastDistanceLeg: 0, title: "", activity: "",
       start_point: "", end_point: "", check: false, route_data: []
     };
 
@@ -192,6 +192,8 @@ class Route extends Component {
       backgroundImage: 'url(' + rabbit + ')'
     }
 
+    // console.log(this.route)
+
       return (
         <main className="route-show-container-parent">
 
@@ -222,6 +224,12 @@ class Route extends Component {
                   <article id="route-HUD-route-title">{title}</article>
                 </aside>
 
+
+
+
+
+
+
                 <aside id="route-HUD-container-second-aside-container">
                   <button id="route-show-second-aside-button">
                     <span>GIVE ME MORE!</span>
@@ -229,6 +237,20 @@ class Route extends Component {
                   <span id="route-show-second-aside-button-span"></span>
                 </aside>
               </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
               <section id="route-show-map-container"
                        ref={map => this.mapNode = map}>

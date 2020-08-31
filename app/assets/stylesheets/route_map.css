@@ -108,11 +108,23 @@
         margin-right: -8px;
       }
 
-      #route-HUD-container-second-aside-container {
-        display: flex;
-        flex-direction: row;
-        
+      @media (min-width: 1024px) {
+
+        #route-HUD-container-second-aside-container {
+          display: flex;
+          flex-direction: row;
+          width: 960px;
+        }
       }
+
+      #route-HUD-container-second-aside-container {
+        position: relative;
+        z-index: 300;
+        bottom: -25px;
+        margin: 0 auto;
+      }
+
+
 
 /* page left */
 #map-page-left {
