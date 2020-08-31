@@ -24,21 +24,23 @@ class Api::RoutesController < ApplicationController
 
 
   def destroy
-    route = Route.find(params[:id])
+    @route = Route.find(params[:id])
 
-    if route.destroy
-      # route.destroy
+    if @route.destroy
+
       render json: ["mock destroy test successful"]
     else
       render json: ["mock destroy test unnsuccessful"]
     end
   end
 
-  def edit
-    route = Route.find(params[:id])
-
-    if route.update
-      route.save
+  def update
+    debugger
+    @route = Route.find(params[:id])
+    debugger
+    
+    if @route.update
+      @route.save
       render "api/routes/show"
     else
       render json: route.errors.full_messages, status: 422
@@ -49,6 +51,9 @@ class Api::RoutesController < ApplicationController
   private 
 
   def route_params
-    params.require(:route).permit(:title, :distance, :total_time, :activity, :description, :start_point, :end_point, :user_id, :route_data)
+    params.require(:route).permit(
+      :title, :distance, :total_time, :activity, :description, 
+      :start_point, :end_point, :user_id, :route_data
+      )
   end
 end

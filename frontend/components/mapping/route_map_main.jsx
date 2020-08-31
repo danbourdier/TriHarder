@@ -8,7 +8,7 @@ import { Redirect } from 'react-router-dom';
 class RouteMap extends Component {
   constructor(props) {
     super(props);
-    this.state = { total_time: 0, distance: 0, lastLegDuration: 0, 
+    this.state = { editedRouteId: "", total_time: 0, distance: 0, lastLegDuration: 0, 
       lastDistanceLeg: 0, title: "", activity: "", description: "", 
       start_point: "", end_point: "", check: false, route_data: []
     };
@@ -63,12 +63,13 @@ class RouteMap extends Component {
     
 
     return () => {
-      debugger
       arg.route_data = JSON.stringify(JSON.parse(arg.route_data).map(arr => {
         arr.lat = Number(arr.lat);
         arr.lng = Number(arr.lng);
         return arr
       }));
+
+      arg.id = this.state.editedRouteId;
 
       this.routeData ? editRoute(arg) : createRoute(arg)
     };
@@ -133,7 +134,7 @@ class RouteMap extends Component {
       const ownPropsRoute = this.props.routeEditing;
 
       this.setState({
-      id: ownPropsRoute.id,
+      editedRouteId: ownPropsRoute.id,
       total_time: ownPropsRoute.total_time, 
       distance: ownPropsRoute.distance, 
       title: ownPropsRoute.title, 
@@ -174,7 +175,6 @@ class RouteMap extends Component {
     // below code (l:138) serves the purpose of closure or *variable scoping*
     // we needed closure because the context of *this* in the api res is applied to a different class
     let that = this;
-    // debugger
 
     if (typeof latLng.lat === "function") {
       this.setState( {route_data: this.state.route_data.concat( { 'lat': `${latLng.lat()}`, 'lng': `${latLng.lng()}` } ) } )
