@@ -60,8 +60,6 @@ class RouteMap extends Component {
   handleClick(arg) {
     const { createRoute, editRoute } = this.props; // when destructuring objects we must name the names of keys we want
 
-    
-
     return () => {
       arg.route_data = JSON.stringify(JSON.parse(arg.route_data).map(arr => {
         arr.lat = Number(arr.lat);
