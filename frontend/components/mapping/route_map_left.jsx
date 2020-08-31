@@ -55,15 +55,15 @@ class RouteMapLeft extends Component {
     // let { points } = this.props;
     
     let newRoute = Object.assign({}, {
-      'activity': activity,
-      'distance': parseFloat(distance),
-      'total_time': parseFloat(total_time),
-      'title': title,
-      'description': description,
-      'start_point': start_point,
-      'end_point': end_point,
-      'user_id': window.getState().entities.users[Number(Object.keys(window.getState().entities.users)[0])].id,
-      'route_data': JSON.stringify(route_data)
+      activity: activity,
+      distance: parseFloat(distance),
+      total_time: parseFloat(total_time),
+      title: title,
+      description: description,
+      start_point: start_point,
+      end_point: end_point,
+      user_id: window.getState().entities.users[Number(Object.keys(window.getState().entities.users)[0])].id,
+      route_data: JSON.stringify(route_data)
     });
 
     return (

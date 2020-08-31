@@ -36,6 +36,15 @@
       width: 964px;
       margin: 0 auto;
     }
+      #route-HUD-container-first-aside span {
+        display: flex;
+        align-items: center;
+        user-select: none;
+        white-space: nowrap;
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+
       #route-HUD-profile-details {
         display: flex;
         margin-top: 16px;
@@ -43,6 +52,10 @@
         justify-content: start;
         color: black;
       }
+        #route-HUD-friends-link {
+          display: flex;
+          text-decoration: none;
+        }
 
       #route-HUD-profile-details div {
         width: 24px;
@@ -60,7 +73,8 @@
     }
 
     #route-HUD-route-details-container div {
-      background-color: cornflowerblue;
+      border-radius: 16px;
+      display: flex;
       color: #fff;
       height: 22px;
       font-size: 12px;
@@ -74,6 +88,13 @@
       text-transform: uppercase;
       background-color: #15a8e6;
     }
+      #route-details-container-distance svg {
+        width: 20px;
+        height: 20px;
+        margin-left: 4px;
+        margin-right: -8px;
+      }
+
       /* #route-details-container-activity {
         background-color: cornflowerblue;
       } */

@@ -187,7 +187,8 @@ class Route extends Component {
         title, created_at, updated_at 
       } = this.route
 
-
+      console.log(this.route)
+      
     let userProfilePic = {
       backgroundSize: 'cover',
       backgroundImage: 'url(' + rabbit + ')'
@@ -203,21 +204,24 @@ class Route extends Component {
                   <article id="route-HUD-profile-details">
                     <div style={userProfilePic}></div>
                     <span>{email} |&nbsp;</span>
-                    <Link to="/friends">
+                    <Link to="/friends" id="route-HUD-friends-link">
                       <FaUserFriends />
                       <span>&nbsp;Friends</span>
                     </Link>
                     
                   </article>
                   <article id="route-HUD-route-details-container">
-                    <div id="route-details-container-activity">{activity}</div>
+                    <div id="route-details-container-activity">
+                      <span>{activity}</span>
+                    </div>
                     <div id="route-details-container-distance">
                       <GiPathDistance />
-                      {distance}
+                      <span>{distance}</span>
                     </div>
                   
                   </article>
-                <div id="route-HUD-route-title">{title}</div>
+
+                  <article id="route-HUD-route-title">{title}</article>
                 </aside>
 
                 <aside id="route-HUD-container-second-aside">
