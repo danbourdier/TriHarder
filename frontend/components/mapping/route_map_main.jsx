@@ -351,6 +351,7 @@ class RouteMap extends Component {
             distance={this.state.distance} 
             createComment={this.createRouteComment}
             points={this.points}
+            actionButton={this.routeData}
           />
 
           <section  

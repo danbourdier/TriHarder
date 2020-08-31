@@ -10,6 +10,7 @@ class RouteMapLeft extends Component {
     this.handleClick = this.props.handleClick;
     this.flag = false;
     this.listener = this.listener.bind(this)
+    this.actionButton = this.props.actionButton ? 'Edit Route' : 'Create Route!'
 
   }
  
@@ -103,7 +104,7 @@ class RouteMapLeft extends Component {
           </section>
           
           <section id="ec-button-1249-container">
-            <button id="ec-button-1249-submit" type="submit" onClick={(this.handleClick(newRoute))} >Create Route!</button>
+            <button id="ec-button-1249-submit" type="submit" onClick={(this.handleClick(newRoute))} >{this.actionButton}</button>
           </section>
 
       </section>
