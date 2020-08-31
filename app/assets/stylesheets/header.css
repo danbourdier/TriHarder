@@ -292,7 +292,7 @@
     flex-direction: column;
     z-index: 3 !important;
     font-size: 12.25px !important;
-    margin-top: 15px;
+    margin-top: 8px;
     border: lightgrey solid 1px;
     width: 167px;
     border-radius: 6px;
@@ -310,7 +310,7 @@
     flex-direction: column;
     z-index: 3 !important;
     font-size: 12.25px !important;
-    margin-top: 15px;
+    margin-top: 8px;
     border: lightgrey solid 1px;
     width: 167px;
     border-radius: 6px;
