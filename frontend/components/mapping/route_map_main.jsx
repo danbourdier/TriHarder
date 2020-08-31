@@ -39,7 +39,7 @@ class RouteMap extends Component {
     this.roadSnappedLatLng = 0;
     this.nullPointExecuted = false;
     this.nullPointReset = false;
-    this.delayFactor = 0;
+    this.delayFactor = 1;
 
   };
 
@@ -126,8 +126,11 @@ class RouteMap extends Component {
 
     if (this.routeData) {
       this.routeData.forEach(route => {
-        this.createPoint(route)
-      })
+        this.delayFactor++
+        setTimeout( () => {
+          this.createPoint(route)
+        }, this.delayFactor * 350)
+      });
     }
 
   }
@@ -182,7 +185,13 @@ class RouteMap extends Component {
           this.points[this.points.length - 2].setMap(null)
         }
         
-      };
+      } // else if (status === google.maps.DirectionsStatus.OVER_QUERY_LIMIT) {
+      //     this.delayFactor += 1;
+      //     setTimeout( () => {
+      //       this.createPoint(latLng)
+      //     }, this.delayFactor * 1000 );
+      // };
+
     });
   }
 
