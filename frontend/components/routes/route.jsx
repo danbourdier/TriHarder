@@ -9,7 +9,7 @@ class Route extends Component {
     this.state = {
       total_time: 0, distance: 0, lastLegDuration: 0,
       lastDistanceLeg: 0, title: "", activity: "",
-      start_point: "", end_point: "", check: false, route_data: []
+      start_point: "", end_point: "", check: false, route_data: [], hidden: true
     };
 
     this.route = this.props.route
