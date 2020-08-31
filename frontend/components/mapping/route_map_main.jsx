@@ -58,16 +58,19 @@ class RouteMap extends Component {
   }
 
   handleClick(arg) {
-    const { createRoute } = this.props; // when destructuring objects we must name the names of keys we want
+    const { createRoute, editRoute } = this.props; // when destructuring objects we must name the names of keys we want
 
-    arg.route_data = JSON.stringify(JSON.parse(arg.route_data).map(arr => {
-      arr.lat = Number(arr.lat);
-      arr.lng = Number(arr.lng);
-      return arr
-    }));
+    
 
     return () => {
-      createRoute(arg)
+      debugger
+      arg.route_data = JSON.stringify(JSON.parse(arg.route_data).map(arr => {
+        arr.lat = Number(arr.lat);
+        arr.lng = Number(arr.lng);
+        return arr
+      }));
+
+      this.routeData ? editRoute(arg) : createRoute(arg)
     };
   }
 
@@ -119,7 +122,6 @@ class RouteMap extends Component {
 
     // our ONLY map event listener with the purpose of creating points with a call to #createPoint
     google.maps.event.addListener(this.map, 'click', (e) => {
-
       this.createPoint(e.latLng);
     });
 
@@ -128,12 +130,27 @@ class RouteMap extends Component {
     });
 
     if (this.routeData) {
+      const ownPropsRoute = this.props.routeEditing;
+
+      this.setState({
+      id: ownPropsRoute.id,
+      total_time: ownPropsRoute.total_time, 
+      distance: ownPropsRoute.distance, 
+      title: ownPropsRoute.title, 
+      activity: ownPropsRoute.activity, 
+      description: ownPropsRoute.description,
+      start_point: ownPropsRoute.start_point, 
+      end_point: ownPropsRoute.end_point,
+      route_data: JSON.parse(ownPropsRoute.route_data)
+      })
+
       this.routeData.forEach(route => {
         this.delayFactor++
         setTimeout( () => {
           this.createPoint(route)
         }, this.delayFactor * 350)
       });
+
     }
 
   }
