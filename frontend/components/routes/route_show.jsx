@@ -229,8 +229,6 @@ class RouteShow extends Component {
                   <article id="route-HUD-route-title">{title}</article>
                 </aside>
 
-
-
                 <aside id="route-HUD-container-second-aside-container">
                   <button id="route-show-second-aside-button" 
                           onMouseEnter={this.flagFlip}
@@ -247,20 +245,6 @@ class RouteShow extends Component {
                   </button>
                 </aside>
               </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
               <section id="route-show-map-container"
                        ref={map => this.mapNode = map}>
