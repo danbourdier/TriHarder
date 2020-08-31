@@ -12,8 +12,9 @@
   flex-direction: row;
 }
 
-/* .route-show-container-parent {
-} */
+.route-show-container-parent {
+  margin-bottom: 40px;
+}
 
 .route-show-container {
   height: 92vh;
@@ -356,7 +357,6 @@
 #route-show-map-container {
 
   height: 100%;
-  /* position: relative; */
   overflow: hidden !important;
 }
 
