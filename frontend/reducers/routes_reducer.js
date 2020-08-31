@@ -19,7 +19,7 @@ const RoutesReducer = (state = {}, action) => {
       return nextState;
 
     case EDIT_ROUTE:
-      nextState[action.route.id] = route;
+      nextState[action.route.id] = action.route;
 
       return nextState;
     default:
