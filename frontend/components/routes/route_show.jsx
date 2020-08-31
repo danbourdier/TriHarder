@@ -238,7 +238,7 @@ class RouteShow extends Component {
                                 this.state.hiddenFlag ? "display-none" : 
                                 "route-show-page-give-me-more-visible-container"
                               }> 
-                                <div><Link to="/" className="route-show-visible-span">Edit</Link></div>
+                                <div><Link to={`/routes/edit/${this.route.id}`} className="route-show-visible-span">Edit</Link></div>
                                   <strong className="route-show-spacer"></strong>
                                 <div><a href="https://www.linkedin.com/in/danielbourdier/" className="route-show-visible-span">Hire me!</a></div>
                     </section>
