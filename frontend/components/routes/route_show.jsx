@@ -28,7 +28,7 @@ class RouteShow extends Component {
     this.roadSnappedLatLng = 0;
     this.nullPointExecuted = false;
     this.nullPointReset = false;
-
+    this.delayFactor = 1;
   }
 
   componentDidMount() {
@@ -58,14 +58,16 @@ class RouteShow extends Component {
     });
 
     this.map = new google.maps.Map(this.mapNode, mapOptions);
-    // map = new google.maps.Map(this.mapNode, mapOptions);
+    this.bounds = new google.maps.LatLngBounds();
 
     this.directionsDisplay.setMap(this.map);
-    // this.directionsDisplay.setMap(map);
 
     this.routeData.forEach(route => {
-      this.createPoint(route)
-    })
+      this.delayFactor++
+        setTimeout( () => {
+          this.createPoint(route)
+        }, this.delayFactor * 350)
+      });
 
   }
 
@@ -119,6 +121,10 @@ class RouteShow extends Component {
 
       };
     });
+
+    this.bounds.extend(latLng);
+    this.map.fitBounds(this.bounds);
+
   }
 
   calcRouteAndRender(directionsService, directionsDisplay) {
@@ -200,8 +206,6 @@ class RouteShow extends Component {
       backgroundSize: 'cover',
       backgroundImage: 'url(' + rabbit + ')'
     }
-
-    // console.log(this.route)
 
       return (
         <main className="route-show-container-parent">
