@@ -167,6 +167,7 @@
             font-size: inherit;
             font-weight: inherit;
             text-decoration: inherit;
+            color: inherit;
           }
 
           .route-show-visible-span:hover {
