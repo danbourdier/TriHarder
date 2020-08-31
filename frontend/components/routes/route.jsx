@@ -216,7 +216,7 @@ class Route extends Component {
                     </div>
                     <div id="route-details-container-distance">
                       <GiPathDistance />
-                      <span>{distance}</span>
+                      <span>{distance} MI</span>
                     </div>
                   
                   </article>
