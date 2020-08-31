@@ -9,7 +9,7 @@ class Route extends Component {
     this.state = {
       total_time: 0, distance: 0, lastLegDuration: 0,
       lastDistanceLeg: 0, title: "", activity: "",
-      start_point: "", end_point: "", check: false, route_data: [], hidden: true
+      start_point: "", end_point: "", check: false, route_data: [], hiddenFlag: true
     };
 
     this.route = this.props.route
@@ -66,6 +66,14 @@ class Route extends Component {
       this.createPoint(route)
     })
 
+  }
+
+  flagTrue() {
+    return this.setState({ hiddenFlag: true })
+  }
+
+  flagFalse() {
+    return this.setState({ hiddenFlag: false })
   }
 
 

@@ -43,7 +43,7 @@ class photoDropDown extends Component {
           <section className={this.state['hiddenFlag'] ? "header-pic-dropdown-container" : "header-pic-dropdown-container-visible"}>
             <Link className="header-button" to="/home_page">Dashboard</Link>
             <div className="header-button" onClick={this.props.logout}>Log Out</div>
-        </section>
+          </section>
       </div>
     </div>
     )
