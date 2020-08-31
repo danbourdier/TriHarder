@@ -23,6 +23,7 @@ class RouteShow extends Component {
     this.createPoint = this.createPoint.bind(this);
     this.setStatePos = this.setStatePos.bind(this);
     this.flagFlip = this.flagFlip.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
 
 
     this.currentPoint = 0;
