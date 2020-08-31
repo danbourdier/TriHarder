@@ -3,7 +3,7 @@ import { FaUserFriends } from 'react-icons/fa';
 import { GiPathDistance } from 'react-icons/gi';
 import { Redirect, Link } from 'react-router-dom';
 
-class Route extends Component {
+class RouteShow extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -242,7 +242,7 @@ class Route extends Component {
                               }> 
                                 <div><Link to="/" className="route-show-visible-span">Edit</Link></div>
                                   <strong className="route-show-spacer"></strong>
-                                <div><Link to="" className="route-show-visible-span">Hire me!</Link></div>
+                                <div><a href="https://www.linkedin.com/in/danielbourdier/" className="route-show-visible-span">Hire me!</a></div>
                     </section>
                   </button>
                 </aside>
@@ -280,4 +280,4 @@ class Route extends Component {
 
 }
 
-export default Route;
+export default RouteShow;

@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 
 import { showRoute, deleteRoute, showRoutes } from '../../actions/route_actions';
-import Route from './route'
+import RouteShow from './route_show'
 import { editRoute } from '../../util/route_api_util';
 
 const mSTP = (state, ownProps) => ({
@@ -20,4 +20,4 @@ const mDTP = dispatch => ({
 
 });
 
-export default connect(mSTP, mDTP)(Route) 
+export default connect(mSTP, mDTP)(RouteShow) 
