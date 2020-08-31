@@ -232,17 +232,21 @@ class Route extends Component {
 
 
                 <aside id="route-HUD-container-second-aside-container">
-                  <button id="route-show-second-aside-button" onMouseEnter={this.flagFlip}>
+                  <button id="route-show-second-aside-button" 
+                          onMouseEnter={this.flagFlip}
+                          onMouseLeave={this.flagFlip}>
                     <span>GIVE ME MORE!</span>
+                    <section className={
+                                this.state.hiddenFlag ? "display-none" : 
+                                "route-show-page-give-me-more-visible-container"
+                              }>
+                                <div><span>HAHAHaA</span></div>
+                                  <strong className="route-show-spacer"></strong>
+                                <div><span>SAMP</span></div>
+                                  <strong className="route-show-spacer"></strong>
+                                <div><span>YOASJP</span></div>
+                    </section>
                   </button>
-                  <section className={
-                              this.state.hiddenFlag ? "display-none" : 
-                              "route-show-page-give-me-more-visible-container"
-                            }>
-                              <div>HAHAHAAHA</div>
-                              <div>BONSAI</div>
-                              <div>YOHOOO!!!</div>
-                  </section>
                 </aside>
               </section>
 
