@@ -22,7 +22,7 @@ class Footer extends Component {
                 <strong>Git Hub</strong>
               </a>
 
-              <a href="https://www.linkedin.com/in/daniel-bourdier-17075194">
+              <a href="https://www.linkedin.com/in/danielbourdier/">
                 <img src={window.linkedInBW} alt="linked in logo" />
                 <br />
                 <strong>LinkedIn</strong>

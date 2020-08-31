@@ -239,12 +239,10 @@ class Route extends Component {
                     <section className={
                                 this.state.hiddenFlag ? "display-none" : 
                                 "route-show-page-give-me-more-visible-container"
-                              }>
-                                <div><span>HAHAHaA</span></div>
+                              }> 
+                                <div><Link to="/" className="route-show-visible-span">Edit</Link></div>
                                   <strong className="route-show-spacer"></strong>
-                                <div><span>SAMP</span></div>
-                                  <strong className="route-show-spacer"></strong>
-                                <div><span>YOASJP</span></div>
+                                <div><Link to="" className="route-show-visible-span">Hire me!</Link></div>
                     </section>
                   </button>
                 </aside>
