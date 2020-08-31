@@ -124,6 +124,24 @@
         bottom: -25px;
         margin: 0 auto;
       }
+        .route-show-page-give-me-more-visible-container {
+          display: flex !important;
+          flex-direction: column;
+          z-index: 3 !important;
+          font-size: 12.25px !important;
+          margin-top: 15px;
+          border: lightgrey solid 1px;
+          width: 167px;
+          border-radius: 6px;
+          overflow: hidden;
+          border-bottom: none;
+          box-shadow: black 0px 0px 5px -2px;
+          z-index: 10000 !important;
+          position: absolute;
+          top: 37px;
+          left: -37px;
+          height: fit-content;
+        }
 
         @media (min-width: 1024px) {
           #route-show-second-aside-button {

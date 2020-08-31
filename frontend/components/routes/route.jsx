@@ -21,6 +21,7 @@ class Route extends Component {
     this.calcRouteAndRender = this.calcRouteAndRender.bind(this);
     this.createPoint = this.createPoint.bind(this);
     this.setStatePos = this.setStatePos.bind(this);
+    this.flagFlip = this.flagFlip.bind(this);
 
 
     this.currentPoint = 0;
@@ -68,12 +69,8 @@ class Route extends Component {
 
   }
 
-  flagTrue() {
-    return this.setState({ hiddenFlag: true })
-  }
-
-  flagFalse() {
-    return this.setState({ hiddenFlag: false })
+  flagFlip() {
+    return this.setState({ hiddenFlag: (!this.state.hiddenFlag) })
   }
 
 
@@ -234,15 +231,18 @@ class Route extends Component {
 
 
 
-
-
-
-
                 <aside id="route-HUD-container-second-aside-container">
-                  <button id="route-show-second-aside-button">
+                  <button id="route-show-second-aside-button" onMouseEnter={this.flagFlip}>
                     <span>GIVE ME MORE!</span>
                   </button>
-                  <span id="route-show-second-aside-button-span"></span>
+                  <section className={
+                              this.state.hiddenFlag ? "display-none" : 
+                              "route-show-page-give-me-more-visible-container"
+                            }>
+                              <div>HAHAHAAHA</div>
+                              <div>BONSAI</div>
+                              <div>YOHOOO!!!</div>
+                  </section>
                 </aside>
               </section>
 
