@@ -9,7 +9,6 @@ const mSTP = (state, ownProps) => ({
   // access to our wildcard to use for our ingenious creations!
   route: state.entities.routes[Number(ownProps.match.params.routeId)],
   currentUser: state.entities.users[state.session.id],
-
 })
 
 const mDTP = dispatch => ({
@@ -17,7 +16,7 @@ const mDTP = dispatch => ({
   getRoute: route => dispatch(showRoute(route)),
   deleteRoute: routeId => dispatch(deleteRoute(routeId)),
   editRoute: route => dispatch(editRoute(route)),
-
+  
 });
 
 export default connect(mSTP, mDTP)(RouteShow) 

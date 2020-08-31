@@ -19,7 +19,8 @@ const mSTP = (state, ownProps) => {
 
 const mDTP = dispatch => ({
   createRoute: route => dispatch(createRoute(route)),
-  createComment: comment => dispatch(createComment(comment))
+  createComment: comment => dispatch(createComment(comment)),
+  editRoute: route => dispatch(editRoute(route)),
 });
 
 export default connect(mSTP, mDTP)(Search)
