@@ -1,4 +1,4 @@
- import React, {Component} from 'react';
+import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 
 class RouteIndexItem extends Component {
@@ -10,24 +10,29 @@ class RouteIndexItem extends Component {
 
   render() {
 
-    let { id, title, total_time, activity, distance, description, start_point, end_point, created_at } = this.props.rout;
+    let { id, title, total_time, activity, distance, description, start_point, 
+          end_point, created_at 
+        } = this.props.rout;
+
       activity = `${activity[0]}`.toUpperCase() + `${activity.slice(1)}`
-    let parsedDate = new Date(created_at)
-      let month = parsedDate.getMonth()
+
+    let parsedDate = created_at.split('-');
+
+      let month = Number(parsedDate[1])
         if (month < 10) {
           month = "0" + `${month}`
         } else {
           month = `${month}`
         };
 
-      let day = parsedDate.getDay()
+      let day = parseFloat(parsedDate[2])
         if (day < 10) {
           day = "0" + `${day}`
         } else {
           day = `${day}`
         };
 
-      let year = parsedDate.getFullYear()
+      let year = Number(parsedDate[0])
         year = `${year}`;
 
     return (
