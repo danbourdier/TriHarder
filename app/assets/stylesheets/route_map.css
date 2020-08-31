@@ -38,7 +38,7 @@
           margin: 0 auto;
         }
     }
-    
+
       #route-HUD-route-title {
         font-size: 38px;
         line-height: 1.18;
@@ -108,9 +108,11 @@
         margin-right: -8px;
       }
 
-      /* #route-details-container-activity {
-        background-color: cornflowerblue;
-      } */
+      #route-HUD-container-second-aside-container {
+        display: flex;
+        flex-direction: row;
+        
+      }
 
 /* page left */
 #map-page-left {

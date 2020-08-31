@@ -187,8 +187,6 @@ class Route extends Component {
         title, created_at, updated_at 
       } = this.route
 
-      console.log(this.route)
-      
     let userProfilePic = {
       backgroundSize: 'cover',
       backgroundImage: 'url(' + rabbit + ')'
@@ -224,8 +222,11 @@ class Route extends Component {
                   <article id="route-HUD-route-title">{title}</article>
                 </aside>
 
-                <aside id="route-HUD-container-second-aside">
-                  <div>route option to edit or duplicate</div>
+                <aside id="route-HUD-container-second-aside-container">
+                  <button id="route-show-second-aside-button">
+                    <span>GIVE ME MORE!</span>
+                  </button>
+                  <span id="route-show-second-aside-button-span"></span>
                 </aside>
               </section>
 
