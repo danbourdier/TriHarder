@@ -4,18 +4,12 @@ import { Link } from 'react-router-dom';
 class RouteIndexItem extends Component {
 
 
+  scrollFunc() {
+    return window.scrollTo(0, -1000);
+  }
 
   render() {
 
-     // route sample
-
-    // (title: "Pompeii Speedrun", 
-    // total_time: 2.10, 
-    // activity: "run",
-    // distance: 26.2, 
-    // description: "Hydrate or Die", 
-    // start_point: "Marathon, Greece",
-    // end_point: "Athens, Greece", user_id: 1)
     let { id, title, total_time, activity, distance, description, start_point, end_point, created_at } = this.props.rout;
       activity = `${activity[0]}`.toUpperCase() + `${activity.slice(1)}`
     let parsedDate = new Date(created_at)
@@ -43,7 +37,7 @@ class RouteIndexItem extends Component {
         
         {/*  */}
         <section className="route-index-item-second-section">
-        <Link to={`/routes/${id}`}>{title}</Link>
+        <Link to={`/routes/${id}`} onClick={this.scrollFunc}>{title}</Link>
           <p>Distance </p>
           <span>{Number(distance).toFixed(2)}<p id="ec-mi-next-to-big">mi</p></span>
         </section>
