@@ -32,10 +32,23 @@
     backdrop-filter: blur(4px);
   }
 
-    #route-HUD-container-first-aside {
-      width: 964px;
-      margin: 0 auto;
+     @media (min-width: 768px) {
+        #route-HUD-container-first-aside {
+          width: 964px;
+          margin: 0 auto;
+        }
     }
+    
+      #route-HUD-route-title {
+        font-size: 38px;
+        line-height: 1.18;
+        letter-spacing: 1px;
+        color: black;
+        font-weight: 900;
+        font-family: Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+      }
+
       #route-HUD-container-first-aside span {
         display: flex;
         align-items: center;

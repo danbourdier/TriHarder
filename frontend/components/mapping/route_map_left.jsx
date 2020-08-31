@@ -51,8 +51,6 @@ class RouteMapLeft extends Component {
   render() {
     let { activity, description, distance, title, 
         total_time, start_point, end_point, route_data } = this.props.thatState;
-
-    // let { points } = this.props;
     
     let newRoute = Object.assign({}, {
       activity: activity,
