@@ -39,6 +39,7 @@ class RouteMap extends Component {
     this.roadSnappedLatLng = 0;
     this.nullPointExecuted = false;
     this.nullPointReset = false;
+    this.delayFactor = 0;
 
   };
 
@@ -123,7 +124,6 @@ class RouteMap extends Component {
       this.geocodeAddress(this.geocoder, this.map);
     });
 
-
     if (this.routeData) {
       this.routeData.forEach(route => {
         this.createPoint(route)
@@ -151,12 +151,10 @@ class RouteMap extends Component {
     // below code (l:138) serves the purpose of closure or *variable scoping*
     // we needed closure because the context of *this* in the api res is applied to a different class
     let that = this;
-    debugger
-    
+    // debugger
+
     if (typeof latLng.lat === "function") {
       this.setState( {route_data: this.state.route_data.concat( { 'lat': `${latLng.lat()}`, 'lng': `${latLng.lng()}` } ) } )
-    } else {
-      this.setState({ route_data: this.props.routeEditing.route_data })
     }
 
     this.directionsService.route({
