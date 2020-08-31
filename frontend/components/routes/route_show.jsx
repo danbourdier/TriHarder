@@ -9,11 +9,12 @@ class RouteShow extends Component {
     this.state = {
       total_time: 0, distance: 0, lastLegDuration: 0,
       lastDistanceLeg: 0, title: "", activity: "",
-      start_point: "", end_point: "", check: false, route_data: [], hiddenFlag: true
+      start_point: "", end_point: "", check: false, route_data: [], 
+      hiddenFlag: true, 
     };
 
-    this.route = this.props.route
-    this.routeData = JSON.parse(this.route.route_data)
+    this.route = this.props.route;
+    this.routeData = JSON.parse(this.route.route_data);
     // used by our maps service to store and reference markers
     this.points = [];
 
@@ -29,6 +30,13 @@ class RouteShow extends Component {
     this.nullPointExecuted = false;
     this.nullPointReset = false;
     this.delayFactor = 1;
+  }
+
+  componentDidUpdate(prevProps) {
+    if (Object.values(prevProps.routes).length !== Object.values(this.props.routes).length) {
+
+      this.setState({ check: true })
+    }
   }
 
   componentDidMount() {
@@ -69,6 +77,10 @@ class RouteShow extends Component {
         }, this.delayFactor * 350)
       });
 
+  }
+
+  handleDelete() {
+    return this.props.deleteRoute(this.route.id)
   }
 
   componentWillUnmount() {
@@ -196,11 +208,13 @@ class RouteShow extends Component {
 
   render () {
 
+    if (this.state.check) {
+      return <Redirect to="/home_page" />
+    }
+
       const { email } = this.props.currentUser;
 
-      const { total_time, distance, activity, description, 
-        title, created_at, updated_at 
-      } = this.route
+      const { distance, activity, title } = this.route
 
     let userProfilePic = {
       backgroundSize: 'cover',
@@ -248,7 +262,10 @@ class RouteShow extends Component {
                               }> 
                                 <div><Link to={`/routes/edit/${this.route.id}`} className="route-show-visible-span">Edit</Link></div>
                                   <strong className="route-show-spacer"></strong>
+                                <div><a onClick={this.handleDelete} className="route-show-visible-span">Delete</a></div>
+                                  <strong className="route-show-spacer"></strong>
                                 <div><a href="https://www.linkedin.com/in/danielbourdier/" className="route-show-visible-span">Hire me!</a></div>
+                                  <strong className="route-show-spacer"></strong>
                     </section>
                   </button>
                 </aside>

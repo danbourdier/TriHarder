@@ -7,6 +7,7 @@ const mSTP = (state, ownProps) => ({
   // the below takes advantage of mSTP second argument under the hoos and allows 
     // access to our wildcard to use for our ingenious creations!
     route: state.entities.routes[Number(ownProps.match.params.routeId)],
+    routes: state.entities.routes,
     currentUser: state.entities.users[state.session.id],
 
 })
