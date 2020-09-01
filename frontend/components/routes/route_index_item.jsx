@@ -13,7 +13,7 @@ class RouteIndexItem extends Component {
     let { id, title, total_time, activity, distance, description, start_point, 
           end_point, created_at 
         } = this.props.rout;
-debugger
+
       activity = `${activity[0]}`.toUpperCase() + `${activity.slice(1)}`
 
     let parsedDate = created_at.split('-');
