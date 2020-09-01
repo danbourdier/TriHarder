@@ -2,18 +2,7 @@ import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 
 class RouteIndexItem extends Component {
-  constructor(props) {
-    super(props)
 
-    this.ourRoute = this.props.rout;
-
-
-
-  }
-
-  // componentDidMount() {
-
-  // }
 
   scrollFunc() {
     return window.scrollTo(0, -1000);
@@ -23,8 +12,8 @@ class RouteIndexItem extends Component {
 
     let { id, title, total_time, activity, distance, description, start_point, 
           end_point, created_at 
-        } = this.ourRoute;
-
+        } = this.props.rout;
+debugger
       activity = `${activity[0]}`.toUpperCase() + `${activity.slice(1)}`
 
     let parsedDate = created_at.split('-');

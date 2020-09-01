@@ -244,7 +244,7 @@ class RouteShow extends Component {
                     </div>
                     <div id="route-details-container-distance">
                       <GiPathDistance />
-                      <span>{distance} MI</span>
+                      <span>{Math.floor(distance)} MI</span>
                     </div>
                   
                   </article>
