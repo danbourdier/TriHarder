@@ -35,10 +35,8 @@ class Api::RoutesController < ApplicationController
   end
 
   def update
-
     @route = Route.find(params[:id])
-    # @new_route = Route.new(route_params)
-    debugger
+
     
     if @route.update_attributes(route_params)
       @route.save
