@@ -75,7 +75,7 @@ class RouteShow extends Component {
       this.delayFactor++
         setTimeout( () => {
           this.createPoint(route)
-        }, this.delayFactor * 350)
+        }, this.delayFactor * 450)
       });
 
   }
