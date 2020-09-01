@@ -147,7 +147,7 @@ class RouteMap extends Component {
         this.delayFactor++
         setTimeout( () => {
           this.createPoint(route)
-        }, this.delayFactor * 350)
+        }, this.delayFactor * 1000)
       });
 
     }
