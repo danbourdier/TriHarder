@@ -14,7 +14,8 @@ class RouteShow extends Component {
     };
 
     this.route = this.props.route;
-    this.routeData = JSON.parse(this.route.route_data);
+    // this.routeData = JSON.parse(this.route.route_data);
+
     // used by our maps service to store and reference markers
     this.points = [];
 
@@ -41,9 +42,16 @@ class RouteShow extends Component {
   }
 
   componentDidMount() {
+    if (!this.route) {
+      this.props.getRoutes();
+      return this.forceUpdate();
+    }
+
+    let routeData = JSON.parse(this.route.route_data);
+
     let map;
     const mapOptions = {
-      center: { lat: this.routeData[0].lat, lng: this.routeData[0].lng},
+      center: { lat: routeData[0].lat, lng: routeData[0].lng},
       zoom: 17, // zoom level bench marks are 0: globeview, 5: continent view, 10: state...
       styles: [
         {
@@ -71,7 +79,7 @@ class RouteShow extends Component {
 
     this.directionsDisplay.setMap(this.map);
 
-    this.routeData.forEach(route => {
+    routeData.forEach(route => {
       this.delayFactor++
         setTimeout( () => {
           this.createPoint(route)
@@ -91,12 +99,6 @@ class RouteShow extends Component {
   flagFlip() {
     return this.setState({ hiddenFlag: (!this.state.hiddenFlag) })
   }
-
-
-  update(field) {
-    // although #setState is asynchronous, we make it synchronous by enclosing it in an sync function
-    return e => this.setState({ [field]: e.currentTarget.value })
-  };
 
   setStatePos(field, value) {
     return this.setState({ [field]: value })
@@ -208,14 +210,13 @@ class RouteShow extends Component {
 
 
   render () {
+    if (!this.route) {
+      return <h2 className="error-comp">Error, return to home page</h2>;
+    }
 
     if (this.state.check) {
       return <Redirect to="/home_page" />
     }
-
-      const { email } = this.props.currentUser;
-
-      const { distance, activity, title } = this.route
 
     let userProfilePic = {
       backgroundSize: 'cover',
@@ -231,7 +232,7 @@ class RouteShow extends Component {
                 <aside id="route-HUD-container-first-aside">
                   <article id="route-HUD-profile-details">
                     <div style={userProfilePic}></div>
-                    <span>{email} |&nbsp;</span>
+                    <span>{this.props.currentUser.email} |&nbsp;</span>
                     <Link to="/friends" id="route-HUD-friends-link">
                       <FaUserFriends />
                       <span>&nbsp;Friends</span>
@@ -240,16 +241,16 @@ class RouteShow extends Component {
                   </article>
                   <article id="route-HUD-route-details-container">
                     <div id="route-details-container-activity">
-                      <span>{activity}</span>
+                      <span>{this.route.activity}</span>
                     </div>
                     <div id="route-details-container-distance">
                       <GiPathDistance />
-                      <span>{Math.floor(distance)} MI</span>
+                      <span>{Math.floor(this.route.distance)} MI</span>
                     </div>
                   
                   </article>
 
-                  <article id="route-HUD-route-title">{title}</article>
+                  <article id="route-HUD-route-title">{this.route.title}</article>
                 </aside>
 
                 <aside id="route-HUD-container-second-aside-container">

@@ -17,3 +17,8 @@
  /* body {
    background-color: blue;
  } */
+
+ .error-comp {
+    min-height: 90vh;
+    background-color: whitesmoke;
+ }

@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import RouteIndexItem from './route_index_item';
 import BarChart from './route_chart';
 import RouteChartTotals from './route_index_chart_totals';
-import { Link } from 'react-router-dom';
 
 class RouteIndex extends Component {
 
