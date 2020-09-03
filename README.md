@@ -82,9 +82,9 @@ https://www.mapmyrun.com/
 </p>
 
 <p>
-  <img style="float: left" width="460" height="280" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/bcrypt1.png">
+  <img style="float: left" width="450" height="280" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/bcrypt1.png">
 
-  <img style="float: right" width="460" height="280" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/bcrypt2.png">
+  <img style="float: right" width="450" height="280" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/bcrypt2.png">
 </p>
 
 
@@ -100,15 +100,31 @@ https://www.mapmyrun.com/
 
 
 <p align="center">
-  <img width="460" height="300" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/mapping.gif">
+  <img width="800" height="450" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/mapping.gif">
 </p>
 
 * Google Maps API is a powerful technology that allows a huge array of features that enable the user the ability to not only map routes. But also, the following;
 
+  1. Geocoding API, by providing a zip code, city name, country name, and more we can pan the map to the specified location. What happens in the below code is we 
+    make a call to the API and manipulate the response (contingent of a code 200) by setting our map's center prop to the returned object coordinates. As noted by keying in to [`geometry`][`location`]
 
-  1. Geocoding API, by providing a zip code, city name, country name, and more we can pan the map to the specified location.
+  <p>
+    <img style="float: left" width="450" height="280" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/geo1.png">
 
-  2. Directions Service (Google), this feature leverages Google's tech to connect points and create polylines in between that snap to the nearest road by fetching 100's of geocoded points along the roads in between and returning a route most consistent with the Users' placed waypoints.
+    <img style="float: right" width="450" height="280" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/geo2.png">
+  </p>
+
+  <br>
+
+  2. Directions Service, Directions Display (Google), this feature leverages Google's tech to connect points and create polylines in between that snap to the nearest road by fetching 100's of geocoded points along the roads in between and returning a route most consistent with the Users' placed waypoints.
+
+  <p>
+    <img style="float: left" width="450" height="280" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/calcroute1.png">
+
+    <img style="float: right" width="450" height="280" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/calcroute2.png">
+  </p>
+
+  <br>
 
   3. Marker Creation
 
