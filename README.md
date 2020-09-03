@@ -163,7 +163,7 @@ https://www.mapmyrun.com/
 
 * Before we are able to update our frontend and store we must make calls to communicate with our backend and fetch data 
   1. Before dispatching an action to update our Redux store we make an AJAX request passing in an object containing a `url`(where to send the request to be interpreted and redirect our request by rails router), `method(`type of request), and `data`(formatted into JSON) according to RESTful convention.
-  
+
   <br>
 
   Its also worth mentioning that because our routes config specifies the default data type received to be JSON format, a future developer can run the risk of an unforeseen bug that would essentially confuse `Rails Router` on how to process the incoming object. Additionally Rails Router knows where to send the prior mentioned request by matching `GET` requests to only index, and show controller actions depending on the AJAX request's contained `url`. Other requests follow the same convention.
@@ -184,17 +184,27 @@ https://www.mapmyrun.com/
     <img style="float: right" width="440" height="280" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/routeParams.png">
   </p>
 
+  <br>
+
+  3. After a controller action is successful we check model validations and create associations as needed through `Active Record` which automatically performs under-the-hood `SQL` joins and queries to fufill relationships between objects in our `PostgreSQL` DB. 
+    Although our `Route Model` has one simple associative method, our `User Model` exemplifies what proper use of `Active Record` can look like with `:belongs_to` and `:has_many` associations.
+    <p>
+    <img style="float: left" width="440" height="280" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/routeModel.png">
+
+    <img style="float: right" width="440" height="280" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/userModel.png">
+  </p>
+
+  <br>
+
 
 
 
 
 ---
+
 ## Future Directions
-* Finalizing route manipulation and viewing
-* Use of Google Maps API
 * Gear Tracker
-* Friend Requests
-* Comment Functionality     
+
 ---
 
 
