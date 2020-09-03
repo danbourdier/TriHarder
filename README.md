@@ -4,46 +4,6 @@
 ___
 
 
-## Table Of Contents
-
-* [Live Site](https://tri-harder.herokuapp.com/)
-* [Intro](https://github.com/danbourdier/TriHarder/#Intro)
-* [Technologies](https://github.com/danbourdier/TriHarder/#Technologies)
-* [Legal](https://github.com/danbourdier/TriHarder/#Legal)
-* [Links](https://github.com/danbourdier/TriHarder/#Links)
-* [Future Directions](https://github.com/danbourdier/TriHarder/#Intro)
-
-
----
-
-
-## Intro
-
-
-Welcome to Tri'Harder! A place where friends and Triathlon enthusiasts can join to collaborate on their unfettered determination in reaching their Triathlon goals!
-
-
-Tri'Harder is a MapMyRun clone that sets to emulate all the greatest features of the latter site with emphasis on our painfully endeavoring Tri'ers! Location rich features such as Google Api and logging Tri'training attempts are center of this awesome app! Feature rich programming such as route creation through use of Google API and searching for local routes are what make this the ideal clone.
-
-
----
-
-
-## LINKS
-
-Clone Website Link
-
-
-[Live Site](https://tri-harder.herokuapp.com/)
-
-
-Original Website Link
-
-https://www.mapmyrun.com/
-
-
----
-
 ## TECHNOLOGIES
 
 #### Backend          
@@ -62,6 +22,50 @@ https://www.mapmyrun.com/
 
 
 ---
+
+
+
+## Table Of Contents
+
+* [Live Site](https://tri-harder.herokuapp.com/)
+* [Intro](https://github.com/danbourdier/TriHarder/#Intro)
+* [Technologies](https://github.com/danbourdier/TriHarder/#Technologies)
+* [Legal](https://github.com/danbourdier/TriHarder/#Legal)
+* [Links](https://github.com/danbourdier/TriHarder/#Links)
+* [Future Directions](https://github.com/danbourdier/TriHarder/#Intro)
+
+
+---
+
+
+## OVERVIEW
+
+
+Welcome to Tri'Harder! A place where friends and Triathlon enthusiasts can join to collaborate on their unfettered determination in reaching their Triathlon goals!
+
+
+Tri'Harder is a MapMyRun clone that sets to emulate all the greatest features of the latter site with emphasis on our painfully endeavoring Tri'ers! Location rich features such as Google Api and logging Tri'training attempts are center of this awesome app! Feature rich programming such as route creation through use of Google API and searching for local routes are what make this the ideal clone.
+
+
+---
+
+
+## LINKS
+
+Live Site Link
+
+
+[Live Site](https://tri-harder.herokuapp.com/)
+
+
+As inspired by: Website Link (Received a complete facelift as of Late July)
+
+https://www.mapmyrun.com/
+
+
+---
+
+
 ## Features
 
 
