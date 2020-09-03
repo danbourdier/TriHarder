@@ -7,18 +7,24 @@ ___
 ## TECHNOLOGIES
 
 #### Backend          
-1. Postgresql
-2. Rails
-3. Ruby
-4. Ajax
+1. `Postgresql`
+2. `Rails`
+3. `Active Record`
+4. `Active Migration`
+5. `Action Controller`
+3. `Ruby`
+4. `Ajax`
+5. `JBuilder`
 
 ### Frontend
-* React-Redux
-* CSS
+* `React-Redux`
+* `JavaScript` (ECMAScript anyone?)
+* `HTML`
+* `CSS3`
 
 
 ### Hosting
-* Heroku
+* `Heroku`
 
 
 ---
@@ -162,7 +168,7 @@ https://www.mapmyrun.com/
 ### Backend (React-Redux to backend calls)
 
 * Before we are able to update our frontend and store we must make calls to communicate with our backend and fetch data 
-  1. Before dispatching an action to update our Redux store we make an AJAX request passing in an object containing a `url`(where to send the request to be interpreted and redirect our request by rails router), `method(`type of request), and `data`(formatted into JSON) according to RESTful convention.
+  1. Before dispatching an action to update our Redux store we make an `AJAX` request passing in an object containing a `url`(where to send the request to be interpreted and redirect our request by rails router), `method(`type of request), and `data`(formatted into JSON) according to `RESTful` convention and `RESTful` routes.
 
   <br>
 
@@ -189,10 +195,10 @@ https://www.mapmyrun.com/
   3. After a controller action is successful we check model validations and create associations as needed through `Active Record` which automatically performs under-the-hood `SQL` joins and queries to fufill relationships between objects in our `PostgreSQL` DB. 
     Although our `Route Model` has one simple associative method, our `User Model` exemplifies what proper use of `Active Record` can look like with `:belongs_to` and `:has_many` associations.
     <p>
-    <img style="float: left" width="440" height="280" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/routeModel.png">
+      <img style="float: left" width="440" height="280" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/routeModel.png">
 
-    <img style="float: right" width="440" height="280" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/userModel.png">
-  </p>
+      <img style="float: right" width="440" height="280" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/userModel.png">
+    </p>
 
   <br>
 
@@ -201,6 +207,23 @@ https://www.mapmyrun.com/
   <p align="center">
     <img width="800" height="450" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/connectionModel.png">
   </p>  
+
+  <br>
+
+  4. Finally our `JBuilder`s serve the purpose finalizing an endpoint for our frontend to manipulate and use at its discretion!
+  <br>
+
+  To create DRY code, partials were used to be used in different types of returned requests. One example is below when we created our route partial to later use in our `route_show_jbuilder`.
+  By default, `JSON.extract` allows us to take specific data from and object in this case a route, and return another object with the chosen attributes for our endpoint. However, this can sometimes cause delays for bigger teams as needs
+  constantly change and backend developers often need to reconstruct said endpoints to satisfy needs on the frontend. I found myself changing this same endpoint several times as i was trying to develop more efficient ways of rendering data on the frontend. Technology such as `GraphQl` corrects that by offering our frontend flexibility on what they ONLY want to extract WHILE lightening the burden on our DB. A great tool to use!
+    <p>
+      <img style="float: left" width="440" height="280" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/jbuilderPartial.png">
+
+      <img style="float: right" width="440" height="280" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/jbuilderShow.png">
+    </p>
+
+  <br>
+
 
 
 
