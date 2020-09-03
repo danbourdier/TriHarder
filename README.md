@@ -73,7 +73,8 @@ https://www.mapmyrun.com/
 
 ### User Auth
 
-Users will be able to signup and create an account to enjoy full access to the clone.
+* Users can signup or just tour the site as a demo user!
+*
 
 
 ![login snapshot](https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/log_in_snapshot.png "Logo Title Text 2")

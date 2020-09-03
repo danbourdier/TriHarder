@@ -211,9 +211,11 @@ class RouteMap extends Component {
       // };
 
     });
-
-    this.bounds.extend(latLng);
-    this.map.fitBounds(this.bounds);
+    if (this.points.length >= 1) {
+      this.bounds.extend(latLng);
+      this.map.fitBounds(this.bounds);
+    }
+    
   }
 
   calcRouteAndRender(directionsService, directionsDisplay) {
