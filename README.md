@@ -44,7 +44,7 @@ ___
 Welcome to Tri'Harder! A place where friends and Triathlon enthusiasts can join to collaborate on their unfettered determination in reaching their Triathlon goals!
 
 
-Tri'Harder is a MapMyRun clone that sets to emulate all the greatest features of the latter site with emphasis on our painfully endeavoring Tri'ers! Location rich features such as Google Api and logging Tri'training attempts are center of this awesome app! Feature rich programming such as route creation through use of Google API and searching for local routes are what make this the ideal clone.
+Tri'Harder is a MapMyRun clone that sets to emulate all the greatest features of the latter site with emphasis on our painfully endeavoring Tri'ers! Location rich features such as Google Api and logging Tri'training attempts are center of this awesome app!
 
 
 ---
@@ -71,13 +71,19 @@ https://www.mapmyrun.com/
 
 ---
 
-### User Auth
+### User Authentification (BCrypt!)
 
 * Users can signup or just tour the site as a demo user!
-*
+* Live app prioritizes Bcrypt to secure new accounts and existing ones with the most comprehensive password algorithm that not only hashes an entry but salts it (randomizes entries with deterministic computation and adds additional randomized characters to promote resistance to rainbow table attacks). Upon a user's attempt to login, the app takes advantage of the deterministic output to match the user's entry to the randomized password generated on account signup.
 
 
-![login snapshot](https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/log_in_snapshot.png "Logo Title Text 2")
+<img src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/auth.gif" >
+
+&nbsp; 
+
+### 
+
+
 
 
 ---
