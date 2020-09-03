@@ -218,8 +218,9 @@ https://www.mapmyrun.com/
   constantly change and backend developers often need to reconstruct said endpoints to satisfy needs on the frontend. I found myself changing this same endpoint several times as i was trying to develop more efficient ways of rendering data on the frontend. Technology such as `GraphQl` corrects that by offering our frontend flexibility on what they ONLY want to extract WHILE lightening the burden on our DB. A great tool to use!
     <p>
       <img style="float: left" width="440" height="280" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/jbuilderPartial.png">
+      <img style="float: left" width="440" height="280" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/jbuilderPartial.png">
 
-      <img style="float: right" width="440" height="280" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/jbuilderShow.png">
+      <!-- <img style="float: right" width="440" height="280" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/jbuilderShow.png"> -->
     </p>
 
   <br>
