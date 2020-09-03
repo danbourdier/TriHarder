@@ -82,8 +82,8 @@ https://www.mapmyrun.com/
 </p>
 
 <p>
-  <img float="left" width="460" height="300" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/bcryptCode.png">
-  <img float="right" width="460" height="300" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/bcryptCode.png">
+  <img style="float: left" width="460" height="300" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/bcrypt1.png">
+  <img style="float: right" width="460" height="300" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/bcrypt2.png">
 </p>
 
 
