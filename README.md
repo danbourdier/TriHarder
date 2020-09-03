@@ -96,7 +96,7 @@ Users will be able to signup and create an account to enjoy full access to the c
 
 
 
-This README would normally document whatever steps are necessary to get the
+<!-- This README would normally document whatever steps are necessary to get the
 application up and running.
 
 Things you may want to cover:
@@ -117,4 +117,4 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* ...
+* ... -->
