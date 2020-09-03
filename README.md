@@ -196,6 +196,11 @@ https://www.mapmyrun.com/
 
   <br>
 
+  A sneak peek into our `Connection Model`'s (Friends) associations! The dynamic keying of values serves the purpose of being able to satisfy commenting and reply functionality. 
+
+  <p align="center">
+    <img width="800" height="450" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/connectionModel.png">
+  </p>  
 
 
 
