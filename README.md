@@ -195,9 +195,9 @@ https://www.mapmyrun.com/
   3. After a controller action is successful we check model validations and create associations as needed through `Active Record` which automatically performs under-the-hood `SQL` joins and queries to fufill relationships between objects in our `PostgreSQL` DB. 
     Although our `Route Model` has one simple associative method, our `User Model` exemplifies what proper use of `Active Record` can look like with `:belongs_to` and `:has_many` associations.
     <p>
-      <img style="float: left" width="440" height="280" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/routeModel.png">
+      <img style="float: left" width="400" height="280" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/routeModel.png">
 
-      <img style="float: right" width="440" height="280" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/userModel.png">
+      <img style="float: right" width="400" height="280" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/userModel.png">
     </p>
 
   <br>
