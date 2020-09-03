@@ -119,9 +119,11 @@ https://www.mapmyrun.com/
 
   2. Directions Service, Directions Display (Google), this feature leverages Google's tech to connect points and create polylines in between that snap to the nearest road by fetching 100's of geocoded points along the roads in between and returning a route most consistent with the Users' placed waypoints. Perhaps the most complex implementation I developed, biggest issue was including waypoints and using directions service to compute data such as distance positioning and 
   creating parseable information to store in our local state. 
+  <br>
+  <br>
   
   Each call to the API returns a multi-dimensional object that contains information ranging from the initial request (an object containing destination latitude and longitude, travelMode, and current waypoints)
-  to an array of routes each an object containing legs(our stops along the way) summary of location and waypoint order to track chonologically. Very fun stuff! See the immediate screen shot below of said code in chrome dev tools.
+  to an array of routes each an object containing legs(our stops along the way) summary of location and waypoint order to track chonologically. Very fun stuff! <br> <br> See the immediate screen shot below of said code in chrome dev tools.
   <img width="450" height="280" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/calcroute3.png">
   <br>
   <p>
@@ -130,6 +132,7 @@ https://www.mapmyrun.com/
     <img style="float: right" width="450" height="280" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/calcroute2.png">
   </p>
 
+  <br>
   <br>
 
   3. Marker Creation
