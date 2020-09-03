@@ -98,10 +98,13 @@ https://www.mapmyrun.com/
 
 ### Google Maps API (Geocoding API, Directions Service, Directions Display)
 
-
+*Mapping*
 <p align="center">
   <img width="800" height="450" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/mapping.gif">
 </p>
+<br>
+<br>
+*Show Page*
 
 <p align="center">
   <img width="800" height="450" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/handsomest_shot.png">
