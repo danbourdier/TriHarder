@@ -96,7 +96,7 @@ https://www.mapmyrun.com/
 
 
 
-### Google Maps API (Geocoding API, Directions Service, Directions Display)
+### Google Maps API (Geocoding API, Directions Service, Directions Display), Frontend
 
 *Mapping*
 <p align="center">
@@ -154,6 +154,31 @@ https://www.mapmyrun.com/
   <p align="center">
     <img width="800" height="450" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/createPoint.png">
   </p>  
+
+
+### Backend (React-Redux to backend calls)
+
+* Before we are able to update our frontend and store we must make calls to communicate with our backend and fetch data 
+  1. Before dispatching an action to update our Redux store we make an AJAX request passing in an object containing a `url`(where to send the request to be interpreted and redirect our request by rails router), `method(`type of request), and `data`(formatted into JSON) according to RESTful convention.
+  <br>
+  Its also worth mentioning that because our routes config specifies the default data type received to be JSON format, a future developer can run the risk of an unforeseen bug that would essentially confuse `Rails Router` on how to process the incoming object. Additionally Rails Router knows where to send the prior mentioned request by matching `GET` requests to only index, and show controller actions depending on the AJAX request's contained `url`. Other requests follow the same convention.
+  <p>
+    <img style="float: left" width="440" height="280" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/routeUtil.png">
+
+    <img style="float: right" width="440" height="280" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/routeConfig.png">
+  </p>
+
+  <br> 
+  <br> 
+  2. In the respective controller we carry out the `POST` requests by passing our `AJAX` method's data through *strong_params* which essentially deconstructs params from our data and *permits* what is allowed to go though to our action. (Kind of like a bouncer at a club) 
+  <p>
+    <img style="float: left" width="440" height="280" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/routeCreate.png">
+
+    <img style="float: right" width="440" height="280" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/routeParams.png">
+  </p>
+
+
+
 
 
 ---
