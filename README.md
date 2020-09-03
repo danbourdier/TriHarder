@@ -103,6 +103,10 @@ https://www.mapmyrun.com/
   <img width="800" height="450" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/mapping.gif">
 </p>
 
+<p align="center">
+  <img width="800" height="450" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/handsomest_shot.png">
+</p>
+
 * `Google Maps API` is a powerful technology that allows a huge array of features that enable the user the ability to not only map routes. But also, the following;
 
   1. `Geocoding API,` by providing a zip code, city name, country name, and more we can pan the map to the specified location. What happens in the below code is we 
@@ -116,10 +120,10 @@ https://www.mapmyrun.com/
   </p>
 
   <br>
+  <br>
 
   2. `Directions Service, Directions Display` (Google), this feature leverages Google's tech to connect points and create polylines in between that snap to the nearest road by fetching 100's of geocoded points along the roads in between and returning a route most consistent with the Users' placed waypoints. Perhaps the most complex implementation I developed, biggest issue was including waypoints and using directions service to compute data such as distance positioning and 
   creating parseable information to store in our local state. 
-  <br>
   <br>
   
   Each call to the API returns a multi-dimensional object that contains information ranging from the initial request (an object containing destination latitude and longitude, travelMode, and current waypoints)
@@ -127,7 +131,7 @@ https://www.mapmyrun.com/
   <img width="450" height="280" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/calcroute3.png">
   <br>
 
-  The bottom left shot shows our calculation method that works by receiving every consecutive request upon a user received event to create a point. Upon detecting that we have more than 1 point in our local state, our `calcRouteandRender` gets called to receive our latest endpoint and parse its data to add and store to our current totals of `distance` (formatted into miles since its received as feet initially), and `duration` (formatted again because its received as hours). `nullPointExecuted` serves as an indicator to determine wether or not we not only update our state to subtract or most recent leg's `distance` but also `duration` before we null the point out of our collection. (This is in reference to our method to delete points called `nullPoints`).
+  The bottom left shot shows our calculation method that works by receiving every consecutive request upon a user received event to create a point. As for our next screen shot, upon detecting that we have more than 1 point in our local state, our `calcRouteandRender` gets called to receive our latest endpoint and parse its data to add and store to our current totals of `distance` (formatted into miles since its received as feet initially), and `duration` (formatted again because its received as hours). `nullPointExecuted` serves as an indicator to determine wether or not we not only update our state to subtract or most recent leg's `distance` but also `duration` before we null the point out of our collection. (This is in reference to our method to delete points called `nullPoints`).
   <p>
     <img style="float: left" width="440" height="280" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/calcroute1.png">
 
@@ -138,8 +142,14 @@ https://www.mapmyrun.com/
   <br>
 
 
-
   3. Marker Creation
+  <br>
+  Our most *important* tool in mapping yet as it holds the answer to making our route component dynamic is the below snippet.
+  <br>
+  Because of our need to individually view code we need to store interpolated latitude and longitude data in our local slice of state to later iterate our route show page each user event (click) on the map not only stores each points but calls on the aforementioned functions!
+  <p align="center">
+    <img width="800" height="450" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/createPoint.png">
+  </p>  
 
 
 ---
