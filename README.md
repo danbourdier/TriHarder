@@ -126,6 +126,8 @@ https://www.mapmyrun.com/
   to an array of routes each an object containing legs(our stops along the way) summary of location and waypoint order to track chonologically. Very fun stuff! <br> <br> See the immediate screen shot below of said code in chrome dev tools.
   <img width="450" height="280" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/calcroute3.png">
   <br>
+
+  The bottom left shot shows our calculation method that works by receiving every consecutive request upon a user received event to create a point. Upon detecting that we have more than 1 point in our local state, our `calcRouteandRender` gets called to receive our latest endpoint and parse its data to add and store to our current totals of `distance` (formatted into miles since its received as feet initially), and `duration` (formatted again because its received as hours). `nullPointExecuted` serves as an indicator to determine wether or not we not only update our state to subtract or most recent leg's `distance` but also `duration` before we null the point out of our collection. (This is in reference to our method to delete points called `nullPoints`).
   <p>
     <img style="float: left" width="440" height="280" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/calcroute1.png">
 
