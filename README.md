@@ -74,7 +74,7 @@ https://www.mapmyrun.com/
 ### User Authentification (BCrypt!)
 
 * Users can signup or just tour the site as a demo user!
-* Live app prioritizes Bcrypt to secure new accounts and existing ones with the most comprehensive password algorithm that not only hashes an entry but salts it (randomizes entries with deterministic computation and adds additional randomized characters to promote resistance to rainbow table attacks). Upon a user's attempt to login, the app takes advantage of the deterministic output to match the user's entry to the randomized password generated on account signup.
+* Live app prioritizes `Bcrypt` to secure new accounts and existing ones with the most comprehensive password algorithm that not only hashes an entry but salts it (randomizes entries with deterministic computation and adds additional randomized characters to promote resistance to rainbow table attacks). Upon a user's attempt to login, the app takes advantage of the deterministic output to match the user's entry to the randomized password generated on account signup.
 
 
 <p align="center">
@@ -103,9 +103,9 @@ https://www.mapmyrun.com/
   <img width="800" height="450" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/mapping.gif">
 </p>
 
-* Google Maps API is a powerful technology that allows a huge array of features that enable the user the ability to not only map routes. But also, the following;
+* `Google Maps API` is a powerful technology that allows a huge array of features that enable the user the ability to not only map routes. But also, the following;
 
-  1. Geocoding API, by providing a zip code, city name, country name, and more we can pan the map to the specified location. What happens in the below code is we 
+  1. `Geocoding API,` by providing a zip code, city name, country name, and more we can pan the map to the specified location. What happens in the below code is we 
     make a call to the API and manipulate the response (contingent of a code 200) by setting our map's center prop to the returned object coordinates. As noted by keying in to [`geometry`][`location`].
     A very straight forward tool and intuitive to use!
 
@@ -117,7 +117,7 @@ https://www.mapmyrun.com/
 
   <br>
 
-  2. Directions Service, Directions Display (Google), this feature leverages Google's tech to connect points and create polylines in between that snap to the nearest road by fetching 100's of geocoded points along the roads in between and returning a route most consistent with the Users' placed waypoints. Perhaps the most complex implementation I developed, biggest issue was including waypoints and using directions service to compute data such as distance positioning and 
+  2. `Directions Service, Directions Display` (Google), this feature leverages Google's tech to connect points and create polylines in between that snap to the nearest road by fetching 100's of geocoded points along the roads in between and returning a route most consistent with the Users' placed waypoints. Perhaps the most complex implementation I developed, biggest issue was including waypoints and using directions service to compute data such as distance positioning and 
   creating parseable information to store in our local state. 
   <br>
   <br>
@@ -127,15 +127,15 @@ https://www.mapmyrun.com/
   <img width="450" height="280" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/calcroute3.png">
   <br>
   <p>
-    <img style="float: left" width="450" height="280" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/calcroute1.png">
+    <img style="float: left" width="440" height="280" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/calcroute1.png">
 
-    <img style="float: right" width="450" height="280" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/calcroute2.png">
+    <img style="float: right" width="440" height="280" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/calcroute2.png">
   </p>
 
   <br>
   <br>
 
-  
+
 
   3. Marker Creation
 
