@@ -34,10 +34,14 @@ ___
 ## Table Of Contents
 
 * [Live Site](https://tri-harder.herokuapp.com/)
-* [Intro](https://github.com/danbourdier/TriHarder/#Intro)
+* [Intro](https://github.com/danbourdier/TriHarder/#Overview)
+* [Features!](https://github.com/danbourdier/TriHarder/#Features)
+* [Google Maps API!](https://github.com/danbourdier/TriHarder/#GoogleMapsAPI)
+* [Backend](https://github.com/danbourdier/TriHarder/#BACKEND)
 * [Technologies](https://github.com/danbourdier/TriHarder/#Technologies)
 * [Legal](https://github.com/danbourdier/TriHarder/#Legal)
 * [Links](https://github.com/danbourdier/TriHarder/#Links)
+* [Markdown Limitations](https://github.com/danbourdier/TriHarder/#MarkdownandGitHubReadMeLimitations)
 * [Future Directions](https://github.com/danbourdier/TriHarder/#Intro)
 
 
@@ -102,7 +106,8 @@ https://www.mapmyrun.com/
 
 
 
-### Google Maps API (Geocoding API, Directions Service, Directions Display), Frontend
+### GoogleMapsAPI 
+(Geocoding API, Directions Service, Directions Display), Frontend
 
 *Mapping*
 <p align="center">
@@ -165,8 +170,8 @@ https://www.mapmyrun.com/
   <br> 
   <br>
 
-### Backend (React-Redux to backend calls)
-
+### BACKEND 
+  (React-Redux to backend calls)
 * Before we are able to update our frontend and store we must make calls to communicate with our backend and fetch data 
   1. Before dispatching an action to update our Redux store we make an `AJAX` request passing in an object containing a `url`(where to send the request to be interpreted and redirect our request by rails router), `method(`type of request), and `data`(formatted into JSON) according to `RESTful` convention and `RESTful` routes.
 
@@ -227,7 +232,9 @@ https://www.mapmyrun.com/
 
 
 
-
+## MarkdownandGitHubReadMeLimitations
+ To learn more about the processes to my live site programming first-hand contact me on 
+ `www.linkedin.com/in/danielbourdier` for a more detailed explanation of my code!
 
 ---
 
