@@ -109,9 +109,9 @@ https://www.mapmyrun.com/
     make a call to the API and manipulate the response (contingent of a code 200) by setting our map's center prop to the returned object coordinates. As noted by keying in to [`geometry`][`location`]
 
   <p>
-    <img style="float: left" width="450" height="280" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/geo1.png">
+    <img style="float: left" width="410" height="200" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/geo1.png">
 
-    <img style="float: right" width="450" height="280" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/geo2.png">
+    <img style="float: right" width="410" height="200" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/geo2.png">
   </p>
 
   <br>
