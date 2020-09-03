@@ -96,7 +96,7 @@ https://www.mapmyrun.com/
 
 
 
-### Mapping
+### Google Maps API (Geocoding API, Directions Service, Directions Display)
 
 
 <p align="center">
@@ -106,7 +106,8 @@ https://www.mapmyrun.com/
 * Google Maps API is a powerful technology that allows a huge array of features that enable the user the ability to not only map routes. But also, the following;
 
   1. Geocoding API, by providing a zip code, city name, country name, and more we can pan the map to the specified location. What happens in the below code is we 
-    make a call to the API and manipulate the response (contingent of a code 200) by setting our map's center prop to the returned object coordinates. As noted by keying in to [`geometry`][`location`]
+    make a call to the API and manipulate the response (contingent of a code 200) by setting our map's center prop to the returned object coordinates. As noted by keying in to [`geometry`][`location`].
+    A very straight forward tool and intuitive to use!
 
   <p>
     <img style="float: left" width="410" height="200" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/geo1.png">
@@ -116,8 +117,13 @@ https://www.mapmyrun.com/
 
   <br>
 
-  2. Directions Service, Directions Display (Google), this feature leverages Google's tech to connect points and create polylines in between that snap to the nearest road by fetching 100's of geocoded points along the roads in between and returning a route most consistent with the Users' placed waypoints.
-
+  2. Directions Service, Directions Display (Google), this feature leverages Google's tech to connect points and create polylines in between that snap to the nearest road by fetching 100's of geocoded points along the roads in between and returning a route most consistent with the Users' placed waypoints. Perhaps the most complex implementation I developed, biggest issue was including waypoints and using directions service to compute data such as distance positioning and 
+  creating parseable information to store in our local state. 
+  
+  Each call to the API returns a multi-dimensional object that contains information ranging from the initial request (an object containing destination latitude and longitude, travelMode, and current waypoints)
+  to an array of routes each an object containing legs(our stops along the way) summary of location and waypoint order to track chonologically. Very fun stuff! See the immediate screen shot below of said code in chrome dev tools.
+  <img width="450" height="280" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/calcroute3.png">
+  <br>
   <p>
     <img style="float: left" width="450" height="280" src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/calcroute1.png">
 

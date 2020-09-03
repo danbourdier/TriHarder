@@ -203,12 +203,7 @@ class RouteMap extends Component {
           this.points[this.points.length - 2].setMap(null)
         }
         
-      } // else if (status === google.maps.DirectionsStatus.OVER_QUERY_LIMIT) {
-      //     this.delayFactor += 1;
-      //     setTimeout( () => {
-      //       this.createPoint(latLng)
-      //     }, this.delayFactor * 1000 );
-      // };
+      }
 
     });
     if (this.points.length >= 1) {
