@@ -60,7 +60,7 @@ class User < ApplicationRecord
   
   def generate_unique_session_token
     self.session_token = new_session_token
-    while User.find_by(session_token: self.session_token) # referenced from aA open as a more efficient alternative
+    while User.find_by(session_token: self.session_token) # efficient alternative
       self.session_token = new_session_token
     end
     self.session_token
