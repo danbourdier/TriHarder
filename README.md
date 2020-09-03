@@ -77,9 +77,16 @@ https://www.mapmyrun.com/
 * Live app prioritizes Bcrypt to secure new accounts and existing ones with the most comprehensive password algorithm that not only hashes an entry but salts it (randomizes entries with deterministic computation and adds additional randomized characters to promote resistance to rainbow table attacks). Upon a user's attempt to login, the app takes advantage of the deterministic output to match the user's entry to the randomized password generated on account signup.
 
 
-<img src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/auth.gif" >
+
+<img src="https://github.com/danbourdier/TriHarder/blob/master/app/assets/images/auth.gif" align="center" >
 
 &nbsp; 
+
+&nbsp; 
+
+&nbsp; 
+
+
 
 ### 
 
