@@ -1,14 +1,11 @@
 .outermost-splash-div {
   display: flex;
   flex-direction: column;
-  /* background-color: yellow; */
   position: relative;
-  /* text-align: right; */
-  /* justify-content: right; */
 }
 
 .first-splash-image {
-  /* background-image: url("splash.png"); */
+  
   position: absolute;
   width: 1320px;
   height: 670px;
@@ -23,21 +20,14 @@
   position: relative;
   display: flex;
   margin: 24px;
-  
   width: 1192px;
   left: 41px;
   flex-direction: column;
-  /* background-color: violet; */
-  /* justify-content: space-between; */
-  /* justify-content: right; */
-  /* margin-left: auto;    shifts the container to the edge of it's parent*/
-  
 }
 
 /* containers below */
 .own-every-mile-container {
   width: 1000px;
-  /* background-color: lavender; */
   margin-left: auto;
   margin-top: 20px;
   text-align: right;
