@@ -7,7 +7,6 @@ class RouteMapRight extends Component {
   }
 
   render() {
-
     let {total_time, distance, nullPoint, nullAllPoints} = this.props;
 
     return (
