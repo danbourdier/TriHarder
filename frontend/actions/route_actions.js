@@ -32,7 +32,6 @@ const changeRoute = route => ({
   type: EDIT_ROUTE,
   route
 })
-//////////////
 
 export const createRoute = route => dispatch => {
 
@@ -61,5 +60,3 @@ export const editRoute = route => dispatch => (
   RouteUtil.editRoute(route)
     .then(route => dispatch(changeRoute(route)), errors => dispatch(receiveErrors(errors)) )
 );
-
-// export const deleteRoute = 

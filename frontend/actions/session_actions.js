@@ -30,12 +30,11 @@ export const wipeErrors = () => ({
 // thunk action creators
 
 
-
+// for our thunk action creators I wanted to make sure we have error handling or tracking. hence i call upon receiveErrors
 export const signup = user => dispatch => (
   APIUtil.signup(user)
     .then(user => dispatch(receiveCurrentUser(user)), errors => dispatch(receiveErrors(errors)) )
-); // i put second args to #then because we need a way for store to keep track of errors upon ajax
-//      requests returning failure promises
+); 
 
 export const login = user => dispatch => ( 
   APIUtil.login(user)
