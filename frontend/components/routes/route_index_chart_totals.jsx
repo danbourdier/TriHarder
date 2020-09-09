@@ -27,7 +27,6 @@ const RouteChartTotals = props => (
         <aside>{props.numWorkouts}</aside>
         <span>completed</span>
       </div>
-
     </aside>
   </figure>
 
