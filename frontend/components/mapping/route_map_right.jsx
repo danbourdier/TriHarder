@@ -7,7 +7,7 @@ class RouteMapRight extends Component {
   }
 
   render() {
-    // object destructuring for DRYer code
+
     let {total_time, distance, nullPoint, nullAllPoints} = this.props;
 
     return (
