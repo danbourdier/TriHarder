@@ -26,7 +26,6 @@ class RouteMapRight extends Component {
           <strong>ToolTip</strong>
       </section>
     )
-
   };
 
 }
