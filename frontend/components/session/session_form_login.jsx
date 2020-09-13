@@ -39,16 +39,12 @@ class SessionFormLogin extends React.Component {
   };
 
   render() {
-    // let emailError = "";
-    // let passwordError = "";
     let stateErrors = this.props.errors.responseJSON;
 
     if (stateErrors) {
       stateErrors.forEach(error => {
         if ((error.includes("Invalid")) && (this.state.emailError.length === 0)) {
-          // emailError = error;
           this.setState({ emailError: error })
-          // passwordError = error;
           this.setState({ passwordError: error })
         }
 
@@ -79,7 +75,6 @@ class SessionFormLogin extends React.Component {
             <label>
               <input type="text" value={this.state.email} placeholder="Email" onChange={this.update('email')}/>
             </label>
-             {/* <p className={this.state.emailError.length < 1 ? "display-none" : "error"}>{this.state.emailError}</p> */}
              {eErrorTag}
 
             <label>
