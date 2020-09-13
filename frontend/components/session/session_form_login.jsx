@@ -55,9 +55,9 @@ class SessionFormLogin extends React.Component {
       });
     };
 
-    let eErrorTag = this.state.email.length > 0 ? 
+    let eErrorTag = (this.state.email.length > 0 || this.state.emailError.length === 0 )? 
       null : <p className="error">{this.state.emailError}</p>
-    let pErrorTag = this.state.password.length > 0 ? 
+    let pErrorTag = (this.state.password.length > 0 || this.state.passwordError.length === 0 ) ? 
       null : <p className="error">{this.state.passwordError}</p>
 
     
