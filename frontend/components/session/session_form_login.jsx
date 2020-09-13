@@ -12,7 +12,7 @@ class SessionFormLogin extends React.Component {
   constructor(props) {
     super(props)
 
-    this.state = { email: "", password: "" };
+    this.state = { email: "", emailError: "", password: "", passwordError: ""};
     this.handleSubmit = this.handleSubmit.bind(this);
     this.demoUser = this.demoUser.bind(this);
   };
@@ -35,7 +35,7 @@ class SessionFormLogin extends React.Component {
 
   render() {
     let wam = this.props.errors.responseJSON;
-    // let {} = this.state
+
     let emailError = "";
     let passwordError = "";
 
