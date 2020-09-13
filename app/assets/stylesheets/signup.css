@@ -244,11 +244,15 @@
 .session-form-signup-gender label {
   min-width: 152.5px;
   min-height: 44px;
+  position: relative;
 }
 .session-form-signup-gender label span {
   position: absolute;
-  bottom: 301px;
-  right: 272.5px;
+  /* bottom: 301px; */
+  bottom: 10%;
+  top: 35%;
+  left: 10%;
+  /* right: 272.5px; */
   font-size: 14px;
   color: darkgray;
 }
