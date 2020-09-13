@@ -68,10 +68,9 @@ class SessionFormSignup extends React.Component {
     if (stateErrors) {
 
       stateErrors.forEach(error => {
-        if (error.includes("First")) {
-          firstError = error
-        } else if (error.includes("Last")) {
-          lastError = error;
+        if ((error.includes("First")) && (this.state.firstNameError.length === 0)) {
+          // firstError = error
+          this.setState({ firstNameError: error })
         } else if (error.includes("Last")) {
           lastError = error;
         } else if (error.includes("Email")) {
