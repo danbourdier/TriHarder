@@ -75,12 +75,12 @@ class SessionFormLogin extends React.Component {
             <label>
               <input type="text" value={this.state.email} placeholder="Email" onChange={this.update('email')}/>
             </label>
-             <p className={this.state.emailError.length < 1 ? "error-hidden" : "error"}>{this.state.emailError}</p>
+             <p className={this.state.emailError.length < 1 ? "display-none" : "error"}>{this.state.emailError}</p>
 
             <label>
               <input type="password" value={this.state.password} placeholder="Password" onChange={this.update('password')} />
             </label>
-              <p className={this.state.passwordError.length < 1 ? "error-hidden" : "error"}>{this.state.passwordError}</p>
+              <p className={this.state.passwordError.length < 1 ? "display-none" : "error"}>{this.state.passwordError}</p>
 
             <Link className="session-form-login-forgot-password" to="/login/forgot_password">Forgot Password?</Link>
 
