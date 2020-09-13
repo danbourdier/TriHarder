@@ -23,8 +23,12 @@ class SessionFormLogin extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    
-    this.props.processForm(this.state)
+    let payload = {
+      email: this.state.email,
+      password: this.state.password
+    }
+
+    this.props.processForm(payload)
   };
 
   demoUser(e){
@@ -34,16 +38,18 @@ class SessionFormLogin extends React.Component {
   };
 
   render() {
-    let wam = this.props.errors.responseJSON;
+    let stateErrors = this.props.errors.responseJSON;
 
     let emailError = "";
     let passwordError = "";
 
-    if (wam) {
-      wam.forEach(error => {
+    if (stateErrors) {
+      stateErrors.forEach(error => {
         if (error.includes("Invalid")) {
-          emailError = error;
-          passwordError = error;
+          // emailError = error;
+          this.setState({emailError: error})
+          // passwordError = error;
+          this.setState({ passwordError: error })
         }
 
       });
@@ -66,12 +72,12 @@ class SessionFormLogin extends React.Component {
             <label>
               <input type="text" value={this.state.email} placeholder="Email" onChange={this.update('email')}/>
             </label>
-             <p className={emailError.length < 1 ? "error-hidden" : "error"}>{emailError}</p>
+             <p className={this.state.emailError.length < 1 ? "error-hidden" : "error"}>{this.state.emailError}</p>
 
             <label>
               <input type="password" value={this.state.password} placeholder="Password" onChange={this.update('password')} />
             </label>
-              <p className={passwordError.length < 1 ? "error-hidden" : "error"}>{passwordError}</p>
+              <p className={this.state.passwordError.length < 1 ? "error-hidden" : "error"}>{this.state.passwordError}</p>
 
             <Link className="session-form-login-forgot-password" to="/login/forgot_password">Forgot Password?</Link>
 
