@@ -12,7 +12,7 @@ class SessionFormSignup extends React.Component {
       locationError: "", day: "", dayError: "", month: "", monthError: "", 
       year: "", yearError: "" 
     };
-    
+
     this.handleSubmit = this.handleSubmit.bind(this);
     this.demoUser = this.demoUser.bind(this);
 
@@ -38,6 +38,13 @@ class SessionFormSignup extends React.Component {
     });
 
     return this.props.processForm(payload); 
+    // this.setState({
+    //   first_name: "", firstNameError: "", last_name: "", lastNameError: "",
+    //   email: "", emailError: "", password: "", passwordError: "",
+    //   birth_date: "", birthError: "", gender: "", genderError: "", location: "",
+    //   locationError: "", day: "", dayError: "", month: "", monthError: "",
+    //   year: "", yearError: ""
+    // });
   };
 
   demoUser(e) {
@@ -121,14 +128,20 @@ class SessionFormSignup extends React.Component {
         <option key={i} value={locale}>{locale}</option>
       ))
 
-    // let stateDay = "";
-    // let stateMonth = "";
-    // let stateYear = "";
+
+    let fNError = (this.state.first_name.length > 0 || this.state.firstNameError.length === 0) ? 
+      null : <p className="error">{this.state.firstNameError}</p>
+    let lNError = (this.state.last_name.length > 0 || this.state.lastNameError.length === 0) ? 
+      null : <p className="error">{this.state.lastNameError}</p>
+    let eError = (this.state.email.length > 0 || this.state.emailError.length === 0) ? 
+      null : <p className="error">{this.state.emailError}</p>
+    let pError = (this.state.password.length > 0 || this.state.passwordError.length === 0) ? 
+      null : <p className="error">{this.state.passwordError}</p>
+
+
 
     return (
       <div className="session-form-signup-body">
-
-        {/* <img className="session-form-signup-captcha" src={window.captcha} alt="captcha"/> */}
 
         <section className="session-form-signup-container">
         
@@ -137,28 +150,31 @@ class SessionFormSignup extends React.Component {
           <button onClick={this.demoUser} >DEMO USER</button>
           <div><aside className="signup-form-or-fancy"></aside><p>------------------------------------------------OR--------------------------------------------------</p><aside className="signup-form-or-fancy"></aside></div>
             
-          {/* <h3>{this.props.formType}</h3> */}
           <form onSubmit={this.handleSubmit}>
             <div className="session-form-signup-inner">
               <label className="session-form-signup-input">
                 <input type="text" placeholder="First name" value={this.state.first_name} onChange={this.update("first_name")} />
               </label>
-                <p className={firstError.length < 1 ? "error-hidden" : "error"}>{firstError}</p>
+                {/* <p className={firstError.length < 1 ? "error-hidden" : "error"}>{firstError}</p> */}
+                { fNError }
 
               <label className="session-form-signup-input">
                 <input type="text" placeholder="Last name" value={this.state.last_name} onChange={this.update("last_name")} />
               </label>
-                <p className={lastError.length < 1 ? "error-hidden" : "error"}>{lastError}</p>
+                {/* <p className={lastError.length < 1 ? "error-hidden" : "error"}>{lastError}</p> */}
+                { lNError }
 
               <label className="session-form-signup-input">
                 <input type="text" placeholder="Email" value={this.state.email} onChange={this.update("email")} />
               </label>
-                <p className={emailError.length < 1 ? "error-hidden" : "error"}>{emailError}</p>
+                {/* <p className={emailError.length < 1 ? "error-hidden" : "error"}>{emailError}</p> */}
+                { eError }
 
               <label className="session-form-signup-input">
                 <input type="password" placeholder="Password" value={this.state.password} onChange={this.update("password")} />
               </label>
-                <p className={passwordError.length < 1 ? "error-hidden" : "error"}>{passwordError}</p>
+                {/* <p className={passwordError.length < 1 ? "error-hidden" : "error"}>{passwordError}</p> */}
+                { pError }
 
               {/* birthdate selectors */}
               <div className="session-form-signup-birthdate">
