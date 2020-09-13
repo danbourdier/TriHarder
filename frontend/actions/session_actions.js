@@ -29,7 +29,6 @@ export const wipeErrors = () => ({
 
 // thunk action creators
 
-
 // for our thunk action creators I wanted to make sure we have error handling or tracking. hence i call upon receiveErrors
 export const signup = user => dispatch => (
   APIUtil.signup(user)
