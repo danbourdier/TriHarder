@@ -71,16 +71,21 @@ class SessionFormSignup extends React.Component {
         if ((error.includes("First")) && (this.state.firstNameError.length === 0)) {
           // firstError = error
           this.setState({ firstNameError: error })
-        } else if (error.includes("Last")) {
-          lastError = error;
-        } else if (error.includes("Email")) {
-          emailError = error;
-        } else if (error.includes("Birth")) {
-          birthDateError = error;
-        } else if (error.includes("Location")) {
-          locationError = error;
-        } else if (error.includes("Password")) {
-          passwordError = error;
+        } else if ((error.includes("Last")) && (this.state.lastNameError.length === 0)) {
+          // lastError = error;
+          this.setState({ lastNameError: error })
+        } else if ((error.includes("Email")) && (this.state.emailError.length === 0)) {
+          // emailError = error;
+          this.setState({ emailError: error })
+        } else if ((error.includes("Birth")) && (this.state.birthError.length === 0)) {
+          // birthDateError = error;
+          this.setState({ birthError: error })
+        } else if ((error.includes("Location")) && (this.state.locationError.length === 0)) {
+          // locationError = error;
+          this.setState({ locationError: error })
+        } else if ((error.includes("Password")) && (this.state.passwordError.length === 0)) {
+          // passwordError = error;
+          this.setState({ passwordError: error })
         }
       });
 
