@@ -23,8 +23,13 @@ class SessionFormLogin extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    
-    this.props.processForm(this.state)
+    let payload = {
+      email: this.state.email,
+      password: this.state.password
+    }
+
+    this.props.processForm(payload)
+    this.setState({email: "", password: ""})
   };
 
   demoUser(e){
@@ -34,20 +39,24 @@ class SessionFormLogin extends React.Component {
   };
 
   render() {
-    let wam = this.props.errors.responseJSON;
+    let stateErrors = this.props.errors.responseJSON;
 
-    let emailError = "";
-    let passwordError = "";
-
-    if (wam) {
-      wam.forEach(error => {
-        if (error.includes("Invalid")) {
-          emailError = error;
-          passwordError = error;
+    if (stateErrors) {
+      stateErrors.forEach(error => {
+        if ((error.includes("Invalid")) && (this.state.emailError.length === 0)) {
+          this.setState({ emailError: error })
+          this.setState({ passwordError: error })
         }
 
       });
     };
+
+    let eErrorTag = (this.state.email.length > 0 || this.state.emailError.length === 0 )? 
+      null : <p className="error">{this.state.emailError}</p>
+    let pErrorTag = (this.state.password.length > 0 || this.state.passwordError.length === 0 ) ? 
+      null : <p className="error">{this.state.passwordError}</p>
+
+    
 
     return (
       <div className="session-form-login-body"> 
@@ -66,12 +75,12 @@ class SessionFormLogin extends React.Component {
             <label>
               <input type="text" value={this.state.email} placeholder="Email" onChange={this.update('email')}/>
             </label>
-             <p className={emailError.length < 1 ? "error-hidden" : "error"}>{emailError}</p>
+             {eErrorTag}
 
             <label>
               <input type="password" value={this.state.password} placeholder="Password" onChange={this.update('password')} />
             </label>
-              <p className={passwordError.length < 1 ? "error-hidden" : "error"}>{passwordError}</p>
+              {pErrorTag}
 
             <Link className="session-form-login-forgot-password" to="/login/forgot_password">Forgot Password?</Link>
 
