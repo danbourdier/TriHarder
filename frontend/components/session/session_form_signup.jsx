@@ -5,7 +5,7 @@ class SessionFormSignup extends React.Component {
   constructor(props) {
     super(props)
 
-    this.state = { first_name: "", last_name: "", email: "", password: "", birth_date: "", gender: "", location: "", day: "", month: "", year: "" };
+    this.state = { first_name: "", firstNameError: "", last_name: "", lastNameError: "", email: "", emailError: "", password: "", passwordError: "", birth_date: "", birthError: "", gender: "", genderError: "", location: "", locationError: "", day: "", dayError: "", month: "", monthError: "", year: "", yearError: "" };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.demoUser = this.demoUser.bind(this);
 
