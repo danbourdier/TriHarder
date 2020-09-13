@@ -38,16 +38,14 @@ class SessionFormLogin extends React.Component {
   };
 
   render() {
+    
     let stateErrors = this.props.errors.responseJSON;
-
-    let emailError = "";
-    let passwordError = "";
 
     if (stateErrors) {
       stateErrors.forEach(error => {
-        if (error.includes("Invalid")) {
+        if ((error.includes("Invalid")) && (this.state.emailError.length === 0)) {
           // emailError = error;
-          this.setState({emailError: error})
+          this.setState({ emailError: error })
           // passwordError = error;
           this.setState({ passwordError: error })
         }
@@ -55,6 +53,11 @@ class SessionFormLogin extends React.Component {
       });
     };
 
+    // let emailError = "";
+    // let passwordError = "";
+
+    
+    // debugger
     return (
       <div className="session-form-login-body"> 
 
