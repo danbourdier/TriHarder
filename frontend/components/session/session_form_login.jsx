@@ -29,6 +29,7 @@ class SessionFormLogin extends React.Component {
     }
 
     this.props.processForm(payload)
+    this.setState({email: "", password: ""})
   };
 
   demoUser(e){
@@ -38,7 +39,8 @@ class SessionFormLogin extends React.Component {
   };
 
   render() {
-    
+    // let emailError = "";
+    // let passwordError = "";
     let stateErrors = this.props.errors.responseJSON;
 
     if (stateErrors) {
@@ -53,11 +55,11 @@ class SessionFormLogin extends React.Component {
       });
     };
 
-    // let emailError = "";
-    // let passwordError = "";
+    let pErrorTag = ((this.state.passwordError.length < 1) && (this.state.password.length > 0)) ? 
+      null : <p className="error">{this.state.passwordError}</p>
 
     
-    // debugger
+
     return (
       <div className="session-form-login-body"> 
 
@@ -80,7 +82,8 @@ class SessionFormLogin extends React.Component {
             <label>
               <input type="password" value={this.state.password} placeholder="Password" onChange={this.update('password')} />
             </label>
-              <p className={this.state.passwordError.length < 1 ? "display-none" : "error"}>{this.state.passwordError}</p>
+              {/* <p className={((this.state.passwordError.length < 1) && (this.state.password.length > 0)) ? "display-none" : "error"}>{this.state.passwordError}</p> */}
+              {pErrorTag}
 
             <Link className="session-form-login-forgot-password" to="/login/forgot_password">Forgot Password?</Link>
 
