@@ -156,25 +156,21 @@ class SessionFormSignup extends React.Component {
               <label className="session-form-signup-input">
                 <input type="text" placeholder="First name" value={this.state.first_name} onChange={this.update("first_name")} />
               </label>
-                {/* <p className={firstError.length < 1 ? "error-hidden" : "error"}>{firstError}</p> */}
                 { fNError }
 
               <label className="session-form-signup-input">
                 <input type="text" placeholder="Last name" value={this.state.last_name} onChange={this.update("last_name")} />
               </label>
-                {/* <p className={lastError.length < 1 ? "error-hidden" : "error"}>{lastError}</p> */}
                 { lNError }
 
               <label className="session-form-signup-input">
                 <input type="text" placeholder="Email" value={this.state.email} onChange={this.update("email")} />
               </label>
-                {/* <p className={emailError.length < 1 ? "error-hidden" : "error"}>{emailError}</p> */}
                 { eError }
 
               <label className="session-form-signup-input">
                 <input type="password" placeholder="Password" value={this.state.password} onChange={this.update("password")} />
               </label>
-                {/* <p className={passwordError.length < 1 ? "error-hidden" : "error"}>{passwordError}</p> */}
                 { pError }
 
               {/* birthdate selectors */}
