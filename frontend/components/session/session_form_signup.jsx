@@ -111,7 +111,6 @@ class SessionFormSignup extends React.Component {
         <option key={i} value={locale}>{locale}</option>
       ))
 
-
     let fNError = (this.state.first_name.length > 0 || this.state.firstNameError.length === 0) ? 
       null : <p className="error">{this.state.firstNameError}</p>
     let lNError = (this.state.last_name.length > 0 || this.state.lastNameError.length === 0) ? 
@@ -124,7 +123,6 @@ class SessionFormSignup extends React.Component {
       null : <p className="error">{this.state.birthError}</p>
     let lError = (this.state.location.length > 0 || this.state.locationError.length === 0) ? 
       null : <p className="error">{this.state.locationError}</p>
-
 
 
     return (
@@ -186,11 +184,11 @@ class SessionFormSignup extends React.Component {
               <div className="session-form-signup-gender">
                 <label>
                   <input type="radio" name="x" value={"Male"} onClick={this.update("gender")}/>
-                  <span>Male</span>
+                  <span onClick={this.handleCSS}>Male</span>
                 </label>
                 <label>
                   <input type="radio" name="x" value={"Female"} onClick={this.update("gender")} />
-                  <span>Female</span>
+                  <span onClick={this.handleCSS}>Female</span>
                 </label>
               </div>
                 

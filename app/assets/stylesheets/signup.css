@@ -248,8 +248,7 @@
 }
 .session-form-signup-gender label span {
   position: absolute;
-  bottom: 10%;
-  top: 35%;
+  top: 34%;
   left: 10%;
   font-size: 14px;
   color: darkgray;
