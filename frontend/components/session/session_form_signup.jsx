@@ -134,6 +134,10 @@ class SessionFormSignup extends React.Component {
       null : <p className="error">{this.state.emailError}</p>
     let pError = (this.state.password.length > 0 || this.state.passwordError.length === 0) ? 
       null : <p className="error">{this.state.passwordError}</p>
+    let bDError = (this.state.month.length > 0 || this.state.birthError.length === 0) ? 
+      null : <p className="error">{this.state.birthError}</p>
+    let lError = (this.state.location.length > 0 || this.state.locationError.length === 0) ? 
+      null : <p className="error">{this.state.locationError}</p>
 
 
 
@@ -176,26 +180,26 @@ class SessionFormSignup extends React.Component {
               {/* birthdate selectors */}
               <div className="session-form-signup-birthdate">
                 {/* day */}
-                <label className="session-form-signup-input-birth"> {/* We dont need labels at this point*/}
+                <label className="session-form-signup-input-birth">
                   <select name="days" placeholder="Day" value={this.state.day} onChange={this.update("day")}>
                   {dayIndex}
                   </select>
                 </label>
                 {/* month */}
-                <label className="session-form-signup-input-birth"> {/* We dont need labels at this point*/}
+                <label className="session-form-signup-input-birth">
                   <select id="month-selector" name="months" placeholder="Month" value={this.state.month} onChange={this.update("month")}>
                     {monthIndex}
                   </select>
                 </label>
                 {/* year */}
-                <label className="session-form-signup-input-birth"> {/* We dont need labels at this point*/}
+                <label className="session-form-signup-input-birth">
                   <select id="year-selector" name="years" placeholder="Year" value={this.state.year} onChange={this.update("year")}>
                     {yearIndex}
                   </select>
                 </label>
                 
               </div>
-                  <p className={birthDateError.length < 1 ? "error-hidden" : "error"}>{birthDateError}</p>
+                  { bDError }
 
               <div className="session-form-signup-gender">
                 <label>
@@ -214,7 +218,7 @@ class SessionFormSignup extends React.Component {
                   {locationIndex}
                 </select>
               </label>
-                <p className={locationError.length < 1 ? "error-hidden" : "error"}>{locationError}</p>
+                { lError }
 
               <div className="session-form-signup-offer-checkbox">
                 <div>
