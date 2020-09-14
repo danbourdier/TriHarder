@@ -5,21 +5,29 @@ class SessionFormSignup extends React.Component {
   constructor(props) {
     super(props)
 
-    this.state = { first_name: "", last_name: "", email: "", password: "", birth_date: "", gender: "", location: "", day: "", month: "", year: "" };
+    this.state = { 
+      first_name: "", firstNameError: "", last_name: "", lastNameError: "",
+      email: "", emailError: "", password: "", passwordError: "", 
+      birth_date: "", birthError: "", gender: "", genderError: "", location: "",
+      locationError: "", day: "", dayError: "", month: "", monthError: "", 
+      year: "", yearError: "" 
+    };
+
     this.handleSubmit = this.handleSubmit.bind(this);
     this.demoUser = this.demoUser.bind(this);
-
   }
 
   update(field) {
     return e => this.setState( { [field]: e.currentTarget.value  } )
-    // return e => console.log(e.currentTarget.value)
   };
 
   handleSubmit(e) {
     e.preventDefault();
-    
-    let birthDateRaw = this.state['month'] + "/" + this.state['day'] + "/" + this.state['year']
+    let birthDateRaw;
+
+    if (this.state.month) {
+      birthDateRaw = this.state['month'] + "/" + this.state['day'] + "/" + this.state['year']
+    }
 
     let payload = Object.assign({}, {
       first_name: this.state.first_name,
@@ -42,33 +50,21 @@ class SessionFormSignup extends React.Component {
 
   render() {
     let stateErrors = this.props.errors.responseJSON;
-    let firstError = "";
-    let lastError = "";
-    let emailError = "";
-    let passwordError = "";
-    let birthDateError = "";
-    let genderError = "";
-    let locationError = "";
-
-
 
     if (stateErrors) {
-
       stateErrors.forEach(error => {
-        if (error.includes("First")) {
-          firstError = error
-        } else if (error.includes("Last")) {
-          lastError = error;
-        } else if (error.includes("Last")) {
-          lastError = error;
-        } else if (error.includes("Email")) {
-          emailError = error;
-        } else if (error.includes("Birth")) {
-          birthDateError = error;
-        } else if (error.includes("Location")) {
-          locationError = error;
-        } else if (error.includes("Password")) {
-          passwordError = error;
+        if ((error.includes("First")) && (this.state.firstNameError.length === 0)) {
+          this.setState({ firstNameError: error })
+        } else if ((error.includes("Last")) && (this.state.lastNameError.length === 0)) {
+          this.setState({ lastNameError: error })
+        } else if ((error.includes("Email")) && (this.state.emailError.length === 0)) {
+          this.setState({ emailError: error })
+        } else if ((error.includes("Birth")) && (this.state.birthError.length === 0)) {
+          this.setState({ birthError: error })
+        } else if ((error.includes("Location")) && (this.state.locationError.length === 0)) {
+          this.setState({ locationError: error })
+        } else if ((error.includes("Password")) && (this.state.passwordError.length === 0)) {
+          this.setState({ passwordError: error })
         }
       });
 
@@ -115,14 +111,22 @@ class SessionFormSignup extends React.Component {
         <option key={i} value={locale}>{locale}</option>
       ))
 
-    // let stateDay = "";
-    // let stateMonth = "";
-    // let stateYear = "";
+    let fNError = (this.state.first_name.length > 0 || this.state.firstNameError.length === 0) ? 
+      null : <p className="error">{this.state.firstNameError}</p>
+    let lNError = (this.state.last_name.length > 0 || this.state.lastNameError.length === 0) ? 
+      null : <p className="error">{this.state.lastNameError}</p>
+    let eError = (this.state.email.length > 0 || this.state.emailError.length === 0) ? 
+      null : <p className="error">{this.state.emailError}</p>
+    let pError = (this.state.password.length > 0 || this.state.passwordError.length === 0) ? 
+      null : <p className="error">{this.state.passwordError}</p>
+    let bDError = (this.state.month.length > 0 || this.state.birthError.length === 0) ? 
+      null : <p className="error">{this.state.birthError}</p>
+    let lError = (this.state.location.length > 0 || this.state.locationError.length === 0) ? 
+      null : <p className="error">{this.state.locationError}</p>
+
 
     return (
       <div className="session-form-signup-body">
-
-        {/* <img className="session-form-signup-captcha" src={window.captcha} alt="captcha"/> */}
 
         <section className="session-form-signup-container">
         
@@ -131,61 +135,60 @@ class SessionFormSignup extends React.Component {
           <button onClick={this.demoUser} >DEMO USER</button>
           <div><aside className="signup-form-or-fancy"></aside><p>------------------------------------------------OR--------------------------------------------------</p><aside className="signup-form-or-fancy"></aside></div>
             
-          {/* <h3>{this.props.formType}</h3> */}
           <form onSubmit={this.handleSubmit}>
             <div className="session-form-signup-inner">
               <label className="session-form-signup-input">
                 <input type="text" placeholder="First name" value={this.state.first_name} onChange={this.update("first_name")} />
               </label>
-                <p className={firstError.length < 1 ? "error-hidden" : "error"}>{firstError}</p>
+                { fNError }
 
               <label className="session-form-signup-input">
                 <input type="text" placeholder="Last name" value={this.state.last_name} onChange={this.update("last_name")} />
               </label>
-                <p className={lastError.length < 1 ? "error-hidden" : "error"}>{lastError}</p>
+                { lNError }
 
               <label className="session-form-signup-input">
                 <input type="text" placeholder="Email" value={this.state.email} onChange={this.update("email")} />
               </label>
-                <p className={emailError.length < 1 ? "error-hidden" : "error"}>{emailError}</p>
+                { eError }
 
               <label className="session-form-signup-input">
                 <input type="password" placeholder="Password" value={this.state.password} onChange={this.update("password")} />
               </label>
-                <p className={passwordError.length < 1 ? "error-hidden" : "error"}>{passwordError}</p>
+                { pError }
 
               {/* birthdate selectors */}
               <div className="session-form-signup-birthdate">
                 {/* day */}
-                <label className="session-form-signup-input-birth"> {/* We dont need labels at this point*/}
+                <label className="session-form-signup-input-birth">
                   <select name="days" placeholder="Day" value={this.state.day} onChange={this.update("day")}>
                   {dayIndex}
                   </select>
                 </label>
                 {/* month */}
-                <label className="session-form-signup-input-birth"> {/* We dont need labels at this point*/}
+                <label className="session-form-signup-input-birth">
                   <select id="month-selector" name="months" placeholder="Month" value={this.state.month} onChange={this.update("month")}>
                     {monthIndex}
                   </select>
                 </label>
                 {/* year */}
-                <label className="session-form-signup-input-birth"> {/* We dont need labels at this point*/}
+                <label className="session-form-signup-input-birth">
                   <select id="year-selector" name="years" placeholder="Year" value={this.state.year} onChange={this.update("year")}>
                     {yearIndex}
                   </select>
                 </label>
                 
               </div>
-                  <p className={birthDateError.length < 1 ? "error-hidden" : "error"}>{birthDateError}</p>
+                  { bDError }
 
               <div className="session-form-signup-gender">
                 <label>
                   <input type="radio" name="x" value={"Male"} onClick={this.update("gender")}/>
-                  <span>Male</span>
+                  <span onClick={this.handleCSS}>Male</span>
                 </label>
                 <label>
                   <input type="radio" name="x" value={"Female"} onClick={this.update("gender")} />
-                  <span>Female</span>
+                  <span onClick={this.handleCSS}>Female</span>
                 </label>
               </div>
                 
@@ -195,7 +198,7 @@ class SessionFormSignup extends React.Component {
                   {locationIndex}
                 </select>
               </label>
-                <p className={locationError.length < 1 ? "error-hidden" : "error"}>{locationError}</p>
+                { lError }
 
               <div className="session-form-signup-offer-checkbox">
                 <div>
