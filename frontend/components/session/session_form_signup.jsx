@@ -58,14 +58,8 @@ class SessionFormSignup extends React.Component {
 
   render() {
     let stateErrors = this.props.errors.responseJSON;
-    let birthDateError = "";
-    let genderError = "";
-    let locationError = "";
-
-
 
     if (stateErrors) {
-
       stateErrors.forEach(error => {
         if ((error.includes("First")) && (this.state.firstNameError.length === 0)) {
           this.setState({ firstNameError: error })
