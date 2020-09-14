@@ -125,37 +125,36 @@ class SplashPage extends React.Component{
 
             <div className="splash-find-your-path-paragraph">
               <p>Discover and pave new routes</p>
-              <p>wherever you are. Save your favorites for</p>
-              <p>the next time you set out.</p>
+              <p>wherever you are. Click any locale</p>
+              <p>below to start!</p>
             </div>
               <br/>
 
               <div className="splash-cities-div">
                 <ul className="first-city-column-div">
-                  <a href="">New York, NY </a>
-                  <a href="">Manhattan, NY </a>
-                  <a href="">San Francisco, CA </a>
-                  <a href="">Austin, TX </a>
-                  <a href="">Denver, CO </a>
-                  <a href="">Seattle, WA </a>
+                  <Link to="/login">New York, NY </Link>
+                  <Link to="/login">Manhattan, NY </Link>
+                  <Link to="/login">San Francisco, CA </Link>
+                  <Link to="/login">Austin, TX </Link>
+                  <Link to="/login">Denver, CO </Link>
+                  <Link to="/login">Seattle, WA </Link>
                 </ul>
 
                 <ul className="second-city-column-div">
-                  <a href="">San Diego, CA </a>
-                  <a href="">Portland, OR </a>
-                  <a href="">Chicago, IL </a>
-                  <a href="">Honolulu, HI </a>
-                  <a href="">Tallahassee, FI </a>
-                  <a href="">Boston, MA </a>
+                  <Link to="/login">San Diego, CA </Link>
+                  <Link to="/login">Portland, OR </Link>
+                  <Link to="/login">Chicago, IL</Link>
+                  <Link to="/login">Honolulu, HI </Link>
+                  <Link to="/login">Tallahassee, FI </Link>
+                  <Link to="/login">Boston, MA </Link>
                 </ul>
 
                 <ul className="third-city-column-div">
-                  <a href="">Dublin, Ireland </a>
-                  <a href="">Christchurch, New Zealand </a>
-                  <a href="">Vancouver, Canada </a>
-                  <a href="">Edinburgh, Scotland </a>
-                  <a href="">United States </a>
-                  <a href="">Find Your City </a>
+                  <Link to="/login">Christchurch, New Zealand </Link>
+                  <Link to="/login">Vancouver, Canada </Link>
+                  <Link to="/login">Edinburgh, Scotland </Link>
+                  <Link to="/login">United States </Link>
+                  <Link to="/login">Find Your City </Link>
                 </ul>
               </div>
           </div>
