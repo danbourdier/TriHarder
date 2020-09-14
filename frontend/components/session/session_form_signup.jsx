@@ -24,8 +24,11 @@ class SessionFormSignup extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    
-    let birthDateRaw = this.state['month'] + "/" + this.state['day'] + "/" + this.state['year']
+    let birthDateRaw;
+
+    if (this.state.month) {
+      birthDateRaw = this.state['month'] + "/" + this.state['day'] + "/" + this.state['year']
+    }
 
     let payload = Object.assign({}, {
       first_name: this.state.first_name,
