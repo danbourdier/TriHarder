@@ -15,7 +15,6 @@ class SessionFormSignup extends React.Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
     this.demoUser = this.demoUser.bind(this);
-
   }
 
   update(field) {
@@ -41,13 +40,6 @@ class SessionFormSignup extends React.Component {
     });
 
     return this.props.processForm(payload); 
-    // this.setState({
-    //   first_name: "", firstNameError: "", last_name: "", lastNameError: "",
-    //   email: "", emailError: "", password: "", passwordError: "",
-    //   birth_date: "", birthError: "", gender: "", genderError: "", location: "",
-    //   locationError: "", day: "", dayError: "", month: "", monthError: "",
-    //   year: "", yearError: ""
-    // });
   };
 
   demoUser(e) {
