@@ -202,8 +202,6 @@ class SplashPage extends React.Component{
         
         
         <section className="take-on-new-challenges-div">
-          {/* <div> */}
-          {/* </div> */}
 
           <div className="take-on-new-challenges-div-inner">
 
