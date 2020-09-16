@@ -16,7 +16,6 @@ import WorkOutFormContainer from './workouts/workout_container';
 import HeaderMainContainer from './header/header_main_container';
 import FooterContainer from './footer/footer_container';
 import RouteShowContainer from './routes/route_show_container';
-// import EditRouteContainer from './routes/edit_route_container';
 
 const App = () => (
   <div className="render"> 

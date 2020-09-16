@@ -4,7 +4,6 @@ import React, {Component} from 'react';
 const RouteChartTotals = props => (
   <figure className="route-index-chart-totals-container">
     <aside className="route-index-char-totals-calcs">
-      {/* 105 */}
       <div>
         <p>TIME</p>
         <aside>{parseFloat(props.time/60.0).toFixed(2)}</aside>
