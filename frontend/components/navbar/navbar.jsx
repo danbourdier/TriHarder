@@ -4,18 +4,6 @@ import { Link, NavLink } from 'react-router-dom';
 import PhotoDropDown from './personalNavBar';
 
 
-
-
-
-
-
-// const lazyLoad = () => {
-//   window.setTimeout(targetFlip, 2 * 2000);
-// }
-
-// lazyLoad()
-
-
 const NavBar = props => {
   const sessionLinks = () => (
 

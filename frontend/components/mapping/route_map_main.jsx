@@ -111,13 +111,11 @@ class RouteMap extends Component {
     });
 
     this.map = new google.maps.Map(this.mapNode, mapOptions);
-    // map = new google.maps.Map(this.mapNode, mapOptions);
     // right below here is our instantiated bounds at which our map's viewport 
       // is centered
     this.bounds = new google.maps.LatLngBounds();
 
     this.directionsDisplay.setMap(this.map);
-    // this.directionsDisplay.setMap(map);
 
     // our ONLY map event listener with the purpose of creating points with a call to #createPoint
     google.maps.event.addListener(this.map, 'click', (e) => {
