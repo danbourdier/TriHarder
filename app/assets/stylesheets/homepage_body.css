@@ -16,7 +16,7 @@
 }
 
 .homepage-body-header {
-  min-height: 125px;
+  /* min-height: 125px; */
   max-height: 125px;
   border-top: solid 1px aliceblue;
   display: flex;

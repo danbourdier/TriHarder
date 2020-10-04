@@ -10,11 +10,11 @@ const HomePageComponent = props => (
 
     <div className="homepage-body">
       <section className="homepage-body-header">
-        <div id="ecbannerblue">
+        {/* <div id="ecbannerblue">
           <figure>
             Changes are coming to this website!
           </figure>
-        </div>
+        </div> */}
 
         <nav className="homepage-body-header-radios">
           <Link to="/activity_feed">
