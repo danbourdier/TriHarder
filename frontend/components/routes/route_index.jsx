@@ -16,7 +16,7 @@ class RouteIndex extends Component {
     let totalTime = 0;
     let totalCalories = 0;
     let totalWorkouts = 0;
-    // average calories burned every hour by middle aged male
+    // average cal burned every hour by middle aged male
     //    ~175 lb = 400 cal
 
     let allRoutes = this.props.routes;
