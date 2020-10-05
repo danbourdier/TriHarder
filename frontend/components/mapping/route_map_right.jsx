@@ -23,7 +23,6 @@ class RouteMapRight extends Component {
           <button onClick={nullAllPoints}>Clear All Points</button>
           <button onClick={nullPoint}>Clear Last Point</button>
         </section>
-          <strong>ToolTip</strong>
       </section>
     )
   };
