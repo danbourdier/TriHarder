@@ -89,6 +89,7 @@ class RouteMap extends Component {
       center: !this.routeData ? { lat: 40.744661381538805, lng: -73.98616038721435 } 
         : { lat: this.routeData[0].lat, lng: this.routeData[0].lng },
       zoom: 15, // zoom level bench marks are 0: globeview, 5: continent view, 10: state...
+      maxZoom: 18,
       styles: [
         {
           'featureType': 'poi',
