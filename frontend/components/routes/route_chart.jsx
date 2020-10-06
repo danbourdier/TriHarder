@@ -11,13 +11,13 @@ class BarChartComponent extends React.Component {
   }
 
   render() {
-    const data = [];
+    let data = [];
 
     this.props.routes.map((route, idx) => { 
       data.push({name: idx + 1, distance: route.distance, pv: 2400, })
       }
     );
-
+    data = data.length != 0 ? data : [{name: 'No Routes Yet!', distance: 0, pv: 2400}]
     return (
     <BarChart width={600} height={300} data={data}>
       <XAxis dataKey="name" stroke="#8884d8" />
