@@ -40,7 +40,9 @@ class WorkoutForm extends Component {
       'description': description,
       'start_point': start_point,
       'end_point': end_point,
-      'user_id': this.props.currentUserId
+      'user_id': this.props.currentUserId,
+      'route_data': JSON.stringify([{ lat: 40.744661381538805, 
+        lng: -73.98616038721435 }, { lat: 41.744661381538805, lng: -70.98616038721435 }])
     });
 
     this.props.createRoute(newRoute);
