@@ -20,7 +20,7 @@ class RouteIndex extends Component {
     //    ~175 lb = 400 cal
 
     let allRoutes = this.props.routes;
-    let index = allRoutes.map(route => {
+    let index = allRoutes.length != 0 ? allRoutes.map(route => {
         totalDistance = totalDistance + route.distance;
         totalTime = totalTime + route.total_time;
         totalCalories = totalCalories + ((route.total_time / 60) * 400);
@@ -30,9 +30,10 @@ class RouteIndex extends Component {
 
         return (
           <RouteIndexItem key={route.id} rout={route} />
-        )
+        ) 
       
-    });
+    }) : <h3 id="routeIndex20042"> No Routes Yet!</h3>
+    
 
     
 
