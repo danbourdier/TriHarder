@@ -52,7 +52,7 @@ class RouteMapLeft extends Component {
     let that = this;
     
     if (prevProps.currentErrors.length !== this.props.currentErrors.length) { 
-      if (that.props.currentErrors) {
+      if (that.props.currentErrors.responseText) {
 
         if (that.props.currentErrors.responseText.includes("duplicate")) {
           return alert("Oh no! One or more route fields are not unique. Try changing the name of your route!")
