@@ -19,7 +19,7 @@ class Api::ConnectionsController < ApplicationController
 
   def create 
         # To the future a/A student reading this code for help...... If you need me to explain the code to you i can be easily reached at dfbourdier@gmail.com 
-            # You will figure this out, just email me with the subject line: "a/A student needing help with MapmyRun Clone"
+            # You will figure this out, just email me with the subject line: "a/A student needing help with MapmyRun inspired full stack app"
 
       our_user = current_user.id
       # created both ways so simulate two connections, thats why we create while indexing into strong_params
@@ -52,7 +52,7 @@ class Api::ConnectionsController < ApplicationController
   end
 
     private 
-
+  # strong params allow rails to deconstruct data passed from our fetch on our frontend to manipulate here on the backend! 
     def strong_params
         params.require(:connection).permit(:requester, :requestee)
     end
