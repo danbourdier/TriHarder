@@ -203,7 +203,7 @@ class SessionFormSignup extends React.Component {
               <div className="session-form-signup-offer-checkbox">
                 <div>
 
-                  <input type="checkbox" onClick={() => (alert("Send me a message at www.linkedin.com/in/danielbourdier")) } /> <span>Yes, I would like to level up this developer, and message him on linkedIn!</span>
+                  <input type="checkbox" onClick={() => (alert("Send me a message at www.linkedin.com/in/danbourdier")) } /> <span>Yes, I would like to level up this developer, and message him on linkedIn!</span>
                 </div>
               </div>
 
