@@ -233,8 +233,8 @@ https://www.mapmyrun.com/
 
 
 ## MarkdownandGitHubReadMeLimitations
- To learn more about the processes to my live site programming first-hand contact me on 
- `www.linkedin.com/in/danielbourdier` for a more detailed explanation of my code!
+ To learn more about the processes to my live site development first-hand contact me on 
+ `www.linkedin.com/in/danbourdier` for a more detailed explanation of my code!
 
 ---
 
