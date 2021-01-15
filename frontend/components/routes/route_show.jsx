@@ -266,7 +266,7 @@ class RouteShow extends Component {
                                   <strong className="route-show-spacer"></strong>
                                 <div><a onClick={this.handleDelete} className="route-show-visible-span">Delete</a></div>
                                   <strong className="route-show-spacer"></strong>
-                                <div><a href="https://www.linkedin.com/in/danielbourdier/" className="route-show-visible-span">Hire me!</a></div>
+                                <div><a href="https://www.linkedin.com/in/danbourdier/" className="route-show-visible-span">Hire me!</a></div>
                                   <strong className="route-show-spacer"></strong>
                     </section>
                   </button>

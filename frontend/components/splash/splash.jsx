@@ -45,7 +45,7 @@ class SplashPage extends React.Component{
                   <strong>Git Hub</strong>
                 </a>
 
-              <a href="https://www.linkedin.com/in/danielbourdier/">
+              <a href="https://www.linkedin.com/in/danbourdier/">
                   <img src={window.linkedInBW} alt="linked in logo"/>
                     <br />
                   <strong>LinkedIn</strong>
@@ -220,7 +220,7 @@ class SplashPage extends React.Component{
 
 
             <div className="splash-view-challenges-div"> 
-              <a href="https://www.linkedin.com/in/danielbourdier/">TAKE CHALLENGE</a>
+              <a href="https://www.linkedin.com/in/danbourdier/">TAKE CHALLENGE</a>
             </div>
 
           </div>

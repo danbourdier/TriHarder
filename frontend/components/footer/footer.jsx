@@ -22,7 +22,7 @@ class Footer extends Component {
                 <strong>Git Hub</strong>
               </a>
 
-              <a href="https://www.linkedin.com/in/danielbourdier/">
+              <a href="https://www.linkedin.com/in/danbourdier/">
                 <img src={window.linkedInBW} alt="linked in logo" />
                 <br />
                 <strong>LinkedIn</strong>
@@ -58,7 +58,7 @@ class Footer extends Component {
               <div className="footer-social">
                 <h1>SOCIAL</h1>
                 <span>
-                  <p><a href="https://www.linkedin.com/in/danielbourdier/">Like me on LinkedIn</a></p>
+                  <p><a href="https://www.linkedin.com/in/danbourdier/">Like me on LinkedIn</a></p>
                   <p><a href="https://github.com/danbourdier">Follow me on Github</a></p>
                   <p><a href="https://danbourdier.github.io/">Check out my portfolio!</a></p>
                 </span>

@@ -17,7 +17,7 @@ class HeaderTabs extends Component {
           </section>
             {/* split */}
           <section className="header-nav-tab">
-            <a href="https://www.linkedin.com/in/danielbourdier/">Import Talent</a>
+            <a href="https://www.linkedin.com/in/danbourdier/">Import Talent</a>
           </section>
             {/* split */}
           <section className="header-nav-tab">

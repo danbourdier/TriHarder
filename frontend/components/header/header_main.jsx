@@ -80,7 +80,7 @@ class HeaderMain extends Component {
               <div  className={this.state.community ? "display-none" : "community-header-pic-dropdown-container-visible"}>
                 <Link className="header-button" to="/friends">Friends</Link>
                 <Link className="header-button" to="/activity_feed">Activity Feed</Link>
-                <a className="header-button" href="https://www.linkedin.com/in/danielbourdier/">Import Talent</a>
+                <a className="header-button" href="https://www.linkedin.com/in/danbourdier/">Import Talent</a>
               </div>
             </section>
 
@@ -97,9 +97,9 @@ class HeaderMain extends Component {
               
 
             <a className="ec-123-5-link" href="https://github.com/danbourdier">GitHub</a>
-            <a className="ec-123-5-link" href="https://angel.co/u/daniel-bourdier">AngelList</a>
-            <a className="ec-123-5-link" href="https://twitter.com/BourdierDaniel">Twitter</a>
-            <a href="https://www.linkedin.com/in/danielbourdier/">
+            <a className="ec-123-5-link" href="https://angel.co/u/dan-bourdier">AngelList</a>
+            <a className="ec-123-5-link" href="https://twitter.com/BourdierDan">Twitter</a>
+            <a href="https://www.linkedin.com/in/danbourdier/">
               <img src={window.linkedInBW} />LinkedIn
             </a>
           </div>
