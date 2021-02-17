@@ -165,8 +165,8 @@ class RouteMap extends Component {
   } 
 
   createPoint(latLng) {
-    // below code (l:138) serves the purpose of closure or *variable scoping*
-    // we needed closure because the context of *this* in the api res is applied to a different class
+    // below serves the purpose of *variable scoping*
+    // context of *this* in the api res is applied to a different class
     let that = this;
 
     if (typeof latLng.lat === "function") {
